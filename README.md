@@ -1,252 +1,245 @@
-# gmp-mpfr-ios-builder
+# iOS Mathematical Computing Stack Builder
 
-A build system for creating iOS XCFrameworks from the [GNU Multiple Precision Arithmetic Library (GMP)](https://gmplib.org/) and [MPFR (Multiple Precision Floating-Point Reliable)](https://www.mpfr.org/). This project builds GMP 6.3.0 and MPFR 4.2.2 as static XCFrameworks that work on both iOS devices and simulators (Intel and Apple Silicon).
+[](https://developer.apple.com/ios/)
+[](https://developer.apple.com/documentation/xcode/building_a_universal_macos_binary)
+[](https://opensource.org/licenses/MIT)
+
+A complete build system for creating a powerful mathematical computing stack for iOS. This project compiles **GMP, MPFR, MPC, FLINT, and SymEngine** as static `XCFrameworks` that work on modern iOS devices and simulators (Intel and Apple Silicon).
+
+This provides a full suite of tools for arbitrary-precision arithmetic, number theory, and symbolic manipulation directly on iOS.
 
 ## What This Builds
 
-The build process creates two XCFrameworks:
+The build process creates five interdependent `XCFrameworks`:
 
-### `GMP.xcframework`
-- **iOS Device** (arm64): For physical iPhones and iPads
-- **iOS Simulator** (arm64): For Apple Silicon Mac simulators  
-- **iOS Simulator** (x86_64): For Intel Mac simulators
+| Framework                 | Library                                                              | Purpose                                          |
+| ------------------------- | -------------------------------------------------------------------- | ------------------------------------------------ |
+| `GMP.xcframework`         | [GNU Multiple Precision](https://gmplib.org/) 6.3.0                  | Arbitrary-precision integer arithmetic.          |
+| `MPFR.xcframework`        | [Multiple-Precision Floating-Point](https://www.mpfr.org/) 4.2.2     | Correctly rounded arbitrary-precision floats.    |
+| `MPC.xcframework`         | [Multiple-Precision Complex](http://www.multiprecision.org/) 1.3.1    | Arbitrary-precision complex number arithmetic.   |
+| `FLINT.xcframework`       | [Fast Library for Number Theory](https://flintlib.org/) 3.3.1        | Advanced number theory, polynomials, and matrices. |
+| `SymEngine.xcframework`   | [SymEngine](https://symengine.org/) 0.11.2                           | A fast symbolic manipulation library.            |
 
-### `MPFR.xcframework` 
-- **iOS Device** (arm64): For physical iPhones and iPads
-- **iOS Simulator** (arm64): For Apple Silicon Mac simulators
-- **iOS Simulator** (x86_64): For Intel Mac simulators
+Each framework supports:
+
+  - **iOS Device** (arm64): For physical iPhones and iPads.
+  - **iOS Simulator** (arm64): For Apple Silicon Mac simulators.
+  - **iOS Simulator** (x86\_64): For Intel Mac simulators.
+
+-----
 
 ## Requirements
 
-- **macOS** with Xcode and Command Line Tools installed
-- **Bash** (any modern version - the scripts are compatible with macOS's default bash 3.2+)
-- **GMP 6.3.0 source** (included as `gmp-6.3.0.tar.bz2`)
-- **MPFR 4.2.2 source** (included as `mpfr-4.2.2.tar.xz`)
+  - **macOS** with Xcode and Command Line Tools installed.
+  - **CMake**: Required for building SymEngine (`brew install cmake`).
+  - **Source Archives**: The following tarballs must be in the project's root directory:
+      - `gmp-6.3.0.tar.bz2`
+      - `mpfr-4.2.2.tar.xz`
+      - `mpc-1.3.1.tar.gz`
+      - `flint-3.3.1.tar.gz`
+      - `symengine-0.11.2.tar.gz`
 
-## Quick Start
+-----
 
-### Build Everything from Scratch
+## Quick Start: Build the Entire Stack
+
+The libraries have dependencies, so they **must be built in the correct order**.
+
 ```bash
-# Clone or download this repository
-# Make sure both gmp-6.3.0.tar.bz2 and mpfr-4.2.2.tar.xz are in the root directory
+# First, make all build scripts executable
+chmod +x build_*.sh
 
-# Build GMP first (MPFR depends on GMP)
-chmod +x build_gmp.sh
+# 1. Build GMP (no dependencies)
 ./build_gmp.sh
 
-# Build MPFR (requires GMP to be built first)
-chmod +x build_mpfr.sh
+# 2. Build MPFR (depends on GMP)
 ./build_mpfr.sh
 
-# Test that both frameworks compile correctly
-chmod +x ios_compile_test.sh
-./ios_compile_test.sh
+# 3. Build MPC (depends on GMP and MPFR)
+./build_mpc.sh
+
+# 4. Build FLINT (depends on GMP and MPFR)
+./build_flint.sh
+
+# 5. Build SymEngine (depends on all of the above)
+./build_symengine.sh
+
+# All five XCFrameworks are now ready in the project directory.
 ```
 
-### Create XCFramework from Existing Libraries
-```bash
-# If you already have the individual architecture libraries built
-chmod +x pack_libs.sh  
-./pack_libs.sh
-```
-
-## Scripts Overview
-
-### `build_gmp.sh`
-The GMP build script that:
-1. Extracts GMP 6.3.0 source code
-2. Configures and builds for each target architecture
-3. Creates the final `GMP.xcframework`
-
-**Key Features:**
-- Uses modern iOS deployment target (13.0+)
-- Removes deprecated compiler flags (`-fembed-bitcode`)
-- Supports only 64-bit architectures (removed old 32-bit support)
-- Uses `--disable-assembly` for reliable iOS builds
-- Handles Apple Silicon vs Intel architecture naming correctly
-
-### `build_mpfr.sh`
-The MPFR build script that:
-1. Verifies GMP dependency is available
-2. Extracts MPFR 4.2.2 source code
-3. Configures and builds for each target architecture with GMP linking
-4. Creates the final `MPFR.xcframework`
-
-**Dependencies:**
-- **Must be run after `build_gmp.sh`** - MPFR requires GMP libraries and headers
-- Links against the static GMP libraries built in the previous step
-- Uses the same iOS deployment targets and compiler flags as GMP
-
-### `ios_compile_test.sh`
-A test script that verifies both XCFrameworks can be compiled and linked correctly:
-- Tests device (arm64) compilation
-- Tests simulator (arm64 and x86_64) compilation  
-- Includes basic GMP and MPFR function calls
-- Automatically cleans up test files
-
-### `pack_libs.sh`
-A utility script for creating `GMP.xcframework` from pre-built libraries. Note: This script only handles GMP, not MPFR.
-
-## Build Output
-
-After running both build scripts, you'll have:
-
-```
-GMP.xcframework/
-├── Info.plist                    # XCFramework manifest
-├── ios-arm64/                   # iOS Device slice
-│   ├── libgmp.a                # Static library for devices
-│   └── gmp.h                   # Header file
-├── ios-arm64-simulator/         # Apple Silicon simulator slice  
-│   ├── libgmp.a                # Static library for arm64 simulator
-│   └── gmp.h                   # Header file
-└── ios-x86_64-simulator/        # Intel simulator slice
-    ├── libgmp.a                # Static library for x86_64 simulator
-    └── gmp.h                   # Header file
-
-MPFR.xcframework/
-├── Info.plist                   # XCFramework manifest
-├── ios-arm64/                  # iOS Device slice
-│   ├── libmpfr.a               # Static library for devices
-│   └── mpfr.h                  # Header file
-├── ios-arm64-simulator/        # Apple Silicon simulator slice
-│   ├── libmpfr.a               # Static library for arm64 simulator
-│   └── mpfr.h                  # Header file
-└── ios-x86_64-simulator/       # Intel simulator slice
-    ├── libmpfr.a               # Static library for x86_64 simulator
-    └── mpfr.h                  # Header file
-```
+-----
 
 ## Using in iOS Projects
 
 ### Xcode Integration
-1. **Add Frameworks**: Drag both `GMP.xcframework` and `MPFR.xcframework` into your Xcode project
-2. **Link Binary**: Ensure both appear in your target's "Link Binary With Libraries"
-3. **Import**: Use `#import <gmp.h>` and `#import <mpfr.h>` in your Objective-C code
+
+1.  **Add Frameworks**: Drag all five `.xcframework` bundles into your Xcode project's "Frameworks, Libraries, and Embedded Content" section.
+2.  **Import Headers**: Use the appropriate headers in your Objective-C, Objective-C++, or Swift bridging header files.
 
 ### Swift Integration
-Create a bridging header and import both libraries:
+
+Create a bridging header (`YourProject-Bridging-Header.h`) and import the C headers you need.
+
 ```objc
 // In YourProject-Bridging-Header.h
+
+// For basic arithmetic
 #import <gmp.h>
 #import <mpfr.h>
+#import <mpc.h>
+
+// For number theory
+#import <flint/flint.h>
+#import <flint/fmpz.h>
+#import <flint/fmpz_poly.h>
+
+// For symbolic math (use the C wrapper)
+#import <symengine/cwrapper.h>
 ```
 
-### Example Usage
+-----
 
-#### GMP Integer Arithmetic
+## Example Usage
+
+### GMP: Integer Arithmetic
+
 ```objc
 #import <gmp.h>
 
-- (NSString *)calculateLargePower {
-    mpz_t result;
-    mpz_init(result);
-    mpz_ui_pow_ui(result, 2, 100);  // Calculate 2^100
-    
-    char *str = mpz_get_str(NULL, 10, result);
-    NSString *resultString = [NSString stringWithCString:str encoding:NSUTF8StringEncoding];
-    
-    free(str);
-    mpz_clear(result);
-    return resultString;
-}
+mpz_t base, result;
+mpz_init_set_ui(base, 2); // base = 2
+mpz_init(result);
+mpz_pow_ui(result, base, 512); // result = 2^512
+
+char *str = mpz_get_str(NULL, 10, result);
+NSLog(@"2^512 = %s", str);
+
+free(str);
+mpz_clears(base, result, NULL);
 ```
 
-#### MPFR Floating-Point Arithmetic
+### MPFR & MPC: High-Precision Pi and Complex Log
+
 ```objc
-#import <gmp.h>
 #import <mpfr.h>
+#import <mpc.h>
 
-- (NSString *)calculatePiWithPrecision:(int)precision {
-    mpfr_t pi;
-    mpfr_init2(pi, precision);
-    mpfr_const_pi(pi, MPFR_RNDN);
-    
-    char *str = mpfr_get_str(NULL, NULL, 10, 0, pi, MPFR_RNDN);
-    NSString *piString = [NSString stringWithCString:str encoding:NSUTF8StringEncoding];
-    
-    mpfr_free_str(str);
-    mpfr_clear(pi);
-    return piString;
-}
+// Calculate Pi to 256 bits of precision
+mpfr_t pi;
+mpfr_init2(pi, 256);
+mpfr_const_pi(pi, MPFR_RNDN);
+mpfr_printf("Pi = %.50Rf\n", pi);
+
+// Calculate log(1 + i*pi)
+mpc_t z, res;
+mpc_init2(z, 256);
+mpc_init2(res, 256);
+mpc_set_fr_fr(z, mpfr_get_si(pi, MPFR_RNDN), pi, MPC_RNDNN); // z = 1 + i*pi (approx)
+mpc_log(res, z, MPC_RNDNN);
+mpc_printf("log(1 + i*pi) = (%.10Rg, %.10Rg)\n", res);
+
+mpfr_clear(pi);
+mpc_clears(z, res, NULL);
 ```
 
-## Flutter Integration
+### FLINT: Polynomial Factorization
 
-Both XCFrameworks work with Flutter iOS projects using FFI. You'll need to link both frameworks and create appropriate Dart bindings for the C functions you want to use.
+```objc
+#import <flint/fmpz.h>
+#import <flint/fmpz_poly.h>
+#import <flint/fmpz_poly_factor.h>
+
+// Factor the polynomial x^2 - 4
+fmpz_poly_t poly;
+fmpz_poly_init(poly);
+fmpz_poly_set_coeff_si(poly, 2, 1);  // 1*x^2
+fmpz_poly_set_coeff_si(poly, 0, -4); // -4
+
+fmpz_poly_factor_t factors;
+fmpz_poly_factor_init(factors);
+fmpz_poly_factor(factors, poly); // factorize
+
+// Print factors: (x - 2) * (x + 2)
+fmpz_poly_factor_print(factors);
+
+fmpz_poly_clear(poly);
+fmpz_poly_factor_clear(factors);
+```
+
+### SymEngine: Symbolic Differentiation
+
+```objc
+#import <symengine/cwrapper.h>
+
+// Create a symbolic expression for sin(x)
+CVecBasic *args = vec_basic_new();
+CBasic *x = symbol("x");
+vec_basic_push_back(args, x);
+CBasic *expr = basic_function("sin", args);
+
+// Differentiate sin(x) with respect to x
+CBasic *deriv = basic_diff(expr, x);
+
+// The result is cos(x)
+char *s = basic_str(deriv);
+NSLog(@"d/dx(sin(x)) = %s", s);
+
+// Clean up
+basic_free(deriv);
+basic_free(expr);
+basic_free(x);
+vec_basic_free(args);
+free(s);
+```
+
+-----
 
 ## Technical Notes
 
 ### Build Dependencies
-- **MPFR depends on GMP**: Always build GMP first, then MPFR
-- **Linked libraries**: MPFR libraries are linked against their corresponding GMP architecture libraries
-- **Header dependencies**: MPFR compilation requires GMP headers from the built GMP source
 
-### Why Manual XCFramework Assembly?
-This project uses manual XCFramework creation instead of `xcodebuild -create-xcframework` because:
-- Xcode's tool has issues with multiple `arm64` architectures (device vs simulator)
-- Manual assembly provides more control and reliability
-- The resulting XCFrameworks are identical to Xcode-generated ones
+The build order is enforced by dependencies between the libraries:
 
-### Architecture Support
-- **Minimum iOS Version**: 13.0
-- **Supported Architectures**: arm64 (device + simulator), x86_64 (simulator)
-- **Removed Legacy Support**: armv7, armv7s, i386 (32-bit architectures)
+  - **MPFR** requires **GMP**.
+  - **MPC** requires **GMP** and **MPFR**.
+  - **FLINT** requires **GMP** and **MPFR**.
+  - **SymEngine** requires **GMP**, **MPFR**, **MPC**, and **FLINT**.
 
 ### Build Configuration
-- **Optimization**: `-Os` (optimize for size)
-- **Assembly**: Disabled (`--disable-assembly`) for iOS compatibility  
-- **Linking**: Static libraries only (`--disable-shared`)
-- **Debug Info**: DWARF-2 format for Xcode compatibility
-- **MPFR Thread Safety**: Disabled (`--disable-thread-safe`) for iOS compatibility
+
+  - **Minimum iOS Version**: 13.0
+  - **Supported Architectures**: `arm64` (device + simulator), `x86_64` (simulator)
+  - **Assembly**: Disabled (`--disable-assembly`) for maximum iOS compatibility.
+  - **Linking**: Static libraries only (`--disable-shared`).
+  - **Thread Safety**: Disabled where applicable for simplicity in a typical iOS context.
+
+-----
 
 ## Troubleshooting
 
-### "Command not found" errors
-```bash
-# Make scripts executable
-chmod +x build_gmp.sh build_mpfr.sh ios_compile_test.sh
-```
+### "Command not found" or Permission Denied
 
-### "SDK path not found" 
-- Install Xcode Command Line Tools: `xcode-select --install`
-- Verify Xcode is properly installed
+Run `chmod +x build_*.sh` to make all build scripts executable.
 
-### "GMP build not found" when building MPFR
-- Run `./build_gmp.sh` first - MPFR requires GMP to be built
-- Verify `build/lib/` contains the GMP libraries
+### "SDK path not found"
 
-### Build fails on specific architecture
-- Check that you have the correct Xcode and iOS SDK installed
-- Ensure you're building on a supported macOS version
+Install the Xcode Command Line Tools via `xcode-select --install`.
 
-### Linking errors in iOS app
-- Ensure both frameworks are added to your Xcode project
-- Verify both appear in "Link Binary With Libraries"
-- Check that you're importing the correct headers
+### "GMP build not found" (or similar dependency error)
 
-### XCFramework not recognized by Xcode
-- Verify the framework structure matches the output above
-- Try cleaning Xcode build folder and rebuilding your project
+You must run the build scripts in the correct order as described in the "Quick Start" section.
 
-## Updating Library Versions
+### Linking errors in your iOS app
 
-### To update GMP:
-1. Download the desired `.tar.bz2` from [gmplib.org](https://gmplib.org/#DOWNLOAD)
-2. Update the `VERSION` variable in `build_gmp.sh`
-3. Update the `SOFTWARETAR` path if filename differs
-4. Run `./build_gmp.sh`
+  - Ensure all five frameworks are added to your Xcode project target.
+  - Verify they all appear in the "Link Binary With Libraries" build phase.
 
-### To update MPFR:
-1. Download the desired `.tar.xz` from [mpfr.org](https://www.mpfr.org/mpfr-current/)
-2. Update the `VERSION` variable in `build_mpfr.sh`
-3. Update the `SOFTWARETAR` path if filename differs
-4. Rebuild both: `./build_gmp.sh` then `./build_mpfr.sh`
+-----
 
 ## License
 
-This build system is released under the MIT License. GMP itself is dual-licensed under LGPL v3+ and GPL v2+. MPFR is licensed under LGPL v3+.
+This build system is released under the **MIT License**. The underlying mathematical libraries are available under their own open-source licenses (LGPL, GPL), which you must comply with in your application.
 
 ## Credits
 
-Based on [NeoTeo/gmp-ios-builder](https://github.com/NeoTeo/gmp-ios-builder) with modernization for current iOS development practices and extended to support MPFR.
+This project modernizes and extends the concepts from [NeoTeo/gmp-ios-builder](https://github.com/NeoTeo/gmp-ios-builder) to create a full-featured mathematical computing stack.
