@@ -1,0 +1,9 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-x86_64/cmake_install.cmake",
+		"/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-x86_64/symengine/cmake_install.cmake",
+		"/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-x86_64/symengine/utilities/matchpycpp/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
