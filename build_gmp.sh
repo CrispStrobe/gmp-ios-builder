@@ -81,10 +81,18 @@ configureAndMake() {
         errorExit "SDK path not found for platform $platform. Is Xcode installed?"
     fi
 
-    # Set compiler and flags
+    # Set compiler and flags - CRITICAL FIX: Different flags for device vs simulator
     export CC=$(xcrun --sdk $platform -f clang)
-    export CFLAGS="-arch $arch -pipe -Os -gdwarf-2 -isysroot $sdkpath -miphoneos-version-min=$IOSVERSIONMIN"
-    export LDFLAGS="-arch $arch -isysroot $sdkpath"
+    
+    if [[ "$platform" == "iphonesimulator" ]]; then
+        # Simulator-specific flags
+        export CFLAGS="-arch $arch -pipe -Os -gdwarf-2 -isysroot $sdkpath -mios-simulator-version-min=$IOSVERSIONMIN"
+        export LDFLAGS="-arch $arch -isysroot $sdkpath -mios-simulator-version-min=$IOSVERSIONMIN"
+    else
+        # Device-specific flags  
+        export CFLAGS="-arch $arch -pipe -Os -gdwarf-2 -isysroot $sdkpath -miphoneos-version-min=$IOSVERSIONMIN"
+        export LDFLAGS="-arch $arch -isysroot $sdkpath -miphoneos-version-min=$IOSVERSIONMIN"
+    fi
 
     cd "$extractdir"
 

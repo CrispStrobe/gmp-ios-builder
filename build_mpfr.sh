@@ -92,74 +92,72 @@ configureAndMake() {
     local platform=$1
     local arch=$2
     local extractdir="$BUILDDIR/source"
-
+    
     logMsg "================================================================="
     logMsg "Configuring MPFR for PLATFORM: $platform ARCH: $arch"
     logMsg "================================================================="
-
+    
     local sdkpath=$(xcrun --sdk $platform --show-sdk-path)
     if [ ! -d "$sdkpath" ]; then
         errorExit "SDK path not found for platform $platform. Is Xcode installed?"
     fi
-
+    
     # Set up paths for GMP dependency
     local gmp_lib_path="$GMP_LIBDIR/libgmp-$platform-$arch.a"
     if [ ! -f "$gmp_lib_path" ]; then
         errorExit "GMP library not found: $gmp_lib_path"
     fi
-
+    
     # Create a temporary directory with expected library name for configure
     local temp_lib_dir="$BUILDDIR/temp-gmp-$platform-$arch"
     mkdir -p "$temp_lib_dir"
     ln -sf "$gmp_lib_path" "$temp_lib_dir/libgmp.a"
-
-    # Set compiler and flags
+    
+    # Set compiler and flags - CRITICAL: Platform-specific deployment targets
     export CC=$(xcrun --sdk $platform -f clang)
-    export CFLAGS="-arch $arch -pipe -Os -gdwarf-2 -isysroot $sdkpath -miphoneos-version-min=$IOSVERSIONMIN -I$GMP_HEADERS_DIR"
-    export LDFLAGS="-arch $arch -isysroot $sdkpath -L$temp_lib_dir"
+    
+    if [[ "$platform" == "iphonesimulator" ]]; then
+        # Simulator-specific flags
+        export CFLAGS="-arch $arch -pipe -Os -gdwarf-2 -isysroot $sdkpath -mios-simulator-version-min=$IOSVERSIONMIN -I$GMP_HEADERS_DIR"
+        export LDFLAGS="-arch $arch -isysroot $sdkpath -mios-simulator-version-min=$IOSVERSIONMIN -L$temp_lib_dir"
+    else
+        # Device-specific flags
+        export CFLAGS="-arch $arch -pipe -Os -gdwarf-2 -isysroot $sdkpath -miphoneos-version-min=$IOSVERSIONMIN -I$GMP_HEADERS_DIR"
+        export LDFLAGS="-arch $arch -isysroot $sdkpath -miphoneos-version-min=$IOSVERSIONMIN -L$temp_lib_dir"
+    fi
+    
     export LIBS="-lgmp"
-
+    
     cd "$extractdir"
-
+    
     # Important: Run make distclean to ensure a fresh build for each architecture
     make distclean &> /dev/null || true
-
-    # FIXED: Detect build machine architecture and set proper cross-compilation
-    local build_machine=$(uname -m)
-    local build_arch="x86_64"
-    if [[ "$build_machine" == "arm64" ]]; then
-        build_arch="aarch64"
-    fi
-
-    # Set host architecture (GMP convention: aarch64 for arm64)
+    
+    # PATCH: Correctly set host architecture. MPFR's configure script
+    # recognizes `aarch64` for 64-bit ARM, not `arm64`.
     local host_arch=$arch
     if [[ "$arch" == "arm64" ]]; then
         host_arch="aarch64"
     fi
-
-    # CRITICAL FIX: Force cross-compilation mode by making build != host
-    # Even for same-arch builds, iOS is always cross-compilation
-    local build_target="$build_arch-apple-darwin"
-    local host_target="$host_arch-apple-ios"  # Use ios instead of darwin to force cross-compilation
-
-    logMsg "Build: $build_target, Host: $host_target"
-
-    # Configure MPFR with forced cross-compilation
+    
+    # Use the same pattern as GMP - simple and effective
     ./configure \
-        --build="$build_target" \
-        --host="$host_target" \
+        --host="$host_arch-apple-darwin" \
         --disable-shared \
         --enable-static \
         --with-gmp-include="$GMP_HEADERS_DIR" \
         --with-gmp-lib="$temp_lib_dir" \
         --disable-thread-safe
-
+    
     logMsg "Building MPFR for $platform $arch..."
     make -j$(sysctl -n hw.ncpu)
-
+    
     logMsg "Copying built MPFR library..."
     [ -d "$LIBDIR" ] || mkdir -p "$LIBDIR"
     cp "src/.libs/lib$LIBNAME.a" "$LIBDIR/lib$LIBNAME-$platform-$arch.a"
+    
+    # Clean up temp directory
+    rm -rf "$temp_lib_dir"
 }
 
 createFramework() {
