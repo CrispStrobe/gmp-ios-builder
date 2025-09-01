@@ -67,9 +67,9 @@ chmod +x build_*.sh
 
 ## Using in iOS Projects
 
-While the .xcframework bundles produced by this project can be used in native Xcode projects, using them in a Flutter application is facilitated by a specific architecture to overcome challenges with static linking. The process is fully demonstrated in two companion repositories:
-* gmp_bridge: A local Flutter plugin that wraps the native GMP library.
-* gmp_test_app: A complete Flutter demo app that uses the plugin.
+While the .xcframework bundles produced by this project can be used in native Xcode projects, using them in a Flutter application is facilitated by a specific architecture to overcome challenges with static linking. The process is demonstrated in two companion repositories:
+* [gmp-bridge](https://github.com/CrispStrobe/gmp-bridge): A local Flutter bridge plugin that wraps the native GMP library.
+* [gmp-flutter-test](https://github.com/CrispStrobe/gmp-flutter-test): A Flutter demo app that uses the plugin.
 
 ### The Challenge: Symbol Stripping
 When linking a static library (.a) to a Flutter app, the native Xcode build process often fails to see any usage of the C functions, as they are only called from the Dart VM via FFI at runtime. This causes the linker to aggressively "strip" the library's code from the final app binary to save space, leading to "symbol not found" errors when your Dart code tries to call the functions.
