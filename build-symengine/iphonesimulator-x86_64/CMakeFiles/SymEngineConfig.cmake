@@ -41,10 +41,10 @@ if (POLICY CMP0057)
   cmake_policy(SET CMP0057 NEW) # needed for llvm >= 16
 endif ()
 
-set(SYMENGINE_CXX_FLAGS "-std=c++11 -arch x86_64 -pipe -Os -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.1.sdk -mios-simulator-version-min=13.0 -std=c++11 -fPIC -D__extern_always_inline=inline")
+set(SYMENGINE_CXX_FLAGS "-std=c++11  -fPIC -D__extern_always_inline=inline")
 set(SYMENGINE_CXX_FLAGS_RELEASE "-Wall -Wextra -Wno-unused-parameter -O3 -funroll-loops -Wno-unknown-pragmas")
 set(SYMENGINE_CXX_FLAGS_DEBUG "-Wall -Wextra -Wno-unused-parameter -g -ggdb -Wno-unknown-pragmas")
-set(SYMENGINE_C_FLAGS "-arch x86_64 -pipe -Os -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.1.sdk -mios-simulator-version-min=13.0")
+set(SYMENGINE_C_FLAGS "")
 set(SYMENGINE_C_FLAGS_RELEASE "-O3 -DNDEBUG")
 set(SYMENGINE_C_FLAGS_DEBUG "-g")
 

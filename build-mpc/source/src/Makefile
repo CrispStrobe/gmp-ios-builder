@@ -86,7 +86,7 @@ POST_INSTALL = :
 NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
-build_triplet = aarch64-apple-darwin24.3.0
+build_triplet = aarch64-apple-darwin24.6.0
 host_triplet = aarch64-apple-darwin
 subdir = src
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
@@ -268,9 +268,9 @@ AUTOMAKE = ${SHELL} '/Users/christianstrobele/code/gmp-ios-builder/build-mpc/sou
 AWK = awk
 CC = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang
 CCDEPMODE = depmode=gcc3
-CFLAGS = -arch arm64 -pipe -Os -gdwarf-2 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.1.sdk -mios-simulator-version-min=13.0 -I/Users/christianstrobele/code/gmp-ios-builder/build/include -I/Users/christianstrobele/code/gmp-ios-builder/build-mpfr/include
+CFLAGS = -arch arm64 -pipe -Os -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk -I/Users/christianstrobele/code/gmp-ios-builder/build/include -I/Users/christianstrobele/code/gmp-ios-builder/build-mpfr/include -mmacosx-version-min=10.15
 CPP = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -E
-CPPFLAGS = -I/Users/christianstrobele/code/gmp-ios-builder/build/include -I/Users/christianstrobele/code/gmp-ios-builder/build-mpfr/include 
+CPPFLAGS = -I/Users/christianstrobele/code/gmp-ios-builder/build/install-macosx-arm64/usr/local/include -I/Users/christianstrobele/code/gmp-ios-builder/build-mpfr/install-macosx-arm64/usr/local/include 
 CSCOPE = cscope
 CTAGS = ctags
 CYGPATH_W = echo
@@ -287,7 +287,7 @@ ETAGS = etags
 EXEEXT = 
 FGREP = /opt/homebrew/bin/ggrep -F
 FILECMD = file
-GCC_VERSION = 16.0.0
+GCC_VERSION = 17.0.0
 GITVERSION = 
 GREP = /opt/homebrew/bin/ggrep
 HASGIT = 
@@ -297,7 +297,7 @@ INSTALL_PROGRAM = ${INSTALL}
 INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
 LD = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld
-LDFLAGS = -L/Users/christianstrobele/code/gmp-ios-builder/build-mpc/temp-deps-iphonesimulator-arm64 -L/Users/christianstrobele/code/gmp-ios-builder/build-mpc/temp-deps-iphonesimulator-arm64 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.1.sdk -mios-simulator-version-min=13.0 -L/Users/christianstrobele/code/gmp-ios-builder/build-mpc/temp-deps-iphonesimulator-arm64
+LDFLAGS = -L/Users/christianstrobele/code/gmp-ios-builder/build/install-macosx-arm64/usr/local/lib -L/Users/christianstrobele/code/gmp-ios-builder/build-mpfr/install-macosx-arm64/usr/local/lib -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk -mmacosx-version-min=10.15 -L/Users/christianstrobele/code/gmp-ios-builder/build/lib -L/Users/christianstrobele/code/gmp-ios-builder/build-mpfr/lib
 LIBOBJS = 
 LIBS = -lmpfr -lgmp -lm -lmpfr -lgmp
 LIBTOOL = $(SHELL) $(top_builddir)/libtool
@@ -346,10 +346,10 @@ am__quote =
 am__tar = $${TAR-tar} chof - "$$tardir"
 am__untar = $${TAR-tar} xf -
 bindir = ${exec_prefix}/bin
-build = aarch64-apple-darwin24.3.0
+build = aarch64-apple-darwin24.6.0
 build_alias = 
 build_cpu = aarch64
-build_os = darwin24.3.0
+build_os = darwin24.6.0
 build_vendor = apple
 builddir = .
 datadir = ${datarootdir}

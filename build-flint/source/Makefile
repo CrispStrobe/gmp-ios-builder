@@ -74,14 +74,14 @@ WANT_DEPS:=1
 WANT_ASSEMBLY:=0
 ASM_PATH:=$(ABS_SRC_DIR)/mpn_extras/
 
-GMP_LIB_PATH:=/Users/christianstrobele/code/gmp-ios-builder/build-flint/temp-deps-iphonesimulator-arm64
-MPFR_LIB_PATH:=/Users/christianstrobele/code/gmp-ios-builder/build-flint/temp-deps-iphonesimulator-arm64
+GMP_LIB_PATH:=/Users/christianstrobele/code/gmp-ios-builder/build/lib
+MPFR_LIB_PATH:=/Users/christianstrobele/code/gmp-ios-builder/build-mpfr/lib
 BLAS_LIB_PATH:=
 GC_LIB_PATH:=
 NTL_LIB_PATH:=
 
-CFLAGS:=-g -arch arm64 -pipe -Os -gdwarf-2 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.1.sdk -mios-simulator-version-min=13.0 -I/Users/christianstrobele/code/gmp-ios-builder/build/include -I/Users/christianstrobele/code/gmp-ios-builder/build-mpfr/include
-TESTCFLAGS:=-g -arch arm64 -pipe -Os -gdwarf-2 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.1.sdk -mios-simulator-version-min=13.0 -I/Users/christianstrobele/code/gmp-ios-builder/build/include -I/Users/christianstrobele/code/gmp-ios-builder/build-mpfr/include
+CFLAGS:=-g -arch arm64 -pipe -Os -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk -mmacosx-version-min=10.15 -I/Users/christianstrobele/code/gmp-ios-builder/build/include -I/Users/christianstrobele/code/gmp-ios-builder/build-mpfr/include
+TESTCFLAGS:=-g -arch arm64 -pipe -Os -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk -mmacosx-version-min=10.15 -I/Users/christianstrobele/code/gmp-ios-builder/build/include -I/Users/christianstrobele/code/gmp-ios-builder/build-mpfr/include
 CPPFLAGS:=-I$(ABS_SRC_DIR) -I$(SRC_DIR)  -I/Users/christianstrobele/code/gmp-ios-builder/build/include -I/Users/christianstrobele/code/gmp-ios-builder/build-mpfr/include -DBUILDING_FLINT
 CPPFLAGS2:=-L$(ABS_FLINT_DIR) $(CPPFLAGS)
 LIB_CPPFLAGS:=-DFLINT_NOSTDIO -DFLINT_NOSTDARG
@@ -108,7 +108,7 @@ nmod_poly_CFLAGS:=-funroll-loops
 arith_CFLAGS:=-funroll-loops
 endif
 
-LDFLAGS:=-arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.1.sdk -mios-simulator-version-min=13.0 -L/Users/christianstrobele/code/gmp-ios-builder/build-flint/temp-deps-iphonesimulator-arm64 -L/Users/christianstrobele/code/gmp-ios-builder/build-flint/temp-deps-iphonesimulator-arm64 -L/Users/christianstrobele/code/gmp-ios-builder/build-flint/temp-deps-iphonesimulator-arm64
+LDFLAGS:=-arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk -mmacosx-version-min=10.15 -L/Users/christianstrobele/code/gmp-ios-builder/build-flint/temp-deps-macosx-arm64 -L/Users/christianstrobele/code/gmp-ios-builder/build/lib -L/Users/christianstrobele/code/gmp-ios-builder/build-mpfr/lib
 EXTRA_SHARED_FLAGS:=-install_name '/Users/christianstrobele/code/gmp-ios-builder/build-flint/source/libflint.21.0.dylib' -compatibility_version 21.0 -current_version 21.0.0 $(foreach path, $(sort $(GMP_LIB_PATH) $(MPFR_LIB_PATH) $(BLAS_LIB_PATH) $(GC_LIB_PATH) $(NTL_LIB_PATH)), -Wl,-rpath,$(path))
 EXE_LDFLAGS:=$(LDFLAGS) $(foreach path, $(sort $(FLINT_DIR) $(GMP_LIB_PATH) $(MPFR_LIB_PATH) $(BLAS_LIB_PATH) $(GC_LIB_PATH) $(NTL_LIB_PATH)), -Wl,-rpath,$(path))
 

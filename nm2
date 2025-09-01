@@ -1,0 +1,5231 @@
+
+../gmp_test_app/ios/libgmp-simulator.a(assert.o):
+000000000000006c T ___gmp_assert_fail
+0000000000000000 T ___gmp_assert_header
+                 U ___stderrp
+                 U _abort
+                 U _fprintf
+00000000000000a4 s l_.str
+00000000000000a8 s l_.str.1
+00000000000000ad s l_.str.2
+0000000000000000 t ltmp0
+00000000000000a4 s ltmp1
+0000000000000638 s ltmp2
+
+../gmp_test_app/ios/libgmp-simulator.a(compat.o):
+                 U ___gmpn_bdiv_dbm1c
+0000000000000000 T ___gmpn_divexact_by3
+0000000000000020 T ___gmpn_divmod_1
+                 U ___gmpn_divrem_1
+                 U ___gmpz_jacobi
+0000000000000034 T ___gmpz_legendre
+0000000000000000 t ltmp0
+00000000000007a8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(errno.o):
+0000000000000034 T ___gmp_divide_by_zero
+0000000000000648 S ___gmp_errno
+0000000000000000 T ___gmp_exception
+0000000000000044 T ___gmp_overflow_in_mpz
+0000000000000024 T ___gmp_sqrt_of_negative
+                 U _abort
+                 U _raise
+0000000000000000 t ltmp0
+0000000000000648 s ltmp1
+0000000000000560 s ltmp2
+
+../gmp_test_app/ios/libgmp-simulator.a(extract-dbl.o):
+0000000000000000 T ___gmp_extract_double
+0000000000000000 t ltmp0
+00000000000007f0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(invalid.o):
+0000000000000000 T ___gmp_invalid_operation
+                 U _abort
+                 U _raise
+0000000000000000 t ltmp0
+0000000000000270 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(memory.o):
+00000000000000b8 D ___gmp_allocate_func
+0000000000000000 T ___gmp_default_allocate
+0000000000000084 t ___gmp_default_allocate.cold.1
+0000000000000080 T ___gmp_default_free
+000000000000002c T ___gmp_default_reallocate
+00000000000000c8 D ___gmp_free_func
+00000000000000c0 D ___gmp_reallocate_func
+                 U ___stderrp
+                 U _abort
+                 U _fprintf
+                 U _free
+                 U _malloc
+                 U _realloc
+00000000000000d0 s l_.str
+00000000000000fb s l_.str.1
+0000000000000000 t ltmp0
+00000000000000b8 d ltmp1
+00000000000000d0 s ltmp2
+0000000000000a18 s ltmp3
+
+../gmp_test_app/ios/libgmp-simulator.a(mp_bpl.o):
+0000000000000004 S ___gmp_0
+0000000000000000 S ___gmp_bits_per_limb
+0000000000000004 C ___gmp_junk
+0000000000000000 t ltmp0
+0000000000000000 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(mp_clz_tab.o):
+0000000000000000 S ___gmpn_clz_tab
+0000000000000000 t ltmp0
+0000000000000000 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(mp_dv_tab.o):
+0000000000000000 S ___gmp_digit_value_tab
+0000000000000000 t ltmp0
+0000000000000000 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(mp_minv_tab.o):
+0000000000000000 S ___gmp_binvert_limb_table
+0000000000000000 t ltmp0
+0000000000000000 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(mp_get_fns.o):
+                 U ___gmp_allocate_func
+                 U ___gmp_free_func
+0000000000000000 T ___gmp_get_memory_functions
+                 U ___gmp_reallocate_func
+0000000000000000 t ltmp0
+0000000000000420 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(mp_set_fns.o):
+                 U ___gmp_allocate_func
+                 U ___gmp_default_allocate
+                 U ___gmp_default_free
+                 U ___gmp_default_reallocate
+                 U ___gmp_free_func
+                 U ___gmp_reallocate_func
+0000000000000000 T ___gmp_set_memory_functions
+0000000000000000 t ltmp0
+0000000000000490 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(version.o):
+0000000000000008 S ___gmp_version
+0000000000000000 s l_.str
+0000000000000000 t ltmp0
+0000000000000000 s ltmp1
+0000000000000008 s ltmp2
+
+../gmp_test_app/ios/libgmp-simulator.a(nextprime.o):
+0000000000000274 T ___gmp_init_primesieve
+0000000000000000 T ___gmp_nextprime
+0000000000000288 s ___gmp_nextprime.addtab
+0000000000000000 t ltmp0
+0000000000000288 s ltmp1
+00000000000009a8 s ltmp2
+
+../gmp_test_app/ios/libgmp-simulator.a(primesieve.o):
+0000000000000000 T ___gmp_primesieve
+00000000000004f0 s ___gmp_primesieve.presieved
+                 U ___gmpn_popcount
+0000000000000110 t _block_resieve
+                 U _memcpy
+0000000000000000 t ltmp0
+00000000000004f0 s ltmp1
+0000000000001628 s ltmp2
+
+../gmp_test_app/ios/libgmp-simulator.a(tal-reent.o):
+                 U ___gmp_allocate_func
+                 U ___gmp_free_func
+0000000000000000 T ___gmp_tmp_reentrant_alloc
+0000000000000044 T ___gmp_tmp_reentrant_free
+0000000000000000 t ltmp0
+0000000000000698 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(init.o):
+                 U ___gmp_allocate_func
+                 U ___gmp_default_fp_limb_precision
+0000000000000000 T ___gmpf_init
+0000000000000000 t ltmp0
+0000000000000570 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(init2.o):
+                 U ___gmp_allocate_func
+0000000000000000 T ___gmpf_init2
+0000000000000000 t ltmp0
+0000000000000608 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(inits.o):
+                 U ___gmpf_init
+0000000000000000 T ___gmpf_inits
+0000000000000000 t ltmp0
+00000000000005c8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(set.o):
+0000000000000000 T ___gmpf_set
+0000000000000000 t ltmp0
+0000000000000798 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(set_ui.o):
+0000000000000000 T ___gmpf_set_ui
+0000000000000000 t ltmp0
+0000000000000510 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(set_si.o):
+0000000000000000 T ___gmpf_set_si
+0000000000000000 t ltmp0
+0000000000000558 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(set_str.o):
+                 U __DefaultRuneLocale
+                 U ___gmp_digit_value_tab
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+0000000000000000 T ___gmpf_set_str
+                 U ___gmpn_bases
+                 U ___gmpn_clz_tab
+                 U ___gmpn_divrem
+                 U ___gmpn_lshift
+                 U ___gmpn_mul
+                 U ___gmpn_mul_1
+                 U ___gmpn_set_str
+                 U ___gmpn_sqr
+                 U ___maskrune
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+                 U _bzero
+                 U _nl_langinfo
+                 U _strlen
+0000000000000000 t ltmp0
+00000000000032e8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(set_d.o):
+                 U ___gmp_extract_double
+                 U ___gmp_invalid_operation
+0000000000000000 T ___gmpf_set_d
+0000000000000000 t ltmp0
+0000000000000840 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(set_z.o):
+0000000000000000 T ___gmpf_set_z
+0000000000000000 t ltmp0
+0000000000000830 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(iset.o):
+                 U ___gmp_allocate_func
+                 U ___gmp_default_fp_limb_precision
+0000000000000000 T ___gmpf_init_set
+0000000000000000 t ltmp0
+0000000000000880 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(iset_ui.o):
+                 U ___gmp_allocate_func
+                 U ___gmp_default_fp_limb_precision
+0000000000000000 T ___gmpf_init_set_ui
+0000000000000000 t ltmp0
+0000000000000620 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(iset_si.o):
+                 U ___gmp_allocate_func
+                 U ___gmp_default_fp_limb_precision
+0000000000000000 T ___gmpf_init_set_si
+0000000000000000 t ltmp0
+0000000000000658 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(iset_str.o):
+                 U ___gmp_allocate_func
+                 U ___gmp_default_fp_limb_precision
+0000000000000000 T ___gmpf_init_set_str
+                 U ___gmpf_set_str
+0000000000000000 t ltmp0
+0000000000000690 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(iset_d.o):
+                 U ___gmp_allocate_func
+                 U ___gmp_default_fp_limb_precision
+0000000000000000 T ___gmpf_init_set_d
+                 U ___gmpf_set_d
+0000000000000000 t ltmp0
+0000000000000618 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(clear.o):
+                 U ___gmp_free_func
+0000000000000000 T ___gmpf_clear
+0000000000000000 t ltmp0
+00000000000004c0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(clears.o):
+                 U ___gmp_free_func
+0000000000000000 T ___gmpf_clears
+0000000000000000 t ltmp0
+00000000000005f0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(get_str.o):
+                 U ___gmp_allocate_func
+                 U ___gmp_reallocate_func
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+0000000000000000 T ___gmpf_get_str
+                 U ___gmpn_bases
+                 U ___gmpn_clz_tab
+                 U ___gmpn_get_str
+                 U ___gmpn_mul
+                 U ___gmpn_mul_1
+                 U ___gmpn_sqr
+                 U ___gmpn_tdiv_qr
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+                 U _bzero
+0000000000000720 t _mpn_pow_1_highpart
+00000000000008e4 s l_.str
+0000000000000923 s l_.str.1
+0000000000000000 t ltmp0
+00000000000008e4 s ltmp1
+00000000000032d8 s ltmp2
+
+../gmp_test_app/ios/libgmp-simulator.a(dump.o):
+                 U ___gmp_free_func
+0000000000000000 T ___gmpf_dump
+                 U ___gmpf_get_str
+                 U _printf
+                 U _strlen
+0000000000000094 s l_.str
+000000000000009f s l_.str.1
+0000000000000000 t ltmp0
+0000000000000094 s ltmp1
+00000000000006d0 s ltmp2
+
+../gmp_test_app/ios/libgmp-simulator.a(size.o):
+0000000000000000 T ___gmpf_size
+0000000000000000 t ltmp0
+00000000000004f0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(eq.o):
+0000000000000000 T ___gmpf_eq
+                 U ___gmpn_clz_tab
+0000000000000000 t ltmp0
+0000000000000cd8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(reldiff.o):
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpf_div
+0000000000000000 T ___gmpf_reldiff
+                 U ___gmpf_set_ui
+                 U ___gmpf_sub
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+00000000000009e8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(sqrt.o):
+                 U ___gmp_sqrt_of_negative
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+0000000000000000 T ___gmpf_sqrt
+                 U ___gmpn_sqrtrem
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+                 U _bzero
+0000000000000000 t ltmp0
+0000000000000da8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(random2.o):
+                 U ___gmp_randinit_mt_noseed
+                 U ___gmp_rands
+                 U ___gmp_rands_initialized
+0000000000000000 T ___gmpf_random2
+                 U ___gmpn_random2
+0000000000000000 t ltmp0
+0000000000000c00 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(inp_str.o):
+                 U __DefaultRuneLocale
+                 U ___gmp_allocate_func
+                 U ___gmp_free_func
+                 U ___gmp_reallocate_func
+0000000000000000 T ___gmpf_inp_str
+                 U ___gmpf_set_str
+                 U ___maskrune
+                 U ___stdinp
+                 U _getc
+                 U _ungetc
+0000000000000000 t ltmp0
+0000000000001058 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(out_str.o):
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpf_get_str
+0000000000000000 T ___gmpf_out_str
+                 U ___gmpn_bases
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+                 U ___stdoutp
+                 U _ferror
+                 U _fprintf
+                 U _fputc
+                 U _fwrite
+                 U _nl_langinfo
+                 U _putc
+                 U _strlen
+0000000000000220 s l_.str
+0000000000000225 s l_.str.1
+0000000000000000 t ltmp0
+0000000000000220 s ltmp1
+00000000000013c8 s ltmp2
+
+../gmp_test_app/ios/libgmp-simulator.a(add.o):
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+0000000000000000 T ___gmpf_add
+                 U ___gmpf_set
+                 U ___gmpf_sub
+                 U ___gmpn_add_n
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+                 U _bzero
+0000000000000000 t ltmp0
+0000000000001f78 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(add_ui.o):
+0000000000000000 T ___gmpf_add_ui
+                 U ___gmpf_set_ui
+                 U ___gmpf_sub_ui
+                 U _bzero
+0000000000000000 t ltmp0
+0000000000001548 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(sub.o):
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpf_add
+                 U ___gmpf_neg
+                 U ___gmpf_set
+0000000000000000 T ___gmpf_sub
+                 U ___gmpn_neg
+                 U ___gmpn_sub
+                 U ___gmpn_sub_1
+                 U ___gmpn_sub_n
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+                 U _memset
+0000000000000b54 t _mpn_sub_nc
+0000000000000000 t ltmp0
+0000000000003150 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(sub_ui.o):
+                 U ___gmpf_set
+                 U ___gmpf_sub
+0000000000000000 T ___gmpf_sub_ui
+0000000000000000 t ltmp0
+0000000000000650 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(ui_sub.o):
+                 U ___gmpf_neg
+                 U ___gmpf_sub
+0000000000000000 T ___gmpf_ui_sub
+0000000000000000 t ltmp0
+0000000000000668 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(mul.o):
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+0000000000000000 T ___gmpf_mul
+                 U ___gmpn_mul
+                 U ___gmpn_sqr
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+00000000000010b8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(mul_ui.o):
+0000000000000000 T ___gmpf_mul_ui
+                 U ___gmpn_mul_1
+0000000000000000 t ltmp0
+0000000000001118 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(div.o):
+                 U ___gmp_divide_by_zero
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+0000000000000000 T ___gmpf_div
+                 U ___gmpn_div_q
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+                 U _bzero
+0000000000000000 t ltmp0
+0000000000001598 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(div_ui.o):
+                 U ___gmp_divide_by_zero
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+0000000000000000 T ___gmpf_div_ui
+                 U ___gmpn_divrem_1
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+                 U _bzero
+0000000000000000 t ltmp0
+0000000000000e50 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(cmp_z.o):
+                 U ___gmpf_cmp
+0000000000000000 T ___gmpf_cmp_z
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+0000000000000738 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(cmp.o):
+0000000000000000 T ___gmpf_cmp
+0000000000000000 t ltmp0
+0000000000000df0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(cmp_d.o):
+                 U ___gmp_extract_double
+                 U ___gmp_invalid_operation
+                 U ___gmpf_cmp
+0000000000000000 T ___gmpf_cmp_d
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+00000000000009c8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(cmp_ui.o):
+0000000000000000 T ___gmpf_cmp_ui
+0000000000000000 t ltmp0
+00000000000007b0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(cmp_si.o):
+0000000000000000 T ___gmpf_cmp_si
+0000000000000000 t ltmp0
+0000000000000898 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(mul_2exp.o):
+0000000000000000 T ___gmpf_mul_2exp
+                 U ___gmpn_lshift
+                 U ___gmpn_rshift
+0000000000000000 t ltmp0
+0000000000000b68 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(div_2exp.o):
+0000000000000000 T ___gmpf_div_2exp
+                 U ___gmpn_lshift
+                 U ___gmpn_rshift
+0000000000000000 t ltmp0
+0000000000000b70 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(abs.o):
+0000000000000000 T ___gmpf_abs
+0000000000000000 t ltmp0
+00000000000007c0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(neg.o):
+0000000000000000 T ___gmpf_neg
+0000000000000000 t ltmp0
+0000000000000800 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(set_q.o):
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+0000000000000000 T ___gmpf_set_q
+                 U ___gmpn_div_q
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+                 U _bzero
+0000000000000000 t ltmp0
+0000000000001060 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(get_d.o):
+0000000000000000 T ___gmpf_get_d
+                 U ___gmpn_get_d
+0000000000000000 t ltmp0
+0000000000000608 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(get_d_2exp.o):
+0000000000000000 T ___gmpf_get_d_2exp
+                 U ___gmpn_clz_tab
+                 U ___gmpn_get_d
+0000000000000000 t ltmp0
+00000000000007f0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(set_dfl_prec.o):
+0000000000000020 D ___gmp_default_fp_limb_precision
+0000000000000000 T ___gmpf_set_default_prec
+0000000000000000 t ltmp0
+0000000000000020 d ltmp1
+00000000000003f8 s ltmp2
+
+../gmp_test_app/ios/libgmp-simulator.a(set_prc.o):
+                 U ___gmp_reallocate_func
+0000000000000000 T ___gmpf_set_prec
+0000000000000000 t ltmp0
+00000000000008d0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(set_prc_raw.o):
+0000000000000000 T ___gmpf_set_prec_raw
+0000000000000000 t ltmp0
+0000000000000510 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(get_dfl_prec.o):
+                 U ___gmp_default_fp_limb_precision
+0000000000000000 T ___gmpf_get_default_prec
+0000000000000000 t ltmp0
+0000000000000300 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(get_prc.o):
+0000000000000000 T ___gmpf_get_prec
+0000000000000000 t ltmp0
+0000000000000500 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(ui_div.o):
+                 U ___gmp_divide_by_zero
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+0000000000000000 T ___gmpf_ui_div
+                 U ___gmpn_tdiv_qr
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+                 U _bzero
+0000000000000000 t ltmp0
+00000000000010d0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(sqrt_ui.o):
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+0000000000000000 T ___gmpf_sqrt_ui
+                 U ___gmpn_sqrtrem
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+                 U _bzero
+0000000000000000 t ltmp0
+0000000000000980 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(ceilfloor.o):
+0000000000000000 T ___gmpf_ceil
+0000000000000008 t ___gmpf_ceil_or_floor
+00000000000001b0 T ___gmpf_floor
+0000000000000000 t ltmp0
+0000000000000e50 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(trunc.o):
+0000000000000000 T ___gmpf_trunc
+0000000000000000 t ltmp0
+0000000000000800 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(pow_ui.o):
+                 U ___gmpf_clear
+                 U ___gmpf_get_prec
+                 U ___gmpf_init2
+                 U ___gmpf_mul
+0000000000000000 T ___gmpf_pow_ui
+                 U ___gmpf_set
+                 U ___gmpf_set_ui
+                 U ___gmpn_clz_tab
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+0000000000000a30 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(urandomb.o):
+0000000000000000 T ___gmpf_urandomb
+                 U ___gmpn_lshift
+0000000000000000 t ltmp0
+0000000000000c70 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(swap.o):
+0000000000000000 T ___gmpf_swap
+0000000000000000 t ltmp0
+00000000000005a8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(fits_sint.o):
+0000000000000000 T ___gmpf_fits_sint_p
+0000000000000000 t ltmp0
+00000000000006b8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(fits_slong.o):
+0000000000000000 T ___gmpf_fits_slong_p
+0000000000000000 t ltmp0
+00000000000006b8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(fits_sshort.o):
+0000000000000000 T ___gmpf_fits_sshort_p
+0000000000000000 t ltmp0
+00000000000006b8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(fits_uint.o):
+0000000000000000 T ___gmpf_fits_uint_p
+0000000000000000 t ltmp0
+0000000000000678 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(fits_ulong.o):
+0000000000000000 T ___gmpf_fits_ulong_p
+0000000000000000 t ltmp0
+0000000000000618 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(fits_ushort.o):
+0000000000000000 T ___gmpf_fits_ushort_p
+0000000000000000 t ltmp0
+0000000000000698 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(get_si.o):
+0000000000000000 T ___gmpf_get_si
+0000000000000000 t ltmp0
+00000000000006f0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(get_ui.o):
+0000000000000000 T ___gmpf_get_ui
+0000000000000000 t ltmp0
+00000000000006b8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(int_p.o):
+0000000000000000 T ___gmpf_integer_p
+0000000000000000 t ltmp0
+0000000000000660 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt1-abs.o):
+0000000000000000 T ___gmpz_abs
+                 U ___gmpz_realloc
+0000000000000000 t ltmp0
+0000000000000818 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt2-add.o):
+                 U ___gmpn_add_n
+                 U ___gmpn_sub_n
+0000000000000000 T ___gmpz_add
+                 U ___gmpz_realloc
+0000000000000000 t ltmp0
+0000000000001518 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt3-add_ui.o):
+0000000000000000 T ___gmpz_add_ui
+                 U ___gmpz_realloc
+0000000000000000 t ltmp0
+00000000000011e8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(aorsmul.o):
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_add_n
+                 U ___gmpn_mul
+                 U ___gmpn_sqr
+                 U ___gmpn_sub_n
+0000000000000000 T ___gmpz_addmul
+0000000000000008 t ___gmpz_aorsmul
+                 U ___gmpz_aorsmul_1
+                 U ___gmpz_realloc
+0000000000000420 T ___gmpz_submul
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+0000000000001f80 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(aorsmul_i.o):
+                 U ___gmpn_addmul_1
+                 U ___gmpn_com
+                 U ___gmpn_mul_1
+                 U ___gmpn_submul_1
+00000000000003fc T ___gmpz_addmul_ui
+0000000000000000 T ___gmpz_aorsmul_1
+                 U ___gmpz_realloc
+0000000000000404 T ___gmpz_submul_ui
+0000000000000000 t ltmp0
+0000000000001ac0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(and.o):
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+0000000000000000 T ___gmpz_and
+                 U ___gmpz_realloc
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+00000000000020c0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(array_init.o):
+                 U ___gmp_allocate_func
+0000000000000000 T ___gmpz_array_init
+0000000000000000 t ltmp0
+00000000000006a0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(bin_ui.o):
+                 U ___gmpn_rshift
+                 U ___gmpz_add
+                 U ___gmpz_add_ui
+                 U ___gmpz_addmul_ui
+0000000000000000 T ___gmpz_bin_ui
+                 U ___gmpz_clear
+                 U ___gmpz_cmp_ui
+                 U ___gmpz_divexact
+                 U ___gmpz_init
+                 U ___gmpz_init_set_ui
+                 U ___gmpz_mul
+                 U ___gmpz_mul_ui
+                 U ___gmpz_oddfac_1
+                 U ___gmpz_realloc
+                 U ___gmpz_set
+                 U ___gmpz_set_ui
+                 U ___gmpz_sub
+                 U ___gmpz_sub_ui
+                 U ___gmpz_tdiv_q_2exp
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+00000000000003ac t _mpz_hmul_nbnpk
+00000000000004f8 t _posmpz_dec_ui
+0000000000000540 t _rek_raising_fac4
+0000000000000000 t ltmp0
+0000000000002028 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(bin_uiui.o):
+                 U ___gmp_binvert_limb_table
+                 U ___gmp_fac2cnt_table
+                 U ___gmp_limbroots_table
+                 U ___gmp_oddfac_table
+                 U ___gmp_primesieve
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_clz_tab
+                 U ___gmpn_com
+                 U ___gmpn_lshift
+                 U ___gmpn_mul_1
+                 U ___gmpn_pi1_bdiv_q_1
+                 U ___gmpn_sbpi1_bdiv_q
+0000000000000000 T ___gmpz_bin_uiui
+                 U ___gmpz_mul
+                 U ___gmpz_prodlimbs
+                 U ___gmpz_realloc
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+000000000000011c t _bc_bin_uiui
+00000000000012d8 s _bin2kk
+0000000000001390 s _bin2kkinv
+0000000000001448 s _fac2bin
+00000000000010d0 s _facinv
+0000000000000a64 t _mpz_bdiv_bin_uiui
+0000000000000570 t _mpz_goetgheluck_bin_uiui
+0000000000000188 t _mpz_smallk_bin_uiui
+00000000000003d0 t _mpz_smallkdc_bin_uiui
+0000000000001004 t _mul1
+0000000000001008 t _mul2
+000000000000101c t _mul3
+0000000000001030 t _mul4
+0000000000001048 t _mul5
+0000000000001064 t _mul6
+0000000000001084 t _mul7
+00000000000010ac t _mul8
+0000000000001460 s _mulfunc
+00000000000012d0 s _tcnttab
+0000000000000000 t ltmp0
+00000000000010d0 s ltmp1
+0000000000001460 s ltmp2
+0000000000004df0 s ltmp3
+
+../gmp_test_app/ios/libgmp-simulator.a(cdiv_q.o):
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpz_add_ui
+0000000000000000 T ___gmpz_cdiv_q
+                 U ___gmpz_tdiv_qr
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+0000000000000950 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(cdiv_q_ui.o):
+                 U ___gmp_divide_by_zero
+                 U ___gmpn_divrem_1
+0000000000000000 T ___gmpz_cdiv_q_ui
+                 U ___gmpz_realloc
+0000000000000000 t ltmp0
+0000000000000890 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(cdiv_qr.o):
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpz_add_ui
+0000000000000000 T ___gmpz_cdiv_qr
+                 U ___gmpz_set
+                 U ___gmpz_sub
+                 U ___gmpz_tdiv_qr
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+00000000000009f8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(cdiv_qr_ui.o):
+                 U ___gmp_divide_by_zero
+                 U ___gmpn_divrem_1
+0000000000000000 T ___gmpz_cdiv_qr_ui
+                 U ___gmpz_realloc
+0000000000000000 t ltmp0
+0000000000000a40 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(cdiv_r.o):
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+0000000000000000 T ___gmpz_cdiv_r
+                 U ___gmpz_set
+                 U ___gmpz_sub
+                 U ___gmpz_tdiv_r
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+0000000000000948 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(cdiv_r_ui.o):
+                 U ___gmp_divide_by_zero
+                 U ___gmpn_mod_1
+0000000000000000 T ___gmpz_cdiv_r_ui
+                 U ___gmpz_realloc
+0000000000000000 t ltmp0
+00000000000007a8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(cdiv_ui.o):
+                 U ___gmp_divide_by_zero
+                 U ___gmpn_mod_1
+0000000000000000 T ___gmpz_cdiv_ui
+0000000000000000 t ltmp0
+00000000000006d8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(cfdiv_q_2exp.o):
+                 U ___gmpn_rshift
+0000000000000000 T ___gmpz_cdiv_q_2exp
+0000000000000008 t ___gmpz_cfdiv_q_2exp
+00000000000001dc T ___gmpz_fdiv_q_2exp
+                 U ___gmpz_realloc
+0000000000000000 t ltmp0
+0000000000001028 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(cfdiv_r_2exp.o):
+                 U ___gmpn_com
+0000000000000000 T ___gmpz_cdiv_r_2exp
+0000000000000008 t ___gmpz_cfdiv_r_2exp
+0000000000000230 T ___gmpz_fdiv_r_2exp
+                 U ___gmpz_realloc
+                 U _memset
+0000000000000000 t ltmp0
+0000000000001170 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt4-clear.o):
+                 U ___gmp_free_func
+0000000000000000 T ___gmpz_clear
+0000000000000000 t ltmp0
+0000000000000460 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt5-clears.o):
+                 U ___gmp_free_func
+0000000000000000 T ___gmpz_clears
+0000000000000000 t ltmp0
+0000000000000578 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(clrbit.o):
+0000000000000000 T ___gmpz_clrbit
+                 U ___gmpz_realloc
+                 U _bzero
+0000000000000000 t ltmp0
+0000000000000b80 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt6-cmp.o):
+0000000000000000 T ___gmpz_cmp
+0000000000000000 t ltmp0
+00000000000007c8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt7-cmp_d.o):
+                 U ___gmp_extract_double
+                 U ___gmp_invalid_operation
+0000000000000000 T ___gmpz_cmp_d
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+0000000000000d60 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt8-cmp_si.o):
+0000000000000000 T ___gmpz_cmp_si
+0000000000000000 t ltmp0
+00000000000006c0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt9-cmp_ui.o):
+0000000000000000 T ___gmpz_cmp_ui
+0000000000000000 t ltmp0
+0000000000000620 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(cmpabs.o):
+0000000000000000 T ___gmpz_cmpabs
+0000000000000000 t ltmp0
+0000000000000790 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(cmpabs_d.o):
+                 U ___gmp_extract_double
+                 U ___gmp_invalid_operation
+0000000000000000 T ___gmpz_cmpabs_d
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+0000000000000c80 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(cmpabs_ui.o):
+0000000000000000 T ___gmpz_cmpabs_ui
+0000000000000000 t ltmp0
+0000000000000638 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(com.o):
+0000000000000000 T ___gmpz_com
+                 U ___gmpz_realloc
+0000000000000000 t ltmp0
+00000000000010c8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(combit.o):
+0000000000000000 T ___gmpz_combit
+                 U ___gmpz_realloc
+                 U _bzero
+0000000000000000 t ltmp0
+0000000000000cc8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(cong.o):
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_add_n
+                 U ___gmpn_clz_tab
+                 U ___gmpn_divisible_p
+                 U ___gmpn_mod_1
+                 U ___gmpn_modexact_1c_odd
+                 U ___gmpn_sub_n
+                 U ___gmpz_cmp
+0000000000000000 T ___gmpz_congruent_p
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+0000000000001ef8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(cong_2exp.o):
+0000000000000000 T ___gmpz_congruent_2exp_p
+0000000000000000 t ltmp0
+0000000000000f28 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(cong_ui.o):
+                 U ___gmpn_clz_tab
+                 U ___gmpn_mod_1
+                 U ___gmpn_modexact_1c_odd
+                 U ___gmpz_cmp_ui
+0000000000000000 T ___gmpz_congruent_ui_p
+0000000000000000 t ltmp0
+0000000000000c20 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(divexact.o):
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_divexact
+0000000000000000 T ___gmpz_divexact
+                 U ___gmpz_realloc
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+0000000000000bf8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(divegcd.o):
+                 U ___gmpn_bdiv_dbm1c
+                 U ___gmpn_clz_tab
+                 U ___gmpn_divexact_1
+                 U ___gmpz_divexact
+0000000000000000 T ___gmpz_divexact_gcd
+                 U ___gmpz_realloc
+                 U ___gmpz_set
+                 U ___gmpz_tdiv_q_2exp
+0000000000000000 t ltmp0
+0000000000001068 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(dive_ui.o):
+                 U ___gmp_divide_by_zero
+                 U ___gmpn_divexact_1
+0000000000000000 T ___gmpz_divexact_ui
+                 U ___gmpz_realloc
+0000000000000000 t ltmp0
+00000000000007a8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(divis.o):
+                 U ___gmpn_divisible_p
+0000000000000000 T ___gmpz_divisible_p
+0000000000000000 t ltmp0
+0000000000000590 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(divis_ui.o):
+                 U ___gmpn_clz_tab
+                 U ___gmpn_mod_1
+                 U ___gmpn_modexact_1c_odd
+0000000000000000 T ___gmpz_divisible_ui_p
+0000000000000000 t ltmp0
+0000000000000878 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(divis_2exp.o):
+0000000000000000 T ___gmpz_divisible_2exp_p
+0000000000000000 t ltmp0
+0000000000000758 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt10-dump.o):
+                 U ___gmp_free_func
+0000000000000000 T ___gmpz_dump
+                 U ___gmpz_get_str
+                 U _puts
+                 U _strlen
+0000000000000000 t ltmp0
+0000000000000578 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(export.o):
+                 U ___gmp_allocate_func
+                 U ___gmpn_clz_tab
+0000000000000000 T ___gmpz_export
+0000000000000000 t ltmp0
+00000000000015f8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(mfac_uiui.o):
+                 U ___gmp_limbroots_table
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_gcd_1
+                 U ___gmpz_2fac_ui
+                 U ___gmpz_clear
+                 U ___gmpz_fac_ui
+                 U ___gmpz_init
+0000000000000000 T ___gmpz_mfac_uiui
+                 U ___gmpz_mul
+                 U ___gmpz_prodlimbs
+                 U ___gmpz_realloc
+                 U ___gmpz_ui_pow_ui
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+0000000000001140 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(2fac_ui.o):
+                 U ___gmp_fac2cnt_table
+                 U ___gmp_odd2fac_table
+0000000000000000 T ___gmpz_2fac_ui
+                 U ___gmpz_mul_2exp
+                 U ___gmpz_oddfac_1
+                 U ___gmpz_prodlimbs
+                 U ___gmpz_realloc
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+0000000000000a58 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(fac_ui.o):
+                 U ___gmp_fac2cnt_table
+0000000000000000 T ___gmpz_fac_ui
+00000000000001f8 s ___gmpz_fac_ui.table
+                 U ___gmpz_mul_2exp
+                 U ___gmpz_oddfac_1
+                 U ___gmpz_prodlimbs
+                 U ___gmpz_realloc
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+00000000000001f8 s ltmp1
+0000000000000c50 s ltmp2
+
+../gmp_test_app/ios/libgmp-simulator.a(oddfac_1.o):
+                 U ___gmp_limbroots_table
+                 U ___gmp_odd2fac_table
+                 U ___gmp_oddfac_table
+                 U ___gmp_primesieve
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_clz_tab
+                 U ___gmpn_mul
+                 U ___gmpn_sqr
+0000000000000000 T ___gmpz_oddfac_1
+                 U ___gmpz_prodlimbs
+                 U ___gmpz_realloc
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+00000000000025c8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(prodlimbs.o):
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_mul
+                 U ___gmpn_mul_1
+0000000000000000 T ___gmpz_prodlimbs
+                 U ___gmpz_realloc
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+0000000000000cb8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(fdiv_q_ui.o):
+                 U ___gmp_divide_by_zero
+                 U ___gmpn_divrem_1
+0000000000000000 T ___gmpz_fdiv_q_ui
+                 U ___gmpz_realloc
+0000000000000000 t ltmp0
+0000000000000890 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(fdiv_qr.o):
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpz_add
+0000000000000000 T ___gmpz_fdiv_qr
+                 U ___gmpz_set
+                 U ___gmpz_sub_ui
+                 U ___gmpz_tdiv_qr
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+00000000000009f8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(fdiv_qr_ui.o):
+                 U ___gmp_divide_by_zero
+                 U ___gmpn_divrem_1
+0000000000000000 T ___gmpz_fdiv_qr_ui
+                 U ___gmpz_realloc
+0000000000000000 t ltmp0
+0000000000000a40 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(fdiv_r.o):
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpz_add
+0000000000000000 T ___gmpz_fdiv_r
+                 U ___gmpz_set
+                 U ___gmpz_tdiv_r
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+0000000000000948 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(fdiv_r_ui.o):
+                 U ___gmp_divide_by_zero
+                 U ___gmpn_mod_1
+0000000000000000 T ___gmpz_fdiv_r_ui
+                 U ___gmpz_realloc
+0000000000000000 t ltmp0
+00000000000007a8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(fdiv_q.o):
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+0000000000000000 T ___gmpz_fdiv_q
+                 U ___gmpz_sub_ui
+                 U ___gmpz_tdiv_qr
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+0000000000000950 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(fdiv_ui.o):
+                 U ___gmp_divide_by_zero
+                 U ___gmpn_mod_1
+0000000000000000 T ___gmpz_fdiv_ui
+0000000000000000 t ltmp0
+00000000000006d0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(fib_ui.o):
+                 U ___gmp_fib_table
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_add_n
+                 U ___gmpn_fib2_ui
+                 U ___gmpn_lshift
+                 U ___gmpn_mul
+                 U ___gmpn_sub_n
+0000000000000000 T ___gmpz_fib_ui
+                 U ___gmpz_realloc
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+0000000000000ce0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(fib2_ui.o):
+                 U ___gmp_fib_table
+                 U ___gmpn_fib2_ui
+0000000000000000 T ___gmpz_fib2_ui
+                 U ___gmpz_realloc
+0000000000000000 t ltmp0
+0000000000000820 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt11-fits_sint.o):
+0000000000000000 T ___gmpz_fits_sint_p
+0000000000000000 t ltmp0
+0000000000000648 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt12-fits_slong.o):
+0000000000000000 T ___gmpz_fits_slong_p
+0000000000000000 t ltmp0
+0000000000000648 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt13-fits_sshort.o):
+0000000000000000 T ___gmpz_fits_sshort_p
+0000000000000000 t ltmp0
+0000000000000630 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt14-fits_uint.o):
+0000000000000000 T ___gmpz_fits_uint_p
+0000000000000000 t ltmp0
+00000000000005d0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt15-fits_ulong.o):
+0000000000000000 T ___gmpz_fits_ulong_p
+0000000000000000 t ltmp0
+0000000000000528 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt16-fits_ushort.o):
+0000000000000000 T ___gmpz_fits_ushort_p
+0000000000000000 t ltmp0
+00000000000005d8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(gcd.o):
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_clz_tab
+                 U ___gmpn_gcd
+                 U ___gmpn_gcd_1
+                 U ___gmpn_lshift
+                 U ___gmpn_rshift
+0000000000000000 T ___gmpz_gcd
+                 U ___gmpz_realloc
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+                 U _bzero
+0000000000000000 t ltmp0
+0000000000001c00 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(gcd_ui.o):
+                 U ___gmpn_gcd_1
+0000000000000000 T ___gmpz_gcd_ui
+                 U ___gmpz_realloc
+0000000000000000 t ltmp0
+0000000000000930 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(gcdext.o):
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_gcdext
+                 U ___gmpz_divexact
+0000000000000000 T ___gmpz_gcdext
+                 U ___gmpz_mul
+                 U ___gmpz_realloc
+                 U ___gmpz_sub
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+0000000000001640 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt17-get_d.o):
+                 U ___gmpn_get_d
+0000000000000000 T ___gmpz_get_d
+0000000000000000 t ltmp0
+0000000000000548 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt18-get_d_2exp.o):
+                 U ___gmpn_clz_tab
+                 U ___gmpn_get_d
+0000000000000000 T ___gmpz_get_d_2exp
+0000000000000000 t ltmp0
+0000000000000838 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt19-get_si.o):
+0000000000000000 T ___gmpz_get_si
+0000000000000000 t ltmp0
+00000000000005f0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt20-get_str.o):
+                 U ___gmp_allocate_func
+                 U ___gmp_reallocate_func
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_bases
+                 U ___gmpn_clz_tab
+                 U ___gmpn_get_str
+0000000000000000 T ___gmpz_get_str
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+000000000000030c s l_.str
+000000000000034b s l_.str.1
+0000000000000000 t ltmp0
+000000000000030c s ltmp1
+0000000000001480 s ltmp2
+
+../gmp_test_app/ios/libgmp-simulator.a(lt21-get_ui.o):
+0000000000000000 T ___gmpz_get_ui
+0000000000000000 t ltmp0
+0000000000000598 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(getlimbn.o):
+0000000000000000 T ___gmpz_getlimbn
+0000000000000000 t ltmp0
+00000000000005b0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(hamdist.o):
+                 U ___gmpn_hamdist
+                 U ___gmpn_popcount
+0000000000000000 T ___gmpz_hamdist
+0000000000000000 t ltmp0
+0000000000000f70 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(import.o):
+0000000000000000 T ___gmpz_import
+                 U ___gmpz_realloc
+0000000000000000 t ltmp0
+00000000000012a0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt22-init.o):
+0000000000000000 T ___gmpz_init
+0000000000000010 s ___gmpz_init.dummy_limb
+0000000000000000 t ltmp0
+0000000000000010 s ltmp1
+0000000000000490 s ltmp2
+
+../gmp_test_app/ios/libgmp-simulator.a(lt23-init2.o):
+                 U ___gmp_allocate_func
+                 U ___gmp_overflow_in_mpz
+0000000000000000 T ___gmpz_init2
+0000000000000000 t ltmp0
+00000000000005f8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt24-inits.o):
+0000000000000000 T ___gmpz_inits
+0000000000000038 s ___gmpz_inits.dummy_limb
+0000000000000000 t ltmp0
+0000000000000038 s ltmp1
+0000000000000588 s ltmp2
+
+../gmp_test_app/ios/libgmp-simulator.a(inp_raw.o):
+0000000000000000 T ___gmpz_inp_raw
+                 U ___gmpz_realloc
+                 U ___stdinp
+                 U _fread
+0000000000000000 t ltmp0
+0000000000000ef8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt25-inp_str.o):
+                 U __DefaultRuneLocale
+                 U ___gmp_allocate_func
+                 U ___gmp_digit_value_tab
+                 U ___gmp_free_func
+                 U ___gmp_reallocate_func
+                 U ___gmpn_bases
+                 U ___gmpn_set_str
+0000000000000000 T ___gmpz_inp_str
+000000000000009c T ___gmpz_inp_str_nowhite
+                 U ___gmpz_realloc
+                 U ___maskrune
+                 U ___stdinp
+                 U _getc
+                 U _ungetc
+0000000000000000 t ltmp0
+00000000000019f8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(invert.o):
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpz_add
+                 U ___gmpz_gcdext
+0000000000000000 T ___gmpz_invert
+                 U ___gmpz_set
+                 U ___gmpz_sub
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+0000000000000a70 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(ior.o):
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+0000000000000000 T ___gmpz_ior
+                 U ___gmpz_realloc
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+0000000000002150 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt26-iset.o):
+                 U ___gmp_allocate_func
+0000000000000000 T ___gmpz_init_set
+0000000000000000 t ltmp0
+00000000000007f8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt27-iset_d.o):
+0000000000000000 T ___gmpz_init_set_d
+0000000000000010 s ___gmpz_init_set_d.dummy_limb
+                 U ___gmpz_set_d
+0000000000000000 t ltmp0
+0000000000000010 s ltmp1
+00000000000004d8 s ltmp2
+
+../gmp_test_app/ios/libgmp-simulator.a(lt28-iset_si.o):
+                 U ___gmp_allocate_func
+0000000000000000 T ___gmpz_init_set_si
+0000000000000000 t ltmp0
+00000000000005b8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt29-iset_str.o):
+0000000000000000 T ___gmpz_init_set_str
+0000000000000010 s ___gmpz_init_set_str.dummy_limb
+                 U ___gmpz_set_str
+0000000000000000 t ltmp0
+0000000000000010 s ltmp1
+00000000000004f8 s ltmp2
+
+../gmp_test_app/ios/libgmp-simulator.a(lt30-iset_ui.o):
+                 U ___gmp_allocate_func
+0000000000000000 T ___gmpz_init_set_ui
+0000000000000000 t ltmp0
+0000000000000570 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(jacobi.o):
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_clz_tab
+                 U ___gmpn_jacobi_base
+                 U ___gmpn_jacobi_n
+                 U ___gmpn_mod_1
+                 U ___gmpn_modexact_1c_odd
+                 U ___gmpn_rshift
+                 U ___gmpn_tdiv_qr
+0000000000000000 T ___gmpz_jacobi
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+0000000000001b18 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(kronsz.o):
+                 U ___gmpn_clz_tab
+                 U ___gmpn_jacobi_base
+                 U ___gmpn_mod_1
+                 U ___gmpn_modexact_1c_odd
+0000000000000000 T ___gmpz_si_kronecker
+0000000000000000 t ltmp0
+0000000000000e30 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(kronuz.o):
+                 U ___gmpn_clz_tab
+                 U ___gmpn_jacobi_base
+                 U ___gmpn_mod_1
+                 U ___gmpn_modexact_1c_odd
+0000000000000000 T ___gmpz_ui_kronecker
+0000000000000000 t ltmp0
+0000000000000d90 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(kronzs.o):
+                 U ___gmpn_clz_tab
+                 U ___gmpn_jacobi_base
+                 U ___gmpn_mod_1
+                 U ___gmpn_modexact_1c_odd
+0000000000000000 T ___gmpz_kronecker_si
+0000000000000000 t ltmp0
+0000000000000bb0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(kronzu.o):
+                 U ___gmpn_clz_tab
+                 U ___gmpn_jacobi_base
+                 U ___gmpn_mod_1
+                 U ___gmpn_modexact_1c_odd
+0000000000000000 T ___gmpz_kronecker_ui
+0000000000000000 t ltmp0
+0000000000000b60 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lcm.o):
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_gcd_1
+                 U ___gmpn_mul_1
+                 U ___gmpz_divexact
+                 U ___gmpz_gcd
+0000000000000000 T ___gmpz_lcm
+                 U ___gmpz_mul
+                 U ___gmpz_realloc
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+0000000000000c60 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lcm_ui.o):
+                 U ___gmpn_gcd_1
+                 U ___gmpn_mul_1
+0000000000000000 T ___gmpz_lcm_ui
+                 U ___gmpz_realloc
+0000000000000000 t ltmp0
+0000000000000810 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(limbs_finish.o):
+0000000000000000 T ___gmpz_limbs_finish
+0000000000000000 t ltmp0
+0000000000000508 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(limbs_modify.o):
+0000000000000000 T ___gmpz_limbs_modify
+                 U ___gmpz_realloc
+0000000000000000 t ltmp0
+0000000000000518 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(limbs_read.o):
+0000000000000000 T ___gmpz_limbs_read
+0000000000000000 t ltmp0
+0000000000000490 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(limbs_write.o):
+0000000000000000 T ___gmpz_limbs_write
+                 U ___gmpz_realloc
+0000000000000000 t ltmp0
+0000000000000518 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lucmod.o):
+                 U ___gmpz_add
+                 U ___gmpz_addmul_ui
+0000000000000000 T ___gmpz_lucas_mod
+                 U ___gmpz_mul
+                 U ___gmpz_mul_si
+                 U ___gmpz_set_si
+                 U ___gmpz_set_ui
+                 U ___gmpz_sizeinbase
+                 U ___gmpz_sub
+                 U ___gmpz_submul_ui
+                 U ___gmpz_swap
+                 U ___gmpz_tdiv_q_2exp
+                 U ___gmpz_tdiv_r
+                 U ___gmpz_tstbit
+0000000000000000 t ltmp0
+0000000000000a68 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lucnum_ui.o):
+                 U ___gmp_fib_table
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_add_n
+                 U ___gmpn_fib2_ui
+                 U ___gmpn_lshift
+                 U ___gmpn_mul
+                 U ___gmpn_sqr
+0000000000000000 T ___gmpz_lucnum_ui
+                 U ___gmpz_realloc
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+0000000000001070 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lucnum2_ui.o):
+                 U ___gmp_fib_table
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_add_n
+                 U ___gmpn_fib2_ui
+                 U ___gmpn_lshift
+                 U ___gmpn_sub_n
+0000000000000000 T ___gmpz_lucnum2_ui
+                 U ___gmpz_realloc
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+0000000000000c48 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(millerrabin.o):
+                 U ___gmp_randclear
+                 U ___gmp_randinit_default
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_scan1
+                 U ___gmpz_add_ui
+                 U ___gmpz_cmp_ui
+0000000000000000 T ___gmpz_millerrabin
+                 U ___gmpz_powm
+                 U ___gmpz_powm_ui
+                 U ___gmpz_set_ui
+                 U ___gmpz_stronglucas
+                 U ___gmpz_sub_ui
+                 U ___gmpz_tdiv_q_2exp
+                 U ___gmpz_urandomm
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000290 t _millerrabin
+0000000000000370 t _mod_eq_m1
+0000000000000000 t ltmp0
+0000000000001418 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(mod.o):
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpz_add
+0000000000000000 T ___gmpz_mod
+                 U ___gmpz_tdiv_r
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+0000000000000aa8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt31-mul.o):
+                 U ___gmp_allocate_func
+                 U ___gmp_free_func
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_mul
+                 U ___gmpn_mul_1
+                 U ___gmpn_sqr
+0000000000000000 T ___gmpz_mul
+                 U ___gmpz_realloc
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+00000000000012b0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt32-mul_2exp.o):
+                 U ___gmpn_lshift
+0000000000000000 T ___gmpz_mul_2exp
+                 U ___gmpz_realloc
+                 U _bzero
+0000000000000000 t ltmp0
+0000000000000a80 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(mul_si.o):
+                 U ___gmpn_mul_1
+0000000000000000 T ___gmpz_mul_si
+                 U ___gmpz_realloc
+0000000000000000 t ltmp0
+00000000000007c8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt33-mul_ui.o):
+                 U ___gmpn_mul_1
+0000000000000000 T ___gmpz_mul_ui
+                 U ___gmpz_realloc
+0000000000000000 t ltmp0
+00000000000007b8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(n_pow_ui.o):
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_clz_tab
+                 U ___gmpn_lshift
+                 U ___gmpn_mul
+                 U ___gmpn_mul_1
+                 U ___gmpn_rshift
+                 U ___gmpn_sqr
+0000000000000000 T ___gmpz_n_pow_ui
+                 U ___gmpz_realloc
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+                 U _bzero
+0000000000000000 t ltmp0
+00000000000020b0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt34-neg.o):
+0000000000000000 T ___gmpz_neg
+                 U ___gmpz_realloc
+0000000000000000 t ltmp0
+0000000000000838 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt35-nextprime.o):
+                 U ___gmp_primesieve
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_clz_tab
+                 U ___gmpz_add_ui
+                 U ___gmpz_cdiv_ui
+                 U ___gmpz_clear
+                 U ___gmpz_cmp_ui
+                 U ___gmpz_init
+                 U ___gmpz_millerrabin
+0000000000000000 T ___gmpz_nextprime
+00000000000004b0 T ___gmpz_prevprime
+                 U ___gmpz_set_ui
+                 U ___gmpz_sqrt
+                 U ___gmpz_sub_ui
+                 U ___gmpz_tdiv_q_ui
+                 U ___gmpz_tdiv_ui
+                 U ___gmpz_ui_pow_ui
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+                 U _bzero
+0000000000000120 t _findnext
+0000000000000090 t _findnext_small
+000000000000055c s _primegap_small
+0000000000000000 t ltmp0
+000000000000055c s ltmp1
+00000000000020c8 s ltmp2
+
+../gmp_test_app/ios/libgmp-simulator.a(out_raw.o):
+                 U ___gmp_allocate_func
+                 U ___gmp_free_func
+                 U ___gmpn_clz_tab
+0000000000000000 T ___gmpz_out_raw
+                 U ___stdoutp
+                 U _fwrite
+0000000000000000 t ltmp0
+0000000000000f80 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt36-out_str.o):
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_bases
+                 U ___gmpn_get_str
+0000000000000000 T ___gmpz_out_str
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+                 U ___stdoutp
+                 U _ferror
+                 U _fputc
+                 U _fwrite
+0000000000000274 s l_.str
+00000000000002b3 s l_.str.1
+0000000000000000 t ltmp0
+0000000000000274 s ltmp1
+0000000000001628 s ltmp2
+
+../gmp_test_app/ios/libgmp-simulator.a(perfpow.o):
+                 U ___gmpn_perfect_power_p
+0000000000000000 T ___gmpz_perfect_power_p
+0000000000000000 t ltmp0
+0000000000000460 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(perfsqr.o):
+                 U ___gmpn_perfect_square_p
+0000000000000000 T ___gmpz_perfect_square_p
+0000000000000000 t ltmp0
+0000000000000588 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(popcount.o):
+                 U ___gmpn_popcount
+0000000000000000 T ___gmpz_popcount
+0000000000000000 t ltmp0
+00000000000005b8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt37-pow_ui.o):
+                 U ___gmpz_mul
+                 U ___gmpz_n_pow_ui
+0000000000000000 T ___gmpz_pow_ui
+                 U ___gmpz_set
+                 U ___gmpz_set_ui
+0000000000000000 t ltmp0
+00000000000005d8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(powm.o):
+                 U ___gmp_divide_by_zero
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_add_n
+                 U ___gmpn_binvert
+                 U ___gmpn_binvert_itch
+                 U ___gmpn_clz_tab
+                 U ___gmpn_mul
+                 U ___gmpn_mullo_n
+                 U ___gmpn_powlo
+                 U ___gmpn_powm
+                 U ___gmpn_rshift
+                 U ___gmpn_sub
+                 U ___gmpn_sub_n
+                 U ___gmpn_tdiv_qr
+                 U ___gmpz_invert
+0000000000000000 T ___gmpz_powm
+                 U ___gmpz_realloc
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+                 U _bzero
+0000000000000000 t ltmp0
+0000000000002f18 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(powm_sec.o):
+                 U ___gmp_divide_by_zero
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_sec_powm
+                 U ___gmpn_sec_powm_itch
+                 U ___gmpn_sub_n
+0000000000000000 T ___gmpz_powm_sec
+                 U ___gmpz_realloc
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+00000000000011f0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(powm_ui.o):
+                 U ___gmp_divide_by_zero
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_clz_tab
+                 U ___gmpn_dcpi1_div_qr
+                 U ___gmpn_div_qr_2n_pi1
+                 U ___gmpn_divrem_1
+                 U ___gmpn_lshift
+                 U ___gmpn_mu_div_qr
+                 U ___gmpn_mu_div_qr_itch
+                 U ___gmpn_mul
+                 U ___gmpn_rshift
+                 U ___gmpn_sbpi1_div_qr
+                 U ___gmpn_sqr
+                 U ___gmpn_sub_n
+                 U ___gmpz_mod
+                 U ___gmpz_powm
+0000000000000000 T ___gmpz_powm_ui
+                 U ___gmpz_realloc
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000900 t _mod
+00000000000007b8 t _reduce
+0000000000000ae8 s lCPI2_0
+0000000000000000 t ltmp0
+0000000000000ae8 s ltmp1
+00000000000039c8 s ltmp2
+
+../gmp_test_app/ios/libgmp-simulator.a(primorial_ui.o):
+                 U ___gmp_limbroots_table
+                 U ___gmp_primesieve
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+0000000000000000 T ___gmpz_primorial_ui
+                 U ___gmpz_prodlimbs
+                 U ___gmpz_realloc
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+0000000000000cf0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(pprime_p.o):
+                 U ___gmp_assert_fail
+                 U ___gmpn_mod_1
+                 U ___gmpn_modexact_1c_odd
+                 U ___gmpn_preinv_mod_1
+                 U ___gmpz_cmp_ui
+                 U ___gmpz_cmpabs_ui
+                 U ___gmpz_millerrabin
+0000000000000000 T ___gmpz_probab_prime_p
+                 U ___gmpz_sizeinbase
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+00000000000004c0 s lCPI0_0
+00000000000004d0 s lCPI0_1
+00000000000004e0 s lCPI0_2
+00000000000004f0 s lCPI0_3
+0000000000000500 s lCPI0_4
+0000000000000510 s lCPI0_5
+0000000000000520 s lCPI0_6
+0000000000000530 s lCPI0_7
+0000000000000540 s l_.str
+000000000000054b s l_.str.1
+0000000000000000 t ltmp0
+00000000000004c0 s ltmp1
+0000000000000540 s ltmp2
+0000000000001468 s ltmp3
+
+../gmp_test_app/ios/libgmp-simulator.a(random.o):
+                 U ___gmp_randinit_mt_noseed
+                 U ___gmp_rands
+                 U ___gmp_rands_initialized
+0000000000000000 T ___gmpz_random
+                 U ___gmpz_urandomb
+0000000000000000 t ltmp0
+0000000000000568 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt38-random2.o):
+                 U ___gmpn_random2
+0000000000000000 T ___gmpz_random2
+                 U ___gmpz_realloc
+0000000000000000 t ltmp0
+0000000000000648 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(realloc.o):
+                 U ___gmp_allocate_func
+                 U ___gmp_overflow_in_mpz
+                 U ___gmp_reallocate_func
+0000000000000000 T ___gmpz_realloc
+0000000000000000 t ltmp0
+0000000000000648 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(realloc2.o):
+                 U ___gmp_allocate_func
+                 U ___gmp_overflow_in_mpz
+                 U ___gmp_reallocate_func
+0000000000000000 T ___gmpz_realloc2
+0000000000000000 t ltmp0
+0000000000000648 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(remove.o):
+                 U ___gmp_divide_by_zero
+                 U ___gmpn_remove
+                 U ___gmpz_clear
+                 U ___gmpz_fdiv_q_2exp
+                 U ___gmpz_init
+                 U ___gmpz_init_set
+                 U ___gmpz_mul
+                 U ___gmpz_realloc
+0000000000000000 T ___gmpz_remove
+                 U ___gmpz_scan1
+                 U ___gmpz_set
+                 U ___gmpz_swap
+                 U ___gmpz_tdiv_qr
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+0000000000000f40 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(roinit_n.o):
+0000000000000000 T ___gmpz_roinit_n
+0000000000000000 t ltmp0
+00000000000005d0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(root.o):
+                 U ___gmp_divide_by_zero
+                 U ___gmp_sqrt_of_negative
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_rootrem
+                 U ___gmpz_realloc
+0000000000000000 T ___gmpz_root
+                 U ___gmpz_set
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+0000000000000c80 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(rootrem.o):
+                 U ___gmp_divide_by_zero
+                 U ___gmp_sqrt_of_negative
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_rootrem
+                 U ___gmpz_realloc
+0000000000000000 T ___gmpz_rootrem
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+0000000000000fc0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(rrandomb.o):
+                 U ___gmpz_realloc
+0000000000000000 T ___gmpz_rrandomb
+                 U _memset
+0000000000000000 t ltmp0
+0000000000000f90 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(scan0.o):
+                 U ___gmpn_clz_tab
+0000000000000000 T ___gmpz_scan0
+0000000000000000 t ltmp0
+0000000000000b98 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(scan1.o):
+                 U ___gmpn_clz_tab
+0000000000000000 T ___gmpz_scan1
+0000000000000000 t ltmp0
+0000000000000ba8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt39-set.o):
+                 U ___gmpz_realloc
+0000000000000000 T ___gmpz_set
+0000000000000000 t ltmp0
+0000000000000840 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt40-set_d.o):
+                 U ___gmp_extract_double
+                 U ___gmp_invalid_operation
+                 U ___gmpz_realloc
+0000000000000000 T ___gmpz_set_d
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+                 U _bzero
+0000000000000000 t ltmp0
+0000000000000a50 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(set_f.o):
+                 U ___gmpz_realloc
+0000000000000000 T ___gmpz_set_f
+                 U _bzero
+0000000000000000 t ltmp0
+0000000000000a88 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt41-set_q.o):
+0000000000000000 T ___gmpz_set_q
+                 U ___gmpz_tdiv_q
+0000000000000000 t ltmp0
+00000000000004c8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt42-set_si.o):
+                 U ___gmpz_realloc
+0000000000000000 T ___gmpz_set_si
+0000000000000000 t ltmp0
+0000000000000610 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt43-set_str.o):
+                 U __DefaultRuneLocale
+                 U ___gmp_digit_value_tab
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_bases
+                 U ___gmpn_set_str
+                 U ___gmpz_realloc
+0000000000000000 T ___gmpz_set_str
+                 U ___maskrune
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+                 U _strlen
+0000000000000000 t ltmp0
+0000000000001630 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt44-set_ui.o):
+                 U ___gmpz_realloc
+0000000000000000 T ___gmpz_set_ui
+0000000000000000 t ltmp0
+00000000000005c0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(setbit.o):
+                 U ___gmpz_realloc
+0000000000000000 T ___gmpz_setbit
+                 U _bzero
+0000000000000000 t ltmp0
+0000000000000aa8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt45-size.o):
+0000000000000000 T ___gmpz_size
+0000000000000000 t ltmp0
+0000000000000488 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(sizeinbase.o):
+                 U ___gmpn_bases
+                 U ___gmpn_clz_tab
+0000000000000000 T ___gmpz_sizeinbase
+0000000000000000 t ltmp0
+0000000000000a68 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt46-sqrt.o):
+                 U ___gmp_sqrt_of_negative
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_sqrtrem
+                 U ___gmpz_realloc
+0000000000000000 T ___gmpz_sqrt
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+0000000000000bf8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(sqrtrem.o):
+                 U ___gmp_sqrt_of_negative
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_sqrtrem
+                 U ___gmpz_realloc
+0000000000000000 T ___gmpz_sqrtrem
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+0000000000000cc8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(stronglucas.o):
+                 U ___gmpn_clz_tab
+                 U ___gmpn_jacobi_base
+                 U ___gmpn_mod_1
+                 U ___gmpn_mod_34lsub1
+                 U ___gmpn_modexact_1c_odd
+                 U ___gmpn_perfect_square_p
+                 U ___gmpn_sqrtrem
+                 U ___gmpn_strongfibo
+                 U ___gmpz_clear
+                 U ___gmpz_init
+                 U ___gmpz_lucas_mod
+                 U ___gmpz_mul
+                 U ___gmpz_roinit_n
+                 U ___gmpz_scan0
+0000000000000000 T ___gmpz_stronglucas
+                 U ___gmpz_submul_ui
+                 U ___gmpz_tdiv_r
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+00000000000003ec t _limb_apprsqrt
+000000000000038c t _mpz_oddjacobi_ui
+0000000000000000 t ltmp0
+0000000000001368 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt47-sub.o):
+                 U ___gmpn_add_n
+                 U ___gmpn_sub_n
+                 U ___gmpz_realloc
+0000000000000000 T ___gmpz_sub
+0000000000000000 t ltmp0
+0000000000001508 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt48-sub_ui.o):
+                 U ___gmpz_realloc
+0000000000000000 T ___gmpz_sub_ui
+0000000000000000 t ltmp0
+00000000000011f0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt49-swap.o):
+0000000000000000 T ___gmpz_swap
+0000000000000000 t ltmp0
+0000000000000560 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(tdiv_ui.o):
+                 U ___gmp_divide_by_zero
+                 U ___gmpn_mod_1
+0000000000000000 T ___gmpz_tdiv_ui
+0000000000000000 t ltmp0
+0000000000000678 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(tdiv_q.o):
+                 U ___gmp_divide_by_zero
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_div_q
+                 U ___gmpz_realloc
+0000000000000000 T ___gmpz_tdiv_q
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+0000000000000ff0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(tdiv_q_2exp.o):
+                 U ___gmpn_rshift
+                 U ___gmpz_realloc
+0000000000000000 T ___gmpz_tdiv_q_2exp
+0000000000000000 t ltmp0
+00000000000009d0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(tdiv_q_ui.o):
+                 U ___gmp_divide_by_zero
+                 U ___gmpn_divrem_1
+                 U ___gmpz_realloc
+0000000000000000 T ___gmpz_tdiv_q_ui
+0000000000000000 t ltmp0
+0000000000000828 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(tdiv_qr.o):
+                 U ___gmp_divide_by_zero
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_tdiv_qr
+                 U ___gmpz_realloc
+0000000000000000 T ___gmpz_tdiv_qr
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+0000000000001388 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(tdiv_qr_ui.o):
+                 U ___gmp_divide_by_zero
+                 U ___gmpn_divrem_1
+                 U ___gmpz_realloc
+0000000000000000 T ___gmpz_tdiv_qr_ui
+0000000000000000 t ltmp0
+0000000000000988 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(tdiv_r.o):
+                 U ___gmp_divide_by_zero
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_tdiv_qr
+                 U ___gmpz_realloc
+0000000000000000 T ___gmpz_tdiv_r
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+00000000000012b0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(tdiv_r_2exp.o):
+                 U ___gmpz_realloc
+0000000000000000 T ___gmpz_tdiv_r_2exp
+0000000000000000 t ltmp0
+0000000000000ba0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(tdiv_r_ui.o):
+                 U ___gmp_divide_by_zero
+                 U ___gmpn_mod_1
+                 U ___gmpz_realloc
+0000000000000000 T ___gmpz_tdiv_r_ui
+0000000000000000 t ltmp0
+00000000000007c8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(tstbit.o):
+0000000000000000 T ___gmpz_tstbit
+0000000000000000 t ltmp0
+0000000000000710 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(ui_pow_ui.o):
+                 U ___gmpz_n_pow_ui
+0000000000000000 T ___gmpz_ui_pow_ui
+0000000000000000 t ltmp0
+0000000000000550 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt50-ui_sub.o):
+                 U ___gmpz_realloc
+0000000000000000 T ___gmpz_ui_sub
+0000000000000000 t ltmp0
+0000000000001240 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt51-urandomb.o):
+                 U ___gmpz_realloc
+0000000000000000 T ___gmpz_urandomb
+0000000000000000 t ltmp0
+0000000000000b28 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(urandomm.o):
+                 U ___gmp_divide_by_zero
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_clz_tab
+                 U ___gmpn_sub_n
+                 U ___gmpz_realloc
+0000000000000000 T ___gmpz_urandomm
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+0000000000001388 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(xor.o):
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpz_realloc
+0000000000000000 T ___gmpz_xor
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+0000000000002088 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt52-abs.o):
+0000000000000000 T ___gmpq_abs
+                 U ___gmpz_realloc
+0000000000000000 t ltmp0
+0000000000000a28 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(aors.o):
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+0000000000000000 T ___gmpq_add
+000000000000000c t ___gmpq_aors
+00000000000002f8 T ___gmpq_sub
+                 U ___gmpz_add
+                 U ___gmpz_divexact_gcd
+                 U ___gmpz_gcd
+                 U ___gmpz_mul
+                 U ___gmpz_set
+                 U ___gmpz_sub
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+0000000000001030 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(canonicalize.o):
+                 U ___gmp_divide_by_zero
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+0000000000000000 T ___gmpq_canonicalize
+                 U ___gmpz_divexact_gcd
+                 U ___gmpz_gcd
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+00000000000008a0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt53-clear.o):
+                 U ___gmp_free_func
+0000000000000000 T ___gmpq_clear
+0000000000000000 t ltmp0
+0000000000000528 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt54-clears.o):
+                 U ___gmp_free_func
+0000000000000000 T ___gmpq_clears
+0000000000000000 t ltmp0
+0000000000000600 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt55-cmp.o):
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_clz_tab
+                 U ___gmpn_mul
+0000000000000000 T ___gmpq_cmp
+0000000000000410 T ___gmpq_cmp_z
+0000000000000428 s ___gmpq_cmp_z.den
+0000000000000420 s ___gmpq_cmp_z.one
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000008 t _mpq_cmp_numden
+0000000000000000 t ltmp0
+0000000000000420 s ltmp1
+0000000000000428 s ltmp2
+0000000000001b98 s ltmp3
+
+../gmp_test_app/ios/libgmp-simulator.a(lt56-cmp_si.o):
+0000000000000000 T ___gmpq_cmp_si
+                 U ___gmpq_cmp_ui
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+0000000000000708 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt57-cmp_ui.o):
+                 U ___gmp_divide_by_zero
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_mul_1
+0000000000000000 T ___gmpq_cmp_ui
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+0000000000000e48 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt58-div.o):
+                 U ___gmp_divide_by_zero
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+0000000000000000 T ___gmpq_div
+                 U ___gmpq_mul
+                 U ___gmpq_set_ui
+                 U ___gmpz_divexact_gcd
+                 U ___gmpz_gcd
+                 U ___gmpz_mul
+                 U ___gmpz_realloc
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+0000000000001060 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt59-get_d.o):
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_div_q
+                 U ___gmpn_get_d
+0000000000000000 T ___gmpq_get_d
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+                 U _bzero
+0000000000000000 t ltmp0
+0000000000000f50 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(get_den.o):
+0000000000000000 T ___gmpq_get_den
+                 U ___gmpz_realloc
+0000000000000000 t ltmp0
+0000000000000848 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(get_num.o):
+0000000000000000 T ___gmpq_get_num
+                 U ___gmpz_realloc
+0000000000000000 t ltmp0
+0000000000000868 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt60-get_str.o):
+                 U ___gmp_allocate_func
+                 U ___gmp_reallocate_func
+                 U ___gmpn_bases
+0000000000000000 T ___gmpq_get_str
+                 U ___gmpz_get_str
+                 U _strlen
+0000000000000000 t ltmp0
+0000000000000b38 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt61-init.o):
+                 U ___gmp_allocate_func
+0000000000000000 T ___gmpq_init
+0000000000000050 s ___gmpq_init.dummy_limb
+0000000000000000 t ltmp0
+0000000000000050 s ltmp1
+0000000000000580 s ltmp2
+
+../gmp_test_app/ios/libgmp-simulator.a(lt62-inits.o):
+                 U ___gmpq_init
+0000000000000000 T ___gmpq_inits
+0000000000000000 t ltmp0
+00000000000005b8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt63-inp_str.o):
+0000000000000000 T ___gmpq_inp_str
+                 U ___gmpz_inp_str
+                 U ___gmpz_inp_str_nowhite
+                 U ___gmpz_realloc
+                 U ___stdinp
+                 U _getc
+                 U _ungetc
+0000000000000000 t ltmp0
+0000000000000c80 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(inv.o):
+                 U ___gmp_divide_by_zero
+0000000000000000 T ___gmpq_inv
+                 U ___gmpz_realloc
+0000000000000000 t ltmp0
+0000000000000b30 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(md_2exp.o):
+                 U ___gmpn_clz_tab
+                 U ___gmpn_rshift
+0000000000000244 T ___gmpq_div_2exp
+0000000000000000 T ___gmpq_mul_2exp
+                 U ___gmpz_mul_2exp
+                 U ___gmpz_realloc
+                 U ___gmpz_set
+0000000000000014 t _mord_2exp
+0000000000000000 t ltmp0
+0000000000001220 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt64-mul.o):
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+0000000000000000 T ___gmpq_mul
+                 U ___gmpz_divexact_gcd
+                 U ___gmpz_gcd
+                 U ___gmpz_mul
+                 U ___gmpz_realloc
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+0000000000000f10 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt65-neg.o):
+0000000000000000 T ___gmpq_neg
+                 U ___gmpz_realloc
+0000000000000000 t ltmp0
+00000000000009f8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt66-out_str.o):
+0000000000000000 T ___gmpq_out_str
+                 U ___gmpz_cmp_ui
+                 U ___gmpz_out_str
+                 U ___stdoutp
+                 U _ferror
+                 U _putc
+0000000000000000 t ltmp0
+0000000000000b30 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt67-set.o):
+0000000000000000 T ___gmpq_set
+                 U ___gmpz_realloc
+0000000000000000 t ltmp0
+0000000000000a28 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(set_den.o):
+0000000000000000 T ___gmpq_set_den
+                 U ___gmpz_realloc
+0000000000000000 t ltmp0
+0000000000000888 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(set_num.o):
+0000000000000000 T ___gmpq_set_num
+                 U ___gmpz_realloc
+0000000000000000 t ltmp0
+0000000000000880 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt68-set_si.o):
+0000000000000000 T ___gmpq_set_si
+                 U ___gmpz_realloc
+0000000000000000 t ltmp0
+00000000000006b0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt69-set_str.o):
+                 U ___gmp_allocate_func
+                 U ___gmp_free_func
+0000000000000000 T ___gmpq_set_str
+                 U ___gmpz_realloc
+                 U ___gmpz_set_str
+                 U _memcpy
+                 U _strchr
+0000000000000000 t ltmp0
+0000000000000948 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt70-set_ui.o):
+0000000000000000 T ___gmpq_set_ui
+                 U ___gmpz_realloc
+0000000000000000 t ltmp0
+0000000000000678 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(equal.o):
+0000000000000000 T ___gmpq_equal
+0000000000000000 t ltmp0
+00000000000007b8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt71-set_z.o):
+0000000000000000 T ___gmpq_set_z
+                 U ___gmpz_realloc
+0000000000000000 t ltmp0
+00000000000008b0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt72-set_d.o):
+                 U ___gmp_extract_double
+                 U ___gmp_invalid_operation
+                 U ___gmpn_clz_tab
+                 U ___gmpn_rshift
+0000000000000000 T ___gmpq_set_d
+                 U ___gmpz_realloc
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+                 U _bzero
+0000000000000000 t ltmp0
+0000000000000f98 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt73-set_f.o):
+                 U ___gmpn_clz_tab
+                 U ___gmpn_rshift
+0000000000000000 T ___gmpq_set_f
+                 U ___gmpz_realloc
+                 U _bzero
+0000000000000000 t ltmp0
+0000000000001148 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt74-swap.o):
+0000000000000000 T ___gmpq_swap
+0000000000000000 t ltmp0
+0000000000000678 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(fib_table.o):
+0000000000000000 S ___gmp_fib_table
+0000000000000000 t ltmp0
+0000000000000000 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(mp_bases.o):
+0000000000000000 S ___gmpn_bases
+0000000000000000 t ltmp0
+0000000000000000 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt75-add.o):
+0000000000000000 T ___gmpn_add
+                 U ___gmpn_add_n
+0000000000000000 t ltmp0
+0000000000000858 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(add_1.o):
+0000000000000000 T ___gmpn_add_1
+0000000000000000 t ltmp0
+0000000000000710 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(add_n.o):
+0000000000000000 T ___gmpn_add_n
+0000000000000000 t ltmp0
+00000000000005c0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt76-sub.o):
+0000000000000000 T ___gmpn_sub
+                 U ___gmpn_sub_n
+0000000000000000 t ltmp0
+0000000000000858 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(sub_1.o):
+0000000000000000 T ___gmpn_sub_1
+0000000000000000 t ltmp0
+0000000000000710 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(sub_n.o):
+0000000000000000 T ___gmpn_sub_n
+0000000000000000 t ltmp0
+00000000000005c0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(cnd_add_n.o):
+0000000000000000 T ___gmpn_cnd_add_n
+0000000000000000 t ltmp0
+0000000000000600 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(cnd_sub_n.o):
+0000000000000000 T ___gmpn_cnd_sub_n
+0000000000000000 t ltmp0
+0000000000000600 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(cnd_swap.o):
+0000000000000000 T ___gmpn_cnd_swap
+0000000000000000 t ltmp0
+00000000000005c0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt77-neg.o):
+                 U ___gmpn_com
+0000000000000000 T ___gmpn_neg
+0000000000000000 t ltmp0
+0000000000000500 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt78-com.o):
+0000000000000000 T ___gmpn_com
+0000000000000000 t ltmp0
+0000000000000448 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(mul_1.o):
+0000000000000000 T ___gmpn_mul_1
+0000000000000000 t ltmp0
+00000000000007e8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(addmul_1.o):
+0000000000000000 T ___gmpn_addmul_1
+0000000000000000 t ltmp0
+0000000000000898 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(submul_1.o):
+0000000000000000 T ___gmpn_submul_1
+0000000000000000 t ltmp0
+0000000000000860 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(add_err1_n.o):
+0000000000000000 T ___gmpn_add_err1_n
+0000000000000000 t ltmp0
+0000000000000788 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(add_err2_n.o):
+0000000000000000 T ___gmpn_add_err2_n
+0000000000000000 t ltmp0
+00000000000008f8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(add_err3_n.o):
+0000000000000000 T ___gmpn_add_err3_n
+0000000000000000 t ltmp0
+0000000000000b68 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(sub_err1_n.o):
+0000000000000000 T ___gmpn_sub_err1_n
+0000000000000000 t ltmp0
+0000000000000798 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(sub_err2_n.o):
+0000000000000000 T ___gmpn_sub_err2_n
+0000000000000000 t ltmp0
+00000000000008c8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(sub_err3_n.o):
+0000000000000000 T ___gmpn_sub_err3_n
+0000000000000000 t ltmp0
+0000000000000b40 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lshift.o):
+0000000000000000 T ___gmpn_lshift
+0000000000000000 t ltmp0
+0000000000000690 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(rshift.o):
+0000000000000000 T ___gmpn_rshift
+0000000000000000 t ltmp0
+0000000000000628 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(dive_1.o):
+                 U ___gmp_binvert_limb_table
+                 U ___gmpn_clz_tab
+0000000000000000 T ___gmpn_divexact_1
+0000000000000000 t ltmp0
+0000000000001070 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(diveby3.o):
+                 U ___gmpn_bdiv_dbm1c
+0000000000000000 T ___gmpn_divexact_by3c
+0000000000000000 t ltmp0
+0000000000000558 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt79-divis.o):
+                 U ___gmp_binvert_limb_table
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_clz_tab
+                 U ___gmpn_dcpi1_bdiv_qr
+0000000000000000 T ___gmpn_divisible_p
+                 U ___gmpn_mod_1
+                 U ___gmpn_modexact_1c_odd
+                 U ___gmpn_mu_bdiv_qr
+                 U ___gmpn_mu_bdiv_qr_itch
+                 U ___gmpn_rshift
+                 U ___gmpn_sbpi1_bdiv_qr
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+0000000000001480 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(divrem.o):
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+0000000000000000 T ___gmpn_divrem
+                 U ___gmpn_divrem_1
+                 U ___gmpn_divrem_2
+                 U ___gmpn_tdiv_qr
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+                 U _bzero
+0000000000000000 t ltmp0
+0000000000001268 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(divrem_1.o):
+                 U ___gmpn_clz_tab
+0000000000000000 T ___gmpn_divrem_1
+0000000000000000 t ltmp0
+0000000000002238 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(divrem_2.o):
+0000000000000000 T ___gmpn_divrem_2
+0000000000000000 t ltmp0
+00000000000021e0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt80-fib2_ui.o):
+                 U ___gmp_fib_table
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_add_n
+0000000000000000 T ___gmpn_fib2_ui
+                 U ___gmpn_lshift
+                 U ___gmpn_sqr
+                 U ___gmpn_sub_n
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+0000000000000b58 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(fib2m.o):
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_add_n
+                 U ___gmpn_clz_tab
+                 U ___gmpn_com
+                 U ___gmpn_fib2_ui
+0000000000000000 T ___gmpn_fib2m
+                 U ___gmpn_lshift
+                 U ___gmpn_sqr
+                 U ___gmpn_sub_n
+                 U ___gmpn_tdiv_qr
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+                 U _bzero
+0000000000000000 t ltmp0
+0000000000001820 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(mod_1.o):
+                 U ___gmpn_clz_tab
+0000000000000000 T ___gmpn_mod_1
+000000000000021c t _mpn_mod_1_norm
+0000000000000000 t ltmp0
+0000000000001c18 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(mod_34lsub1.o):
+0000000000000000 T ___gmpn_mod_34lsub1
+0000000000000000 t ltmp0
+0000000000000a50 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(mode1o.o):
+                 U ___gmp_binvert_limb_table
+0000000000000000 T ___gmpn_modexact_1c_odd
+0000000000000000 t ltmp0
+0000000000000e10 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(pre_divrem_1.o):
+0000000000000000 T ___gmpn_preinv_divrem_1
+0000000000000000 t ltmp0
+0000000000001978 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(pre_mod_1.o):
+0000000000000000 T ___gmpn_preinv_mod_1
+0000000000000000 t ltmp0
+0000000000000950 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt81-dump.o):
+0000000000000000 T ___gmpn_dump
+                 U _printf
+                 U _putchar
+                 U _puts
+00000000000000c0 s l_.str.1
+00000000000000c4 s l_.str.2
+00000000000000ca s l_str
+0000000000000000 t ltmp0
+00000000000000c0 s ltmp1
+0000000000000648 s ltmp2
+
+../gmp_test_app/ios/libgmp-simulator.a(mod_1_1.o):
+                 U ___gmpn_clz_tab
+0000000000000158 T ___gmpn_mod_1_1p
+0000000000000000 T ___gmpn_mod_1_1p_cps
+0000000000000000 t ltmp0
+00000000000019d8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(mod_1_2.o):
+                 U ___gmpn_clz_tab
+00000000000001a0 T ___gmpn_mod_1s_2p
+0000000000000000 T ___gmpn_mod_1s_2p_cps
+0000000000000000 t ltmp0
+00000000000028e0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(mod_1_3.o):
+                 U ___gmpn_clz_tab
+00000000000001f0 T ___gmpn_mod_1s_3p
+0000000000000000 T ___gmpn_mod_1s_3p_cps
+0000000000000000 t ltmp0
+0000000000002ad8 s ltmp1
+0000000000002b18 s ltmp2
+
+../gmp_test_app/ios/libgmp-simulator.a(mod_1_4.o):
+                 U ___gmpn_clz_tab
+0000000000000244 T ___gmpn_mod_1s_4p
+0000000000000000 T ___gmpn_mod_1s_4p_cps
+00000000000006cc s lJTI1_0
+0000000000000000 t ltmp0
+00000000000006cc s ltmp1
+00000000000037e0 s ltmp2
+0000000000003820 s ltmp3
+
+../gmp_test_app/ios/libgmp-simulator.a(lshiftc.o):
+0000000000000000 T ___gmpn_lshiftc
+0000000000000000 t ltmp0
+0000000000000698 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt82-mul.o):
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_add_n
+0000000000000000 T ___gmpn_mul
+                 U ___gmpn_mul_basecase
+                 U ___gmpn_mul_n
+                 U ___gmpn_nussbaumer_mul
+                 U ___gmpn_toom22_mul
+                 U ___gmpn_toom32_mul
+                 U ___gmpn_toom33_mul
+                 U ___gmpn_toom42_mul
+                 U ___gmpn_toom43_mul
+                 U ___gmpn_toom44_mul
+                 U ___gmpn_toom53_mul
+                 U ___gmpn_toom63_mul
+                 U ___gmpn_toom6h_mul
+                 U ___gmpn_toom8h_mul
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+0000000000002878 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(mul_fft.o):
+                 U ___gmp_assert_fail
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_add_n
+0000000000000000 T ___gmpn_fft_best_k
+000000000000007c T ___gmpn_fft_next_size
+                 U ___gmpn_lshift
+                 U ___gmpn_lshiftc
+0000000000000090 T ___gmpn_mul_fft
+                 U ___gmpn_mul_n
+                 U ___gmpn_mulmod_bknp1
+                 U ___gmpn_sqr
+                 U ___gmpn_sqrmod_bknp1
+                 U ___gmpn_sub_n
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+                 U _bzero
+                 U _memcpy
+0000000000001d68 t _mpn_fft_div_2exp_modF
+00000000000010f0 t _mpn_fft_fft
+0000000000001b0c t _mpn_fft_fftinv
+000000000000039c t _mpn_fft_initl
+0000000000000da8 t _mpn_fft_mul_2exp_modF
+0000000000001398 t _mpn_fft_mul_modF_K
+0000000000001e48 s _mpn_fft_table
+000000000000040c t _mpn_mul_fft_decompose
+0000000000000650 t _mpn_mul_fft_internal
+0000000000001dd8 s l_.str
+0000000000001de2 s l_.str.1
+0000000000001e05 s l_.str.2
+0000000000001e11 s l_.str.4
+0000000000001e1b s l_.str.5
+0000000000001e23 s l_.str.6
+0000000000001e37 s l_.str.7
+0000000000000000 t ltmp0
+0000000000001dd8 s ltmp1
+0000000000001e48 s ltmp2
+0000000000008e30 s ltmp3
+
+../gmp_test_app/ios/libgmp-simulator.a(mul_n.o):
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_mul_basecase
+0000000000000000 T ___gmpn_mul_n
+                 U ___gmpn_nussbaumer_mul
+                 U ___gmpn_toom22_mul
+                 U ___gmpn_toom33_mul
+                 U ___gmpn_toom44_mul
+                 U ___gmpn_toom6h_mul
+                 U ___gmpn_toom8h_mul
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+0000000000000be0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(sqr.o):
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_nussbaumer_mul
+0000000000000000 T ___gmpn_sqr
+                 U ___gmpn_sqr_basecase
+                 U ___gmpn_toom2_sqr
+                 U ___gmpn_toom3_sqr
+                 U ___gmpn_toom6_sqr
+                 U ___gmpn_toom8_sqr
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+0000000000000a68 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(mul_basecase.o):
+                 U ___gmpn_addmul_1
+                 U ___gmpn_mul_1
+0000000000000000 T ___gmpn_mul_basecase
+0000000000000000 t ltmp0
+00000000000005e0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(sqr_basecase.o):
+                 U ___gmpn_add_n
+                 U ___gmpn_addmul_1
+                 U ___gmpn_lshift
+                 U ___gmpn_mul_1
+0000000000000000 T ___gmpn_sqr_basecase
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+0000000000000db0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(nussbaumer_mul.o):
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_mulmod_bnm1
+                 U ___gmpn_mulmod_bnm1_next_size
+0000000000000000 T ___gmpn_nussbaumer_mul
+                 U ___gmpn_sqrmod_bnm1
+                 U ___gmpn_sqrmod_bnm1_next_size
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+0000000000000b90 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(mulmid_basecase.o):
+                 U ___gmpn_addmul_1
+                 U ___gmpn_mul_1
+0000000000000000 T ___gmpn_mulmid_basecase
+0000000000000000 t ltmp0
+00000000000007c8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(toom42_mulmid.o):
+                 U ___gmpn_add_1
+                 U ___gmpn_add_err1_n
+                 U ___gmpn_add_err2_n
+                 U ___gmpn_add_n
+                 U ___gmpn_addmul_1
+                 U ___gmpn_mulmid_basecase
+                 U ___gmpn_sub_1
+                 U ___gmpn_sub_err2_n
+                 U ___gmpn_sub_n
+0000000000000000 T ___gmpn_toom42_mulmid
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+00000000000022c0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(mulmid_n.o):
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_mulmid_basecase
+0000000000000000 T ___gmpn_mulmid_n
+                 U ___gmpn_toom42_mulmid
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+00000000000008e8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(mulmid.o):
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_add_n
+0000000000000000 T ___gmpn_mulmid
+                 U ___gmpn_mulmid_basecase
+                 U ___gmpn_toom42_mulmid
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+0000000000001a50 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt83-random.o):
+                 U ___gmp_randinit_mt_noseed
+                 U ___gmp_rands
+                 U ___gmp_rands_initialized
+0000000000000000 T ___gmpn_random
+0000000000000000 t ltmp0
+0000000000000a10 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt84-random2.o):
+                 U ___gmp_randinit_mt_noseed
+                 U ___gmp_rands
+                 U ___gmp_rands_initialized
+0000000000000000 T ___gmpn_random2
+                 U _memset
+0000000000000000 t ltmp0
+0000000000000f80 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(pow_1.o):
+                 U ___gmpn_mul
+                 U ___gmpn_mul_1
+0000000000000000 T ___gmpn_pow_1
+                 U ___gmpn_sqr
+0000000000000000 t ltmp0
+0000000000000f78 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt85-rootrem.o):
+                 U ___gmp_assert_fail
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_clz_tab
+                 U ___gmpn_div_q
+                 U ___gmpn_lshift
+                 U ___gmpn_mul
+                 U ___gmpn_mul_1
+                 U ___gmpn_pow_1
+0000000000000000 T ___gmpn_rootrem
+                 U ___gmpn_rshift
+                 U ___gmpn_sqrtrem
+                 U ___gmpn_sub_n
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+                 U _bzero
+0000000000000e34 s _logbased_root.vexp
+0000000000000d34 s _logbased_root.vlog
+                 U _memset
+0000000000000204 t _mpn_rootrem_internal
+0000000000000d10 s lCPI1_0
+0000000000000d18 s l_.str
+0000000000000d22 s l_.str.1
+0000000000000000 t ltmp0
+0000000000000d10 s ltmp1
+0000000000000d18 s ltmp2
+0000000000000d34 s ltmp3
+0000000000003fc0 s ltmp4
+
+../gmp_test_app/ios/libgmp-simulator.a(lt86-sqrtrem.o):
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_add_n
+                 U ___gmpn_addmul_1
+                 U ___gmpn_clz_tab
+                 U ___gmpn_dcpi1_divappr_q
+                 U ___gmpn_lshift
+                 U ___gmpn_mu_divappr_q
+                 U ___gmpn_mu_divappr_q_itch
+                 U ___gmpn_mul
+                 U ___gmpn_rshift
+                 U ___gmpn_sbpi1_divappr_q
+                 U ___gmpn_sqr
+0000000000000000 T ___gmpn_sqrtrem
+                 U ___gmpn_sub_n
+                 U ___gmpn_submul_1
+                 U ___gmpn_tdiv_qr
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000001024 s _invsqrttab
+                 U _memset
+0000000000000634 t _mpn_dc_sqrt
+0000000000000ad8 t _mpn_dc_sqrtrem
+0000000000000d84 t _mpn_divappr_q
+0000000000000518 t _mpn_sqrtrem1
+00000000000005ac t _mpn_sqrtrem2
+0000000000000000 t ltmp0
+0000000000001024 s ltmp1
+0000000000004ce0 s ltmp2
+
+../gmp_test_app/ios/libgmp-simulator.a(lt87-sizeinbase.o):
+                 U ___gmpn_bases
+                 U ___gmpn_clz_tab
+0000000000000000 T ___gmpn_sizeinbase
+0000000000000000 t ltmp0
+0000000000000a28 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt88-get_str.o):
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_bases
+                 U ___gmpn_clz_tab
+                 U ___gmpn_compute_powtab
+0000000000000000 T ___gmpn_get_str
+                 U ___gmpn_preinv_divrem_1
+                 U ___gmpn_tdiv_qr
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+                 U _bzero
+000000000000025c t _mpn_bc_get_str
+000000000000064c t _mpn_dc_get_str
+0000000000000000 t ltmp0
+0000000000002dc0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt89-set_str.o):
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_add_n
+                 U ___gmpn_bases
+00000000000001e0 T ___gmpn_bc_set_str
+                 U ___gmpn_compute_powtab
+0000000000000488 T ___gmpn_dc_set_str
+                 U ___gmpn_mul
+                 U ___gmpn_mul_1
+0000000000000000 T ___gmpn_set_str
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+                 U _bzero
+0000000000000000 t ltmp0
+00000000000020c8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(compute_powtab.o):
+                 U ___gmpn_bases
+0000000000000000 T ___gmpn_compute_powtab
+                 U ___gmpn_divexact_1
+                 U ___gmpn_mul_1
+                 U ___gmpn_pi1_bdiv_q_1
+                 U ___gmpn_sqr
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000590 s lCPI0_0
+0000000000000000 t ltmp0
+0000000000000590 s ltmp1
+00000000000020c0 s ltmp2
+
+../gmp_test_app/ios/libgmp-simulator.a(lt90-scan0.o):
+                 U ___gmpn_clz_tab
+0000000000000000 T ___gmpn_scan0
+0000000000000000 t ltmp0
+00000000000006e0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt91-scan1.o):
+                 U ___gmpn_clz_tab
+0000000000000000 T ___gmpn_scan1
+0000000000000000 t ltmp0
+00000000000006c8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt92-popcount.o):
+0000000000000000 T ___gmpn_popcount
+0000000000000000 t ltmp0
+0000000000000848 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt93-hamdist.o):
+0000000000000000 T ___gmpn_hamdist
+0000000000000000 t ltmp0
+0000000000000848 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt94-cmp.o):
+0000000000000000 T ___gmpn_cmp
+0000000000000000 t ltmp0
+0000000000000658 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(zero_p.o):
+0000000000000000 T ___gmpn_zero_p
+0000000000000000 t ltmp0
+00000000000004a8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt95-perfsqr.o):
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_mod_34lsub1
+0000000000000000 T ___gmpn_perfect_square_p
+                 U ___gmpn_sqrtrem
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000220 s _sq_res_0x100
+0000000000000000 t ltmp0
+0000000000000220 s ltmp1
+0000000000000cc8 s ltmp2
+
+../gmp_test_app/ios/libgmp-simulator.a(lt96-perfpow.o):
+                 U ___gmp_assert_fail
+                 U ___gmp_binvert_limb_table
+                 U ___gmp_init_primesieve
+                 U ___gmp_nextprime
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_binvert
+                 U ___gmpn_brootinv
+                 U ___gmpn_bsqrtinv
+                 U ___gmpn_clz_tab
+                 U ___gmpn_com
+                 U ___gmpn_gcd_1
+0000000000000000 T ___gmpn_perfect_power_p
+                 U ___gmpn_pow_1
+                 U ___gmpn_powlo
+                 U ___gmpn_remove
+                 U ___gmpn_rshift
+                 U ___gmpn_scan1
+                 U ___gmpn_trialdiv
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+                 U _bzero
+000000000000056c t _is_kth_power
+0000000000000a08 s _logs
+0000000000000a00 s _nrtrial
+0000000000000370 t _perfpow
+0000000000000780 t _pow_equals
+00000000000009f8 s lCPI0_0
+0000000000000a20 s l_.str
+0000000000000a2a s l_.str.1
+0000000000000000 t ltmp0
+00000000000009f8 s ltmp1
+0000000000000a00 s ltmp2
+0000000000000a20 s ltmp3
+0000000000003168 s ltmp4
+
+../gmp_test_app/ios/libgmp-simulator.a(strongfibo.o):
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_add_n
+                 U ___gmpn_fib2m
+                 U ___gmpn_lshift
+                 U ___gmpn_rshift
+                 U ___gmpn_scan0
+                 U ___gmpn_sqr
+0000000000000000 T ___gmpn_strongfibo
+                 U ___gmpn_sub_n
+                 U ___gmpn_tdiv_qr
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+                 U _bzero
+0000000000000000 t ltmp0
+0000000000001a08 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(gcd_11.o):
+                 U ___gmpn_clz_tab
+0000000000000000 T ___gmpn_gcd_11
+0000000000000000 t ltmp0
+00000000000006a8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(gcd_22.o):
+                 U ___gmpn_clz_tab
+                 U ___gmpn_gcd_11
+0000000000000000 T ___gmpn_gcd_22
+0000000000000000 t ltmp0
+00000000000010f0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(gcd_1.o):
+                 U ___gmpn_clz_tab
+0000000000000000 T ___gmpn_gcd_1
+                 U ___gmpn_gcd_11
+                 U ___gmpn_mod_1
+                 U ___gmpn_modexact_1c_odd
+0000000000000000 t ltmp0
+0000000000000de8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt97-gcd.o):
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_clz_tab
+0000000000000000 T ___gmpn_gcd
+                 U ___gmpn_gcd_11
+                 U ___gmpn_gcd_22
+                 U ___gmpn_gcd_subdiv_step
+                 U ___gmpn_hgcd
+                 U ___gmpn_hgcd2
+                 U ___gmpn_hgcd_itch
+                 U ___gmpn_hgcd_matrix_adjust
+                 U ___gmpn_hgcd_matrix_init
+                 U ___gmpn_matrix22_mul1_inverse_vector
+                 U ___gmpn_tdiv_qr
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+00000000000004cc t _gcd_hook
+0000000000000000 t ltmp0
+0000000000001bc0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(gcdext_1.o):
+0000000000000000 T ___gmpn_gcdext_1
+0000000000000000 t ltmp0
+0000000000000640 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt98-gcdext.o):
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_add
+                 U ___gmpn_add_n
+                 U ___gmpn_divexact
+                 U ___gmpn_gcd_subdiv_step
+0000000000000000 T ___gmpn_gcdext
+                 U ___gmpn_gcdext_hook
+                 U ___gmpn_gcdext_lehmer_n
+                 U ___gmpn_hgcd
+                 U ___gmpn_hgcd_itch
+                 U ___gmpn_hgcd_matrix_adjust
+                 U ___gmpn_hgcd_matrix_init
+                 U ___gmpn_mul
+                 U ___gmpn_sub_n
+                 U ___gmpn_tdiv_qr
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+                 U _bzero
+0000000000000000 t ltmp0
+0000000000003ff0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(gcd_subdiv_step.o):
+                 U ___gmpn_add
+                 U ___gmpn_add_n
+0000000000000000 T ___gmpn_gcd_subdiv_step
+0000000000000420 s ___gmpn_gcd_subdiv_step.one
+                 U ___gmpn_sub_n
+                 U ___gmpn_tdiv_qr
+0000000000000000 t ltmp0
+0000000000000420 s ltmp1
+0000000000001948 s ltmp2
+
+../gmp_test_app/ios/libgmp-simulator.a(gcdext_lehmer.o):
+                 U ___gmp_assert_fail
+                 U ___gmpn_add_n
+                 U ___gmpn_addmul_1
+                 U ___gmpn_clz_tab
+                 U ___gmpn_gcd_subdiv_step
+                 U ___gmpn_gcdext_1
+0000000000000000 T ___gmpn_gcdext_hook
+0000000000000318 T ___gmpn_gcdext_lehmer_n
+                 U ___gmpn_hgcd2
+                 U ___gmpn_hgcd_mul_matrix1_vector
+                 U ___gmpn_matrix22_mul1_inverse_vector
+                 U ___gmpn_mul
+                 U ___gmpn_mul_1
+                 U _bzero
+0000000000000834 s l_.str
+0000000000000844 s l_.str.1
+000000000000084e s l_.str.2
+0000000000000000 t ltmp0
+0000000000000834 s ltmp1
+0000000000002fe0 s ltmp2
+
+../gmp_test_app/ios/libgmp-simulator.a(div_q.o):
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_clz_tab
+                 U ___gmpn_dcpi1_div_q
+                 U ___gmpn_dcpi1_divappr_q
+0000000000000000 T ___gmpn_div_q
+                 U ___gmpn_divrem_1
+                 U ___gmpn_divrem_2
+                 U ___gmpn_lshift
+                 U ___gmpn_mu_div_q
+                 U ___gmpn_mu_div_q_itch
+                 U ___gmpn_mu_divappr_q
+                 U ___gmpn_mu_divappr_q_itch
+                 U ___gmpn_mul
+                 U ___gmpn_sbpi1_div_q
+                 U ___gmpn_sbpi1_divappr_q
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+                 U _memset
+00000000000012b8 s lCPI0_0
+0000000000000000 t ltmp0
+00000000000012b8 s ltmp1
+0000000000006068 s ltmp2
+
+../gmp_test_app/ios/libgmp-simulator.a(lt99-tdiv_qr.o):
+                 U ___gmp_assert_fail
+                 U ___gmp_divide_by_zero
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_add_n
+                 U ___gmpn_clz_tab
+                 U ___gmpn_dcpi1_div_qr
+                 U ___gmpn_divrem_1
+                 U ___gmpn_divrem_2
+                 U ___gmpn_lshift
+                 U ___gmpn_mu_div_qr
+                 U ___gmpn_mu_div_qr_itch
+                 U ___gmpn_mul
+                 U ___gmpn_rshift
+                 U ___gmpn_sbpi1_div_qr
+                 U ___gmpn_sub_n
+                 U ___gmpn_submul_1
+0000000000000000 T ___gmpn_tdiv_qr
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000f50 s lCPI0_0
+0000000000000f58 s l_.str
+0000000000000f62 s l_.str.1
+0000000000000f6b s l_.str.2
+0000000000000f7a s l_.str.3
+0000000000000000 t ltmp0
+0000000000000f50 s ltmp1
+0000000000000f58 s ltmp2
+0000000000004ce0 s ltmp3
+
+../gmp_test_app/ios/libgmp-simulator.a(jacbase.o):
+0000000000000000 T ___gmpn_jacobi_base
+0000000000000000 t ltmp0
+0000000000000608 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(jacobi_2.o):
+                 U ___gmpn_clz_tab
+0000000000000000 T ___gmpn_jacobi_2
+                 U ___gmpn_jacobi_base
+0000000000000000 t ltmp0
+00000000000019f0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt100-jacobi.o):
+00000000000003f0 S ___gmp_jacobi_table
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_clz_tab
+                 U ___gmpn_gcd_subdiv_step
+                 U ___gmpn_hgcd2_jacobi
+                 U ___gmpn_hgcd_itch
+                 U ___gmpn_hgcd_jacobi
+                 U ___gmpn_hgcd_matrix_adjust
+                 U ___gmpn_hgcd_matrix_init
+                 U ___gmpn_jacobi_2
+                 U ___gmpn_jacobi_base
+0000000000000000 T ___gmpn_jacobi_n
+                 U ___gmpn_matrix22_mul1_inverse_vector
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+00000000000003a4 t _jacobi_hook
+0000000000000000 t ltmp0
+00000000000003f0 s ltmp1
+0000000000001708 s ltmp2
+
+../gmp_test_app/ios/libgmp-simulator.a(lt101-get_d.o):
+                 U ___gmpn_clz_tab
+0000000000000000 T ___gmpn_get_d
+0000000000000000 t ltmp0
+0000000000000a48 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(matrix22_mul.o):
+                 U ___gmpn_add_n
+000000000000002c T ___gmpn_matrix22_mul
+0000000000000000 T ___gmpn_matrix22_mul_itch
+                 U ___gmpn_mul
+                 U ___gmpn_sub_n
+0000000000000774 t _abs_sub_n
+00000000000007d0 t _add_signed_n
+0000000000000000 t ltmp0
+00000000000022a0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(matrix22_mul1_inverse_vector.o):
+0000000000000000 T ___gmpn_matrix22_mul1_inverse_vector
+                 U ___gmpn_mul_1
+                 U ___gmpn_submul_1
+0000000000000000 t ltmp0
+0000000000000760 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(hgcd_matrix.o):
+                 U ___gmpn_add_n
+                 U ___gmpn_addmul_1
+0000000000000530 T ___gmpn_hgcd_matrix_adjust
+0000000000000000 T ___gmpn_hgcd_matrix_init
+0000000000000448 T ___gmpn_hgcd_matrix_mul
+0000000000000354 T ___gmpn_hgcd_matrix_mul_1
+0000000000000080 T ___gmpn_hgcd_matrix_update_q
+                 U ___gmpn_hgcd_mul_matrix1_vector
+                 U ___gmpn_matrix22_mul
+                 U ___gmpn_mul
+                 U ___gmpn_sub_n
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+                 U _bzero
+0000000000000000 t ltmp0
+00000000000026f8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(hgcd2.o):
+                 U ___gmpn_addmul_1
+                 U ___gmpn_clz_tab
+0000000000000000 T ___gmpn_hgcd2
+0000000000000418 T ___gmpn_hgcd_mul_matrix1_vector
+                 U ___gmpn_mul_1
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000338 t _div2
+0000000000000000 t ltmp0
+0000000000001f30 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(hgcd_step.o):
+                 U ___gmpn_clz_tab
+                 U ___gmpn_gcd_subdiv_step
+                 U ___gmpn_hgcd2
+                 U ___gmpn_hgcd_matrix_mul_1
+                 U ___gmpn_hgcd_matrix_update_q
+0000000000000000 T ___gmpn_hgcd_step
+                 U ___gmpn_matrix22_mul1_inverse_vector
+00000000000001a4 t _hgcd_hook
+0000000000000000 t ltmp0
+0000000000000e88 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(hgcd_reduce.o):
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_add_n
+                 U ___gmpn_hgcd
+                 U ___gmpn_hgcd_appr
+                 U ___gmpn_hgcd_itch
+                 U ___gmpn_hgcd_matrix_adjust
+000000000000005c T ___gmpn_hgcd_reduce
+0000000000000000 T ___gmpn_hgcd_reduce_itch
+                 U ___gmpn_mul
+                 U ___gmpn_mulmod_bnm1
+                 U ___gmpn_mulmod_bnm1_next_size
+                 U ___gmpn_sub_n
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+                 U _bzero
+00000000000001ac t _hgcd_matrix_apply
+000000000000074c t _submul
+0000000000000000 t ltmp0
+0000000000002c20 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(hgcd.o):
+                 U ___gmpn_clz_tab
+0000000000000088 T ___gmpn_hgcd
+0000000000000000 T ___gmpn_hgcd_itch
+                 U ___gmpn_hgcd_matrix_adjust
+                 U ___gmpn_hgcd_matrix_init
+                 U ___gmpn_hgcd_matrix_mul
+                 U ___gmpn_hgcd_reduce
+                 U ___gmpn_hgcd_step
+0000000000000000 t ltmp0
+0000000000000e08 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(hgcd_appr.o):
+                 U ___gmpn_clz_tab
+                 U ___gmpn_hgcd2
+0000000000000088 T ___gmpn_hgcd_appr
+0000000000000000 T ___gmpn_hgcd_appr_itch
+                 U ___gmpn_hgcd_matrix_init
+                 U ___gmpn_hgcd_matrix_mul
+                 U ___gmpn_hgcd_matrix_mul_1
+                 U ___gmpn_hgcd_reduce
+                 U ___gmpn_hgcd_step
+                 U ___gmpn_rshift
+0000000000000000 t ltmp0
+0000000000001368 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(hgcd2_jacobi.o):
+                 U ___gmp_jacobi_table
+                 U ___gmpn_clz_tab
+0000000000000000 T ___gmpn_hgcd2_jacobi
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+000000000000043c t _div2
+0000000000000000 t ltmp0
+00000000000025a8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(hgcd_jacobi.o):
+                 U ___gmp_jacobi_table
+                 U ___gmpn_clz_tab
+                 U ___gmpn_gcd_subdiv_step
+                 U ___gmpn_hgcd2_jacobi
+0000000000000000 T ___gmpn_hgcd_jacobi
+                 U ___gmpn_hgcd_matrix_adjust
+                 U ___gmpn_hgcd_matrix_init
+                 U ___gmpn_hgcd_matrix_mul
+                 U ___gmpn_hgcd_matrix_mul_1
+                 U ___gmpn_hgcd_matrix_update_q
+                 U ___gmpn_matrix22_mul1_inverse_vector
+00000000000003d0 t _hgcd_jacobi_hook
+0000000000000220 t _hgcd_jacobi_step
+0000000000000000 t ltmp0
+00000000000019f0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(mullo_n.o):
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_add_n
+                 U ___gmpn_mul_n
+                 U ___gmpn_mullo_basecase
+0000000000000000 T ___gmpn_mullo_n
+                 U ___gmpn_nussbaumer_mul
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000158 t _mpn_dc_mullo_n
+0000000000000000 t ltmp0
+0000000000001030 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(mullo_basecase.o):
+                 U ___gmpn_addmul_1
+                 U ___gmpn_mul_1
+0000000000000000 T ___gmpn_mullo_basecase
+0000000000000000 t ltmp0
+00000000000006c8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(sqrlo.o):
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_add_n
+                 U ___gmpn_lshift
+                 U ___gmpn_mullo_basecase
+                 U ___gmpn_mullo_n
+                 U ___gmpn_nussbaumer_mul
+                 U ___gmpn_sqr
+0000000000000000 T ___gmpn_sqrlo
+                 U ___gmpn_sqrlo_basecase
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+0000000000000dd8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(sqrlo_basecase.o):
+                 U ___gmpn_add_n
+                 U ___gmpn_addmul_1
+                 U ___gmpn_lshift
+                 U ___gmpn_mul_1
+0000000000000000 T ___gmpn_sqrlo_basecase
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+0000000000000f20 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(toom22_mul.o):
+                 U ___gmpn_add_n
+                 U ___gmpn_mul_basecase
+                 U ___gmpn_sub_n
+0000000000000000 T ___gmpn_toom22_mul
+                 U ___gmpn_toom32_mul
+                 U _bzero
+0000000000000000 t ltmp0
+0000000000001b48 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(toom32_mul.o):
+                 U ___gmpn_add_n
+                 U ___gmpn_addmul_1
+                 U ___gmpn_mul
+                 U ___gmpn_mul_n
+                 U ___gmpn_rshift
+                 U ___gmpn_sub_n
+0000000000000000 T ___gmpn_toom32_mul
+                 U _bzero
+0000000000000000 t ltmp0
+00000000000030e8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(toom42_mul.o):
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_add_n
+                 U ___gmpn_addmul_1
+                 U ___gmpn_lshift
+                 U ___gmpn_mul
+                 U ___gmpn_mul_n
+                 U ___gmpn_sub_n
+0000000000000000 T ___gmpn_toom42_mul
+                 U ___gmpn_toom_eval_dgr3_pm1
+                 U ___gmpn_toom_interpolate_5pts
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+                 U _bzero
+                 U _memcpy
+0000000000000000 t ltmp0
+00000000000022d0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(toom52_mul.o):
+                 U ___gmpn_add_n
+                 U ___gmpn_mul
+                 U ___gmpn_mul_n
+                 U ___gmpn_sub_n
+0000000000000000 T ___gmpn_toom52_mul
+                 U ___gmpn_toom_eval_pm1
+                 U ___gmpn_toom_eval_pm2
+                 U ___gmpn_toom_interpolate_6pts
+                 U _bzero
+0000000000000000 t ltmp0
+0000000000002258 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(toom62_mul.o):
+                 U ___gmpn_add_n
+                 U ___gmpn_addmul_1
+                 U ___gmpn_lshift
+                 U ___gmpn_mul
+                 U ___gmpn_mul_n
+                 U ___gmpn_sub_n
+0000000000000000 T ___gmpn_toom62_mul
+                 U ___gmpn_toom_eval_pm1
+                 U ___gmpn_toom_eval_pm2
+                 U ___gmpn_toom_interpolate_7pts
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+                 U _bzero
+                 U _memcpy
+0000000000000000 t ltmp0
+0000000000002868 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(toom33_mul.o):
+                 U ___gmpn_add_n
+                 U ___gmpn_lshift
+                 U ___gmpn_mul
+                 U ___gmpn_sub_n
+                 U ___gmpn_toom22_mul
+0000000000000000 T ___gmpn_toom33_mul
+                 U ___gmpn_toom_interpolate_5pts
+0000000000000000 t ltmp0
+0000000000001d68 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(toom43_mul.o):
+                 U ___gmpn_add_n
+                 U ___gmpn_lshift
+                 U ___gmpn_mul
+                 U ___gmpn_mul_n
+                 U ___gmpn_sub_n
+0000000000000000 T ___gmpn_toom43_mul
+                 U ___gmpn_toom_eval_dgr3_pm1
+                 U ___gmpn_toom_eval_dgr3_pm2
+                 U ___gmpn_toom_interpolate_6pts
+0000000000000000 t ltmp0
+0000000000001538 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(toom53_mul.o):
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_add_n
+                 U ___gmpn_lshift
+                 U ___gmpn_mul
+                 U ___gmpn_mul_n
+                 U ___gmpn_sub_n
+0000000000000000 T ___gmpn_toom53_mul
+                 U ___gmpn_toom_eval_pm1
+                 U ___gmpn_toom_eval_pm2
+                 U ___gmpn_toom_interpolate_7pts
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+                 U _memcpy
+0000000000000000 t ltmp0
+0000000000001e88 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(toom54_mul.o):
+                 U ___gmpn_mul
+                 U ___gmpn_mul_n
+0000000000000000 T ___gmpn_toom54_mul
+                 U ___gmpn_toom_couple_handling
+                 U ___gmpn_toom_eval_dgr3_pm1
+                 U ___gmpn_toom_eval_dgr3_pm2
+                 U ___gmpn_toom_eval_pm1
+                 U ___gmpn_toom_eval_pm2
+                 U ___gmpn_toom_eval_pm2exp
+                 U ___gmpn_toom_interpolate_8pts
+0000000000000000 t ltmp0
+0000000000000b38 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(toom63_mul.o):
+                 U ___gmpn_add_n
+                 U ___gmpn_lshift
+                 U ___gmpn_mul
+                 U ___gmpn_mul_n
+                 U ___gmpn_sub_n
+0000000000000000 T ___gmpn_toom63_mul
+                 U ___gmpn_toom_couple_handling
+                 U ___gmpn_toom_eval_pm1
+                 U ___gmpn_toom_eval_pm2
+                 U ___gmpn_toom_eval_pm2exp
+                 U ___gmpn_toom_interpolate_8pts
+00000000000006bc t _abs_sub_add_n
+0000000000000000 t ltmp0
+0000000000001a90 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(toom44_mul.o):
+                 U ___gmpn_add_n
+                 U ___gmpn_lshift
+                 U ___gmpn_mul
+                 U ___gmpn_toom22_mul
+                 U ___gmpn_toom33_mul
+0000000000000000 T ___gmpn_toom44_mul
+                 U ___gmpn_toom_eval_dgr3_pm1
+                 U ___gmpn_toom_eval_dgr3_pm2
+                 U ___gmpn_toom_interpolate_7pts
+0000000000000000 t ltmp0
+00000000000010e8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(toom6h_mul.o):
+                 U ___gmpn_mul
+                 U ___gmpn_toom22_mul
+                 U ___gmpn_toom33_mul
+                 U ___gmpn_toom44_mul
+0000000000000000 T ___gmpn_toom6h_mul
+                 U ___gmpn_toom_couple_handling
+                 U ___gmpn_toom_eval_dgr3_pm1
+                 U ___gmpn_toom_eval_pm1
+                 U ___gmpn_toom_eval_pm2
+                 U ___gmpn_toom_eval_pm2exp
+                 U ___gmpn_toom_eval_pm2rexp
+                 U ___gmpn_toom_interpolate_12pts
+0000000000000000 t ltmp0
+0000000000001828 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(toom6_sqr.o):
+                 U ___gmpn_toom2_sqr
+0000000000000000 T ___gmpn_toom6_sqr
+                 U ___gmpn_toom_couple_handling
+                 U ___gmpn_toom_eval_pm1
+                 U ___gmpn_toom_eval_pm2
+                 U ___gmpn_toom_eval_pm2exp
+                 U ___gmpn_toom_eval_pm2rexp
+                 U ___gmpn_toom_interpolate_12pts
+0000000000000000 t ltmp0
+0000000000000960 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(toom8h_mul.o):
+                 U ___gmpn_mul
+                 U ___gmpn_toom22_mul
+                 U ___gmpn_toom33_mul
+                 U ___gmpn_toom44_mul
+                 U ___gmpn_toom6h_mul
+0000000000000000 T ___gmpn_toom8h_mul
+                 U ___gmpn_toom_couple_handling
+                 U ___gmpn_toom_eval_dgr3_pm1
+                 U ___gmpn_toom_eval_pm1
+                 U ___gmpn_toom_eval_pm2
+                 U ___gmpn_toom_eval_pm2exp
+                 U ___gmpn_toom_eval_pm2rexp
+                 U ___gmpn_toom_interpolate_16pts
+0000000000000000 t ltmp0
+0000000000001b60 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(toom8_sqr.o):
+                 U ___gmpn_toom2_sqr
+                 U ___gmpn_toom3_sqr
+                 U ___gmpn_toom6_sqr
+0000000000000000 T ___gmpn_toom8_sqr
+                 U ___gmpn_toom_couple_handling
+                 U ___gmpn_toom_eval_pm1
+                 U ___gmpn_toom_eval_pm2
+                 U ___gmpn_toom_eval_pm2exp
+                 U ___gmpn_toom_eval_pm2rexp
+                 U ___gmpn_toom_interpolate_16pts
+0000000000000000 t ltmp0
+0000000000001038 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(toom_couple_handling.o):
+                 U ___gmpn_add_n
+                 U ___gmpn_rshift
+                 U ___gmpn_sub_n
+0000000000000000 T ___gmpn_toom_couple_handling
+0000000000000000 t ltmp0
+0000000000000b28 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(toom2_sqr.o):
+                 U ___gmpn_add_n
+                 U ___gmpn_sqr_basecase
+                 U ___gmpn_sub_n
+0000000000000000 T ___gmpn_toom2_sqr
+                 U _bzero
+0000000000000000 t ltmp0
+0000000000001170 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(toom3_sqr.o):
+                 U ___gmpn_add_n
+                 U ___gmpn_lshift
+                 U ___gmpn_sqr_basecase
+                 U ___gmpn_sub_n
+                 U ___gmpn_toom2_sqr
+0000000000000000 T ___gmpn_toom3_sqr
+                 U ___gmpn_toom_interpolate_5pts
+0000000000000000 t ltmp0
+0000000000001470 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(toom4_sqr.o):
+                 U ___gmpn_add_n
+                 U ___gmpn_lshift
+                 U ___gmpn_toom2_sqr
+                 U ___gmpn_toom3_sqr
+0000000000000000 T ___gmpn_toom4_sqr
+                 U ___gmpn_toom_eval_dgr3_pm1
+                 U ___gmpn_toom_eval_dgr3_pm2
+                 U ___gmpn_toom_interpolate_7pts
+0000000000000000 t ltmp0
+0000000000000bf8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(toom_eval_dgr3_pm1.o):
+                 U ___gmpn_add_n
+                 U ___gmpn_sub_n
+0000000000000000 T ___gmpn_toom_eval_dgr3_pm1
+0000000000000000 t ltmp0
+0000000000000d00 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(toom_eval_dgr3_pm2.o):
+                 U ___gmpn_add_n
+                 U ___gmpn_lshift
+                 U ___gmpn_sub_n
+0000000000000000 T ___gmpn_toom_eval_dgr3_pm2
+0000000000000000 t ltmp0
+0000000000000e78 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(toom_eval_pm1.o):
+                 U ___gmpn_add_n
+                 U ___gmpn_sub_n
+0000000000000000 T ___gmpn_toom_eval_pm1
+0000000000000000 t ltmp0
+0000000000001168 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(toom_eval_pm2.o):
+                 U ___gmpn_add_n
+                 U ___gmpn_lshift
+                 U ___gmpn_sub_n
+0000000000000000 T ___gmpn_toom_eval_pm2
+0000000000000000 t ltmp0
+0000000000000fd8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(toom_eval_pm2exp.o):
+                 U ___gmpn_add_n
+                 U ___gmpn_lshift
+                 U ___gmpn_sub_n
+0000000000000000 T ___gmpn_toom_eval_pm2exp
+0000000000000000 t ltmp0
+0000000000000ea0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(toom_eval_pm2rexp.o):
+                 U ___gmpn_add_n
+                 U ___gmpn_lshift
+                 U ___gmpn_sub_n
+0000000000000000 T ___gmpn_toom_eval_pm2rexp
+0000000000000000 t ltmp0
+0000000000001280 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(toom_interpolate_5pts.o):
+                 U ___gmpn_add_n
+                 U ___gmpn_bdiv_dbm1c
+                 U ___gmpn_lshift
+                 U ___gmpn_rshift
+                 U ___gmpn_sub_n
+0000000000000000 T ___gmpn_toom_interpolate_5pts
+0000000000000000 t ltmp0
+0000000000000fa8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(toom_interpolate_6pts.o):
+                 U ___gmpn_add_n
+                 U ___gmpn_bdiv_dbm1c
+                 U ___gmpn_lshift
+                 U ___gmpn_rshift
+                 U ___gmpn_sub_n
+0000000000000000 T ___gmpn_toom_interpolate_6pts
+0000000000000000 t ltmp0
+0000000000001298 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(toom_interpolate_7pts.o):
+                 U ___gmpn_add_n
+                 U ___gmpn_addmul_1
+                 U ___gmpn_bdiv_dbm1c
+                 U ___gmpn_divexact_1
+                 U ___gmpn_lshift
+                 U ___gmpn_rshift
+                 U ___gmpn_sub_n
+                 U ___gmpn_submul_1
+0000000000000000 T ___gmpn_toom_interpolate_7pts
+0000000000000000 t ltmp0
+00000000000015d8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(toom_interpolate_8pts.o):
+                 U ___gmpn_add_n
+                 U ___gmpn_bdiv_dbm1c
+                 U ___gmpn_divexact_1
+                 U ___gmpn_lshift
+                 U ___gmpn_rshift
+                 U ___gmpn_sub_n
+0000000000000000 T ___gmpn_toom_interpolate_8pts
+0000000000000000 t ltmp0
+00000000000020a0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(toom_interpolate_12pts.o):
+                 U ___gmpn_add_n
+                 U ___gmpn_addmul_1
+                 U ___gmpn_bdiv_dbm1c
+                 U ___gmpn_divexact_1
+                 U ___gmpn_lshift
+                 U ___gmpn_rshift
+                 U ___gmpn_sub_n
+                 U ___gmpn_submul_1
+0000000000000000 T ___gmpn_toom_interpolate_12pts
+0000000000000000 t ltmp0
+0000000000002fa0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(toom_interpolate_16pts.o):
+                 U ___gmpn_add_n
+                 U ___gmpn_addmul_1
+                 U ___gmpn_divexact_1
+                 U ___gmpn_lshift
+                 U ___gmpn_rshift
+                 U ___gmpn_sub_n
+                 U ___gmpn_submul_1
+0000000000000000 T ___gmpn_toom_interpolate_16pts
+0000000000000000 t ltmp0
+0000000000003ef0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(invertappr.o):
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_add_n
+                 U ___gmpn_divrem_2
+00000000000008c4 T ___gmpn_invertappr
+                 U ___gmpn_mul
+                 U ___gmpn_mul_n
+                 U ___gmpn_mulmod_bnm1
+                 U ___gmpn_mulmod_bnm1_next_size
+0000000000000000 T ___gmpn_ni_invertappr
+                 U ___gmpn_sbpi1_divappr_q
+                 U ___gmpn_sub_n
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+                 U _memset
+0000000000000644 t _mpn_bc_invertappr
+0000000000000000 t ltmp0
+0000000000002f70 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt102-invert.o):
+                 U ___gmpn_add_n
+                 U ___gmpn_divrem_2
+0000000000000000 T ___gmpn_invert
+                 U ___gmpn_mul_n
+                 U ___gmpn_ni_invertappr
+                 U ___gmpn_sbpi1_div_q
+                 U _memset
+0000000000000310 t _mpn_add_nc
+0000000000000000 t ltmp0
+00000000000019b8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(binvert.o):
+                 U ___gmp_binvert_limb_table
+0000000000000040 T ___gmpn_binvert
+0000000000000000 T ___gmpn_binvert_itch
+                 U ___gmpn_com
+                 U ___gmpn_dcpi1_bdiv_q
+                 U ___gmpn_mullo_n
+                 U ___gmpn_mulmod_bnm1
+                 U ___gmpn_mulmod_bnm1_next_size
+                 U ___gmpn_sbpi1_bdiv_q
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+                 U _bzero
+0000000000000000 t ltmp0
+0000000000001020 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(mulmod_bnm1.o):
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_add
+                 U ___gmpn_add_n
+0000000000000000 T ___gmpn_bc_mulmod_bnm1
+                 U ___gmpn_fft_best_k
+                 U ___gmpn_fft_next_size
+                 U ___gmpn_mul
+                 U ___gmpn_mul_fft
+                 U ___gmpn_mul_n
+                 U ___gmpn_mulmod_bknp1
+000000000000006c T ___gmpn_mulmod_bnm1
+0000000000000a44 T ___gmpn_mulmod_bnm1_next_size
+                 U ___gmpn_neg
+                 U ___gmpn_rshift
+                 U ___gmpn_sub
+                 U ___gmpn_sub_n
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000784 t _mpn_bc_mulmod_bnp1
+00000000000009d0 t _mpn_sub_nc
+0000000000000000 t ltmp0
+0000000000003938 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(sqrmod_bnm1.o):
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_add
+                 U ___gmpn_add_n
+                 U ___gmpn_fft_best_k
+                 U ___gmpn_fft_next_size
+                 U ___gmpn_mul_fft
+                 U ___gmpn_rshift
+                 U ___gmpn_sqr
+                 U ___gmpn_sqrmod_bknp1
+0000000000000000 T ___gmpn_sqrmod_bnm1
+00000000000007d4 T ___gmpn_sqrmod_bnm1_next_size
+                 U ___gmpn_sub
+                 U ___gmpn_sub_n
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+                 U _bzero
+000000000000050c t _mpn_bc_sqrmod_bnp1
+0000000000000760 t _mpn_sub_nc
+0000000000000000 t ltmp0
+0000000000002c10 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(mulmod_bknp1.o):
+                 U ___gmpn_add_n
+                 U ___gmpn_bdiv_dbm1c
+                 U ___gmpn_com
+                 U ___gmpn_divexact_1
+                 U ___gmpn_mod_34lsub1
+                 U ___gmpn_mul_n
+0000000000000000 T ___gmpn_mulmod_bknp1
+                 U ___gmpn_sqr
+00000000000009b4 T ___gmpn_sqrmod_bknp1
+                 U ___gmpn_sub_n
+0000000000000708 t __mpn_crt
+000000000000034c t __mpn_modbknp1dbnp1_n
+0000000000000500 t __mpn_modbnp1
+00000000000005e0 t __mpn_modbnp1_kn
+0000000000000ba0 t __mpn_modbnp1_neg_ip
+0000000000000be4 t __mpn_modbnp1_pn_ip
+                 U _bzero
+0000000000000000 t ltmp0
+0000000000003818 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(div_qr_1.o):
+                 U ___gmpn_clz_tab
+0000000000000000 T ___gmpn_div_qr_1
+                 U ___gmpn_div_qr_1n_pi1
+                 U ___gmpn_lshift
+0000000000000000 t ltmp0
+0000000000001aa0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(div_qr_1n_pi1.o):
+0000000000000000 T ___gmpn_div_qr_1n_pi1
+0000000000000000 t ltmp0
+0000000000001de0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(div_qr_2.o):
+                 U ___gmpn_clz_tab
+0000000000000000 T ___gmpn_div_qr_2
+                 U ___gmpn_div_qr_2n_pi1
+                 U ___gmpn_div_qr_2u_pi1
+0000000000000000 t ltmp0
+0000000000002050 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(div_qr_2n_pi1.o):
+0000000000000000 T ___gmpn_div_qr_2n_pi1
+0000000000000000 t ltmp0
+0000000000001198 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(div_qr_2u_pi1.o):
+0000000000000000 T ___gmpn_div_qr_2u_pi1
+0000000000000000 t ltmp0
+0000000000001a40 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(sbpi1_div_q.o):
+                 U ___gmp_assert_fail
+                 U ___gmpn_add_n
+0000000000000000 T ___gmpn_sbpi1_div_q
+                 U ___gmpn_sub_1
+                 U ___gmpn_sub_n
+                 U ___gmpn_submul_1
+0000000000000a00 s l_.str
+0000000000000a0e s l_.str.1
+0000000000000a1a s l_.str.2
+0000000000000000 t ltmp0
+0000000000000a00 s ltmp1
+0000000000003ed8 s ltmp2
+
+../gmp_test_app/ios/libgmp-simulator.a(sbpi1_div_qr.o):
+                 U ___gmpn_add_n
+0000000000000000 T ___gmpn_sbpi1_div_qr
+                 U ___gmpn_sub_n
+                 U ___gmpn_submul_1
+0000000000000000 t ltmp0
+00000000000016f8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(sbpi1_divappr_q.o):
+                 U ___gmp_assert_fail
+                 U ___gmpn_add_n
+0000000000000000 T ___gmpn_sbpi1_divappr_q
+                 U ___gmpn_sub_n
+                 U ___gmpn_submul_1
+000000000000073c s l_.str
+000000000000074e s l_.str.1
+0000000000000000 t ltmp0
+000000000000073c s ltmp1
+00000000000031d8 s ltmp2
+
+../gmp_test_app/ios/libgmp-simulator.a(dcpi1_div_q.o):
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_add_n
+0000000000000000 T ___gmpn_dcpi1_div_q
+                 U ___gmpn_dcpi1_divappr_q
+                 U ___gmpn_mul
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+                 U _memcpy
+0000000000000000 t ltmp0
+00000000000013f0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(dcpi1_div_qr.o):
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_add_n
+0000000000000280 T ___gmpn_dcpi1_div_qr
+0000000000000000 T ___gmpn_dcpi1_div_qr_n
+                 U ___gmpn_divrem_2
+                 U ___gmpn_mul
+                 U ___gmpn_sbpi1_div_qr
+                 U ___gmpn_sub_n
+                 U ___gmpn_submul_1
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+0000000000002a78 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(dcpi1_divappr_q.o):
+                 U ___gmpn_add_n
+                 U ___gmpn_dcpi1_div_qr_n
+0000000000000000 T ___gmpn_dcpi1_divappr_q
+                 U ___gmpn_divrem_2
+                 U ___gmpn_mul
+                 U ___gmpn_sbpi1_div_qr
+                 U ___gmpn_sbpi1_divappr_q
+                 U ___gmpn_sub_n
+                 U ___gmpn_submul_1
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+                 U _memset
+0000000000000674 t _mpn_dcpi1_divappr_q_n
+0000000000000000 t ltmp0
+00000000000029b0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(mu_div_qr.o):
+                 U ___gmp_assert_fail
+                 U ___gmpn_add_n
+                 U ___gmpn_invertappr
+0000000000000000 T ___gmpn_mu_div_qr
+0000000000000964 T ___gmpn_mu_div_qr_itch
+                 U ___gmpn_mul
+                 U ___gmpn_mul_n
+                 U ___gmpn_mulmod_bnm1
+                 U ___gmpn_mulmod_bnm1_next_size
+00000000000004d4 T ___gmpn_preinv_mu_div_qr
+0000000000000a0c T ___gmpn_preinv_mu_div_qr_itch
+                 U ___gmpn_sub_n
+                 U _bzero
+0000000000000244 t _mpn_mu_div_qr2
+0000000000000a50 s l_.str
+0000000000000a5c s l_.str.1
+0000000000000a64 s l_.str.2
+0000000000000000 t ltmp0
+0000000000000a50 s ltmp1
+0000000000003ab8 s ltmp2
+
+../gmp_test_app/ios/libgmp-simulator.a(mu_divappr_q.o):
+                 U ___gmp_assert_fail
+                 U ___gmpn_add_n
+                 U ___gmpn_invertappr
+0000000000000000 T ___gmpn_mu_divappr_q
+0000000000000788 T ___gmpn_mu_divappr_q_itch
+                 U ___gmpn_mul
+                 U ___gmpn_mul_n
+                 U ___gmpn_mulmod_bnm1
+                 U ___gmpn_mulmod_bnm1_next_size
+                 U ___gmpn_sub_n
+                 U _bzero
+                 U _memset
+000000000000083c s l_.str
+000000000000084b s l_.str.1
+0000000000000853 s l_.str.2
+0000000000000000 t ltmp0
+000000000000083c s ltmp1
+0000000000003100 s ltmp2
+
+../gmp_test_app/ios/libgmp-simulator.a(mu_div_q.o):
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_add_n
+0000000000000000 T ___gmpn_mu_div_q
+00000000000004a4 T ___gmpn_mu_div_q_itch
+                 U ___gmpn_mu_divappr_q
+                 U ___gmpn_mu_divappr_q_itch
+                 U ___gmpn_mul
+                 U ___gmpn_sub_n
+                 U _memcpy
+                 U _memset
+0000000000000000 t ltmp0
+0000000000001e78 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(bdiv_q_1.o):
+                 U ___gmp_binvert_limb_table
+0000000000000148 T ___gmpn_bdiv_q_1
+                 U ___gmpn_clz_tab
+0000000000000000 T ___gmpn_pi1_bdiv_q_1
+0000000000000000 t ltmp0
+0000000000001208 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(sbpi1_bdiv_q.o):
+                 U ___gmpn_addmul_1
+0000000000000000 T ___gmpn_sbpi1_bdiv_q
+0000000000000000 t ltmp0
+0000000000000968 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(sbpi1_bdiv_qr.o):
+                 U ___gmpn_addmul_1
+0000000000000000 T ___gmpn_sbpi1_bdiv_qr
+0000000000000000 t ltmp0
+00000000000007c0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(sbpi1_bdiv_r.o):
+                 U ___gmpn_addmul_1
+0000000000000000 T ___gmpn_sbpi1_bdiv_r
+0000000000000000 t ltmp0
+0000000000000760 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(dcpi1_bdiv_q.o):
+                 U ___gmpn_add_n
+                 U ___gmpn_addmul_1
+0000000000000000 T ___gmpn_dcpi1_bdiv_q
+                 U ___gmpn_dcpi1_bdiv_qr_n
+                 U ___gmpn_mul
+                 U ___gmpn_mullo_n
+                 U ___gmpn_sbpi1_bdiv_q
+                 U ___gmpn_sbpi1_bdiv_qr
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000304 t _mpn_dcpi1_bdiv_q_n
+0000000000000000 t ltmp0
+00000000000016b0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(dcpi1_bdiv_qr.o):
+                 U ___gmpn_add_n
+00000000000001e8 T ___gmpn_dcpi1_bdiv_qr
+0000000000000004 T ___gmpn_dcpi1_bdiv_qr_n
+0000000000000000 T ___gmpn_dcpi1_bdiv_qr_n_itch
+                 U ___gmpn_mul
+                 U ___gmpn_sbpi1_bdiv_qr
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+0000000000001d88 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(mu_bdiv_q.o):
+                 U ___gmpn_binvert
+                 U ___gmpn_binvert_itch
+                 U ___gmpn_com
+0000000000000000 T ___gmpn_mu_bdiv_q
+0000000000000610 T ___gmpn_mu_bdiv_q_itch
+                 U ___gmpn_mul
+                 U ___gmpn_mullo_n
+                 U ___gmpn_mulmod_bnm1
+                 U ___gmpn_mulmod_bnm1_next_size
+                 U ___gmpn_sub_n
+0000000000000000 t ltmp0
+0000000000002568 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(mu_bdiv_qr.o):
+                 U ___gmpn_add_n
+                 U ___gmpn_binvert
+                 U ___gmpn_binvert_itch
+                 U ___gmpn_com
+0000000000000000 T ___gmpn_mu_bdiv_qr
+0000000000000758 T ___gmpn_mu_bdiv_qr_itch
+                 U ___gmpn_mul
+                 U ___gmpn_mullo_n
+                 U ___gmpn_mulmod_bnm1
+                 U ___gmpn_mulmod_bnm1_next_size
+                 U ___gmpn_sub_n
+0000000000000000 t ltmp0
+0000000000002710 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(bdiv_q.o):
+                 U ___gmp_binvert_limb_table
+0000000000000000 T ___gmpn_bdiv_q
+00000000000000fc T ___gmpn_bdiv_q_itch
+                 U ___gmpn_dcpi1_bdiv_q
+                 U ___gmpn_mu_bdiv_q
+                 U ___gmpn_mu_bdiv_q_itch
+                 U ___gmpn_sbpi1_bdiv_q
+0000000000000000 t ltmp0
+0000000000000a60 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(bdiv_qr.o):
+                 U ___gmp_binvert_limb_table
+0000000000000000 T ___gmpn_bdiv_qr
+00000000000001c4 T ___gmpn_bdiv_qr_itch
+                 U ___gmpn_dcpi1_bdiv_qr
+                 U ___gmpn_mu_bdiv_qr
+                 U ___gmpn_mu_bdiv_qr_itch
+                 U ___gmpn_sbpi1_bdiv_qr
+0000000000000000 t ltmp0
+0000000000000f08 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(broot.o):
+                 U ___gmp_binvert_limb_table
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+0000000000000388 T ___gmpn_broot
+0000000000000000 T ___gmpn_broot_invm1
+                 U ___gmpn_com
+                 U ___gmpn_mullo_n
+                 U ___gmpn_pi1_bdiv_q_1
+                 U ___gmpn_powlo
+                 U ___gmpn_sqr
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+00000000000019b0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(brootinv.o):
+                 U ___gmp_binvert_limb_table
+0000000000000000 T ___gmpn_brootinv
+                 U ___gmpn_com
+                 U ___gmpn_mul_1
+                 U ___gmpn_mullo_n
+                 U ___gmpn_pi1_bdiv_q_1
+                 U ___gmpn_powlo
+                 U ___gmpn_sqr
+                 U ___gmpn_sub_n
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+0000000000001168 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(bsqrt.o):
+0000000000000000 T ___gmpn_bsqrt
+                 U ___gmpn_bsqrtinv
+                 U ___gmpn_mullo_n
+0000000000000000 t ltmp0
+0000000000000610 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(bsqrtinv.o):
+0000000000000000 T ___gmpn_bsqrtinv
+                 U ___gmpn_mul_1
+                 U ___gmpn_mullo_n
+                 U ___gmpn_rshift
+                 U ___gmpn_sqrlo
+                 U ___gmpn_sub_n
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+0000000000000878 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(lt103-divexact.o):
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_bdiv_q
+                 U ___gmpn_bdiv_q_itch
+                 U ___gmpn_clz_tab
+                 U ___gmpn_com
+0000000000000000 T ___gmpn_divexact
+                 U ___gmpn_divexact_1
+                 U ___gmpn_rshift
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+0000000000000f80 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(bdiv_dbm1c.o):
+0000000000000000 T ___gmpn_bdiv_dbm1c
+0000000000000000 t ltmp0
+00000000000008d8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(redc_1.o):
+                 U ___gmpn_add_n
+                 U ___gmpn_addmul_1
+0000000000000000 T ___gmpn_redc_1
+0000000000000000 t ltmp0
+0000000000000630 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(redc_2.o):
+                 U ___gmpn_add_n
+                 U ___gmpn_addmul_1
+0000000000000000 T ___gmpn_redc_2
+0000000000000000 t ltmp0
+0000000000000b90 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(redc_n.o):
+                 U ___gmp_assert_fail
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_add_n
+                 U ___gmpn_mullo_n
+                 U ___gmpn_mulmod_bnm1
+                 U ___gmpn_mulmod_bnm1_next_size
+0000000000000000 T ___gmpn_redc_n
+                 U ___gmpn_sub_n
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+00000000000001c0 s l_.str
+00000000000001c9 s l_.str.1
+0000000000000000 t ltmp0
+00000000000001c0 s ltmp1
+0000000000000cd8 s ltmp2
+
+../gmp_test_app/ios/libgmp-simulator.a(lt104-powm.o):
+                 U ___gmp_binvert_limb_table
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_binvert
+                 U ___gmpn_clz_tab
+                 U ___gmpn_lshift
+                 U ___gmpn_mod_1
+                 U ___gmpn_mul_basecase
+                 U ___gmpn_mul_n
+0000000000000000 T ___gmpn_powm
+                 U ___gmpn_redc_1
+                 U ___gmpn_redc_n
+                 U ___gmpn_sqr
+                 U ___gmpn_sqr_basecase
+                 U ___gmpn_sub_n
+                 U ___gmpn_tdiv_qr
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+                 U _bzero
+0000000000000ef4 t _mpn_2powm
+0000000000001674 t _redcify
+00000000000017a0 s _win_size.x
+0000000000000000 t ltmp0
+00000000000017a0 s ltmp1
+0000000000006cc0 s ltmp2
+
+../gmp_test_app/ios/libgmp-simulator.a(powlo.o):
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_clz_tab
+                 U ___gmpn_mullo_n
+0000000000000000 T ___gmpn_powlo
+                 U ___gmpn_sqrlo
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000518 s _win_size.x
+0000000000000000 t ltmp0
+0000000000000518 s ltmp1
+00000000000020b8 s ltmp2
+
+../gmp_test_app/ios/libgmp-simulator.a(sec_powm.o):
+                 U ___gmp_assert_fail
+                 U ___gmpn_cnd_sub_n
+                 U ___gmpn_mul_basecase
+                 U ___gmpn_redc_1
+                 U ___gmpn_sec_div_r
+0000000000000000 T ___gmpn_sec_powm
+0000000000000570 T ___gmpn_sec_powm_itch
+                 U ___gmpn_sec_tabselect
+                 U ___gmpn_sqr_basecase
+                 U ___gmpn_sub_n
+                 U _bzero
+00000000000004b0 t _redcify
+00000000000005d8 s _win_size.x
+00000000000005b4 s l_.str
+00000000000005bf s l_.str.1
+0000000000000000 t ltmp0
+00000000000005b4 s ltmp1
+00000000000005d8 s ltmp2
+0000000000001f40 s ltmp3
+
+../gmp_test_app/ios/libgmp-simulator.a(sec_mul.o):
+                 U ___gmpn_mul_basecase
+0000000000000000 T ___gmpn_sec_mul
+0000000000000004 T ___gmpn_sec_mul_itch
+0000000000000000 t ltmp0
+0000000000000500 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(sec_sqr.o):
+                 U ___gmpn_mul_basecase
+0000000000000000 T ___gmpn_sec_sqr
+000000000000000c T ___gmpn_sec_sqr_itch
+0000000000000000 t ltmp0
+0000000000000518 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(sec_div_qr.o):
+                 U ___gmpn_clz_tab
+                 U ___gmpn_lshift
+                 U ___gmpn_rshift
+000000000000000c T ___gmpn_sec_div_qr
+0000000000000000 T ___gmpn_sec_div_qr_itch
+                 U ___gmpn_sec_pi1_div_qr
+0000000000000000 t ltmp0
+0000000000001248 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(sec_div_r.o):
+                 U ___gmpn_clz_tab
+                 U ___gmpn_lshift
+                 U ___gmpn_rshift
+000000000000000c T ___gmpn_sec_div_r
+0000000000000000 T ___gmpn_sec_div_r_itch
+                 U ___gmpn_sec_pi1_div_r
+0000000000000000 t ltmp0
+00000000000010c0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(sec_pi1_div_qr.o):
+                 U ___gmpn_add_n
+                 U ___gmpn_cnd_add_n
+                 U ___gmpn_cnd_sub_n
+                 U ___gmpn_lshift
+0000000000000000 T ___gmpn_sec_pi1_div_qr
+                 U ___gmpn_sub_n
+                 U ___gmpn_submul_1
+0000000000000000 t ltmp0
+0000000000000fa0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(sec_pi1_div_r.o):
+                 U ___gmpn_cnd_add_n
+                 U ___gmpn_cnd_sub_n
+                 U ___gmpn_lshift
+0000000000000000 T ___gmpn_sec_pi1_div_r
+                 U ___gmpn_sub_n
+                 U ___gmpn_submul_1
+0000000000000000 t ltmp0
+0000000000000e60 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(sec_add_1.o):
+                 U ___gmpn_add_n
+0000000000000004 T ___gmpn_sec_add_1
+0000000000000000 T ___gmpn_sec_add_1_itch
+                 U _bzero
+0000000000000000 t ltmp0
+00000000000006a8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(sec_sub_1.o):
+0000000000000004 T ___gmpn_sec_sub_1
+0000000000000000 T ___gmpn_sec_sub_1_itch
+                 U ___gmpn_sub_n
+                 U _bzero
+0000000000000000 t ltmp0
+00000000000006a8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(sec_invert.o):
+                 U ___gmpn_cnd_add_n
+                 U ___gmpn_cnd_sub_n
+                 U ___gmpn_cnd_swap
+                 U ___gmpn_copyi
+                 U ___gmpn_lshift
+                 U ___gmpn_rshift
+                 U ___gmpn_sec_add_1
+0000000000000008 T ___gmpn_sec_invert
+0000000000000000 T ___gmpn_sec_invert_itch
+                 U ___gmpn_zero
+0000000000000000 t ltmp0
+0000000000000c48 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(trialdiv.o):
+                 U ___gmpn_mod_1s_4p
+0000000000000000 T ___gmpn_trialdiv
+0000000000000108 s _gmp_primes_dtab
+0000000000003fb8 s _gmp_primes_ptab
+0000000000000000 t ltmp0
+0000000000000108 s ltmp1
+0000000000008240 s ltmp2
+
+../gmp_test_app/ios/libgmp-simulator.a(lt105-remove.o):
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_bdiv_qr
+                 U ___gmpn_bdiv_qr_itch
+                 U ___gmpn_com
+0000000000000000 T ___gmpn_remove
+                 U ___gmpn_sqr
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000490 t _mpn_bdiv_qr_wrap
+0000000000000000 t ltmp0
+00000000000022b0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(and_n.o):
+0000000000000000 T ___gmpn_and_n
+0000000000000000 t ltmp0
+0000000000000598 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(andn_n.o):
+0000000000000000 T ___gmpn_andn_n
+0000000000000000 t ltmp0
+0000000000000598 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(nand_n.o):
+0000000000000000 T ___gmpn_nand_n
+0000000000000000 t ltmp0
+00000000000005a0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(ior_n.o):
+0000000000000000 T ___gmpn_ior_n
+0000000000000000 t ltmp0
+0000000000000598 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(iorn_n.o):
+0000000000000000 T ___gmpn_iorn_n
+0000000000000000 t ltmp0
+0000000000000598 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(nior_n.o):
+0000000000000000 T ___gmpn_nior_n
+0000000000000000 t ltmp0
+00000000000005a0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(xor_n.o):
+0000000000000000 T ___gmpn_xor_n
+0000000000000000 t ltmp0
+0000000000000598 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(xnor_n.o):
+0000000000000000 T ___gmpn_xnor_n
+0000000000000000 t ltmp0
+0000000000000598 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(copyi.o):
+0000000000000000 T ___gmpn_copyi
+0000000000000000 t ltmp0
+0000000000000488 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(copyd.o):
+0000000000000000 T ___gmpn_copyd
+0000000000000000 t ltmp0
+0000000000000450 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(zero.o):
+0000000000000000 T ___gmpn_zero
+                 U _bzero
+0000000000000000 t ltmp0
+0000000000000450 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(sec_tabselect.o):
+0000000000000000 T ___gmpn_sec_tabselect
+0000000000000000 t ltmp0
+00000000000005b0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(comb_tables.o):
+00000000000002a8 S ___gmp_fac2cnt_table
+00000000000002d0 S ___gmp_limbroots_table
+0000000000000220 S ___gmp_odd2fac_table
+0000000000000000 S ___gmp_oddfac_table
+0000000000000000 t ltmp0
+0000000000000000 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(add_n_sub_n.o):
+                 U ___gmpn_add_n
+0000000000000000 T ___gmpn_add_n_sub_n
+                 U ___gmpn_sub_n
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+0000000000001868 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(asprintf.o):
+0000000000000000 T ___gmp_asprintf
+                 U ___gmp_vasprintf
+0000000000000000 t ltmp0
+00000000000004b0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(asprntffuns.o):
+0000000000000114 T ___gmp_asprintf_final
+0000000000000000 T ___gmp_asprintf_memory
+0000000000000088 T ___gmp_asprintf_reps
+                 U ___gmp_reallocate_func
+                 U _memcpy
+                 U _memset
+0000000000000000 t ltmp0
+0000000000000af0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(doprnt.o):
+                 U ___gmp_allocate_func
+                 U ___gmp_assert_fail
+0000000000000000 T ___gmp_doprnt
+                 U ___gmp_doprnt_integer
+                 U ___gmp_doprnt_mpf2
+                 U ___gmp_free_func
+                 U ___gmpf_set_si
+                 U ___gmpq_get_str
+                 U ___gmpq_set_si
+                 U ___gmpz_get_str
+                 U ___gmpz_set_si
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+                 U _bzero
+                 U _memcpy
+                 U _nl_langinfo
+                 U _strchr
+                 U _strlen
+0000000000000828 s lCPI0_0
+0000000000000830 s lCPI0_1
+0000000000000840 s lJTI0_0
+00000000000008f6 s lJTI0_1
+0000000000000902 s lJTI0_2
+000000000000090c s l_.str
+0000000000000915 s l_.str.1
+000000000000091c s l_.str.2
+0000000000000923 s l_.str.3
+000000000000092c s l_.str.4
+0000000000000944 s l_.str.5
+0000000000000000 t ltmp0
+0000000000000828 s ltmp1
+0000000000000830 s ltmp2
+0000000000000840 s ltmp3
+000000000000090c s ltmp4
+0000000000002b58 s ltmp5
+
+../gmp_test_app/ios/libgmp-simulator.a(doprntf.o):
+                 U __DefaultRuneLocale
+0000000000000000 T ___gmp_doprnt_mpf2
+                 U ___gmp_free_func
+                 U ___gmpf_get_str
+                 U ___gmpn_bases
+                 U ___maskrune
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+                 U _snprintf
+                 U _strlen
+000000000000074c s l_.str
+0000000000000771 s l_.str.1
+0000000000000796 s l_.str.2
+0000000000000799 s l_.str.3
+000000000000079c s l_.str.4
+0000000000000000 t ltmp0
+000000000000074c s ltmp1
+0000000000002ae0 s ltmp2
+
+../gmp_test_app/ios/libgmp-simulator.a(doprnti.o):
+0000000000000000 T ___gmp_doprnt_integer
+                 U _strchr
+                 U _strlen
+0000000000000310 s l_.str
+0000000000000313 s l_.str.1
+0000000000000316 s l_.str.2
+0000000000000000 t ltmp0
+0000000000000310 s ltmp1
+00000000000013c8 s ltmp2
+
+../gmp_test_app/ios/libgmp-simulator.a(fprintf.o):
+                 U ___gmp_doprnt
+0000000000000000 T ___gmp_fprintf
+                 U ___gmp_fprintf_funs
+0000000000000000 t ltmp0
+0000000000000980 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(obprintf.o):
+0000000000000000 t ltmp0
+
+../gmp_test_app/ios/libgmp-simulator.a(obvprintf.o):
+0000000000000000 t ltmp0
+
+../gmp_test_app/ios/libgmp-simulator.a(obprntffuns.o):
+0000000000000000 t ltmp0
+
+../gmp_test_app/ios/libgmp-simulator.a(printf.o):
+                 U ___gmp_doprnt
+                 U ___gmp_fprintf_funs
+0000000000000000 T ___gmp_printf
+                 U ___stdoutp
+0000000000000000 t ltmp0
+00000000000004a8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(printffuns.o):
+00000000000000e0 S ___gmp_fprintf_funs
+                 U ___memset_chk
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+                 U _fwrite
+0000000000000000 t _gmp_fprintf_memory
+0000000000000020 t _gmp_fprintf_reps
+                 U _vfprintf
+0000000000000000 t ltmp0
+00000000000000e0 s ltmp1
+0000000000000f00 s ltmp2
+
+../gmp_test_app/ios/libgmp-simulator.a(snprintf.o):
+                 U ___gmp_doprnt
+0000000000000000 T ___gmp_snprintf
+                 U ___gmp_snprintf_funs
+0000000000000000 t ltmp0
+0000000000000630 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(snprntffuns.o):
+                 U ___gmp_allocate_func
+                 U ___gmp_free_func
+00000000000001e8 S ___gmp_snprintf_funs
+00000000000001d0 t _gmp_snprintf_final
+0000000000000000 t _gmp_snprintf_format
+000000000000010c t _gmp_snprintf_memory
+000000000000016c t _gmp_snprintf_reps
+                 U _memcpy
+                 U _memset
+                 U _vsnprintf
+0000000000000000 t ltmp0
+00000000000001e8 s ltmp1
+0000000000000fc8 s ltmp2
+
+../gmp_test_app/ios/libgmp-simulator.a(sprintf.o):
+                 U ___gmp_doprnt
+0000000000000000 T ___gmp_sprintf
+                 U ___gmp_sprintf_funs
+0000000000000000 t ltmp0
+00000000000004b0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(sprintffuns.o):
+00000000000000b8 S ___gmp_sprintf_funs
+00000000000000a4 t _gmp_sprintf_final
+0000000000000000 t _gmp_sprintf_format
+0000000000000038 t _gmp_sprintf_memory
+000000000000006c t _gmp_sprintf_reps
+                 U _memcpy
+                 U _memset
+                 U _strlen
+                 U _vsprintf
+0000000000000000 t ltmp0
+00000000000000b8 s ltmp1
+0000000000000ca8 s ltmp2
+
+../gmp_test_app/ios/libgmp-simulator.a(vasprintf.o):
+                 U ___gmp_allocate_func
+                 U ___gmp_asprintf_final
+0000000000000150 S ___gmp_asprintf_funs
+                 U ___gmp_asprintf_memory
+                 U ___gmp_asprintf_reps
+                 U ___gmp_doprnt
+                 U ___gmp_reallocate_func
+00000000000000cc T ___gmp_vasprintf
+0000000000000000 t _gmp_asprintf_format
+                 U _vsnprintf
+0000000000000140 s lCPI1_0
+0000000000000000 t ltmp0
+0000000000000140 s ltmp1
+0000000000000150 s ltmp2
+0000000000000d50 s ltmp3
+
+../gmp_test_app/ios/libgmp-simulator.a(vfprintf.o):
+                 U ___gmp_doprnt
+                 U ___gmp_fprintf_funs
+0000000000000000 T ___gmp_vfprintf
+0000000000000000 t ltmp0
+0000000000000930 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(vprintf.o):
+                 U ___gmp_doprnt
+                 U ___gmp_fprintf_funs
+0000000000000000 T ___gmp_vprintf
+                 U ___stdoutp
+0000000000000000 t ltmp0
+0000000000000450 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(vsnprintf.o):
+                 U ___gmp_doprnt
+                 U ___gmp_snprintf_funs
+0000000000000000 T ___gmp_vsnprintf
+0000000000000000 t ltmp0
+00000000000005f0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(vsprintf.o):
+                 U ___gmp_doprnt
+                 U ___gmp_sprintf_funs
+0000000000000000 T ___gmp_vsprintf
+0000000000000000 t ltmp0
+00000000000004b8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(repl-vsnprintf.o):
+0000000000000000 t ltmp0
+
+../gmp_test_app/ios/libgmp-simulator.a(doscan.o):
+                 U __DefaultRuneLocale
+                 U ___gmp_allocate_func
+                 U ___gmp_assert_fail
+0000000000000000 T ___gmp_doscan
+                 U ___gmp_free_func
+                 U ___gmp_reallocate_func
+                 U ___gmpf_div_2exp
+                 U ___gmpf_mul_2exp
+                 U ___gmpf_set_si
+                 U ___gmpf_set_str
+                 U ___gmpq_set_si
+                 U ___gmpq_set_str
+                 U ___gmpz_set_si
+                 U ___gmpz_set_str
+                 U ___maskrune
+                 U _memcpy
+                 U _nl_langinfo
+0000000000000c10 t _skip_white
+                 U _strlen
+                 U _strtol
+0000000000000c9c s lJTI0_0
+0000000000000d48 s lJTI0_1
+0000000000000d52 s l_.str
+0000000000000d5b s l_.str.1
+0000000000000000 t ltmp0
+0000000000000c9c s ltmp1
+0000000000000d52 s ltmp2
+0000000000004190 s ltmp3
+
+../gmp_test_app/ios/libgmp-simulator.a(fscanf.o):
+                 U ___gmp_doscan
+0000000000000000 T ___gmp_fscanf
+                 U ___gmp_fscanf_funs
+0000000000000000 t ltmp0
+0000000000000980 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(fscanffuns.o):
+0000000000000008 S ___gmp_fscanf_funs
+                 U _fgetc
+                 U _fscanf
+0000000000000000 t _step
+                 U _ungetc
+0000000000000000 t ltmp0
+0000000000000008 s ltmp1
+00000000000009e0 s ltmp2
+
+../gmp_test_app/ios/libgmp-simulator.a(scanf.o):
+                 U ___gmp_doscan
+                 U ___gmp_fscanf_funs
+0000000000000000 T ___gmp_scanf
+                 U ___stdinp
+0000000000000000 t ltmp0
+00000000000004a0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(sscanf.o):
+                 U ___gmp_doscan
+0000000000000000 T ___gmp_sscanf
+                 U ___gmp_sscanf_funs
+0000000000000000 t ltmp0
+00000000000004e8 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(sscanffuns.o):
+0000000000000088 S ___gmp_sscanf_funs
+0000000000000048 t _get
+0000000000000000 t _scan
+                 U _sscanf
+0000000000000038 t _step
+000000000000006c t _unget
+0000000000000000 t ltmp0
+0000000000000088 s ltmp1
+0000000000000a10 s ltmp2
+
+../gmp_test_app/ios/libgmp-simulator.a(vfscanf.o):
+                 U ___gmp_doscan
+                 U ___gmp_fscanf_funs
+0000000000000000 T ___gmp_vfscanf
+0000000000000000 t ltmp0
+0000000000000930 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(vscanf.o):
+                 U ___gmp_doscan
+                 U ___gmp_fscanf_funs
+0000000000000000 T ___gmp_vscanf
+                 U ___stdinp
+0000000000000000 t ltmp0
+0000000000000450 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(vsscanf.o):
+                 U ___gmp_doscan
+                 U ___gmp_sscanf_funs
+0000000000000000 T ___gmp_vsscanf
+0000000000000000 t ltmp0
+0000000000000478 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(rand.o):
+                 U ___gmp_errno
+0000000000000000 T ___gmp_randinit
+                 U ___gmp_randinit_lc_2exp_size
+0000000000000000 t ltmp0
+00000000000008d0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(randclr.o):
+0000000000000000 T ___gmp_randclear
+0000000000000000 t ltmp0
+00000000000007d0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(randdef.o):
+0000000000000000 T ___gmp_randinit_default
+                 U ___gmp_randinit_mt
+0000000000000000 t ltmp0
+00000000000005e0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(randiset.o):
+0000000000000000 T ___gmp_randinit_set
+0000000000000000 t ltmp0
+00000000000007e0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(randlc2s.o):
+00000000000000b0 s ___gmp_rand_lc_scheme
+                 U ___gmp_randinit_lc_2exp
+0000000000000000 T ___gmp_randinit_lc_2exp_size
+                 U ___gmpz_clear
+                 U ___gmpz_init_set_str
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000260 s l_.str
+0000000000000268 s l_.str.1
+00000000000002bf s l_.str.10
+00000000000002d0 s l_.str.11
+00000000000002ea s l_.str.12
+000000000000030b s l_.str.13
+0000000000000333 s l_.str.14
+0000000000000364 s l_.str.15
+0000000000000397 s l_.str.16
+0000000000000270 s l_.str.2
+0000000000000278 s l_.str.3
+0000000000000281 s l_.str.4
+000000000000028a s l_.str.5
+0000000000000293 s l_.str.6
+000000000000029c s l_.str.7
+00000000000002a6 s l_.str.8
+00000000000002b0 s l_.str.9
+0000000000000000 t ltmp0
+00000000000000b0 s ltmp1
+0000000000000260 s ltmp2
+0000000000000df0 s ltmp3
+
+../gmp_test_app/ios/libgmp-simulator.a(randlc2x.o):
+0000000000000700 s _Linear_Congruential_Generator
+                 U ___gmp_allocate_func
+                 U ___gmp_assert_fail
+                 U ___gmp_free_func
+0000000000000000 T ___gmp_randinit_lc_2exp
+                 U ___gmp_tmp_reentrant_alloc
+                 U ___gmp_tmp_reentrant_free
+                 U ___gmpn_add_n
+                 U ___gmpn_lshift
+                 U ___gmpn_mul
+                 U ___gmpn_rshift
+                 U ___gmpz_clear
+                 U ___gmpz_fdiv_r_2exp
+                 U ___gmpz_init
+                 U ___gmpz_init2
+                 U ___gmpz_init_set
+                 U ___gmpz_realloc
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+                 U _bzero
+0000000000000468 t _lc
+00000000000003ac t _randclear_lc
+0000000000000164 t _randget_lc
+00000000000003ec t _randiset_lc
+0000000000000114 t _randseed_lc
+00000000000006e4 s l_.str
+00000000000006ef s l_.str.1
+0000000000000000 t ltmp0
+00000000000006e4 s ltmp1
+0000000000000700 s ltmp2
+0000000000002ad0 s ltmp3
+
+../gmp_test_app/ios/libgmp-simulator.a(randmt.o):
+00000000000003c0 s _Mersenne_Twister_Generator_Noseed
+                 U ___gmp_allocate_func
+                 U ___gmp_free_func
+0000000000000000 T ___gmp_mt_recalc_buffer
+00000000000002d0 T ___gmp_randclear_mt
+00000000000000e8 T ___gmp_randget_mt
+000000000000035c T ___gmp_randinit_mt_noseed
+00000000000002f0 T ___gmp_randiset_mt
+00000000000003e0 s _default_state
+                 U _memcpy
+0000000000000000 t ltmp0
+00000000000003c0 s ltmp1
+00000000000003e0 s ltmp2
+0000000000001ee8 s ltmp3
+
+../gmp_test_app/ios/libgmp-simulator.a(randmts.o):
+0000000000000230 s _Mersenne_Twister_Generator
+                 U ___gmp_mt_recalc_buffer
+                 U ___gmp_randclear_mt
+                 U ___gmp_randget_mt
+0000000000000000 T ___gmp_randinit_mt
+                 U ___gmp_randinit_mt_noseed
+                 U ___gmp_randiset_mt
+                 U ___gmpz_add_ui
+                 U ___gmpz_addmul_ui
+                 U ___gmpz_clear
+                 U ___gmpz_clrbit
+                 U ___gmpz_export
+                 U ___gmpz_init2
+                 U ___gmpz_init_set
+                 U ___gmpz_mod
+                 U ___gmpz_mul
+                 U ___gmpz_setbit
+                 U ___gmpz_sub_ui
+                 U ___gmpz_tdiv_q_2exp
+                 U ___gmpz_tdiv_r_2exp
+                 U ___gmpz_tstbit
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+                 U _bzero
+000000000000002c t _randseed_mt
+0000000000000000 t ltmp0
+0000000000000230 s ltmp1
+0000000000001080 s ltmp2
+
+../gmp_test_app/ios/libgmp-simulator.a(rands.o):
+0000000000000020 C ___gmp_rands
+000000000000062d S ___gmp_rands_initialized
+0000000000000000 t ltmp0
+000000000000062d s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(randsd.o):
+0000000000000000 T ___gmp_randseed
+0000000000000000 t ltmp0
+00000000000007e0 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(randsdui.o):
+                 U ___gmp_randseed
+0000000000000000 T ___gmp_randseed_ui
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+0000000000000700 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(randbui.o):
+0000000000000000 T ___gmp_urandomb_ui
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+0000000000000910 s ltmp1
+
+../gmp_test_app/ios/libgmp-simulator.a(randmui.o):
+                 U ___gmp_divide_by_zero
+0000000000000000 T ___gmp_urandomm_ui
+                 U ___gmpn_clz_tab
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000000000000 t ltmp0
+0000000000000b90 s ltmp1

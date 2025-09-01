@@ -103,7 +103,7 @@ POST_INSTALL = :
 NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
-build_triplet = aarch64-apple-darwin24.3.0
+build_triplet = aarch64-apple-darwin24.6.0
 host_triplet = aarch64-apple-darwin
 
 # The mini-gmp.{c,h} files are external files, not part of MPFR, thus they
@@ -416,14 +416,14 @@ AUTOMAKE = ${SHELL} '/Users/christianstrobele/code/gmp-ios-builder/build-mpfr/so
 AWK = awk
 CC = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang
 CCDEPMODE = depmode=gcc3
-CFLAGS = -arch arm64 -pipe -Os -gdwarf-2 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.1.sdk -mios-simulator-version-min=13.0 -I/Users/christianstrobele/code/gmp-ios-builder/build/source -ffloat-store
+CFLAGS = -arch arm64 -pipe -Os -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk -mmacosx-version-min=10.15 -I/Users/christianstrobele/code/gmp-ios-builder/build/source
 CPP = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -E
 CPPFLAGS =  -I/Users/christianstrobele/code/gmp-ios-builder/build/source
 CSCOPE = cscope
 CTAGS = ctags
 CYGPATH_W = echo
 DATAFILES = 
-DEFS = -DHAVE_STDIO_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_LITTLE_ENDIAN=1 -DHAVE_CLOCK_GETTIME=1 -DHAVE_LOCALE_H=1 -DHAVE_WCHAR_H=1 -DHAVE_STDARG=1 -DHAVE_STRUCT_LCONV_DECIMAL_POINT=1 -DHAVE_STRUCT_LCONV_THOUSANDS_SEP=1 -DHAVE_ALLOCA_H=1 -DHAVE_ALLOCA=1 -DHAVE_UINTPTR_T=1 -DHAVE_VA_COPY=1 -DHAVE_SETLOCALE=1 -DHAVE_GETTIMEOFDAY=1 -DHAVE_SIGNAL=1 -DHAVE_SIGACTION=1 -DHAVE_LONG_LONG=1 -DHAVE_INTMAX_T=1 -DMPFR_HAVE_INTMAX_MAX=1 -DMPFR_HAVE_NORETURN=1 -DMPFR_HAVE_BUILTIN_UNREACHABLE=1 -DMPFR_HAVE_CONSTRUCTOR_ATTR=1 -DMPFR_HAVE_FESETROUND=1 -DHAVE_ROUND=1 -DHAVE_TRUNC=1 -DHAVE_FLOOR=1 -DHAVE_CEIL=1 -DHAVE_NEARBYINT=1 -DHAVE_DOUBLE_IEEE_LITTLE_ENDIAN=1 -DHAVE_LDOUBLE_IS_DOUBLE=1 -DMPFR_USE_STATIC_ASSERT=1 -DHAVE_ATTRIBUTE_MODE=1 -DMPFR_LONG_WITHIN_LIMB=1 -DMPFR_INTMAX_WITHIN_LIMB=1 -DHAVE___GMPN_SBPI1_DIVAPPR_Q=1 -DHAVE_GETRUSAGE=1
+DEFS = -DHAVE_STDIO_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_LITTLE_ENDIAN=1 -DHAVE_CLOCK_GETTIME=1 -DHAVE_LOCALE_H=1 -DHAVE_WCHAR_H=1 -DHAVE_STDARG=1 -DHAVE_STRUCT_LCONV_DECIMAL_POINT=1 -DHAVE_STRUCT_LCONV_THOUSANDS_SEP=1 -DHAVE_ALLOCA_H=1 -DHAVE_ALLOCA=1 -DHAVE_UINTPTR_T=1 -DHAVE_VA_COPY=1 -DHAVE_SETLOCALE=1 -DHAVE_GETTIMEOFDAY=1 -DHAVE_SIGNAL=1 -DHAVE_SIGACTION=1 -DHAVE_LONG_LONG=1 -DHAVE_INTMAX_T=1 -DMPFR_HAVE_INTMAX_MAX=1 -DMPFR_HAVE_NORETURN=1 -DMPFR_HAVE_BUILTIN_UNREACHABLE=1 -DMPFR_HAVE_CONSTRUCTOR_ATTR=1 -DMPFR_HAVE_FESETROUND=1 -DHAVE_SUBNORM_DBL=1 -DHAVE_SUBNORM_FLT=1 -DHAVE_SIGNEDZ=1 -DHAVE_ROUND=1 -DHAVE_TRUNC=1 -DHAVE_FLOOR=1 -DHAVE_CEIL=1 -DHAVE_NEARBYINT=1 -DHAVE_DOUBLE_IEEE_LITTLE_ENDIAN=1 -DHAVE_LDOUBLE_IS_DOUBLE=1 -DMPFR_USE_THREAD_SAFE=1 -DMPFR_USE_C11_THREAD_SAFE=1 -DMPFR_USE_STATIC_ASSERT=1 -DHAVE_ATTRIBUTE_MODE=1 -DMPFR_LONG_WITHIN_LIMB=1 -DMPFR_INTMAX_WITHIN_LIMB=1 -DPRINTF_L=1 -DNPRINTF_T=1 -DPRINTF_A=1 -DPRINTF_GROUPFLAG=1 -DHAVE___GMPN_SBPI1_DIVAPPR_Q=1 -DHAVE_GETRUSAGE=1
 DEPDIR = .deps
 DLLTOOL = false
 DSYMUTIL = dsymutil
@@ -443,7 +443,7 @@ INSTALL_PROGRAM = ${INSTALL}
 INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
 LD = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld
-LDFLAGS = -Wl,-search_paths_first -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.1.sdk -mios-simulator-version-min=13.0 -L/Users/christianstrobele/code/gmp-ios-builder/build-mpfr/temp-gmp-iphonesimulator-arm64 -L/Users/christianstrobele/code/gmp-ios-builder/build-mpfr/temp-gmp-iphonesimulator-arm64
+LDFLAGS = -Wl,-search_paths_first -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk -mmacosx-version-min=10.15 -L/Users/christianstrobele/code/gmp-ios-builder/build-mpfr/temp-gmp-macosx-arm64 -L/Users/christianstrobele/code/gmp-ios-builder/build-mpfr/temp-gmp-macosx-arm64
 LIBMPFR_LDFLAGS = 
 LIBOBJS = 
 LIBS = -lgmp -lgmp
@@ -500,10 +500,10 @@ am__untar = $${TAR-tar} xf -
 am__xargs_n = xargs -n
 ax_pthread_config = 
 bindir = ${exec_prefix}/bin
-build = aarch64-apple-darwin24.3.0
+build = aarch64-apple-darwin24.6.0
 build_alias = 
 build_cpu = aarch64
-build_os = darwin24.3.0
+build_os = darwin24.6.0
 build_vendor = apple
 builddir = .
 datadir = ${datarootdir}

@@ -1,176 +1,238 @@
 #!/bin/bash
 ############################################################################
 #
-# build_symengine.sh
-# Build script for SymEngine (Fast Symbolic Manipulation Library) 
-# for iOS devices and simulators, creating an XCFramework.
+# build_symengine.sh (Corrected & Robust Version)
+#
+# Build script for SymEngine for iOS, Simulator, and macOS,
+# creating a single, robust XCFramework.
 #
 ############################################################################
 set -e # Exit immediately if a command exits with a non-zero status.
 
 # --- Configuration ---
-SCRIPTDIR=$(dirname "$0")
-SCRIPTDIR=$(cd "$SCRIPTDIR" && pwd )
-BUILDDIR=$SCRIPTDIR/build-symengine
-LIBDIR=$BUILDDIR/lib
-LIBNAME=symengine
-VERSION_SYMENGINE=0.11.2
-SYMENGINE_SOURCE="$SCRIPTDIR/symengine-$VERSION_SYMENGINE"
+readonly SCRIPTDIR=$(cd "$(dirname "$0")" && pwd)
+readonly BUILDDIR="$SCRIPTDIR/build-symengine"
+readonly LIBDIR="$BUILDDIR/lib"
+readonly HEADERDIR_FINAL="$BUILDDIR/include" # Central location for final headers
+readonly LIBNAME="symengine"
+readonly VERSION_SYMENGINE="0.11.2"
+readonly SYMENGINE_SOURCE="$SCRIPTDIR/symengine-$VERSION_SYMENGINE"
 
-# Dependency paths
-GMP_BUILDDIR="$SCRIPTDIR/build"
-GMP_LIBDIR="$GMP_BUILDDIR/lib"
-GMP_HEADERS_DIR="$GMP_BUILDDIR/include"
-MPFR_BUILDDIR="$SCRIPTDIR/build-mpfr"
-MPFR_LIBDIR="$MPFR_BUILDDIR/lib"
-MPFR_HEADERS_DIR="$MPFR_BUILDDIR/include"
-MPC_BUILDDIR="$SCRIPTDIR/build-mpc"
-MPC_LIBDIR="$MPC_BUILDDIR/lib"
-MPC_HEADERS_DIR="$MPC_BUILDDIR/include"
-FLINT_BUILDDIR="$SCRIPTDIR/build-flint"
-FLINT_LIBDIR="$FLINT_BUILDDIR/lib"
-FLINT_HEADERS_DIR="$FLINT_BUILDDIR/include"
+# Dependency paths (assuming they are in the same parent directory)
+readonly GMP_BUILDDIR="$SCRIPTDIR/build"
+readonly MPFR_BUILDDIR="$SCRIPTDIR/build-mpfr"
+readonly MPC_BUILDDIR="$SCRIPTDIR/build-mpc"
+readonly FLINT_BUILDDIR="$SCRIPTDIR/build-flint"
 
 # Architectures
-DEVARCHS="arm64"
-SIMARCHS="x86_64 arm64"
-IOSVERSIONMIN=13.0
+readonly DEVARCHS="arm64"
+readonly SIMARCHS="x86_64 arm64"
+readonly MACARCHS="x86_64 arm64"
 
-# --- Functions ---
-cleanup() {
-    echo "[CLEANUP] SymEngine build script finished."
-}
+# Minimum deployment targets
+readonly IOS_MIN_VERSION="13.0"
+readonly MACOS_MIN_VERSION="10.15"
+
+# --- Utility Functions ---
+cleanup() { echo "[CLEANUP] SymEngine build script finished."; }
 trap cleanup EXIT
 
 logMsg() { printf "[SYMENGINE BUILD] %s\n" "$1"; }
-errorExit() { logMsg "ERROR: $1"; logMsg "Build failed."; exit 1; }
+errorExit() { logMsg "❌ ERROR: $1"; logMsg "Build failed."; exit 1; }
 
-setupIncludeDirectories() {
-    logMsg "Setting up include directories for dependencies..."
-    mkdir -p "$GMP_HEADERS_DIR" "$MPFR_HEADERS_DIR" "$MPC_HEADERS_DIR" "$FLINT_HEADERS_DIR"
-    
-    cp -f "$SCRIPTDIR/build/source/gmp.h" "$GMP_HEADERS_DIR/" 2>/dev/null || true
-    cp -f "$SCRIPTDIR/build-mpfr/source/src/mpfr.h" "$MPFR_HEADERS_DIR/" 2>/dev/null || true
-    cp -f "$SCRIPTDIR/build-mpc/source/src/mpc.h" "$MPC_HEADERS_DIR/" 2>/dev/null || true
+# --- Prerequisite Checks & Setup ---
 
-    local flint_source_dir="$SCRIPTDIR/build-flint/source/src"
-    logMsg "Looking for FLINT headers in: $flint_source_dir"
-
-    if [ ! -f "$flint_source_dir/flint.h" ]; then
-        errorExit "FLINT header not found at '$flint_source_dir/flint.h'. Please ensure FLINT was built correctly."
-    fi
-    logMsg "Found FLINT headers."
-
-    local flint_target_dir="$FLINT_HEADERS_DIR/flint"
-    mkdir -p "$flint_target_dir"
-    logMsg "Copying all FLINT headers from $flint_source_dir to $flint_target_dir"
-    cp "$flint_source_dir/"*.h "$flint_target_dir/"
-    logMsg "FLINT headers set up successfully."
-}
-
+# Checks if CMake is installed.
 checkCMake() {
-    if ! command -v cmake &> /dev/null; then errorExit "CMake not found. Please run: brew install cmake"; fi
-    logMsg "CMake found: $(cmake --version | head -1)"
+    if ! command -v cmake &> /dev/null; then
+        errorExit "CMake not found. Please run: brew install cmake"
+    fi
+    logMsg "✅ CMake found: $(cmake --version | head -1)"
 }
 
+# Verifies that dependency build directories exist.
 checkDependencies() {
-    logMsg "Checking dependencies..."
-    for build_dir in "build" "build-mpfr" "build-mpc" "build-flint"; do
-        if [ ! -d "$SCRIPTDIR/$build_dir" ]; then errorExit "$build_dir not found. Please build all dependencies first."; fi
+    logMsg "Checking for dependency build directories..."
+    for dep_dir in "$GMP_BUILDDIR" "$MPFR_BUILDDIR" "$MPC_BUILDDIR" "$FLINT_BUILDDIR"; do
+        if [ ! -d "$dep_dir" ]; then
+            errorExit "Dependency directory '$dep_dir' not found. Please build all dependencies first."
+        fi
     done
-    logMsg "All dependency checks passed."
+    logMsg "✅ All dependency directories found."
 }
 
+# Downloads and extracts the SymEngine source code if not present.
 downloadSymEngine() {
     if [ -d "$SYMENGINE_SOURCE" ]; then return; fi
-    logMsg "Downloading SymEngine $VERSION_SYMENGINE..."
-    curl -L -o "$SCRIPTDIR/symengine-$VERSION_SYMENGINE.tar.gz" "https://github.com/symengine/symengine/archive/v$VERSION_SYMENGINE.tar.gz"
-    tar -xf "$SCRIPTDIR/symengine-$VERSION_SYMENGINE.tar.gz"
+    logMsg "Downloading SymEngine v$VERSION_SYMENGINE..."
+    local tarball="$SCRIPTDIR/symengine-$VERSION_SYMENGINE.tar.gz"
+    curl -L -o "$tarball" "https://github.com/symengine/symengine/archive/v$VERSION_SYMENGINE.tar.gz"
+    tar -xzf "$tarball" -C "$SCRIPTDIR"
+    rm "$tarball"
     if [ ! -d "$SYMENGINE_SOURCE" ]; then errorExit "Failed to extract SymEngine source"; fi
 }
 
+# --- Core Build Functions ---
+
+# Configure and build SymEngine for a specific platform and architecture.
 configureAndMake() {
-    local platform=$1; local arch=$2; local build_dir="$BUILDDIR/$platform-$arch"
+    local platform=$1
+    local arch=$2
+    local build_dir="$BUILDDIR/$platform-$arch"
+
     logMsg "================================================================="
-    logMsg "Configuring SymEngine for PLATFORM: $platform ARCH: $arch"
+    logMsg "Configuring SymEngine for PLATFORM: $platform, ARCH: $arch"
     logMsg "================================================================="
-    local sdkpath=$(xcrun --sdk $platform --show-sdk-path)
-    if [ ! -d "$sdkpath" ]; then errorExit "SDK path not found for platform $platform."; fi
-    
-    rm -rf "$build_dir"; mkdir -p "$build_dir"; cd "$build_dir"
-    local temp_lib_dir="$build_dir/temp-deps"; mkdir -p "$temp_lib_dir"
-    ln -sf "$GMP_LIBDIR/libgmp-$platform-$arch.a" "$temp_lib_dir/libgmp.a"
-    ln -sf "$MPFR_LIBDIR/libmpfr-$platform-$arch.a" "$temp_lib_dir/libmpfr.a"
-    ln -sf "$MPC_LIBDIR/libmpc-$platform-$arch.a" "$temp_lib_dir/libmpc.a"
-    ln -sf "$FLINT_LIBDIR/libflint-$platform-$arch.a" "$temp_lib_dir/libflint.a"
-    
-    export CC=$(xcrun --sdk $platform -f clang); export CXX=$(xcrun --sdk $platform -f clang++)
-    local host_arch=$arch; if [[ "$arch" == "arm64" ]]; then host_arch="aarch64"; fi
-    
-    local cmake_args=""
-    if [[ "$platform" == "iphonesimulator" ]]; then
-        cmake_args="-DCMAKE_SYSTEM_NAME=iOS -DCMAKE_OSX_SYSROOT=$sdkpath -DCMAKE_OSX_DEPLOYMENT_TARGET=$IOSVERSIONMIN -DCMAKE_OSX_ARCHITECTURES=$arch"
-        export CFLAGS="-arch $arch -pipe -Os -isysroot $sdkpath -mios-simulator-version-min=$IOSVERSIONMIN"
-        export CXXFLAGS="-arch $arch -pipe -Os -isysroot $sdkpath -mios-simulator-version-min=$IOSVERSIONMIN -std=c++11"
-    else
-        cmake_args="-DCMAKE_SYSTEM_NAME=iOS -DCMAKE_OSX_SYSROOT=$sdkpath -DCMAKE_OSX_DEPLOYMENT_TARGET=$IOSVERSIONMIN -DCMAKE_OSX_ARCHITECTURES=$arch"
-        export CFLAGS="-arch $arch -pipe -Os -isysroot $sdkpath -miphoneos-version-min=$IOSVERSIONMIN"
-        export CXXFLAGS="-arch $arch -pipe -Os -isysroot $sdkpath -miphoneos-version-min=$IOSVERSIONMIN -std=c++11"
+
+    # Find the correct SDK path.
+    local sdkpath
+    sdkpath=$(xcrun --sdk "$platform" --show-sdk-path)
+    if [ ! -d "$sdkpath" ]; then errorExit "SDK path not found for platform '$platform'."; fi
+
+    # Create a clean build directory.
+    rm -rf "$build_dir"
+    mkdir -p "$build_dir"
+    cd "$build_dir"
+
+    # --- Prepare dependency libraries for this specific build ---
+    local temp_lib_dir="$build_dir/temp-deps"
+    mkdir -p "$temp_lib_dir"
+    ln -sf "$GMP_BUILDDIR/lib/libgmp-$platform-$arch.a" "$temp_lib_dir/libgmp.a"
+    ln -sf "$MPFR_BUILDDIR/lib/libmpfr-$platform-$arch.a" "$temp_lib_dir/libmpfr.a"
+    ln -sf "$MPC_BUILDDIR/lib/libmpc-$platform-$arch.a" "$temp_lib_dir/libmpc.a"
+    ln -sf "$FLINT_BUILDDIR/lib/libflint-$platform-$arch.a" "$temp_lib_dir/libflint.a"
+
+    # --- Define CMake arguments WITHOUT using export ---
+    local cmake_args=()
+
+    # Common CMake settings for all platforms.
+    cmake_args+=(
+        # *** KEY CHANGE HERE: Add the required policy flag back in ***
+        "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
+        "-DCMAKE_BUILD_TYPE=Release"
+        "-DBUILD_SHARED_LIBS=OFF"
+        "-DWITH_GMP=ON"
+        "-DWITH_MPFR=ON"
+        "-DWITH_MPC=ON"
+        "-DWITH_FLINT=ON"
+        "-DINTEGER_CLASS=flint"
+        "-DWITH_SYMENGINE_THREAD_SAFE=OFF"
+        "-DWITH_LLVM=OFF"
+        "-DWITH_TCMALLOC=OFF"
+        "-DBUILD_TESTS=OFF"
+        "-DBUILD_BENCHMARKS=OFF"
+        "-DGMP_INCLUDE_DIR=$GMP_BUILDDIR/include"
+        "-DGMP_LIBRARY=$temp_lib_dir/libgmp.a"
+        "-DMPFR_INCLUDE_DIR=$MPFR_BUILDDIR/include"
+        "-DMPFR_LIBRARY=$temp_lib_dir/libmpfr.a"
+        "-DMPC_INCLUDE_DIR=$MPC_BUILDDIR/include"
+        "-DMPC_LIBRARY=$temp_lib_dir/libmpc.a"
+        "-DFLINT_INCLUDE_DIR=$FLINT_BUILDDIR/include"
+        "-DFLINT_LIBRARY=$temp_lib_dir/libflint.a"
+    )
+
+    # Platform-specific CMake settings.
+    if [[ "$platform" == "iphoneos" ]] || [[ "$platform" == "iphonesimulator" ]]; then
+        cmake_args+=(
+            "-DCMAKE_SYSTEM_NAME=iOS"
+            "-DCMAKE_OSX_ARCHITECTURES=$arch"
+            "-DCMAKE_OSX_SYSROOT=$sdkpath"
+            "-DCMAKE_OSX_DEPLOYMENT_TARGET=$IOS_MIN_VERSION"
+        )
+    else # macosx
+        cmake_args+=(
+            "-DCMAKE_OSX_ARCHITECTURES=$arch"
+            "-DCMAKE_OSX_SYSROOT=$sdkpath"
+            "-DCMAKE_OSX_DEPLOYMENT_TARGET=$MACOS_MIN_VERSION"
+        )
     fi
 
-    # Using the policy flag you confirmed works
-    cmake_args="$cmake_args -DCMAKE_POLICY_VERSION_MINIMUM=3.5 -DCMAKE_IOS_INSTALL_COMBINED=NO"
-    export LDFLAGS="-L$temp_lib_dir"
-    
     logMsg "Running CMake configure..."
-    cmake "$SYMENGINE_SOURCE" $cmake_args -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF \
-        -DWITH_GMP=ON -DWITH_MPFR=ON -DWITH_MPC=ON -DWITH_FLINT=ON -DINTEGER_CLASS=flint \
-        -DWITH_SYMENGINE_THREAD_SAFE=OFF -DWITH_LLVM=OFF -DWITH_TCMALLOC=OFF \
-        -DBUILD_TESTS=OFF -DBUILD_BENCHMARKS=OFF \
-        -DGMP_INCLUDE_DIR="$GMP_HEADERS_DIR" -DGMP_LIBRARY="$temp_lib_dir/libgmp.a" \
-        -DMPFR_INCLUDE_DIR="$MPFR_HEADERS_DIR" -DMPFR_LIBRARY="$temp_lib_dir/libmpfr.a" \
-        -DMPC_INCLUDE_DIR="$MPC_HEADERS_DIR" -DMPC_LIBRARY="$temp_lib_dir/libmpc.a" \
-        -DFLINT_INCLUDE_DIR="$FLINT_HEADERS_DIR" -DFLINT_LIBRARY="$temp_lib_dir/libflint.a"
-    
-    logMsg "Building SymEngine for $platform $arch..."; make -j$(sysctl -n hw.ncpu)
-    
+    cmake "$SYMENGINE_SOURCE" \
+        -DCMAKE_C_COMPILER="$(xcrun --sdk "$platform" -f clang)" \
+        -DCMAKE_CXX_COMPILER="$(xcrun --sdk "$platform" -f clang++)" \
+        "${cmake_args[@]}"
+
+    logMsg "Building SymEngine for $platform $arch..."
+    make -j"$(sysctl -n hw.ncpu)"
+
+    # The library is usually found in a sub-directory, find it robustly.
+    local found_lib
+    found_lib=$(find . -name "lib$LIBNAME.a" -type f | head -1)
+    if [ -z "$found_lib" ]; then
+        errorExit "Could not find built SymEngine library (lib$LIBNAME.a) in '$build_dir'."
+    fi
+    logMsg "Found SymEngine library at: $found_lib"
+
     logMsg "Copying built SymEngine library..."
-    [ -d "$LIBDIR" ] || mkdir -p "$LIBDIR"
-    # FIX: Copy from the 'symengine' subdirectory instead of 'lib'
-    cp "symengine/lib$LIBNAME.a" "$LIBDIR/lib$LIBNAME-$platform-$arch.a"
+    mkdir -p "$LIBDIR"
+    cp "$found_lib" "$LIBDIR/lib$LIBNAME-$platform-$arch.a"
 }
 
-createFramework() {
-    local FRAMEWORK_NAME="SymEngine"; local FRAMEWORK_DIR="$SCRIPTDIR/$FRAMEWORK_NAME.xcframework"; local HEADERS_DIR="$SYMENGINE_SOURCE"
+# Create the final XCFramework from the built static libraries.
+createXCFramework() {
+    local framework_name="SymEngine"
+    local framework_dir="$SCRIPTDIR/$framework_name.xcframework"
+
     logMsg "================================================================="
-    logMsg "Creating SymEngine XCFramework"
+    logMsg "Creating $framework_name.xcframework"
     logMsg "================================================================="
-    rm -rf "$FRAMEWORK_DIR";
-    mkdir -p "$FRAMEWORK_DIR/ios-arm64/symengine" "$FRAMEWORK_DIR/ios-arm64-simulator/symengine" "$FRAMEWORK_DIR/ios-x86_64-simulator/symengine"
-    cp "$LIBDIR/lib$LIBNAME-iphoneos-arm64.a" "$FRAMEWORK_DIR/ios-arm64/lib$LIBNAME.a"
-    cp -r "$HEADERS_DIR/symengine/"*.h "$FRAMEWORK_DIR/ios-arm64/symengine/" 2>/dev/null || true
-    cp "$LIBDIR/lib$LIBNAME-iphonesimulator-arm64.a" "$FRAMEWORK_DIR/ios-arm64-simulator/lib$LIBNAME.a"
-    cp -r "$HEADERS_DIR/symengine/"*.h "$FRAMEWORK_DIR/ios-arm64-simulator/symengine/" 2>/dev/null || true
-    cp "$LIBDIR/lib$LIBNAME-iphonesimulator-x86_64.a" "$FRAMEWORK_DIR/ios-x86_64-simulator/lib$LIBNAME.a"
-    cp -r "$HEADERS_DIR/symengine/"*.h "$FRAMEWORK_DIR/ios-x86_64-simulator/symengine/" 2>/dev/null || true
-    logMsg "Generating Info.plist..."
-    cat > "$FRAMEWORK_DIR/Info.plist" << EOL
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"><plist version="1.0"><dict><key>AvailableLibraries</key><array><dict><key>LibraryIdentifier</key><string>ios-arm64</string><key>LibraryPath</key><string>lib$LIBNAME.a</string><key>HeadersPath</key><string>.</string><key>SupportedArchitectures</key><array><string>arm64</string></array><key>SupportedPlatform</key><string>ios</string></dict><dict><key>LibraryIdentifier</key><string>ios-arm64-simulator</string><key>LibraryPath</key><string>lib$LIBNAME.a</string><key>HeadersPath</key><string>.</string><key>SupportedArchitectures</key><array><string>arm64</string></array><key>SupportedPlatform</key><string>ios</string><key>SupportedPlatformVariant</key><string>simulator</string></dict><dict><key>LibraryIdentifier</key><string>ios-x86_64-simulator</string><key>LibraryPath</key><string>lib$LIBNAME.a</string><key>HeadersPath</key><string>.</string><key>SupportedArchitectures</key><array><string>x86_64</string></array><key>SupportedPlatform</key><string>ios</string><key>SupportedPlatformVariant</key><string>simulator</string></dict></array><key>CFBundlePackageType</key><string>XFWK</string><key>XCFrameworkFormatVersion</key><string>1.0</string></dict></plist>
-EOL
-    logMsg "Successfully created $FRAMEWORK_DIR"
+
+    rm -rf "$framework_dir"
+
+    # Create universal "fat" libraries for simulator and macOS.
+    logMsg "Creating universal simulator library..."
+    local sim_universal_lib="$LIBDIR/lib$LIBNAME-iphonesimulator-universal.a"
+    lipo -create -output "$sim_universal_lib" \
+        "$LIBDIR/lib$LIBNAME-iphonesimulator-x86_64.a" \
+        "$LIBDIR/lib$LIBNAME-iphonesimulator-arm64.a"
+
+    logMsg "Creating universal macOS library..."
+    local mac_universal_lib="$LIBDIR/lib$LIBNAME-macosx-universal.a"
+    lipo -create -output "$mac_universal_lib" \
+        "$LIBDIR/lib$LIBNAME-macosx-x86_64.a" \
+        "$LIBDIR/lib$LIBNAME-macosx-arm64.a"
+
+    # SymEngine headers are nested. We must copy them to a single include directory.
+    logMsg "Gathering SymEngine headers..."
+    rm -rf "$HEADERDIR_FINAL"
+    mkdir -p "$HEADERDIR_FINAL"
+    cp -R "$SYMENGINE_SOURCE/symengine" "$HEADERDIR_FINAL/"
+
+    # *** KEY CHANGE HERE ***
+    # Use xcodebuild to create the XCFramework. This is the modern, reliable method.
+    logMsg "Assembling XCFramework..."
+    xcodebuild -create-xcframework \
+        -library "$LIBDIR/lib$LIBNAME-iphoneos-arm64.a" \
+        -headers "$HEADERDIR_FINAL" \
+        -library "$sim_universal_lib" \
+        -headers "$HEADERDIR_FINAL" \
+        -library "$mac_universal_lib" \
+        -headers "$HEADERDIR_FINAL" \
+        -output "$framework_dir"
+
+    logMsg "✅ Successfully created $framework_dir"
 }
 
 # --- Main Build Logic ---
-logMsg "Starting SymEngine build for iOS..."
+logMsg "Starting SymEngine build..."
+
 checkCMake
 checkDependencies
-setupIncludeDirectories
 downloadSymEngine
+
 if [ -d "$BUILDDIR" ]; then rm -rf "$BUILDDIR"; fi
+
 logMsg "--- Building SymEngine for iOS Device ---"
-for ARCH in $DEVARCHS; do configureAndMake "iphoneos" $ARCH; done
+for ARCH in $DEVARCHS; do configureAndMake "iphoneos" "$ARCH"; done
+
 logMsg "--- Building SymEngine for iOS Simulator ---"
-for ARCH in $SIMARCHS; do configureAndMake "iphonesimulator" $ARCH; done
-createFramework
-logMsg "🎉 SymEngine build process completed successfully!"
+for ARCH in $SIMARCHS; do configureAndMake "iphonesimulator" "$ARCH"; done
+
+logMsg "--- Building SymEngine for macOS ---"
+for ARCH in $MACARCHS; do configureAndMake "macosx" "$ARCH"; done
+
+createXCFramework
+
+logMsg "🚀 SymEngine build process completed successfully!"
 exit 0

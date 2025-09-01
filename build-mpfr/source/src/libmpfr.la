@@ -17,7 +17,7 @@ old_library='libmpfr.a'
 inherited_linker_flags=' '
 
 # Libraries that this one depends upon.
-dependency_libs=' -L/Users/christianstrobele/code/gmp-ios-builder/build-mpfr/temp-gmp-iphonesimulator-arm64 -lgmp'
+dependency_libs=' -L/Users/christianstrobele/code/gmp-ios-builder/build-mpfr/temp-gmp-macosx-arm64 -lgmp'
 
 # Names of additional weak libraries provided by this library
 weak_library_names=''

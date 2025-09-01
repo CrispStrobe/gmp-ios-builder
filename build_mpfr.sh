@@ -1,40 +1,39 @@
 #!/bin/bash
 ############################################################################
 #
-# build-mpfr.sh
-# Build script for MPFR (Multiple Precision Floating-Point Reliable) library
-# for iOS devices and simulators, creating an XCFramework.
+# build-mpfr.sh (Corrected & Robust Version)
 #
-# Requirements:
-# - GMP must be built first (this script looks for GMP libraries and headers)
-# - MPFR 4.2.2 source archive (mpfr-4.2.2.tar.xz) in the same directory
-# - Xcode and Command Line Tools installed
+# Builds the MPFR library for iOS, Simulator, and macOS, creating a
+# single MPFR.xcframework.
+#
+# This script correctly handles cross-compilation environments to avoid
+# configuration errors and build warnings.
 #
 ############################################################################
 set -e # Exit immediately if a command exits with a non-zero status.
 
 # --- Configuration ---
-SCRIPTDIR=$(dirname "$0")
-SCRIPTDIR=$(cd "$SCRIPTDIR" && pwd )
-BUILDDIR=$SCRIPTDIR/build-mpfr
-LIBDIR=$BUILDDIR/lib
-LIBNAME=mpfr
-VERSION=4.2.2
-SOFTWARETAR="$SCRIPTDIR/$LIBNAME-$VERSION.tar.xz"
+readonly SCRIPTDIR=$(cd "$(dirname "$0")" && pwd)
+readonly BUILDDIR="$SCRIPTDIR/build-mpfr"
+readonly LIBDIR="$BUILDDIR/lib"
+readonly HEADERDIR="$BUILDDIR/include"
+readonly LIBNAME="mpfr"
+readonly VERSION="4.2.2"
+readonly SOFTWARETAR="$SCRIPTDIR/$LIBNAME-$VERSION.tar.xz"
 
 # GMP dependency paths (must exist from previous GMP build)
-GMP_BUILDDIR="$SCRIPTDIR/build"
-GMP_LIBDIR="$GMP_BUILDDIR/lib"
-GMP_HEADERS_DIR="$GMP_BUILDDIR/source"
+readonly GMP_BUILDDIR="$SCRIPTDIR/build"
+readonly GMP_LIBDIR="$GMP_BUILDDIR/lib"
+readonly GMP_HEADERS_DIR="$GMP_BUILDDIR/source"
 
-# Architectures for running on a physical device.
-DEVARCHS="arm64"
+# Architectures
+readonly DEVARCHS="arm64"
+readonly SIMARCHS="x86_64 arm64"
+readonly MACARCHS="x86_64 arm64"
 
-# Architectures for running on a simulator.
-SIMARCHS="x86_64 arm64"
-
-# Minimum iOS version
-IOSVERSIONMIN=13.0
+# Minimum deployment targets
+readonly IOS_MIN_VERSION="13.0"
+readonly MACOS_MIN_VERSION="10.15"
 
 # --- Functions ---
 cleanup() {
@@ -47,31 +46,16 @@ logMsg() {
 }
 
 errorExit() {
-    logMsg "ERROR: $1"
+    logMsg "❌ ERROR: $1"
     logMsg "Build failed."
     exit 1
 }
 
 checkGmpDependency() {
     logMsg "Checking GMP dependency..."
-    
     if [ ! -d "$GMP_BUILDDIR" ] || [ ! -f "$GMP_HEADERS_DIR/gmp.h" ]; then
-        errorExit "GMP build not found. Please run ./build_gmp.sh first to build GMP."
+        errorExit "GMP build not found. Please run ./build_gmp.sh first."
     fi
-
-    # Check that required GMP libraries exist
-    local required_gmp_libs=(
-        "$GMP_LIBDIR/libgmp-iphoneos-arm64.a"
-        "$GMP_LIBDIR/libgmp-iphonesimulator-arm64.a" 
-        "$GMP_LIBDIR/libgmp-iphonesimulator-x86_64.a"
-    )
-    
-    for lib in "${required_gmp_libs[@]}"; do
-        if [ ! -f "$lib" ]; then
-            errorExit "Required GMP library not found: $lib. Please run ./build_gmp.sh first."
-        fi
-    done
-    
     logMsg "GMP dependency check passed."
 }
 
@@ -79,191 +63,167 @@ extractSoftware() {
     local extractdir="$BUILDDIR/source"
     logMsg "Creating build directory and extracting MPFR source..."
     mkdir -p "$extractdir"
-    cd "$extractdir"
 
     if [ ! -f "$SOFTWARETAR" ]; then
-        errorExit "MPFR archive not found at $SOFTWARETAR. Please download mpfr-4.2.2.tar.xz"
+        errorExit "MPFR archive not found at $SOFTWARETAR. Please download mpfr-$VERSION.tar.xz"
     fi
 
-    tar -xf "$SOFTWARETAR" --strip-components 1 || errorExit "Failed to extract MPFR tarball."
+    tar -xf "$SOFTWARETAR" -C "$extractdir" --strip-components 1 || errorExit "Failed to extract MPFR tarball."
 }
 
+#
+# THIS FUNCTION CONTAINS THE PRIMARY FIX
+#
 configureAndMake() {
     local platform=$1
     local arch=$2
     local extractdir="$BUILDDIR/source"
     
     logMsg "================================================================="
-    logMsg "Configuring MPFR for PLATFORM: $platform ARCH: $arch"
+    logMsg "Configuring MPFR for PLATFORM: $platform, ARCH: $arch"
     logMsg "================================================================="
     
-    local sdkpath=$(xcrun --sdk $platform --show-sdk-path)
+    # Unset variables to ensure a completely clean state from any previous run.
+    unset CC CXX CFLAGS CXXFLAGS LDFLAGS LIBS SDKROOT CC_FOR_BUILD
+
+    # --- Define variables locally WITHOUT exporting them ---
+
+    local sdkpath
+    sdkpath=$(xcrun --sdk "$platform" --show-sdk-path)
     if [ ! -d "$sdkpath" ]; then
-        errorExit "SDK path not found for platform $platform. Is Xcode installed?"
+        errorExit "SDK path not found for platform '$platform'. Is Xcode installed?"
     fi
-    
-    # Set up paths for GMP dependency
-    local gmp_lib_path="$GMP_LIBDIR/libgmp-$platform-$arch.a"
-    if [ ! -f "$gmp_lib_path" ]; then
-        errorExit "GMP library not found: $gmp_lib_path"
+    logMsg "Using SDK: $sdkpath"
+
+    # Set up a temporary directory for the correctly-named GMP library,
+    # as the configure script expects `libgmp.a`.
+    local temp_gmp_lib_dir="$BUILDDIR/temp-gmp-$platform-$arch"
+    mkdir -p "$temp_gmp_lib_dir"
+    ln -sf "$GMP_LIBDIR/libgmp-$platform-$arch.a" "$temp_gmp_lib_dir/libgmp.a"
+
+    local target_cc
+    target_cc=$(xcrun --sdk "$platform" -f clang)
+
+    local target_cflags
+    local target_ldflags
+
+    if [[ "$platform" == "iphoneos" ]]; then
+        target_cflags="-arch $arch -pipe -Os -isysroot $sdkpath -miphoneos-version-min=$IOS_MIN_VERSION -I$GMP_HEADERS_DIR"
+        target_ldflags="-arch $arch -isysroot $sdkpath -miphoneos-version-min=$IOS_MIN_VERSION -L$temp_gmp_lib_dir"
+    elif [[ "$platform" == "iphonesimulator" ]]; then
+        target_cflags="-arch $arch -pipe -Os -isysroot $sdkpath -mios-simulator-version-min=$IOS_MIN_VERSION -I$GMP_HEADERS_DIR"
+        target_ldflags="-arch $arch -isysroot $sdkpath -mios-simulator-version-min=$IOS_MIN_VERSION -L$temp_gmp_lib_dir"
+    else # macosx
+        target_cflags="-arch $arch -pipe -Os -isysroot $sdkpath -mmacosx-version-min=$MACOS_MIN_VERSION -I$GMP_HEADERS_DIR"
+        target_ldflags="-arch $arch -isysroot $sdkpath -mmacosx-version-min=$MACOS_MIN_VERSION -L$temp_gmp_lib_dir"
     fi
-    
-    # Create a temporary directory with expected library name for configure
-    local temp_lib_dir="$BUILDDIR/temp-gmp-$platform-$arch"
-    mkdir -p "$temp_lib_dir"
-    ln -sf "$gmp_lib_path" "$temp_lib_dir/libgmp.a"
-    
-    # Set compiler and flags - CRITICAL: Platform-specific deployment targets
-    export CC=$(xcrun --sdk $platform -f clang)
-    
-    if [[ "$platform" == "iphonesimulator" ]]; then
-        # Simulator-specific flags
-        export CFLAGS="-arch $arch -pipe -Os -gdwarf-2 -isysroot $sdkpath -mios-simulator-version-min=$IOSVERSIONMIN -I$GMP_HEADERS_DIR"
-        export LDFLAGS="-arch $arch -isysroot $sdkpath -mios-simulator-version-min=$IOSVERSIONMIN -L$temp_lib_dir"
-    else
-        # Device-specific flags
-        export CFLAGS="-arch $arch -pipe -Os -gdwarf-2 -isysroot $sdkpath -miphoneos-version-min=$IOSVERSIONMIN -I$GMP_HEADERS_DIR"
-        export LDFLAGS="-arch $arch -isysroot $sdkpath -miphoneos-version-min=$IOSVERSIONMIN -L$temp_lib_dir"
-    fi
-    
-    export LIBS="-lgmp"
-    
+
     cd "$extractdir"
     
-    # Important: Run make distclean to ensure a fresh build for each architecture
     make distclean &> /dev/null || true
     
-    # PATCH: Correctly set host architecture. MPFR's configure script
-    # recognizes `aarch64` for 64-bit ARM, not `arm64`.
-    local host_arch=$arch
-    if [[ "$arch" == "arm64" ]]; then
-        host_arch="aarch64"
+    local host_triplet
+    host_triplet=$( [[ "$arch" == "arm64" ]] && echo "aarch64" || echo "$arch" )-apple-darwin
+
+    local configure_args=(
+        "--host=$host_triplet"
+        "--with-gmp-include=$GMP_HEADERS_DIR"
+        "--with-gmp-lib=$temp_gmp_lib_dir"
+        "--disable-shared"
+        "--enable-static"
+    )
+
+    local build_cc="/usr/bin/clang"
+    local build_host_triplet
+    
+    if [[ "$platform" != "macosx" ]]; then
+        build_host_triplet=$(uname -m)-apple-darwin
+        configure_args+=( "--build=$build_host_triplet" )
+        
+        logMsg "Configuring with (Cross-Compilation):"
+        logMsg "  CC_FOR_BUILD: $build_cc"
+        logMsg "  BUILD_HOST:   $build_host_triplet"
+    else
+        logMsg "Configuring with (Native Compilation):"
     fi
     
-    # Use the same pattern as GMP - simple and effective
-    ./configure \
-        --host="$host_arch-apple-darwin" \
-        --disable-shared \
-        --enable-static \
-        --with-gmp-include="$GMP_HEADERS_DIR" \
-        --with-gmp-lib="$temp_lib_dir" \
-        --disable-thread-safe
-    
+    logMsg "  TARGET_HOST:  $host_triplet"
+    logMsg "  CC (target):  $target_cc"
+    logMsg "  CFLAGS:       $target_cflags"
+    logMsg "  LDFLAGS:      $target_ldflags"
+
+    # *** KEY CHANGE HERE ***
+    # Pass environment variables on the SAME LINE as the command to prevent leakage.
+    env \
+        CC="$target_cc" \
+        CFLAGS="$target_cflags" \
+        LDFLAGS="$target_ldflags" \
+        LIBS="-lgmp" \
+        CC_FOR_BUILD="$build_cc" \
+        ./configure "${configure_args[@]}"
+
     logMsg "Building MPFR for $platform $arch..."
-    make -j$(sysctl -n hw.ncpu)
-    
+    make -j"$(sysctl -n hw.ncpu)"
+    make install DESTDIR="$BUILDDIR/install-$platform-$arch"
+
     logMsg "Copying built MPFR library..."
-    [ -d "$LIBDIR" ] || mkdir -p "$LIBDIR"
-    cp "src/.libs/lib$LIBNAME.a" "$LIBDIR/lib$LIBNAME-$platform-$arch.a"
+    mkdir -p "$LIBDIR"
+    cp "$BUILDDIR/install-$platform-$arch/usr/local/lib/lib$LIBNAME.a" "$LIBDIR/lib$LIBNAME-$platform-$arch.a"
     
     # Clean up temp directory
-    rm -rf "$temp_lib_dir"
+    rm -rf "$temp_gmp_lib_dir"
 }
 
+#
+# THIS FUNCTION HAS BEEN MODERNIZED
+#
 createFramework() {
-    local FRAMEWORK_NAME="MPFR"
-    local FRAMEWORK_DIR="$SCRIPTDIR/$FRAMEWORK_NAME.xcframework"
-    local HEADERS_DIR="$BUILDDIR/source/src/"
+    local framework_name="MPFR"
+    local framework_dir="$SCRIPTDIR/$framework_name.xcframework"
 
     logMsg "================================================================="
-    logMsg "Creating MPFR XCFramework"
+    logMsg "Creating $framework_name.xcframework"
     logMsg "================================================================="
 
-    rm -rf "$FRAMEWORK_DIR" # Clean old framework
+    rm -rf "$framework_dir" # Clean old framework
 
-    # Create the directory structure for the XCFramework manually
-    logMsg "Creating XCFramework directory structure..."
-    mkdir -p "$FRAMEWORK_DIR/ios-arm64"
-    mkdir -p "$FRAMEWORK_DIR/ios-arm64-simulator"
-    mkdir -p "$FRAMEWORK_DIR/ios-x86_64-simulator"
+    # Create universal "fat" libraries for simulator and macOS slices.
+    logMsg "Creating universal simulator library..."
+    local sim_universal_lib="$LIBDIR/lib$LIBNAME-iphonesimulator-universal.a"
+    lipo -create -output "$sim_universal_lib" \
+        "$LIBDIR/lib$LIBNAME-iphonesimulator-x86_64.a" \
+        "$LIBDIR/lib$LIBNAME-iphonesimulator-arm64.a"
 
-    # Copy the libraries and headers into their correct locations
-    logMsg "Copying libraries and headers..."
-    cp "$LIBDIR/lib$LIBNAME-iphoneos-arm64.a" "$FRAMEWORK_DIR/ios-arm64/lib$LIBNAME.a"
-    cp "$HEADERS_DIR/mpfr.h" "$FRAMEWORK_DIR/ios-arm64/mpfr.h"
+    logMsg "Creating universal macOS library..."
+    local mac_universal_lib="$LIBDIR/lib$LIBNAME-macosx-universal.a"
+    lipo -create -output "$mac_universal_lib" \
+        "$LIBDIR/lib$LIBNAME-macosx-x86_64.a" \
+        "$LIBDIR/lib$LIBNAME-macosx-arm64.a"
 
-    cp "$LIBDIR/lib$LIBNAME-iphonesimulator-arm64.a" "$FRAMEWORK_DIR/ios-arm64-simulator/lib$LIBNAME.a"
-    cp "$HEADERS_DIR/mpfr.h" "$FRAMEWORK_DIR/ios-arm64-simulator/mpfr.h"
+    # Copy headers to a single, clean location.
+    mkdir -p "$HEADERDIR"
+    cp "$BUILDDIR/install-iphoneos-arm64/usr/local/include/mpfr.h" "$HEADERDIR/"
 
-    cp "$LIBDIR/lib$LIBNAME-iphonesimulator-x86_64.a" "$FRAMEWORK_DIR/ios-x86_64-simulator/lib$LIBNAME.a"
-    cp "$HEADERS_DIR/mpfr.h" "$FRAMEWORK_DIR/ios-x86_64-simulator/mpfr.h"
+    # Use xcodebuild to create the XCFramework, which is the modern, preferred method.
+    logMsg "Assembling XCFramework..."
+    xcodebuild -create-xcframework \
+        -library "$LIBDIR/lib$LIBNAME-iphoneos-arm64.a" \
+        -headers "$HEADERDIR" \
+        -library "$sim_universal_lib" \
+        -headers "$HEADERDIR" \
+        -library "$mac_universal_lib" \
+        -headers "$HEADERDIR" \
+        -output "$framework_dir"
 
-    # Create the Info.plist manifest file
-    logMsg "Generating Info.plist..."
-    cat > "$FRAMEWORK_DIR/Info.plist" << EOL
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-    <key>AvailableLibraries</key>
-    <array>
-        <dict>
-            <key>LibraryIdentifier</key>
-            <string>ios-arm64</string>
-            <key>LibraryPath</key>
-            <string>lib$LIBNAME.a</string>
-            <key>HeadersPath</key>
-            <string>.</string>
-            <key>SupportedArchitectures</key>
-            <array>
-                <string>arm64</string>
-            </array>
-            <key>SupportedPlatform</key>
-            <string>ios</string>
-        </dict>
-        <dict>
-            <key>LibraryIdentifier</key>
-            <string>ios-arm64-simulator</string>
-            <key>LibraryPath</key>
-            <string>lib$LIBNAME.a</string>
-            <key>HeadersPath</key>
-            <string>.</string>
-            <key>SupportedArchitectures</key>
-            <array>
-                <string>arm64</string>
-            </array>
-            <key>SupportedPlatform</key>
-            <string>ios</string>
-            <key>SupportedPlatformVariant</key>
-            <string>simulator</string>
-        </dict>
-        <dict>
-            <key>LibraryIdentifier</key>
-            <string>ios-x86_64-simulator</string>
-            <key>LibraryPath</key>
-            <string>lib$LIBNAME.a</string>
-            <key>HeadersPath</key>
-            <string>.</string>
-            <key>SupportedArchitectures</key>
-            <array>
-                <string>x86_64</string>
-            </array>
-            <key>SupportedPlatform</key>
-            <string>ios</string>
-            <key>SupportedPlatformVariant</key>
-            <string>simulator</string>
-        </dict>
-    </array>
-    <key>CFBundlePackageType</key>
-    <string>XFWK</string>
-    <key>XCFrameworkFormatVersion</key>
-    <string>1.0</string>
-</dict>
-</plist>
-EOL
-
-    logMsg "Successfully created $FRAMEWORK_DIR"
-    logMsg "MPFR XCFramework ready for use in iOS projects."
+    logMsg "✅ Successfully created $framework_dir"
 }
+
 
 # --- Main Build Logic ---
+logMsg "Starting MPFR build for iOS, Simulator, and macOS..."
 
-logMsg "Starting MPFR build for iOS..."
-
-# Check GMP dependency first
 checkGmpDependency
 
-# Clean old build directory if it exists
 if [ -d "$BUILDDIR" ]; then
     logMsg "Cleaning old MPFR build directory..."
     rm -rf "$BUILDDIR"
@@ -272,20 +232,21 @@ fi
 extractSoftware
 
 logMsg "--- Building MPFR for iOS Device ---"
-for ARCH in $DEVARCHS; do
-    configureAndMake "iphoneos" $ARCH
+for arch in $DEVARCHS; do
+    configureAndMake "iphoneos" "$arch"
 done
 
 logMsg "--- Building MPFR for iOS Simulator ---"
-for ARCH in $SIMARCHS; do
-    configureAndMake "iphonesimulator" $ARCH
+for arch in $SIMARCHS; do
+    configureAndMake "iphonesimulator" "$arch"
+done
+
+logMsg "--- Building MPFR for macOS ---"
+for arch in $MACARCHS; do
+    configureAndMake "macosx" "$arch"
 done
 
 createFramework
 
-logMsg "MPFR build process completed successfully!"
-logMsg "Next steps:"
-logMsg "1. Use both GMP.xcframework and MPFR.xcframework in your iOS project"
-logMsg "2. Import both: #import <gmp.h> and #import <mpfr.h>"
-logMsg "3. Link both frameworks in your Xcode project"
+logMsg "🚀 MPFR build process completed successfully!"
 exit 0

@@ -74,7 +74,7 @@
 #define MPC_GCC "yes"
 
 /* Version of gcc */
-#define MPC_GCC_VERSION "16.0.0"
+#define MPC_GCC_VERSION "17.0.0"
 
 /* Do not check mpc_out_str on stdout */
 /* #undef MPC_NO_STREAM_REDIRECTION */

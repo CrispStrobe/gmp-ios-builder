@@ -17,7 +17,7 @@ old_library='libmpc.a'
 inherited_linker_flags=' '
 
 # Libraries that this one depends upon.
-dependency_libs=' -L/Users/christianstrobele/code/gmp-ios-builder/build-mpc/temp-deps-iphonesimulator-arm64 -lm -lmpfr -lgmp'
+dependency_libs=' -L/Users/christianstrobele/code/gmp-ios-builder/build/install-macosx-arm64/usr/local/lib -L/Users/christianstrobele/code/gmp-ios-builder/build-mpfr/install-macosx-arm64/usr/local/lib -L/Users/christianstrobele/code/gmp-ios-builder/build/lib -L/Users/christianstrobele/code/gmp-ios-builder/build-mpfr/lib -L/Users/christianstrobele/code/gmp-ios-builder/build-mpfr/temp-gmp-macosx-arm64 -lm /Users/christianstrobele/code/gmp-ios-builder/build-mpfr/install-macosx-arm64/usr/local/lib/libmpfr.la -lgmp /Users/christianstrobele/code/gmp-ios-builder/build/install-macosx-arm64/usr/local/lib/libgmp.la'
 
 # Names of additional weak libraries provided by this library
 weak_library_names=''
