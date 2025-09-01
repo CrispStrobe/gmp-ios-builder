@@ -20,11 +20,7 @@ The build process creates five interdependent `XCFrameworks`:
 | `FLINT.xcframework`       | [Fast Library for Number Theory](https://flintlib.org/) 3.3.1        | Advanced number theory, polynomials, and matrices. |
 | `SymEngine.xcframework`   | [SymEngine](https://symengine.org/) 0.11.2                           | A fast symbolic manipulation library.            |
 
-Each framework supports:
-
-  - **iOS Device** (arm64): For physical iPhones and iPads.
-  - **iOS Simulator** (arm64): For Apple Silicon Mac simulators.
-  - **iOS Simulator** (x86\_64): For Intel Mac simulators.
+Each framework is built with universal support for physical devices (`arm64`) and simulators (`arm64`, `x86_64`).
 
 -----
 
@@ -71,128 +67,48 @@ chmod +x build_*.sh
 
 ## Using in iOS Projects
 
-### Xcode Integration
+While the .xcframework bundles produced by this project can be used in native Xcode projects, using them in a Flutter application is facilitated by a specific architecture to overcome challenges with static linking. The process is fully demonstrated in two companion repositories:
+* gmp_bridge: A local Flutter plugin that wraps the native GMP library.
+* gmp_test_app: A complete Flutter demo app that uses the plugin.
 
-1.  **Add Frameworks**: Drag all five `.xcframework` bundles into your Xcode project's "Frameworks, Libraries, and Embedded Content" section.
-2.  **Import Headers**: Use the appropriate headers in your Objective-C, Objective-C++, or Swift bridging header files.
+### The Challenge: Symbol Stripping
+When linking a static library (.a) to a Flutter app, the native Xcode build process often fails to see any usage of the C functions, as they are only called from the Dart VM via FFI at runtime. This causes the linker to aggressively "strip" the library's code from the final app binary to save space, leading to "symbol not found" errors when your Dart code tries to call the functions.
 
-### Swift Integration
+### The Solution: A Local Plugin Bridge
+A robust solution is to create a local Flutter plugin that acts as a bridge. This approach uses iOS's standard dependency manager, CocoaPods, to correctly link the library and prevent symbol stripping.
 
-Create a bridging header (`YourProject-Bridging-Header.h`) and import the C headers you need.
+The architecture works as follows:
 
-```objc
-// In YourProject-Bridging-Header.h
+* Build the Static Library: This repository (gmp-ios-builder) is used to compile GMP into a universal static library for the simulator (e.g., libgmp-simulator.a).
+* Create a Plugin Wrapper (gmp_bridge): A local Flutter plugin is created. The libgmp-simulator.a file is placed inside its ios/ directory. The plugin's configuration file, gmp_bridge.podspec, is modified to command the linker. It tells CocoaPods to find the library and, most importantly, to force-load all of its symbols.
 
-// For basic arithmetic
-#import <gmp.h>
-#import <mpfr.h>
-#import <mpc.h>
+```ruby
+# In gmp_bridge/ios/gmp_bridge.podspec
 
-// For number theory
-#import <flint/flint.h>
-#import <flint/fmpz.h>
-#import <flint/fmpz_poly.h>
+# 1. Tell CocoaPods where to find the static library.
+s.vendored_libraries = 'libgmp-simulator.a'
 
-// For symbolic math (use the C wrapper)
-#import <symengine/cwrapper.h>
+# 2. Add the linker flag to prevent symbol stripping.
+s.pod_target_xcconfig = {
+  'OTHER_LDFLAGS' => '-force_load "${PODS_TARGET_SRCROOT}/libgmp-simulator.a"'
+}
 ```
 
------
+* Use the Plugin in the App (gmp_test_app): The main Flutter app adds a local path dependency to the gmp_bridge plugin in its pubspec.yaml. When the app is built, CocoaPods automatically creates a gmp_bridge.framework containing the GMP code. The Dart FFI code can then explicitly load this framework to access the GMP functions.
 
-## Example Usage
+```ruby
+// In gmp_test_app/lib/cas_bridge.dart
 
-### GMP: Integer Arithmetic
+// Load the framework created by the plugin, not the main app binary.
+_dylib = DynamicLibrary.open('gmp_bridge.framework/gmp_bridge');
 
-```objc
-#import <gmp.h>
-
-mpz_t base, result;
-mpz_init_set_ui(base, 2); // base = 2
-mpz_init(result);
-mpz_pow_ui(result, base, 512); // result = 2^512
-
-char *str = mpz_get_str(NULL, 10, result);
-NSLog(@"2^512 = %s", str);
-
-free(str);
-mpz_clears(base, result, NULL);
+// Look up and call GMP functions as needed.
+_mpz_pow_ui = _dylib
+    .lookup<NativeFunction<MpzPowUiNative>>('__gmpz_pow_ui')
+    .asFunction();
 ```
 
-### MPFR & MPC: High-Precision Pi and Complex Log
-
-```objc
-#import <mpfr.h>
-#import <mpc.h>
-
-// Calculate Pi to 256 bits of precision
-mpfr_t pi;
-mpfr_init2(pi, 256);
-mpfr_const_pi(pi, MPFR_RNDN);
-mpfr_printf("Pi = %.50Rf\n", pi);
-
-// Calculate log(1 + i*pi)
-mpc_t z, res;
-mpc_init2(z, 256);
-mpc_init2(res, 256);
-mpc_set_fr_fr(z, mpfr_get_si(pi, MPFR_RNDN), pi, MPC_RNDNN); // z = 1 + i*pi (approx)
-mpc_log(res, z, MPC_RNDNN);
-mpc_printf("log(1 + i*pi) = (%.10Rg, %.10Rg)\n", res);
-
-mpfr_clear(pi);
-mpc_clears(z, res, NULL);
-```
-
-### FLINT: Polynomial Factorization
-
-```objc
-#import <flint/fmpz.h>
-#import <flint/fmpz_poly.h>
-#import <flint/fmpz_poly_factor.h>
-
-// Factor the polynomial x^2 - 4
-fmpz_poly_t poly;
-fmpz_poly_init(poly);
-fmpz_poly_set_coeff_si(poly, 2, 1);  // 1*x^2
-fmpz_poly_set_coeff_si(poly, 0, -4); // -4
-
-fmpz_poly_factor_t factors;
-fmpz_poly_factor_init(factors);
-fmpz_poly_factor(factors, poly); // factorize
-
-// Print factors: (x - 2) * (x + 2)
-fmpz_poly_factor_print(factors);
-
-fmpz_poly_clear(poly);
-fmpz_poly_factor_clear(factors);
-```
-
-### SymEngine: Symbolic Differentiation
-
-```objc
-#import <symengine/cwrapper.h>
-
-// Create a symbolic expression for sin(x)
-CVecBasic *args = vec_basic_new();
-CBasic *x = symbol("x");
-vec_basic_push_back(args, x);
-CBasic *expr = basic_function("sin", args);
-
-// Differentiate sin(x) with respect to x
-CBasic *deriv = basic_diff(expr, x);
-
-// The result is cos(x)
-char *s = basic_str(deriv);
-NSLog(@"d/dx(sin(x)) = %s", s);
-
-// Clean up
-basic_free(deriv);
-basic_free(expr);
-basic_free(x);
-vec_basic_free(args);
-free(s);
-```
-
------
+This plugin-based architecture is the recommended pattern for integrating complex native C/C++ static libraries into a modern Flutter application for iOS.
 
 ## Technical Notes
 
