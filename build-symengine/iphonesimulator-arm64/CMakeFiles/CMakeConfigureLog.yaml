@@ -1814,8 +1814,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-7FmgC8"
-      binary: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-7FmgC8"
+      source: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-32g9B5"
+      binary: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-32g9B5"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_EXE_LINKER_FLAGS: ""
@@ -1827,18 +1827,18 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-7FmgC8'
+        Change Dir: '/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-32g9B5'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_9dee3/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_9dee3.dir/build.make CMakeFiles/cmTC_9dee3.dir/build
-        Building C object CMakeFiles/cmTC_9dee3.dir/CMakeCCompilerABI.c.o
-        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang   -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=13.0   -v -Wl,-v -MD -MT CMakeFiles/cmTC_9dee3.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_9dee3.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_9dee3.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_9c29e/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_9c29e.dir/build.make CMakeFiles/cmTC_9c29e.dir/build
+        Building C object CMakeFiles/cmTC_9c29e.dir/CMakeCCompilerABI.c.o
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang   -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=13.0   -v -Wl,-v -MD -MT CMakeFiles/cmTC_9c29e.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_9c29e.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_9c29e.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c
         Apple clang version 17.0.0 (clang-1700.0.13.5)
         Target: arm64-apple-darwin24.6.0
         Thread model: posix
         InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
         clang: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
-         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-ios13.0.0-simulator -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=18.5 -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.5a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-7FmgC8 -target-linker-version 1167.5 -v -fcoverage-compilation-dir=/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-7FmgC8 -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17 -dependency-file CMakeFiles/cmTC_9dee3.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_9dee3.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -ferror-limit 19 -stack-protector 1 -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_9dee3.dir/CMakeCCompilerABI.c.o -x c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c
+         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-ios13.0.0-simulator -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=18.5 -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.5a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-32g9B5 -target-linker-version 1167.5 -v -fcoverage-compilation-dir=/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-32g9B5 -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17 -dependency-file CMakeFiles/cmTC_9c29e.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_9c29e.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -ferror-limit 19 -stack-protector 1 -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_9c29e.dir/CMakeCCompilerABI.c.o -x c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c
         clang -cc1 version 17.0.0 (clang-1700.0.13.5) default target arm64-apple-darwin24.6.0
         ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/usr/local/include"
         ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/System/Library/SubFrameworks"
@@ -1850,13 +1850,13 @@ events:
          /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include
          /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/System/Library/Frameworks (framework directory)
         End of search list.
-        Linking C executable cmTC_9dee3.app/cmTC_9dee3
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9dee3.dir/link.txt --verbose=1
+        Linking C executable cmTC_9c29e.app/cmTC_9c29e
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9c29e.dir/link.txt --verbose=1
         Apple clang version 17.0.0 (clang-1700.0.13.5)
         Target: arm64-apple-darwin24.6.0
         Thread model: posix
         InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
-         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version ios-simulator 14.0.0 18.5 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_9dee3.app/cmTC_9dee3 -headerpad_max_install_names -v CMakeFiles/cmTC_9dee3.dir/CMakeCCompilerABI.c.o -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.iossim.a
+         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version ios-simulator 14.0.0 18.5 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_9c29e.app/cmTC_9c29e -headerpad_max_install_names -v CMakeFiles/cmTC_9c29e.dir/CMakeCCompilerABI.c.o -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.iossim.a
         @(#)PROGRAM:ld PROJECT:ld-1167.5
         BUILD 01:45:05 Apr 30 2025
         configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
@@ -1868,7 +1868,7 @@ events:
         	/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/usr/lib/swift
         Framework search paths:
         	/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/System/Library/Frameworks
-        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=13.0 -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_9dee3.dir/CMakeCCompilerABI.c.o -o cmTC_9dee3.app/cmTC_9dee3
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=13.0 -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_9c29e.dir/CMakeCCompilerABI.c.o -o cmTC_9c29e.app/cmTC_9c29e
         
       exitCode: 0
   -
@@ -1901,18 +1901,18 @@ events:
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-7FmgC8']
+        ignore line: [Change Dir: '/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-32g9B5']
         ignore line: []
-        ignore line: [Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_9dee3/fast]
-        ignore line: [/Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_9dee3.dir/build.make CMakeFiles/cmTC_9dee3.dir/build]
-        ignore line: [Building C object CMakeFiles/cmTC_9dee3.dir/CMakeCCompilerABI.c.o]
-        ignore line: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang   -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=13.0   -v -Wl -v -MD -MT CMakeFiles/cmTC_9dee3.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_9dee3.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_9dee3.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_9c29e/fast]
+        ignore line: [/Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_9c29e.dir/build.make CMakeFiles/cmTC_9c29e.dir/build]
+        ignore line: [Building C object CMakeFiles/cmTC_9c29e.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang   -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=13.0   -v -Wl -v -MD -MT CMakeFiles/cmTC_9c29e.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_9c29e.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_9c29e.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c]
         ignore line: [Apple clang version 17.0.0 (clang-1700.0.13.5)]
         ignore line: [Target: arm64-apple-darwin24.6.0]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
         ignore line: [clang: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
-        ignore line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-ios13.0.0-simulator -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=18.5 -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.5a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-7FmgC8 -target-linker-version 1167.5 -v -fcoverage-compilation-dir=/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-7FmgC8 -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17 -dependency-file CMakeFiles/cmTC_9dee3.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_9dee3.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -ferror-limit 19 -stack-protector 1 -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_9dee3.dir/CMakeCCompilerABI.c.o -x c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-ios13.0.0-simulator -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=18.5 -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.5a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-32g9B5 -target-linker-version 1167.5 -v -fcoverage-compilation-dir=/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-32g9B5 -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17 -dependency-file CMakeFiles/cmTC_9c29e.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_9c29e.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -ferror-limit 19 -stack-protector 1 -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_9c29e.dir/CMakeCCompilerABI.c.o -x c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c]
         ignore line: [clang -cc1 version 17.0.0 (clang-1700.0.13.5) default target arm64-apple-darwin24.6.0]
         ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/usr/local/include"]
         ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/System/Library/SubFrameworks"]
@@ -1924,13 +1924,13 @@ events:
         ignore line: [ /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
         ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/System/Library/Frameworks (framework directory)]
         ignore line: [End of search list.]
-        ignore line: [Linking C executable cmTC_9dee3.app/cmTC_9dee3]
-        ignore line: [/opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9dee3.dir/link.txt --verbose=1]
+        ignore line: [Linking C executable cmTC_9c29e.app/cmTC_9c29e]
+        ignore line: [/opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9c29e.dir/link.txt --verbose=1]
         ignore line: [Apple clang version 17.0.0 (clang-1700.0.13.5)]
         ignore line: [Target: arm64-apple-darwin24.6.0]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
-        link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version ios-simulator 14.0.0 18.5 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_9dee3.app/cmTC_9dee3 -headerpad_max_install_names -v CMakeFiles/cmTC_9dee3.dir/CMakeCCompilerABI.c.o -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.iossim.a]
+        link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version ios-simulator 14.0.0 18.5 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_9c29e.app/cmTC_9c29e -headerpad_max_install_names -v CMakeFiles/cmTC_9c29e.dir/CMakeCCompilerABI.c.o -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.iossim.a]
           arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld] ==> ignore
           arg [-demangle] ==> ignore
           arg [-lto_library] ==> ignore, skip following value
@@ -1947,10 +1947,10 @@ events:
           arg [-mllvm] ==> ignore
           arg [-enable-linkonceodr-outlining] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_9dee3.app/cmTC_9dee3] ==> ignore
+          arg [cmTC_9c29e.app/cmTC_9c29e] ==> ignore
           arg [-headerpad_max_install_names] ==> ignore
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_9dee3.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [CMakeFiles/cmTC_9c29e.dir/CMakeCCompilerABI.c.o] ==> ignore
           arg [-lSystem] ==> lib [System]
           arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.iossim.a] ==> lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.iossim.a]
         linker tool for 'C': /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld
@@ -1991,8 +1991,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-gEgUcz"
-      binary: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-gEgUcz"
+      source: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-iM3BJI"
+      binary: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-iM3BJI"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
@@ -2005,19 +2005,19 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-gEgUcz'
+        Change Dir: '/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-iM3BJI'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_e72c6/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_e72c6.dir/build.make CMakeFiles/cmTC_e72c6.dir/build
-        Building CXX object CMakeFiles/cmTC_e72c6.dir/CMakeCXXCompilerABI.cpp.o
-        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++   -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=13.0   -v -Wl,-v -MD -MT CMakeFiles/cmTC_e72c6.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_e72c6.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_e72c6.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_39b17/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_39b17.dir/build.make CMakeFiles/cmTC_39b17.dir/build
+        Building CXX object CMakeFiles/cmTC_39b17.dir/CMakeCXXCompilerABI.cpp.o
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++   -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=13.0   -v -Wl,-v -MD -MT CMakeFiles/cmTC_39b17.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_39b17.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_39b17.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
         Apple clang version 17.0.0 (clang-1700.0.13.5)
         Target: arm64-apple-darwin24.6.0
         Thread model: posix
         InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
         clang++: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
         ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"
-         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-ios13.0.0-simulator -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=18.5 -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.5a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-gEgUcz -target-linker-version 1167.5 -v -fcoverage-compilation-dir=/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-gEgUcz -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17 -dependency-file CMakeFiles/cmTC_e72c6.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_e72c6.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdeprecated-macro -ferror-limit 19 -stack-protector 1 -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_e72c6.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-ios13.0.0-simulator -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=18.5 -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.5a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-iM3BJI -target-linker-version 1167.5 -v -fcoverage-compilation-dir=/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-iM3BJI -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17 -dependency-file CMakeFiles/cmTC_39b17.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_39b17.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdeprecated-macro -ferror-limit 19 -stack-protector 1 -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_39b17.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
         clang -cc1 version 17.0.0 (clang-1700.0.13.5) default target arm64-apple-darwin24.6.0
         ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/usr/local/include"
         ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/System/Library/SubFrameworks"
@@ -2030,13 +2030,13 @@ events:
          /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include
          /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/System/Library/Frameworks (framework directory)
         End of search list.
-        Linking CXX executable cmTC_e72c6.app/cmTC_e72c6
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e72c6.dir/link.txt --verbose=1
+        Linking CXX executable cmTC_39b17.app/cmTC_39b17
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_39b17.dir/link.txt --verbose=1
         Apple clang version 17.0.0 (clang-1700.0.13.5)
         Target: arm64-apple-darwin24.6.0
         Thread model: posix
         InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
-         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version ios-simulator 14.0.0 18.5 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_e72c6.app/cmTC_e72c6 -headerpad_max_install_names -v CMakeFiles/cmTC_e72c6.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.iossim.a
+         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version ios-simulator 14.0.0 18.5 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_39b17.app/cmTC_39b17 -headerpad_max_install_names -v CMakeFiles/cmTC_39b17.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.iossim.a
         @(#)PROGRAM:ld PROJECT:ld-1167.5
         BUILD 01:45:05 Apr 30 2025
         configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
@@ -2048,7 +2048,7 @@ events:
         	/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/usr/lib/swift
         Framework search paths:
         	/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/System/Library/Frameworks
-        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=13.0 -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_e72c6.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_e72c6.app/cmTC_e72c6
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=13.0 -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_39b17.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_39b17.app/cmTC_39b17
         
       exitCode: 0
   -
@@ -2083,19 +2083,19 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-gEgUcz']
+        ignore line: [Change Dir: '/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-iM3BJI']
         ignore line: []
-        ignore line: [Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_e72c6/fast]
-        ignore line: [/Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_e72c6.dir/build.make CMakeFiles/cmTC_e72c6.dir/build]
-        ignore line: [Building CXX object CMakeFiles/cmTC_e72c6.dir/CMakeCXXCompilerABI.cpp.o]
-        ignore line: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++   -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=13.0   -v -Wl -v -MD -MT CMakeFiles/cmTC_e72c6.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_e72c6.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_e72c6.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_39b17/fast]
+        ignore line: [/Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_39b17.dir/build.make CMakeFiles/cmTC_39b17.dir/build]
+        ignore line: [Building CXX object CMakeFiles/cmTC_39b17.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++   -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=13.0   -v -Wl -v -MD -MT CMakeFiles/cmTC_39b17.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_39b17.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_39b17.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Apple clang version 17.0.0 (clang-1700.0.13.5)]
         ignore line: [Target: arm64-apple-darwin24.6.0]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
         ignore line: [clang++: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
         ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"]
-        ignore line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-ios13.0.0-simulator -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=18.5 -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.5a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-gEgUcz -target-linker-version 1167.5 -v -fcoverage-compilation-dir=/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-gEgUcz -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17 -dependency-file CMakeFiles/cmTC_e72c6.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_e72c6.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdeprecated-macro -ferror-limit 19 -stack-protector 1 -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_e72c6.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-ios13.0.0-simulator -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=18.5 -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.5a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-iM3BJI -target-linker-version 1167.5 -v -fcoverage-compilation-dir=/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-iM3BJI -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17 -dependency-file CMakeFiles/cmTC_39b17.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_39b17.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdeprecated-macro -ferror-limit 19 -stack-protector 1 -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_39b17.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [clang -cc1 version 17.0.0 (clang-1700.0.13.5) default target arm64-apple-darwin24.6.0]
         ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/usr/local/include"]
         ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/System/Library/SubFrameworks"]
@@ -2108,13 +2108,13 @@ events:
         ignore line: [ /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
         ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/System/Library/Frameworks (framework directory)]
         ignore line: [End of search list.]
-        ignore line: [Linking CXX executable cmTC_e72c6.app/cmTC_e72c6]
-        ignore line: [/opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e72c6.dir/link.txt --verbose=1]
+        ignore line: [Linking CXX executable cmTC_39b17.app/cmTC_39b17]
+        ignore line: [/opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_39b17.dir/link.txt --verbose=1]
         ignore line: [Apple clang version 17.0.0 (clang-1700.0.13.5)]
         ignore line: [Target: arm64-apple-darwin24.6.0]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
-        link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version ios-simulator 14.0.0 18.5 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_e72c6.app/cmTC_e72c6 -headerpad_max_install_names -v CMakeFiles/cmTC_e72c6.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.iossim.a]
+        link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version ios-simulator 14.0.0 18.5 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_39b17.app/cmTC_39b17 -headerpad_max_install_names -v CMakeFiles/cmTC_39b17.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.iossim.a]
           arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld] ==> ignore
           arg [-demangle] ==> ignore
           arg [-lto_library] ==> ignore, skip following value
@@ -2131,10 +2131,10 @@ events:
           arg [-mllvm] ==> ignore
           arg [-enable-linkonceodr-outlining] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_e72c6.app/cmTC_e72c6] ==> ignore
+          arg [cmTC_39b17.app/cmTC_39b17] ==> ignore
           arg [-headerpad_max_install_names] ==> ignore
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_e72c6.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [CMakeFiles/cmTC_39b17.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
           arg [-lc++] ==> lib [c++]
           arg [-lSystem] ==> lib [System]
           arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.iossim.a] ==> lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.iossim.a]
@@ -2188,13 +2188,13 @@ events:
       stdout: |
         Change Dir: '/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/cxx/CMakeFiles/CMakeTmp'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_3cc69/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_3cc69.dir/build.make CMakeFiles/cmTC_3cc69.dir/build
-        Building CXX object CMakeFiles/cmTC_3cc69.dir/checkcxx11.cpp.o
-        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++   -std=c++11  -fPIC -std=c++11  -fPIC -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=13.0 -MD -MT CMakeFiles/cmTC_3cc69.dir/checkcxx11.cpp.o -MF CMakeFiles/cmTC_3cc69.dir/checkcxx11.cpp.o.d -o CMakeFiles/cmTC_3cc69.dir/checkcxx11.cpp.o -c /Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/cmake/checkcxx11.cpp
-        Linking CXX executable cmTC_3cc69.app/cmTC_3cc69
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3cc69.dir/link.txt --verbose=1
-        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -std=c++11  -fPIC -std=c++11  -fPIC -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=13.0 -Wl,-headerpad_max_install_names CMakeFiles/cmTC_3cc69.dir/checkcxx11.cpp.o -o cmTC_3cc69.app/cmTC_3cc69
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_34805/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_34805.dir/build.make CMakeFiles/cmTC_34805.dir/build
+        Building CXX object CMakeFiles/cmTC_34805.dir/checkcxx11.cpp.o
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++   -std=c++11  -fPIC -std=c++11  -fPIC -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=13.0 -MD -MT CMakeFiles/cmTC_34805.dir/checkcxx11.cpp.o -MF CMakeFiles/cmTC_34805.dir/checkcxx11.cpp.o.d -o CMakeFiles/cmTC_34805.dir/checkcxx11.cpp.o -c /Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/cmake/checkcxx11.cpp
+        Linking CXX executable cmTC_34805.app/cmTC_34805
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_34805.dir/link.txt --verbose=1
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -std=c++11  -fPIC -std=c++11  -fPIC -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=13.0 -Wl,-headerpad_max_install_names CMakeFiles/cmTC_34805.dir/checkcxx11.cpp.o -o cmTC_34805.app/cmTC_34805
         
       exitCode: 0
   -
@@ -2218,17 +2218,17 @@ events:
       stdout: |
         Change Dir: '/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/cxx/CMakeFiles/CMakeTmp'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_9933b/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_9933b.dir/build.make CMakeFiles/cmTC_9933b.dir/build
-        Building CXX object CMakeFiles/cmTC_9933b.dir/checkcxx11.cpp.o
-        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++   -std=c++11  -fPIC -std=c++11  -fPIC -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=13.0 -MD -MT CMakeFiles/cmTC_9933b.dir/checkcxx11.cpp.o -MF CMakeFiles/cmTC_9933b.dir/checkcxx11.cpp.o.d -o CMakeFiles/cmTC_9933b.dir/checkcxx11.cpp.o -c /Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/cmake/checkcxx11.cpp
-        Linking CXX executable cmTC_9933b.app/cmTC_9933b
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9933b.dir/link.txt --verbose=1
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_9a1ba/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_9a1ba.dir/build.make CMakeFiles/cmTC_9a1ba.dir/build
+        Building CXX object CMakeFiles/cmTC_9a1ba.dir/checkcxx11.cpp.o
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++   -std=c++11  -fPIC -std=c++11  -fPIC -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=13.0 -MD -MT CMakeFiles/cmTC_9a1ba.dir/checkcxx11.cpp.o -MF CMakeFiles/cmTC_9a1ba.dir/checkcxx11.cpp.o.d -o CMakeFiles/cmTC_9a1ba.dir/checkcxx11.cpp.o -c /Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/cmake/checkcxx11.cpp
+        Linking CXX executable cmTC_9a1ba.app/cmTC_9a1ba
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9a1ba.dir/link.txt --verbose=1
         ld: unknown options: --exclude-libs 
         clang++: error: linker command failed with exit code 1 (use -v to see invocation)
-        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -std=c++11  -fPIC -std=c++11  -fPIC -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=13.0 -Wl,-headerpad_max_install_names CMakeFiles/cmTC_9933b.dir/checkcxx11.cpp.o -o cmTC_9933b.app/cmTC_9933b  -Wl,--exclude-libs,ALL
-        make[1]: *** [cmTC_9933b.app/cmTC_9933b] Error 1
-        make: *** [cmTC_9933b/fast] Error 2
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -std=c++11  -fPIC -std=c++11  -fPIC -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=13.0 -Wl,-headerpad_max_install_names CMakeFiles/cmTC_9a1ba.dir/checkcxx11.cpp.o -o cmTC_9a1ba.app/cmTC_9a1ba  -Wl,--exclude-libs,ALL
+        make[1]: *** [cmTC_9a1ba.app/cmTC_9a1ba] Error 1
+        make: *** [cmTC_9a1ba/fast] Error 2
         
       exitCode: 2
   -
@@ -2252,13 +2252,13 @@ events:
       stdout: |
         Change Dir: '/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/cxx/CMakeFiles/CMakeTmp'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_daa7a/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_daa7a.dir/build.make CMakeFiles/cmTC_daa7a.dir/build
-        Building CXX object CMakeFiles/cmTC_daa7a.dir/checkcxx11.cpp.o
-        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++   -std=c++11  -fPIC -std=c++11  -fPIC -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=13.0 -MD -MT CMakeFiles/cmTC_daa7a.dir/checkcxx11.cpp.o -MF CMakeFiles/cmTC_daa7a.dir/checkcxx11.cpp.o.d -o CMakeFiles/cmTC_daa7a.dir/checkcxx11.cpp.o -c /Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/cmake/checkcxx11.cpp
-        Linking CXX executable cmTC_daa7a.app/cmTC_daa7a
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_daa7a.dir/link.txt --verbose=1
-        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -std=c++11  -fPIC -std=c++11  -fPIC -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=13.0 -Wl,-headerpad_max_install_names CMakeFiles/cmTC_daa7a.dir/checkcxx11.cpp.o -o cmTC_daa7a.app/cmTC_daa7a  -Wl,-unexported_symbol,dummy
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_dbccd/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_dbccd.dir/build.make CMakeFiles/cmTC_dbccd.dir/build
+        Building CXX object CMakeFiles/cmTC_dbccd.dir/checkcxx11.cpp.o
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++   -std=c++11  -fPIC -std=c++11  -fPIC -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=13.0 -MD -MT CMakeFiles/cmTC_dbccd.dir/checkcxx11.cpp.o -MF CMakeFiles/cmTC_dbccd.dir/checkcxx11.cpp.o.d -o CMakeFiles/cmTC_dbccd.dir/checkcxx11.cpp.o -c /Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/cmake/checkcxx11.cpp
+        Linking CXX executable cmTC_dbccd.app/cmTC_dbccd
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dbccd.dir/link.txt --verbose=1
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -std=c++11  -fPIC -std=c++11  -fPIC -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=13.0 -Wl,-headerpad_max_install_names CMakeFiles/cmTC_dbccd.dir/checkcxx11.cpp.o -o cmTC_dbccd.app/cmTC_dbccd  -Wl,-unexported_symbol,dummy
         
       exitCode: 0
   -
@@ -2270,8 +2270,8 @@ events:
     checks:
       - "Looking for sys/types.h"
     directories:
-      source: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-OxOkkB"
-      binary: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-OxOkkB"
+      source: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-MhWjwr"
+      binary: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-MhWjwr"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_EXE_LINKER_FLAGS: ""
@@ -2284,15 +2284,15 @@ events:
       variable: "HAVE_SYS_TYPES_H"
       cached: true
       stdout: |
-        Change Dir: '/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-OxOkkB'
+        Change Dir: '/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-MhWjwr'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_297f3/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_297f3.dir/build.make CMakeFiles/cmTC_297f3.dir/build
-        Building C object CMakeFiles/cmTC_297f3.dir/CheckIncludeFile.c.o
-        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang   -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=13.0 -MD -MT CMakeFiles/cmTC_297f3.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_297f3.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_297f3.dir/CheckIncludeFile.c.o -c /Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-OxOkkB/CheckIncludeFile.c
-        Linking C executable cmTC_297f3.app/cmTC_297f3
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_297f3.dir/link.txt --verbose=1
-        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=13.0 -Wl,-headerpad_max_install_names CMakeFiles/cmTC_297f3.dir/CheckIncludeFile.c.o -o cmTC_297f3.app/cmTC_297f3
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_9c513/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_9c513.dir/build.make CMakeFiles/cmTC_9c513.dir/build
+        Building C object CMakeFiles/cmTC_9c513.dir/CheckIncludeFile.c.o
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang   -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=13.0 -MD -MT CMakeFiles/cmTC_9c513.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_9c513.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_9c513.dir/CheckIncludeFile.c.o -c /Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-MhWjwr/CheckIncludeFile.c
+        Linking C executable cmTC_9c513.app/cmTC_9c513
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9c513.dir/link.txt --verbose=1
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=13.0 -Wl,-headerpad_max_install_names CMakeFiles/cmTC_9c513.dir/CheckIncludeFile.c.o -o cmTC_9c513.app/cmTC_9c513
         
       exitCode: 0
   -
@@ -2304,8 +2304,8 @@ events:
     checks:
       - "Looking for stdint.h"
     directories:
-      source: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-8HsqhH"
-      binary: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-8HsqhH"
+      source: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-wC1A7S"
+      binary: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-wC1A7S"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_EXE_LINKER_FLAGS: ""
@@ -2318,15 +2318,15 @@ events:
       variable: "HAVE_STDINT_H"
       cached: true
       stdout: |
-        Change Dir: '/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-8HsqhH'
+        Change Dir: '/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-wC1A7S'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_88258/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_88258.dir/build.make CMakeFiles/cmTC_88258.dir/build
-        Building C object CMakeFiles/cmTC_88258.dir/CheckIncludeFile.c.o
-        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang   -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=13.0 -MD -MT CMakeFiles/cmTC_88258.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_88258.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_88258.dir/CheckIncludeFile.c.o -c /Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-8HsqhH/CheckIncludeFile.c
-        Linking C executable cmTC_88258.app/cmTC_88258
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_88258.dir/link.txt --verbose=1
-        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=13.0 -Wl,-headerpad_max_install_names CMakeFiles/cmTC_88258.dir/CheckIncludeFile.c.o -o cmTC_88258.app/cmTC_88258
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_3a9bc/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_3a9bc.dir/build.make CMakeFiles/cmTC_3a9bc.dir/build
+        Building C object CMakeFiles/cmTC_3a9bc.dir/CheckIncludeFile.c.o
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang   -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=13.0 -MD -MT CMakeFiles/cmTC_3a9bc.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_3a9bc.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_3a9bc.dir/CheckIncludeFile.c.o -c /Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-wC1A7S/CheckIncludeFile.c
+        Linking C executable cmTC_3a9bc.app/cmTC_3a9bc
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3a9bc.dir/link.txt --verbose=1
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=13.0 -Wl,-headerpad_max_install_names CMakeFiles/cmTC_3a9bc.dir/CheckIncludeFile.c.o -o cmTC_3a9bc.app/cmTC_3a9bc
         
       exitCode: 0
   -
@@ -2338,8 +2338,8 @@ events:
     checks:
       - "Looking for stddef.h"
     directories:
-      source: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-E1pkhe"
-      binary: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-E1pkhe"
+      source: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-2qi86g"
+      binary: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-2qi86g"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_EXE_LINKER_FLAGS: ""
@@ -2352,15 +2352,15 @@ events:
       variable: "HAVE_STDDEF_H"
       cached: true
       stdout: |
-        Change Dir: '/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-E1pkhe'
+        Change Dir: '/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-2qi86g'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_9d776/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_9d776.dir/build.make CMakeFiles/cmTC_9d776.dir/build
-        Building C object CMakeFiles/cmTC_9d776.dir/CheckIncludeFile.c.o
-        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang   -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=13.0 -MD -MT CMakeFiles/cmTC_9d776.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_9d776.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_9d776.dir/CheckIncludeFile.c.o -c /Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-E1pkhe/CheckIncludeFile.c
-        Linking C executable cmTC_9d776.app/cmTC_9d776
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9d776.dir/link.txt --verbose=1
-        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=13.0 -Wl,-headerpad_max_install_names CMakeFiles/cmTC_9d776.dir/CheckIncludeFile.c.o -o cmTC_9d776.app/cmTC_9d776
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_eaff3/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_eaff3.dir/build.make CMakeFiles/cmTC_eaff3.dir/build
+        Building C object CMakeFiles/cmTC_eaff3.dir/CheckIncludeFile.c.o
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang   -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=13.0 -MD -MT CMakeFiles/cmTC_eaff3.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_eaff3.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_eaff3.dir/CheckIncludeFile.c.o -c /Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-2qi86g/CheckIncludeFile.c
+        Linking C executable cmTC_eaff3.app/cmTC_eaff3
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_eaff3.dir/link.txt --verbose=1
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=13.0 -Wl,-headerpad_max_install_names CMakeFiles/cmTC_eaff3.dir/CheckIncludeFile.c.o -o cmTC_eaff3.app/cmTC_eaff3
         
       exitCode: 0
   -
@@ -2372,8 +2372,8 @@ events:
     checks:
       - "Check size of long double"
     directories:
-      source: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-JuOAF4"
-      binary: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-JuOAF4"
+      source: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-D3DWNb"
+      binary: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-D3DWNb"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_EXE_LINKER_FLAGS: ""
@@ -2386,15 +2386,15 @@ events:
       variable: "HAVE_SYMENGINE_SIZEOF_LONG_DOUBLE"
       cached: true
       stdout: |
-        Change Dir: '/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-JuOAF4'
+        Change Dir: '/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-D3DWNb'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_27c49/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_27c49.dir/build.make CMakeFiles/cmTC_27c49.dir/build
-        Building C object CMakeFiles/cmTC_27c49.dir/SYMENGINE_SIZEOF_LONG_DOUBLE.c.o
-        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang   -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=13.0 -MD -MT CMakeFiles/cmTC_27c49.dir/SYMENGINE_SIZEOF_LONG_DOUBLE.c.o -MF CMakeFiles/cmTC_27c49.dir/SYMENGINE_SIZEOF_LONG_DOUBLE.c.o.d -o CMakeFiles/cmTC_27c49.dir/SYMENGINE_SIZEOF_LONG_DOUBLE.c.o -c /Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-JuOAF4/SYMENGINE_SIZEOF_LONG_DOUBLE.c
-        Linking C executable cmTC_27c49.app/cmTC_27c49
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_27c49.dir/link.txt --verbose=1
-        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=13.0 -Wl,-headerpad_max_install_names CMakeFiles/cmTC_27c49.dir/SYMENGINE_SIZEOF_LONG_DOUBLE.c.o -o cmTC_27c49.app/cmTC_27c49
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_7ecc6/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_7ecc6.dir/build.make CMakeFiles/cmTC_7ecc6.dir/build
+        Building C object CMakeFiles/cmTC_7ecc6.dir/SYMENGINE_SIZEOF_LONG_DOUBLE.c.o
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang   -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=13.0 -MD -MT CMakeFiles/cmTC_7ecc6.dir/SYMENGINE_SIZEOF_LONG_DOUBLE.c.o -MF CMakeFiles/cmTC_7ecc6.dir/SYMENGINE_SIZEOF_LONG_DOUBLE.c.o.d -o CMakeFiles/cmTC_7ecc6.dir/SYMENGINE_SIZEOF_LONG_DOUBLE.c.o -c /Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-D3DWNb/SYMENGINE_SIZEOF_LONG_DOUBLE.c
+        Linking C executable cmTC_7ecc6.app/cmTC_7ecc6
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7ecc6.dir/link.txt --verbose=1
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=13.0 -Wl,-headerpad_max_install_names CMakeFiles/cmTC_7ecc6.dir/SYMENGINE_SIZEOF_LONG_DOUBLE.c.o -o cmTC_7ecc6.app/cmTC_7ecc6
         
       exitCode: 0
   -
@@ -2418,13 +2418,13 @@ events:
       stdout: |
         Change Dir: '/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/cxx/CMakeFiles/CMakeTmp'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_8f997/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_8f997.dir/build.make CMakeFiles/cmTC_8f997.dir/build
-        Building CXX object CMakeFiles/cmTC_8f997.dir/checkstdtostring.cpp.o
-        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++   -std=c++11  -fPIC -std=c++11  -fPIC -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=13.0 -MD -MT CMakeFiles/cmTC_8f997.dir/checkstdtostring.cpp.o -MF CMakeFiles/cmTC_8f997.dir/checkstdtostring.cpp.o.d -o CMakeFiles/cmTC_8f997.dir/checkstdtostring.cpp.o -c /Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/cmake/checkstdtostring.cpp
-        Linking CXX executable cmTC_8f997.app/cmTC_8f997
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8f997.dir/link.txt --verbose=1
-        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -std=c++11  -fPIC -std=c++11  -fPIC -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=13.0 -Wl,-headerpad_max_install_names CMakeFiles/cmTC_8f997.dir/checkstdtostring.cpp.o -o cmTC_8f997.app/cmTC_8f997
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_082aa/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_082aa.dir/build.make CMakeFiles/cmTC_082aa.dir/build
+        Building CXX object CMakeFiles/cmTC_082aa.dir/checkstdtostring.cpp.o
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++   -std=c++11  -fPIC -std=c++11  -fPIC -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=13.0 -MD -MT CMakeFiles/cmTC_082aa.dir/checkstdtostring.cpp.o -MF CMakeFiles/cmTC_082aa.dir/checkstdtostring.cpp.o.d -o CMakeFiles/cmTC_082aa.dir/checkstdtostring.cpp.o -c /Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/cmake/checkstdtostring.cpp
+        Linking CXX executable cmTC_082aa.app/cmTC_082aa
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_082aa.dir/link.txt --verbose=1
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -std=c++11  -fPIC -std=c++11  -fPIC -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=13.0 -Wl,-headerpad_max_install_names CMakeFiles/cmTC_082aa.dir/checkstdtostring.cpp.o -o cmTC_082aa.app/cmTC_082aa
         
       exitCode: 0
   -
@@ -2448,20 +2448,20 @@ events:
       stdout: |
         Change Dir: '/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/cxx/CMakeFiles/CMakeTmp'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_052bf/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_052bf.dir/build.make CMakeFiles/cmTC_052bf.dir/build
-        Building CXX object CMakeFiles/cmTC_052bf.dir/checkclang.cpp.o
-        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++   -std=c++11  -fPIC  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=13.0 -MD -MT CMakeFiles/cmTC_052bf.dir/checkclang.cpp.o -MF CMakeFiles/cmTC_052bf.dir/checkclang.cpp.o.d -o CMakeFiles/cmTC_052bf.dir/checkclang.cpp.o -c /Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/cmake/checkclang.cpp
-        Linking CXX executable cmTC_052bf.app/cmTC_052bf
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_052bf.dir/link.txt --verbose=1
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_a407f/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_a407f.dir/build.make CMakeFiles/cmTC_a407f.dir/build
+        Building CXX object CMakeFiles/cmTC_a407f.dir/checkclang.cpp.o
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++   -std=c++11  -fPIC  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=13.0 -MD -MT CMakeFiles/cmTC_a407f.dir/checkclang.cpp.o -MF CMakeFiles/cmTC_a407f.dir/checkclang.cpp.o.d -o CMakeFiles/cmTC_a407f.dir/checkclang.cpp.o -c /Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/cmake/checkclang.cpp
+        Linking CXX executable cmTC_a407f.app/cmTC_a407f
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a407f.dir/link.txt --verbose=1
         Undefined symbols for architecture arm64:
           "_main", referenced from:
               <initial-undefines>
         ld: symbol(s) not found for architecture arm64
         clang++: error: linker command failed with exit code 1 (use -v to see invocation)
-        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -std=c++11  -fPIC  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=13.0 -Wl,-headerpad_max_install_names CMakeFiles/cmTC_052bf.dir/checkclang.cpp.o -o cmTC_052bf.app/cmTC_052bf
-        make[1]: *** [cmTC_052bf.app/cmTC_052bf] Error 1
-        make: *** [cmTC_052bf/fast] Error 2
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -std=c++11  -fPIC  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=13.0 -Wl,-headerpad_max_install_names CMakeFiles/cmTC_a407f.dir/checkclang.cpp.o -o cmTC_a407f.app/cmTC_a407f
+        make[1]: *** [cmTC_a407f.app/cmTC_a407f] Error 1
+        make: *** [cmTC_a407f/fast] Error 2
         
       exitCode: 2
   -
@@ -2476,8 +2476,8 @@ events:
     checks:
       - "Performing Test COMPILER_HAS_HIDDEN_VISIBILITY"
     directories:
-      source: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-nwWUrS"
-      binary: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-nwWUrS"
+      source: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-75MnpN"
+      binary: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-75MnpN"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "-std=c++11  -fPIC -D__extern_always_inline=inline"
       CMAKE_EXE_LINKER_FLAGS: ""
@@ -2490,15 +2490,15 @@ events:
       variable: "COMPILER_HAS_HIDDEN_VISIBILITY"
       cached: true
       stdout: |
-        Change Dir: '/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-nwWUrS'
+        Change Dir: '/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-75MnpN'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_2d538/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_2d538.dir/build.make CMakeFiles/cmTC_2d538.dir/build
-        Building CXX object CMakeFiles/cmTC_2d538.dir/src.cxx.o
-        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -DCOMPILER_HAS_HIDDEN_VISIBILITY  -std=c++11  -fPIC -D__extern_always_inline=inline  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=13.0   -fvisibility=hidden -MD -MT CMakeFiles/cmTC_2d538.dir/src.cxx.o -MF CMakeFiles/cmTC_2d538.dir/src.cxx.o.d -o CMakeFiles/cmTC_2d538.dir/src.cxx.o -c /Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-nwWUrS/src.cxx
-        Linking CXX executable cmTC_2d538.app/cmTC_2d538
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2d538.dir/link.txt --verbose=1
-        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -std=c++11  -fPIC -D__extern_always_inline=inline  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=13.0 -Wl,-headerpad_max_install_names CMakeFiles/cmTC_2d538.dir/src.cxx.o -o cmTC_2d538.app/cmTC_2d538
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_8197c/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_8197c.dir/build.make CMakeFiles/cmTC_8197c.dir/build
+        Building CXX object CMakeFiles/cmTC_8197c.dir/src.cxx.o
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -DCOMPILER_HAS_HIDDEN_VISIBILITY  -std=c++11  -fPIC -D__extern_always_inline=inline  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=13.0   -fvisibility=hidden -MD -MT CMakeFiles/cmTC_8197c.dir/src.cxx.o -MF CMakeFiles/cmTC_8197c.dir/src.cxx.o.d -o CMakeFiles/cmTC_8197c.dir/src.cxx.o -c /Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-75MnpN/src.cxx
+        Linking CXX executable cmTC_8197c.app/cmTC_8197c
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8197c.dir/link.txt --verbose=1
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -std=c++11  -fPIC -D__extern_always_inline=inline  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=13.0 -Wl,-headerpad_max_install_names CMakeFiles/cmTC_8197c.dir/src.cxx.o -o cmTC_8197c.app/cmTC_8197c
         
       exitCode: 0
   -
@@ -2513,8 +2513,8 @@ events:
     checks:
       - "Performing Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY"
     directories:
-      source: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-5n1s4O"
-      binary: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-5n1s4O"
+      source: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-ol7eP1"
+      binary: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-ol7eP1"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "-std=c++11  -fPIC -D__extern_always_inline=inline"
       CMAKE_EXE_LINKER_FLAGS: ""
@@ -2527,15 +2527,15 @@ events:
       variable: "COMPILER_HAS_HIDDEN_INLINE_VISIBILITY"
       cached: true
       stdout: |
-        Change Dir: '/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-5n1s4O'
+        Change Dir: '/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-ol7eP1'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_4d31f/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_4d31f.dir/build.make CMakeFiles/cmTC_4d31f.dir/build
-        Building CXX object CMakeFiles/cmTC_4d31f.dir/src.cxx.o
-        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -DCOMPILER_HAS_HIDDEN_INLINE_VISIBILITY  -std=c++11  -fPIC -D__extern_always_inline=inline  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=13.0   -fvisibility-inlines-hidden -MD -MT CMakeFiles/cmTC_4d31f.dir/src.cxx.o -MF CMakeFiles/cmTC_4d31f.dir/src.cxx.o.d -o CMakeFiles/cmTC_4d31f.dir/src.cxx.o -c /Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-5n1s4O/src.cxx
-        Linking CXX executable cmTC_4d31f.app/cmTC_4d31f
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4d31f.dir/link.txt --verbose=1
-        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -std=c++11  -fPIC -D__extern_always_inline=inline  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=13.0 -Wl,-headerpad_max_install_names CMakeFiles/cmTC_4d31f.dir/src.cxx.o -o cmTC_4d31f.app/cmTC_4d31f
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_33edf/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_33edf.dir/build.make CMakeFiles/cmTC_33edf.dir/build
+        Building CXX object CMakeFiles/cmTC_33edf.dir/src.cxx.o
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -DCOMPILER_HAS_HIDDEN_INLINE_VISIBILITY  -std=c++11  -fPIC -D__extern_always_inline=inline  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=13.0   -fvisibility-inlines-hidden -MD -MT CMakeFiles/cmTC_33edf.dir/src.cxx.o -MF CMakeFiles/cmTC_33edf.dir/src.cxx.o.d -o CMakeFiles/cmTC_33edf.dir/src.cxx.o -c /Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-ol7eP1/src.cxx
+        Linking CXX executable cmTC_33edf.app/cmTC_33edf
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_33edf.dir/link.txt --verbose=1
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -std=c++11  -fPIC -D__extern_always_inline=inline  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=13.0 -Wl,-headerpad_max_install_names CMakeFiles/cmTC_33edf.dir/src.cxx.o -o cmTC_33edf.app/cmTC_33edf
         
       exitCode: 0
   -
@@ -2550,8 +2550,8 @@ events:
     checks:
       - "Performing Test COMPILER_HAS_DEPRECATED_ATTR"
     directories:
-      source: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-NdBse2"
-      binary: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-NdBse2"
+      source: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-WNN97v"
+      binary: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-WNN97v"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "-std=c++11  -fPIC -D__extern_always_inline=inline"
       CMAKE_EXE_LINKER_FLAGS: ""
@@ -2564,22 +2564,22 @@ events:
       variable: "COMPILER_HAS_DEPRECATED_ATTR"
       cached: true
       stdout: |
-        Change Dir: '/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-NdBse2'
+        Change Dir: '/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-WNN97v'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_61178/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_61178.dir/build.make CMakeFiles/cmTC_61178.dir/build
-        Building CXX object CMakeFiles/cmTC_61178.dir/src.cxx.o
-        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -DCOMPILER_HAS_DEPRECATED_ATTR  -std=c++11  -fPIC -D__extern_always_inline=inline  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=13.0 -MD -MT CMakeFiles/cmTC_61178.dir/src.cxx.o -MF CMakeFiles/cmTC_61178.dir/src.cxx.o.d -o CMakeFiles/cmTC_61178.dir/src.cxx.o -c /Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-NdBse2/src.cxx
-        /Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-NdBse2/src.cxx:2:25: warning: 'somefunc' is deprecated [-Wdeprecated-declarations]
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_98d31/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_98d31.dir/build.make CMakeFiles/cmTC_98d31.dir/build
+        Building CXX object CMakeFiles/cmTC_98d31.dir/src.cxx.o
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -DCOMPILER_HAS_DEPRECATED_ATTR  -std=c++11  -fPIC -D__extern_always_inline=inline  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=13.0 -MD -MT CMakeFiles/cmTC_98d31.dir/src.cxx.o -MF CMakeFiles/cmTC_98d31.dir/src.cxx.o.d -o CMakeFiles/cmTC_98d31.dir/src.cxx.o -c /Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-WNN97v/src.cxx
+        /Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-WNN97v/src.cxx:2:25: warning: 'somefunc' is deprecated [-Wdeprecated-declarations]
             2 |     int main() { return somefunc();}
               |                         ^
-        /Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-NdBse2/src.cxx:1:16: note: 'somefunc' has been explicitly marked deprecated here
+        /Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/CMakeFiles/CMakeScratch/TryCompile-WNN97v/src.cxx:1:16: note: 'somefunc' has been explicitly marked deprecated here
             1 | __attribute__((__deprecated__)) int somefunc() { return 0; }
               |                ^
         1 warning generated.
-        Linking CXX executable cmTC_61178.app/cmTC_61178
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_61178.dir/link.txt --verbose=1
-        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -std=c++11  -fPIC -D__extern_always_inline=inline  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=13.0 -Wl,-headerpad_max_install_names CMakeFiles/cmTC_61178.dir/src.cxx.o -o cmTC_61178.app/cmTC_61178
+        Linking CXX executable cmTC_98d31.app/cmTC_98d31
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_98d31.dir/link.txt --verbose=1
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -std=c++11  -fPIC -D__extern_always_inline=inline  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -mios-simulator-version-min=13.0 -Wl,-headerpad_max_install_names CMakeFiles/cmTC_98d31.dir/src.cxx.o -o cmTC_98d31.app/cmTC_98d31
         
       exitCode: 0
 ...

@@ -128,7 +128,11 @@ configureAndMake() {
     
     cd "$extractdir"
     
-    make distclean &> /dev/null || true
+    # ./configure sometimes fails if it can't run a `make clean` first
+    # So we run it here manually, ignoring errors if it fails.
+    if [ -f "Makefile" ]; then
+      make distclean &> /dev/null || true
+    fi
     
     local host_triplet
     host_triplet=$( [[ "$arch" == "arm64" ]] && echo "aarch64" || echo "$arch" )-apple-darwin
@@ -161,7 +165,6 @@ configureAndMake() {
     logMsg "  CFLAGS:       $target_cflags"
     logMsg "  LDFLAGS:      $target_ldflags"
     
-    # *** KEY FIX ***
     # Pass environment variables on the SAME LINE to prevent pollution.
     env \
         CC="$target_cc" \
@@ -181,23 +184,29 @@ configureAndMake() {
     cp "$BUILDDIR/install-$platform-$arch/usr/local/lib/lib$LIBNAME.a" "$LIBDIR/lib$LIBNAME-$platform-$arch.a"
 }
 
+#
+# THIS FUNCTION HAS BEEN CORRECTED
+#
 createXCFramework() {
     local framework_name="MPC"
     local framework_dir="$SCRIPTDIR/$framework_name.xcframework"
 
     logMsg "================================================================="
-    logMsg "Creating $framework_name.xcframework"
+    logMsg "Creating and patching $framework_name.xcframework"
     logMsg "================================================================="
 
     rm -rf "$framework_dir"
 
-    logMsg "Creating universal libraries..."
+    # Define source library paths
+    local device_lib="$LIBDIR/lib$LIBNAME-iphoneos-arm64.a"
     local sim_universal_lib="$LIBDIR/lib$LIBNAME-iphonesimulator-universal.a"
+    local mac_universal_lib="$LIBDIR/lib$LIBNAME-macosx-universal.a"
+
+    logMsg "Creating universal libraries..."
     lipo -create -output "$sim_universal_lib" \
         "$LIBDIR/lib$LIBNAME-iphonesimulator-x86_64.a" \
         "$LIBDIR/lib$LIBNAME-iphonesimulator-arm64.a"
 
-    local mac_universal_lib="$LIBDIR/lib$LIBNAME-macosx-universal.a"
     lipo -create -output "$mac_universal_lib" \
         "$LIBDIR/lib$LIBNAME-macosx-x86_64.a" \
         "$LIBDIR/lib$LIBNAME-macosx-arm64.a"
@@ -206,14 +215,31 @@ createXCFramework() {
     mkdir -p "$HEADERDIR"
     cp "$BUILDDIR/install-iphoneos-arm64/usr/local/include/mpc.h" "$HEADERDIR/"
 
-    logMsg "Assembling XCFramework with xcodebuild..."
+    # Step 1: Create the XCFramework (which will have an incorrect manifest)
+    logMsg "Assembling initial XCFramework with xcodebuild..."
     xcodebuild -create-xcframework \
-        -library "$LIBDIR/lib$LIBNAME-iphoneos-arm64.a" -headers "$HEADERDIR" \
+        -library "$device_lib" -headers "$HEADERDIR" \
         -library "$sim_universal_lib" -headers "$HEADERDIR" \
         -library "$mac_universal_lib" -headers "$HEADERDIR" \
         -output "$framework_dir"
 
-    logMsg "✅ Successfully created $framework_dir"
+    # Step 2: Immediately Patch the XCFramework We Just Created
+    logMsg "Patching generated framework for CocoaPods compatibility..."
+    
+    # Rename the binaries inside the framework to be consistent
+    mv "$framework_dir/ios-arm64/libmpc-iphoneos-arm64.a" "$framework_dir/ios-arm64/$framework_name"
+    mv "$framework_dir/ios-arm64_x86_64-simulator/libmpc-iphonesimulator-universal.a" "$framework_dir/ios-arm64_x86_64-simulator/$framework_name"
+    mv "$framework_dir/macos-arm64_x86_64/libmpc-macosx-universal.a" "$framework_dir/macos-arm64_x86_64/$framework_name"
+
+    # Edit the manifest (Info.plist) to reflect the new, consistent binary names
+    local PLIST_PATH="$framework_dir/Info.plist"
+    local COUNT=$(/usr/libexec/PlistBuddy -c "Print :AvailableLibraries:" "$PLIST_PATH" | grep -c "Dict")
+    for (( i=0; i<$COUNT; i++ )); do
+        /usr/libexec/PlistBuddy -c "Set :AvailableLibraries:$i:BinaryPath $framework_name" "$PLIST_PATH"
+        /usr/libexec/PlistBuddy -c "Set :AvailableLibraries:$i:LibraryPath $framework_name" "$PLIST_PATH"
+    done
+    
+    logMsg "✅ Successfully created and patched $framework_dir"
 }
 
 # --- Main Build Logic ---

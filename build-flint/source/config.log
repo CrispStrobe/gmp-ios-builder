@@ -30,8 +30,8 @@ Kernel configured for up to 8 processors.
 Processor type: arm64e (ARM64E)
 Processors active: 0 1 2 3 4 5 6 7
 Primary memory available: 16.00 gigabytes
-Default processor set: 704 tasks, 3675 threads, 8 processors
-Load average: 4.84, Mach factor: 3.65
+Default processor set: 774 tasks, 4069 threads, 8 processors
+Load average: 5.77, Mach factor: 4.12
 /bin/machine           = unknown
 /usr/bin/oslevel       = unknown
 /bin/universe          = unknown
@@ -858,7 +858,7 @@ configure:18257: checking for library containing __gmpn_invert_limb
 configure:18287: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -o conftest   -I/Users/christianstrobele/code/gmp-ios-builder/build/include -I/Users/christianstrobele/code/gmp-ios-builder/build-mpfr/include -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk -mmacosx-version-min=10.15 -L/Users/christianstrobele/code/gmp-ios-builder/build-flint/temp-deps-macosx-arm64 -L/Users/christianstrobele/code/gmp-ios-builder/build/lib -L/Users/christianstrobele/code/gmp-ios-builder/build-mpfr/lib conftest.c -lmpfr -lgmp >&5
 Undefined symbols for architecture arm64:
   "___gmpn_invert_limb", referenced from:
-      _main in conftest-43507e.o
+      _main in conftest-ec3389.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:18287: $? = 1
@@ -907,7 +907,7 @@ configure:18287: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefa
 ld: warning: ignoring duplicate libraries: '-lgmp'
 Undefined symbols for architecture arm64:
   "___gmpn_invert_limb", referenced from:
-      _main in conftest-3b58ac.o
+      _main in conftest-6663cd.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:18287: $? = 1
@@ -957,7 +957,7 @@ configure:18319: checking for library containing __gmpn_modexact_1_odd
 configure:18349: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -o conftest   -I/Users/christianstrobele/code/gmp-ios-builder/build/include -I/Users/christianstrobele/code/gmp-ios-builder/build-mpfr/include -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk -mmacosx-version-min=10.15 -L/Users/christianstrobele/code/gmp-ios-builder/build-flint/temp-deps-macosx-arm64 -L/Users/christianstrobele/code/gmp-ios-builder/build/lib -L/Users/christianstrobele/code/gmp-ios-builder/build-mpfr/lib conftest.c -lmpfr -lgmp >&5
 Undefined symbols for architecture arm64:
   "___gmpn_modexact_1_odd", referenced from:
-      _main in conftest-bef2a9.o
+      _main in conftest-e5706b.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:18349: $? = 1
@@ -1006,7 +1006,7 @@ configure:18349: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefa
 ld: warning: ignoring duplicate libraries: '-lgmp'
 Undefined symbols for architecture arm64:
   "___gmpn_modexact_1_odd", referenced from:
-      _main in conftest-de491f.o
+      _main in conftest-2aea28.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:18349: $? = 1
@@ -1056,7 +1056,7 @@ configure:18381: checking for library containing __gmpn_addmul_2
 configure:18411: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -o conftest   -I/Users/christianstrobele/code/gmp-ios-builder/build/include -I/Users/christianstrobele/code/gmp-ios-builder/build-mpfr/include -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk -mmacosx-version-min=10.15 -L/Users/christianstrobele/code/gmp-ios-builder/build-flint/temp-deps-macosx-arm64 -L/Users/christianstrobele/code/gmp-ios-builder/build/lib -L/Users/christianstrobele/code/gmp-ios-builder/build-mpfr/lib conftest.c -lmpfr -lgmp >&5
 Undefined symbols for architecture arm64:
   "___gmpn_addmul_2", referenced from:
-      _main in conftest-d55a46.o
+      _main in conftest-66cce7.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:18411: $? = 1
@@ -1105,7 +1105,7 @@ configure:18411: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefa
 ld: warning: ignoring duplicate libraries: '-lgmp'
 Undefined symbols for architecture arm64:
   "___gmpn_addmul_2", referenced from:
-      _main in conftest-cf78ff.o
+      _main in conftest-536e7e.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:18411: $? = 1
@@ -1159,7 +1159,7 @@ configure:18505: checking for library containing __gmpn_add_nc
 configure:18535: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -o conftest   -I/Users/christianstrobele/code/gmp-ios-builder/build/include -I/Users/christianstrobele/code/gmp-ios-builder/build-mpfr/include -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk -mmacosx-version-min=10.15 -L/Users/christianstrobele/code/gmp-ios-builder/build-flint/temp-deps-macosx-arm64 -L/Users/christianstrobele/code/gmp-ios-builder/build/lib -L/Users/christianstrobele/code/gmp-ios-builder/build-mpfr/lib conftest.c -lmpfr -lgmp >&5
 Undefined symbols for architecture arm64:
   "___gmpn_add_nc", referenced from:
-      _main in conftest-37e63a.o
+      _main in conftest-2b7b00.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:18535: $? = 1
@@ -1209,7 +1209,7 @@ configure:18535: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefa
 ld: warning: ignoring duplicate libraries: '-lgmp'
 Undefined symbols for architecture arm64:
   "___gmpn_add_nc", referenced from:
-      _main in conftest-18ceda.o
+      _main in conftest-78f0be.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:18535: $? = 1
@@ -1260,7 +1260,7 @@ configure:18567: checking for library containing __gmpn_sub_nc
 configure:18597: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -o conftest   -I/Users/christianstrobele/code/gmp-ios-builder/build/include -I/Users/christianstrobele/code/gmp-ios-builder/build-mpfr/include -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk -mmacosx-version-min=10.15 -L/Users/christianstrobele/code/gmp-ios-builder/build-flint/temp-deps-macosx-arm64 -L/Users/christianstrobele/code/gmp-ios-builder/build/lib -L/Users/christianstrobele/code/gmp-ios-builder/build-mpfr/lib conftest.c -lmpfr -lgmp >&5
 Undefined symbols for architecture arm64:
   "___gmpn_sub_nc", referenced from:
-      _main in conftest-e88b23.o
+      _main in conftest-31b46a.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:18597: $? = 1
@@ -1310,7 +1310,7 @@ configure:18597: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefa
 ld: warning: ignoring duplicate libraries: '-lgmp'
 Undefined symbols for architecture arm64:
   "___gmpn_sub_nc", referenced from:
-      _main in conftest-403a7b.o
+      _main in conftest-40c779.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:18597: $? = 1
@@ -1361,7 +1361,7 @@ configure:18629: checking for library containing __gmpn_addlsh1_n
 configure:18659: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -o conftest   -I/Users/christianstrobele/code/gmp-ios-builder/build/include -I/Users/christianstrobele/code/gmp-ios-builder/build-mpfr/include -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk -mmacosx-version-min=10.15 -L/Users/christianstrobele/code/gmp-ios-builder/build-flint/temp-deps-macosx-arm64 -L/Users/christianstrobele/code/gmp-ios-builder/build/lib -L/Users/christianstrobele/code/gmp-ios-builder/build-mpfr/lib conftest.c -lmpfr -lgmp >&5
 Undefined symbols for architecture arm64:
   "___gmpn_addlsh1_n", referenced from:
-      _main in conftest-78aaf4.o
+      _main in conftest-70aa46.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:18659: $? = 1
@@ -1411,7 +1411,7 @@ configure:18659: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefa
 ld: warning: ignoring duplicate libraries: '-lgmp'
 Undefined symbols for architecture arm64:
   "___gmpn_addlsh1_n", referenced from:
-      _main in conftest-5d013b.o
+      _main in conftest-f238ee.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:18659: $? = 1
@@ -1462,7 +1462,7 @@ configure:18691: checking for library containing __gmpn_addlsh1_n_ip1
 configure:18721: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -o conftest   -I/Users/christianstrobele/code/gmp-ios-builder/build/include -I/Users/christianstrobele/code/gmp-ios-builder/build-mpfr/include -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk -mmacosx-version-min=10.15 -L/Users/christianstrobele/code/gmp-ios-builder/build-flint/temp-deps-macosx-arm64 -L/Users/christianstrobele/code/gmp-ios-builder/build/lib -L/Users/christianstrobele/code/gmp-ios-builder/build-mpfr/lib conftest.c -lmpfr -lgmp >&5
 Undefined symbols for architecture arm64:
   "___gmpn_addlsh1_n_ip1", referenced from:
-      _main in conftest-275603.o
+      _main in conftest-1788f9.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:18721: $? = 1
@@ -1512,7 +1512,7 @@ configure:18721: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefa
 ld: warning: ignoring duplicate libraries: '-lgmp'
 Undefined symbols for architecture arm64:
   "___gmpn_addlsh1_n_ip1", referenced from:
-      _main in conftest-8bbfbc.o
+      _main in conftest-7ed7fc.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:18721: $? = 1
@@ -1563,7 +1563,7 @@ configure:18753: checking for library containing __gmpn_rsh1sub_n
 configure:18783: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -o conftest   -I/Users/christianstrobele/code/gmp-ios-builder/build/include -I/Users/christianstrobele/code/gmp-ios-builder/build-mpfr/include -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk -mmacosx-version-min=10.15 -L/Users/christianstrobele/code/gmp-ios-builder/build-flint/temp-deps-macosx-arm64 -L/Users/christianstrobele/code/gmp-ios-builder/build/lib -L/Users/christianstrobele/code/gmp-ios-builder/build-mpfr/lib conftest.c -lmpfr -lgmp >&5
 Undefined symbols for architecture arm64:
   "___gmpn_rsh1sub_n", referenced from:
-      _main in conftest-33b8d4.o
+      _main in conftest-6f393e.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:18783: $? = 1
@@ -1613,7 +1613,7 @@ configure:18783: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefa
 ld: warning: ignoring duplicate libraries: '-lgmp'
 Undefined symbols for architecture arm64:
   "___gmpn_rsh1sub_n", referenced from:
-      _main in conftest-34ec50.o
+      _main in conftest-059da9.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:18783: $? = 1
@@ -1664,7 +1664,7 @@ configure:18815: checking for library containing __gmpn_rsh1add_n
 configure:18845: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -o conftest   -I/Users/christianstrobele/code/gmp-ios-builder/build/include -I/Users/christianstrobele/code/gmp-ios-builder/build-mpfr/include -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk -mmacosx-version-min=10.15 -L/Users/christianstrobele/code/gmp-ios-builder/build-flint/temp-deps-macosx-arm64 -L/Users/christianstrobele/code/gmp-ios-builder/build/lib -L/Users/christianstrobele/code/gmp-ios-builder/build-mpfr/lib conftest.c -lmpfr -lgmp >&5
 Undefined symbols for architecture arm64:
   "___gmpn_rsh1add_n", referenced from:
-      _main in conftest-8a92e0.o
+      _main in conftest-eccbba.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:18845: $? = 1
@@ -1714,7 +1714,7 @@ configure:18845: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefa
 ld: warning: ignoring duplicate libraries: '-lgmp'
 Undefined symbols for architecture arm64:
   "___gmpn_rsh1add_n", referenced from:
-      _main in conftest-4146ab.o
+      _main in conftest-a609bb.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:18845: $? = 1
@@ -2289,7 +2289,7 @@ configure:20322: checking for _aligned_malloc
 configure:20322: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -o conftest   -I/Users/christianstrobele/code/gmp-ios-builder/build/include -I/Users/christianstrobele/code/gmp-ios-builder/build-mpfr/include -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk -mmacosx-version-min=10.15 -L/Users/christianstrobele/code/gmp-ios-builder/build-flint/temp-deps-macosx-arm64 -L/Users/christianstrobele/code/gmp-ios-builder/build/lib -L/Users/christianstrobele/code/gmp-ios-builder/build-mpfr/lib conftest.c -pthread -lmpfr -lgmp >&5
 Undefined symbols for architecture arm64:
   "__aligned_malloc", referenced from:
-      _main in conftest-7e7ddd.o
+      _main in conftest-221158.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:20322: $? = 1

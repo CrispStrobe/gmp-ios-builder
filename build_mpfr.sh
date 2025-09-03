@@ -174,50 +174,51 @@ configureAndMake() {
     rm -rf "$temp_gmp_lib_dir"
 }
 
-#
-# THIS FUNCTION HAS BEEN MODERNIZED
-#
 createFramework() {
     local framework_name="MPFR"
     local framework_dir="$SCRIPTDIR/$framework_name.xcframework"
+    logMsg "Creating $framework_name.xcframework..."
+    rm -rf "$framework_dir"
 
-    logMsg "================================================================="
-    logMsg "Creating $framework_name.xcframework"
-    logMsg "================================================================="
-
-    rm -rf "$framework_dir" # Clean old framework
-
-    # Create universal "fat" libraries for simulator and macOS slices.
-    logMsg "Creating universal simulator library..."
+    # Define source library paths using the correct LIBNAME for mpfr
+    local device_lib="$LIBDIR/lib$LIBNAME-iphoneos-arm64.a"
     local sim_universal_lib="$LIBDIR/lib$LIBNAME-iphonesimulator-universal.a"
-    lipo -create -output "$sim_universal_lib" \
-        "$LIBDIR/lib$LIBNAME-iphonesimulator-x86_64.a" \
-        "$LIBDIR/lib$LIBNAME-iphonesimulator-arm64.a"
-
-    logMsg "Creating universal macOS library..."
     local mac_universal_lib="$LIBDIR/lib$LIBNAME-macosx-universal.a"
-    lipo -create -output "$mac_universal_lib" \
-        "$LIBDIR/lib$LIBNAME-macosx-x86_64.a" \
-        "$LIBDIR/lib$LIBNAME-macosx-arm64.a"
-
-    # Copy headers to a single, clean location.
+    
+    # Create universal "fat" libs for simulator and macOS
+    lipo -create -output "$sim_universal_lib" "$LIBDIR/lib$LIBNAME-iphonesimulator-x86_64.a" "$LIBDIR/lib$LIBNAME-iphonesimulator-arm64.a"
+    lipo -create -output "$mac_universal_lib" "$LIBDIR/lib$LIBNAME-macosx-x86_64.a" "$LIBDIR/lib$LIBNAME-macosx-arm64.a"
+    
+    # --- FIX 1: Copy MPFR's own headers, not GMP's ---
     mkdir -p "$HEADERDIR"
-    cp "$BUILDDIR/install-iphoneos-arm64/usr/local/include/mpfr.h" "$HEADERDIR/"
+    # The 'make install' step places the correct headers in this directory
+    cp "$BUILDDIR/install-iphoneos-arm64/usr/local/include/"*.h "$HEADERDIR/"
 
-    # Use xcodebuild to create the XCFramework, which is the modern, preferred method.
-    logMsg "Assembling XCFramework..."
+    # Step 1: Create the XCFramework
     xcodebuild -create-xcframework \
-        -library "$LIBDIR/lib$LIBNAME-iphoneos-arm64.a" \
-        -headers "$HEADERDIR" \
-        -library "$sim_universal_lib" \
-        -headers "$HEADERDIR" \
-        -library "$mac_universal_lib" \
-        -headers "$HEADERDIR" \
+        -library "$device_lib" -headers "$HEADERDIR" \
+        -library "$sim_universal_lib" -headers "$HEADERDIR" \
+        -library "$mac_universal_lib" -headers "$HEADERDIR" \
         -output "$framework_dir"
 
-    logMsg "✅ Successfully created $framework_dir"
-}
+    # Step 2: Immediately Patch the XCFramework
+    logMsg "Patching generated framework for CocoaPods compatibility..."
+    
+    # --- FIX 2: Use the correct MPFR library filenames for renaming ---
+    mv "$framework_dir/ios-arm64/libmpfr-iphoneos-arm64.a" "$framework_dir/ios-arm64/$framework_name"
+    mv "$framework_dir/ios-arm64_x86_64-simulator/libmpfr-iphonesimulator-universal.a" "$framework_dir/ios-arm64_x86_64-simulator/$framework_name"
+    mv "$framework_dir/macos-arm64_x86_64/libmpfr-macosx-universal.a" "$framework_dir/macos-arm64_x86_64/$framework_name"
 
+    # Edit the manifest (Info.plist)
+    local PLIST_PATH="$framework_dir/Info.plist"
+    local COUNT=$(/usr/libexec/PlistBuddy -c "Print :AvailableLibraries:" "$PLIST_PATH" | grep -c "Dict")
+    for (( i=0; i<$COUNT; i++ )); do
+        /usr/libexec/PlistBuddy -c "Set :AvailableLibraries:$i:BinaryPath $framework_name" "$PLIST_PATH"
+        /usr/libexec/PlistBuddy -c "Set :AvailableLibraries:$i:LibraryPath $framework_name" "$PLIST_PATH"
+    done
+    
+    logMsg "✅ Successfully created and patched $framework_dir"
+}
 
 # --- Main Build Logic ---
 logMsg "Starting MPFR build for iOS, Simulator, and macOS..."

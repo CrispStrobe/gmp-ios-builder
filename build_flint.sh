@@ -94,7 +94,10 @@ configureAndMake() {
     fi
     
     cd "$extractdir"
-    make distclean &> /dev/null || true
+    
+    if [ -f "Makefile" ]; then
+      make distclean &> /dev/null || true
+    fi
     
     local host_triplet=$([[ "$arch" == "arm64" ]] && echo "aarch64" || echo "$arch")-apple-darwin
     local configure_args=(
@@ -116,8 +119,6 @@ configureAndMake() {
     logMsg "Building FLINT for $platform $arch..."
     make -j"$(sysctl -n hw.ncpu)"
     
-    # Use 'make install' to a temporary directory
-    # This is our robust way to collect all necessary libraries and headers.
     logMsg "Installing FLINT to temporary location..."
     local install_dir="$BUILDDIR/install-$platform-$arch"
     rm -rf "$install_dir"
@@ -130,35 +131,53 @@ configureAndMake() {
     rm -rf "$temp_lib_dir"
 }
 
+#
+# THIS FUNCTION HAS BEEN CORRECTED
+#
 createXCFramework() {
     local framework_name="FLINT"
     local framework_dir="$SCRIPTDIR/$framework_name.xcframework"
-    local temp_headers_dir="$BUILDDIR/headers_temp" # Use a temp dir for headers
 
     logMsg "================================================================="
-    logMsg "Creating $framework_name.xcframework"
+    logMsg "Creating and patching $framework_name.xcframework"
     logMsg "================================================================="
 
     rm -rf "$framework_dir"
 
-    logMsg "Creating universal simulator library..."
+    # Define source library paths
+    local device_lib="$LIBDIR/lib$LIBNAME-iphoneos-arm64.a"
     local sim_universal_lib="$LIBDIR/lib$LIBNAME-iphonesimulator-universal.a"
-    lipo -create -output "$sim_universal_lib" "$LIBDIR"/lib$LIBNAME-iphonesimulator-*.a
-
-    logMsg "Creating universal macOS library..."
     local mac_universal_lib="$LIBDIR/lib$LIBNAME-macosx-universal.a"
+
+    logMsg "Creating universal libraries..."
+    lipo -create -output "$sim_universal_lib" "$LIBDIR"/lib$LIBNAME-iphonesimulator-*.a
     lipo -create -output "$mac_universal_lib" "$LIBDIR"/lib$LIBNAME-macosx-*.a
-        
-    logMsg "Assembling XCFramework..."
-    logMsg "Outputting to path: [$framework_dir]"
-    
+
+    # Step 1: Create the XCFramework
+    logMsg "Assembling initial XCFramework..."
     xcodebuild -create-xcframework \
-        -library "$LIBDIR/lib$LIBNAME-iphoneos-arm64.a" -headers "$HEADERDIR" \
+        -library "$device_lib" -headers "$HEADERDIR" \
         -library "$sim_universal_lib" -headers "$HEADERDIR" \
         -library "$mac_universal_lib" -headers "$HEADERDIR" \
         -output "$framework_dir"
 
-    logMsg "✅ Successfully created $framework_dir"
+    # Step 2: Immediately Patch the XCFramework
+    logMsg "Patching generated framework for CocoaPods compatibility..."
+    
+    # Rename the binaries inside the framework to be consistent
+    mv "$framework_dir/ios-arm64/libflint-iphoneos-arm64.a" "$framework_dir/ios-arm64/$framework_name"
+    mv "$framework_dir/ios-arm64_x86_64-simulator/libflint-iphonesimulator-universal.a" "$framework_dir/ios-arm64_x86_64-simulator/$framework_name"
+    mv "$framework_dir/macos-arm64_x86_64/libflint-macosx-universal.a" "$framework_dir/macos-arm64_x86_64/$framework_name"
+
+    # Edit the manifest (Info.plist) to reflect the new, consistent binary names
+    local PLIST_PATH="$framework_dir/Info.plist"
+    local COUNT=$(/usr/libexec/PlistBuddy -c "Print :AvailableLibraries:" "$PLIST_PATH" | grep -c "Dict")
+    for (( i=0; i<$COUNT; i++ )); do
+        /usr/libexec/PlistBuddy -c "Set :AvailableLibraries:$i:BinaryPath $framework_name" "$PLIST_PATH"
+        /usr/libexec/PlistBuddy -c "Set :AvailableLibraries:$i:LibraryPath $framework_name" "$PLIST_PATH"
+    done
+    
+    logMsg "✅ Successfully created and patched $framework_dir"
 }
 
 # --- Main Build Logic ---
@@ -170,10 +189,9 @@ extractSoftware
 logMsg "--- Building for iOS Device ---"
 for arch in $DEVARCHS; do configureAndMake "iphoneos" "$arch"; done
 
-# Capture headers from the clean 'install' directory ***
+# Capture headers from the clean 'install' directory
 logMsg "Capturing installed headers..."
 rm -rf "$HEADERDIR"
-# The headers are now in the predictable install location from the first build.
 cp -R "$BUILDDIR/install-iphoneos-arm64/usr/local/include/." "$HEADERDIR/"
 logMsg "✅ Headers captured successfully."
 
