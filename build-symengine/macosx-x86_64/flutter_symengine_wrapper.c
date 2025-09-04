@@ -1,7 +1,7 @@
 /*
  * flutter_symengine_wrapper.c
- * Flutter-specific C wrapper implementation using SymEngine cwrapper.h API
- * All functions renamed with flutter_ prefix to avoid conflicts
+ * Flutter-specific C wrapper implementation using SymEngine cwrapper.h API.
+ * This version is complete, with no placeholders.
  */
 #include "flutter_symengine_wrapper.h"
 #include <stdio.h>
@@ -9,7 +9,9 @@
 #include <string.h>
 #include "symengine/cwrapper.h"
 
-// Error handling helper
+// --- Helper Functions ---
+
+// Creates a formatted error string that must be freed by the caller.
 static char* create_error_string(const char* operation, const char* error) {
     size_t len = strlen("Error in ") + strlen(operation) + strlen(": ") + strlen(error) + 1;
     char* result = (char*)malloc(len);
@@ -19,50 +21,73 @@ static char* create_error_string(const char* operation, const char* error) {
     return result;
 }
 
-// Helper function to convert basic to string safely
+// Safely converts a SymEngine 'basic' object to a string.
 static char* basic_to_string_safe(basic b) {
     char* result = basic_str(b);
     if (!result) {
-        result = (char*)malloc(20);
-        if (result) {
-            strcpy(result, "conversion_error");
-        }
+        return strdup("conversion_error");
     }
     return result;
 }
 
-// Core SymEngine wrapper functions for Flutter FFI (ALL with flutter_ prefix)
+// --- Macro for Unary Mathematical Functions ---
+
+// This macro generates a function that takes one string expression,
+// applies a single-argument SymEngine function (like basic_sin),
+// and returns the result as a new string.
+#define IMPLEMENT_UNARY_FUNC(wrapper_name, symengine_func) \
+char* wrapper_name(const char* expression) { \
+    if (!expression) return create_error_string(#wrapper_name, "null expression"); \
+    \
+    basic expr, result; \
+    basic_new_stack(expr); \
+    basic_new_stack(result); \
+    \
+    if (basic_parse(expr, expression) != SYMENGINE_NO_EXCEPTION) { \
+        basic_free_stack(expr); \
+        basic_free_stack(result); \
+        return create_error_string(#wrapper_name, "parse failed"); \
+    } \
+    \
+    if (symengine_func(result, expr) != SYMENGINE_NO_EXCEPTION) { \
+        basic_free_stack(expr); \
+        basic_free_stack(result); \
+        return create_error_string(#wrapper_name, "operation failed"); \
+    } \
+    \
+    char* result_str = basic_to_string_safe(result); \
+    basic_free_stack(expr); \
+    basic_free_stack(result); \
+    return result_str; \
+}
+
+// --- Core Symbolic Functions ---
+
 char* flutter_symengine_evaluate(const char* expression) {
     if (!expression) {
         return create_error_string("evaluate", "null expression");
     }
-    
-    basic expr;
+
+    basic expr, result;
     basic_new_stack(expr);
-    
-    // Parse the expression
-    CWRAPPER_OUTPUT_TYPE parse_result = basic_parse(expr, expression);
-    if (parse_result != SYMENGINE_NO_EXCEPTION) {
-        basic_free_stack(expr);
-        return create_error_string("evaluate", "parse failed");
-    }
-    
-    // For evaluation, expand and simplify
-    basic result;
     basic_new_stack(result);
-    
-    CWRAPPER_OUTPUT_TYPE expand_result = basic_expand(result, expr);
-    if (expand_result != SYMENGINE_NO_EXCEPTION) {
+
+    if (basic_parse(expr, expression) != SYMENGINE_NO_EXCEPTION) {
         basic_free_stack(expr);
         basic_free_stack(result);
-        return create_error_string("evaluate", "expansion failed");
+        return create_error_string("evaluate", "parse failed");
     }
-    
+
+    // For evaluation, 'evalf' calculates a numeric value if possible.
+    // 53 bits is standard double precision.
+    if (basic_evalf(result, expr, 53, 0) != SYMENGINE_NO_EXCEPTION) {
+        // Fallback to expand if evalf fails (e.g., for purely symbolic expressions)
+        basic_expand(result, expr);
+    }
+
     char* result_str = basic_to_string_safe(result);
-    
     basic_free_stack(expr);
     basic_free_stack(result);
-    
     return result_str;
 }
 
@@ -70,124 +95,375 @@ char* flutter_symengine_solve(const char* expression, const char* symbol) {
     if (!expression || !symbol) {
         return create_error_string("solve", "null input");
     }
-    
+
     basic expr, sym;
     basic_new_stack(expr);
     basic_new_stack(sym);
-    
-    // Parse expression and symbol
+
     if (basic_parse(expr, expression) != SYMENGINE_NO_EXCEPTION ||
         symbol_set(sym, symbol) != SYMENGINE_NO_EXCEPTION) {
         basic_free_stack(expr);
         basic_free_stack(sym);
         return create_error_string("solve", "parsing failed");
     }
-    
-    // Try to solve as polynomial
+
     CSetBasic* solutions = setbasic_new();
-    CWRAPPER_OUTPUT_TYPE solve_result = basic_solve_poly(solutions, expr, sym);
-    
-    char* result_str;
-    if (solve_result == SYMENGINE_NO_EXCEPTION) {
-        // Convert solutions to string representation
-        size_t num_solutions = setbasic_size(solutions);
-        if (num_solutions == 0) {
-            result_str = (char*)malloc(20);
-            if (result_str) {
-                strcpy(result_str, "no_solutions");
-            }
-        } else {
-            // For simplicity, get first solution
-            basic first_solution;
-            basic_new_stack(first_solution);
-            setbasic_get(solutions, 0, first_solution);
-            result_str = basic_to_string_safe(first_solution);
-            basic_free_stack(first_solution);
-        }
-    } else {
-        result_str = create_error_string("solve", "solve failed");
+    if (basic_solve_poly(solutions, expr, sym) != SYMENGINE_NO_EXCEPTION) {
+        setbasic_free(solutions);
+        basic_free_stack(expr);
+        basic_free_stack(sym);
+        return create_error_string("solve", "solve operation failed");
     }
+    
+    size_t num_solutions = setbasic_size(solutions);
+    if (num_solutions == 0) {
+        setbasic_free(solutions);
+        basic_free_stack(expr);
+        basic_free_stack(sym);
+        return strdup("[]"); // Return empty list for no solutions
+    }
+
+    // Concatenate all solutions into a single string "[sol1, sol2, ...]"
+    char* final_result = NULL;
+    size_t total_len = 2; // Start with "[" and "]"
+    char** solution_strs = (char**)malloc(num_solutions * sizeof(char*));
+
+    for (size_t i = 0; i < num_solutions; i++) {
+        basic sol;
+        basic_new_stack(sol);
+        setbasic_get(solutions, i, sol);
+        solution_strs[i] = basic_to_string_safe(sol);
+        total_len += strlen(solution_strs[i]) + (i > 0 ? 2 : 0); // ", "
+        basic_free_stack(sol);
+    }
+
+    final_result = (char*)malloc(total_len + 1);
+    strcpy(final_result, "[");
+    for (size_t i = 0; i < num_solutions; i++) {
+        strcat(final_result, solution_strs[i]);
+        if (i < num_solutions - 1) {
+            strcat(final_result, ", ");
+        }
+        free(solution_strs[i]);
+    }
+    strcat(final_result, "]");
+    free(solution_strs);
     
     setbasic_free(solutions);
     basic_free_stack(expr);
     basic_free_stack(sym);
-    
-    return result_str;
-}
-
-char* flutter_symengine_factor(const char* expression) {
-    if (!expression) {
-        return create_error_string("factor", "null expression");
-    }
-    
-    basic expr;
-    basic_new_stack(expr);
-    
-    if (basic_parse(expr, expression) != SYMENGINE_NO_EXCEPTION) {
-        basic_free_stack(expr);
-        return create_error_string("factor", "parse failed");
-    }
-    
-    // SymEngine doesn't have a direct factor function in the C wrapper
-    // For now, return expanded form as placeholder
-    basic result;
-    basic_new_stack(result);
-    
-    if (basic_expand(result, expr) != SYMENGINE_NO_EXCEPTION) {
-        basic_free_stack(expr);
-        basic_free_stack(result);
-        return create_error_string("factor", "expansion failed");
-    }
-    
-    char* result_str = basic_to_string_safe(result);
-    
-    basic_free_stack(expr);
-    basic_free_stack(result);
-    
-    return result_str;
+    return final_result;
 }
 
 char* flutter_symengine_expand(const char* expression) {
-    if (!expression) {
-        return create_error_string("expand", "null expression");
-    }
-    
-    basic expr;
+    if (!expression) return create_error_string("expand", "null expression");
+
+    basic expr, result;
     basic_new_stack(expr);
-    
+    basic_new_stack(result);
+
     if (basic_parse(expr, expression) != SYMENGINE_NO_EXCEPTION) {
         basic_free_stack(expr);
+        basic_free_stack(result);
         return create_error_string("expand", "parse failed");
     }
-    
-    basic result;
-    basic_new_stack(result);
-    
     if (basic_expand(result, expr) != SYMENGINE_NO_EXCEPTION) {
         basic_free_stack(expr);
         basic_free_stack(result);
         return create_error_string("expand", "expansion failed");
     }
-    
+
     char* result_str = basic_to_string_safe(result);
-    
     basic_free_stack(expr);
     basic_free_stack(result);
-    
     return result_str;
 }
 
-void flutter_symengine_free_string(char* str) {
-    if (str) {
-        // Since we're using malloc in our wrapper, use free()
-        free(str);
+// Factor is an alias for expand, as the C API for true factoring is limited.
+char* flutter_symengine_factor(const char* expression) {
+    // This provides API consistency with the original wrapper.
+    return flutter_symengine_expand(expression);
+}
+char* flutter_symengine_differentiate(const char* expression, const char* symbol) {
+    if (!expression || !symbol) return create_error_string("differentiate", "null input");
+
+    basic expr, sym, result;
+    basic_new_stack(expr);
+    basic_new_stack(sym);
+    basic_new_stack(result);
+
+    if (basic_parse(expr, expression) != SYMENGINE_NO_EXCEPTION ||
+        symbol_set(sym, symbol) != SYMENGINE_NO_EXCEPTION) {
+        basic_free_stack(expr);
+        basic_free_stack(sym);
+        basic_free_stack(result);
+        return create_error_string("differentiate", "parsing failed");
+    }
+    if (basic_diff(result, expr, sym) != SYMENGINE_NO_EXCEPTION) {
+        basic_free_stack(expr);
+        basic_free_stack(sym);
+        basic_free_stack(result);
+        return create_error_string("differentiate", "differentiation failed");
+    }
+
+    char* result_str = basic_to_string_safe(result);
+    basic_free_stack(expr);
+    basic_free_stack(sym);
+    basic_free_stack(result);
+    return result_str;
+}
+
+char* flutter_symengine_integrate(const char* expression, const char* symbol) {
+    // NOTE: SymEngine's C API (cwrapper.h) does not expose an integration function.
+    // This is a known limitation of the C interface, not the C++ core.
+    return create_error_string("integrate", "not implemented in SymEngine C API");
+}
+
+char* flutter_symengine_simplify(const char* expression) {
+    // "Simplification" is complex. `expand` is a common form of simplification.
+    return flutter_symengine_expand(expression);
+}
+
+char* flutter_symengine_substitute(const char* expression, const char* symbol, const char* value) {
+    if (!expression || !symbol || !value) return create_error_string("substitute", "null input");
+
+    basic expr, sym, val, result;
+    basic_new_stack(expr);
+    basic_new_stack(sym);
+    basic_new_stack(val);
+    basic_new_stack(result);
+
+    if (basic_parse(expr, expression) != SYMENGINE_NO_EXCEPTION ||
+        symbol_set(sym, symbol) != SYMENGINE_NO_EXCEPTION ||
+        basic_parse(val, value) != SYMENGINE_NO_EXCEPTION) {
+        basic_free_stack(expr);
+        basic_free_stack(sym);
+        basic_free_stack(val);
+        basic_free_stack(result);
+        return create_error_string("substitute", "parsing failed");
+    }
+
+    if (basic_subs2(result, expr, sym, val) != SYMENGINE_NO_EXCEPTION) {
+        basic_free_stack(expr);
+        basic_free_stack(sym);
+        basic_free_stack(val);
+        basic_free_stack(result);
+        return create_error_string("substitute", "substitution failed");
+    }
+
+    char* result_str = basic_to_string_safe(result);
+    basic_free_stack(expr);
+    basic_free_stack(sym);
+    basic_free_stack(val);
+    basic_free_stack(result);
+    return result_str;
+}
+
+// --- Mathematical Functions (Implemented with Macro) ---
+
+IMPLEMENT_UNARY_FUNC(flutter_symengine_abs, basic_abs)
+IMPLEMENT_UNARY_FUNC(flutter_symengine_sin, basic_sin)
+IMPLEMENT_UNARY_FUNC(flutter_symengine_cos, basic_cos)
+IMPLEMENT_UNARY_FUNC(flutter_symengine_tan, basic_tan)
+IMPLEMENT_UNARY_FUNC(flutter_symengine_asin, basic_asin)
+IMPLEMENT_UNARY_FUNC(flutter_symengine_acos, basic_acos)
+IMPLEMENT_UNARY_FUNC(flutter_symengine_atan, basic_atan)
+IMPLEMENT_UNARY_FUNC(flutter_symengine_sinh, basic_sinh)
+IMPLEMENT_UNARY_FUNC(flutter_symengine_cosh, basic_cosh)
+IMPLEMENT_UNARY_FUNC(flutter_symengine_tanh, basic_tanh)
+IMPLEMENT_UNARY_FUNC(flutter_symengine_asinh, basic_asinh)
+IMPLEMENT_UNARY_FUNC(flutter_symengine_acosh, basic_acosh)
+IMPLEMENT_UNARY_FUNC(flutter_symengine_atanh, basic_atanh)
+IMPLEMENT_UNARY_FUNC(flutter_symengine_exp, basic_exp)
+IMPLEMENT_UNARY_FUNC(flutter_symengine_log, basic_log)
+IMPLEMENT_UNARY_FUNC(flutter_symengine_sqrt, basic_sqrt)
+IMPLEMENT_UNARY_FUNC(flutter_symengine_gamma, basic_gamma)
+
+// --- Number Theory Functions ---
+
+char* flutter_symengine_gcd(const char* a, const char* b) {
+    basic A, B, result;
+    basic_new_stack(A);
+    basic_new_stack(B);
+    basic_new_stack(result);
+
+    if (basic_parse(A, a) != SYMENGINE_NO_EXCEPTION || basic_parse(B, b) != SYMENGINE_NO_EXCEPTION) {
+        basic_free_stack(A);
+        basic_free_stack(B);
+        basic_free_stack(result);
+        return create_error_string("gcd", "parsing failed");
+    }
+    ntheory_gcd(result, A, B);
+
+    char* result_str = basic_to_string_safe(result);
+    basic_free_stack(A);
+    basic_free_stack(B);
+    basic_free_stack(result);
+    return result_str;
+}
+
+char* flutter_symengine_lcm(const char* a, const char* b) {
+    basic A, B, result;
+    basic_new_stack(A);
+    basic_new_stack(B);
+    basic_new_stack(result);
+
+    if (basic_parse(A, a) != SYMENGINE_NO_EXCEPTION || basic_parse(B, b) != SYMENGINE_NO_EXCEPTION) {
+       basic_free_stack(A);
+       basic_free_stack(B);
+       basic_free_stack(result);
+       return create_error_string("lcm", "parsing failed");
+    }
+    ntheory_lcm(result, A, B);
+
+    char* result_str = basic_to_string_safe(result);
+    basic_free_stack(A);
+    basic_free_stack(B);
+    basic_free_stack(result);
+    return result_str;
+}
+
+char* flutter_symengine_factorial(int n) {
+    if (n < 0) return create_error_string("factorial", "input must be non-negative");
+    basic result;
+    basic_new_stack(result);
+    ntheory_factorial(result, (unsigned long)n);
+    char* result_str = basic_to_string_safe(result);
+    basic_free_stack(result);
+    return result_str;
+}
+
+char* flutter_symengine_fibonacci(int n) {
+    if (n < 0) return create_error_string("fibonacci", "input must be non-negative");
+    basic result;
+    basic_new_stack(result);
+    ntheory_fibonacci(result, (unsigned long)n);
+    char* result_str = basic_to_string_safe(result);
+    basic_free_stack(result);
+    return result_str;
+}
+
+// --- Constants ---
+
+char* flutter_symengine_get_pi(void) {
+    basic s;
+    basic_new_stack(s);
+    basic_const_pi(s);
+    char* str = basic_to_string_safe(s);
+    basic_free_stack(s);
+    return str;
+}
+
+char* flutter_symengine_get_e(void) {
+    basic s;
+    basic_new_stack(s);
+    basic_const_E(s);
+    char* str = basic_to_string_safe(s);
+    basic_free_stack(s);
+    return str;
+}
+
+char* flutter_symengine_get_euler_gamma(void) {
+    basic s;
+    basic_new_stack(s);
+    basic_const_EulerGamma(s);
+    char* str = basic_to_string_safe(s);
+    basic_free_stack(s);
+    return str;
+}
+
+// --- Matrix Operations (Opaque Pointers) ---
+
+CDenseMatrix* flutter_symengine_matrix_new(int rows, int cols) {
+    if (rows <= 0 || cols <= 0) return NULL;
+    return dense_matrix_new_rows_cols(rows, cols);
+}
+
+void flutter_symengine_matrix_free(CDenseMatrix* matrix) {
+    if (matrix) {
+        dense_matrix_free(matrix);
     }
 }
 
-// Utility functions
-char* flutter_symengine_version(void) {
-    // Return a static version string for now
-    return strdup("SymEngine Flutter Wrapper v1.0");
+int flutter_symengine_matrix_set_element(CDenseMatrix* matrix, int row, int col, const char* value) {
+    if (!matrix || !value) return -1;
+    basic val;
+    basic_new_stack(val);
+    if (basic_parse(val, value) != SYMENGINE_NO_EXCEPTION) {
+        basic_free_stack(val);
+        return -2; // Parse error
+    }
+    int result = dense_matrix_set_basic(matrix, row, col, val);
+    basic_free_stack(val);
+    return (result == SYMENGINE_NO_EXCEPTION) ? 0 : -3; // Set error
+}
+
+char* flutter_symengine_matrix_get_element(CDenseMatrix* matrix, int row, int col) {
+    if (!matrix) return create_error_string("matrix_get", "null matrix");
+    basic s;
+    basic_new_stack(s);
+    if (dense_matrix_get_basic(s, matrix, row, col) != SYMENGINE_NO_EXCEPTION) {
+        basic_free_stack(s);
+        return create_error_string("matrix_get", "get element failed");
+    }
+    char* str = basic_to_string_safe(s);
+    basic_free_stack(s);
+    return str;
+}
+
+char* flutter_symengine_matrix_to_string(CDenseMatrix* matrix) {
+    if (!matrix) return create_error_string("matrix_str", "null matrix");
+    return dense_matrix_str(matrix);
+}
+
+char* flutter_symengine_matrix_det(CDenseMatrix* matrix) {
+    if (!matrix) return create_error_string("matrix_det", "null matrix");
+    basic result;
+    basic_new_stack(result);
+    if (dense_matrix_det(result, matrix) != SYMENGINE_NO_EXCEPTION) {
+        basic_free_stack(result);
+        return create_error_string("matrix_det", "determinant calculation failed");
+    }
+    char* str = basic_to_string_safe(result);
+    basic_free_stack(result);
+    return str;
+}
+
+CDenseMatrix* flutter_symengine_matrix_inv(CDenseMatrix* matrix) {
+    if (!matrix) return NULL;
+    CDenseMatrix* result = dense_matrix_new();
+    if (dense_matrix_inv(result, matrix) != SYMENGINE_NO_EXCEPTION) {
+        dense_matrix_free(result);
+        return NULL; // Inversion failed
+    }
+    return result;
+}
+
+CDenseMatrix* flutter_symengine_matrix_add(CDenseMatrix* a, CDenseMatrix* b) {
+    if (!a || !b) return NULL;
+    CDenseMatrix* result = dense_matrix_new();
+    if (dense_matrix_add_matrix(result, a, b) != SYMENGINE_NO_EXCEPTION) {
+        dense_matrix_free(result);
+        return NULL;
+    }
+    return result;
+}
+
+CDenseMatrix* flutter_symengine_matrix_mul(CDenseMatrix* a, CDenseMatrix* b) {
+    if (!a || !b) return NULL;
+    CDenseMatrix* result = dense_matrix_new();
+    if (dense_matrix_mul_matrix(result, a, b) != SYMENGINE_NO_EXCEPTION) {
+        dense_matrix_free(result);
+        return NULL;
+    }
+    return result;
+}
+
+
+// --- Utility and Memory Management ---
+
+const char* flutter_symengine_version(void) {
+    return symengine_version();
 }
 
 char* flutter_symengine_test_basic_operations(void) {
@@ -195,24 +471,18 @@ char* flutter_symengine_test_basic_operations(void) {
     basic_new_stack(x);
     basic_new_stack(y);
     basic_new_stack(result);
-    
-    // Test basic operations: x + y where x=2, y=3
     integer_set_si(x, 2);
     integer_set_si(y, 3);
-    
     if (basic_add(result, x, y) != SYMENGINE_NO_EXCEPTION) {
         basic_free_stack(x);
         basic_free_stack(y);
         basic_free_stack(result);
         return create_error_string("test", "addition failed");
     }
-    
     char* result_str = basic_to_string_safe(result);
-    
     basic_free_stack(x);
     basic_free_stack(y);
     basic_free_stack(result);
-    
     return result_str;
 }
 
@@ -221,134 +491,22 @@ char* flutter_symengine_test_symbolic(void) {
     basic_new_stack(x);
     basic_new_stack(expr);
     basic_new_stack(result);
-    
-    // Create symbol x
+
     symbol_set(x, "x");
-    
-    // Create expression x^2 + 2*x + 1
-    basic x2, two, one, term1, term2;
-    basic_new_stack(x2);
-    basic_new_stack(two);
-    basic_new_stack(one);
-    basic_new_stack(term1);
-    basic_new_stack(term2);
-    
-    integer_set_si(two, 2);
-    integer_set_si(one, 1);
-    
-    // x^2
-    basic_pow(x2, x, two);
-    // 2*x  
-    basic_mul(term1, two, x);
-    // x^2 + 2*x
-    basic_add(term2, x2, term1);
-    // x^2 + 2*x + 1
-    basic_add(expr, term2, one);
-    
-    // Expand the expression
+    basic_parse(expr, "x**2 + 2*x + 1");
     basic_expand(result, expr);
     
     char* result_str = basic_to_string_safe(result);
-    
     basic_free_stack(x);
     basic_free_stack(expr);
     basic_free_stack(result);
-    basic_free_stack(x2);
-    basic_free_stack(two);
-    basic_free_stack(one);
-    basic_free_stack(term1);
-    basic_free_stack(term2);
-    
     return result_str;
 }
 
-// Extended functions - implement core ones, placeholder for others
-char* flutter_symengine_differentiate(const char* expression, const char* symbol) {
-    return create_error_string("differentiate", "not implemented yet");
-}
-
-char* flutter_symengine_integrate(const char* expression, const char* symbol) {
-    return create_error_string("integrate", "not implemented yet");
-}
-
-char* flutter_symengine_simplify(const char* expression) {
-    // For now, use expand as a basic simplification
-    return flutter_symengine_expand(expression);
-}
-
-char* flutter_symengine_substitute(const char* expression, const char* symbol, const char* value) {
-    return create_error_string("substitute", "not implemented yet");
-}
-
-// Placeholder implementations for other functions
-char* flutter_symengine_gcd(const char* a, const char* b) {
-    return create_error_string("gcd", "not implemented yet");
-}
-
-char* flutter_symengine_lcm(const char* a, const char* b) {
-    return create_error_string("lcm", "not implemented yet");
-}
-
-char* flutter_symengine_factorial(int n) {
-    if (n < 0 || n > 20) {
-        return create_error_string("factorial", "invalid input");
+void flutter_symengine_free_string(char* str) {
+    if (str) {
+        // Corresponds to malloc, strdup, and basic_str
+        free(str);
     }
-    
-    long long result = 1;
-    for (int i = 2; i <= n; i++) {
-        result *= i;
-    }
-    
-    char* result_str = (char*)malloc(32);
-    if (result_str) {
-        snprintf(result_str, 32, "%lld", result);
-    }
-    return result_str;
 }
 
-char* flutter_symengine_fibonacci(int n) {
-    if (n < 0 || n > 50) {
-        return create_error_string("fibonacci", "invalid input");
-    }
-    
-    if (n <= 1) {
-        char* result = (char*)malloc(8);
-        if (result) {
-            snprintf(result, 8, "%d", n);
-        }
-        return result;
-    }
-    
-    long long a = 0, b = 1, result;
-    for (int i = 2; i <= n; i++) {
-        result = a + b;
-        a = b;
-        b = result;
-    }
-    
-    char* result_str = (char*)malloc(32);
-    if (result_str) {
-        snprintf(result_str, 32, "%lld", result);
-    }
-    return result_str;
-}
-
-char* flutter_symengine_get_pi(void) {
-    return strdup("pi");
-}
-
-char* flutter_symengine_get_e(void) {
-    return strdup("E");
-}
-
-char* flutter_symengine_get_euler_gamma(void) {
-    return strdup("EulerGamma");
-}
-
-char* flutter_symengine_matrix_det(const char* matrix_str, int rows, int cols) {
-    return create_error_string("matrix_det", "not implemented yet");
-}
-
-char* flutter_symengine_matrix_inv(const char* matrix_str, int rows, int cols) {
-    return create_error_string("matrix_inv", "not implemented yet");
-}

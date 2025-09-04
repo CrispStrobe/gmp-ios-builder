@@ -88,7 +88,7 @@ set(SYMENGINE_MPFR_LIBRARIES /Users/christianstrobele/code/math-stack-ios-builde
 set(SYMENGINE_MPFR_INCLUDE_DIRS /Users/christianstrobele/code/math-stack-ios-builder/build-mpfr/include)
 set(HAVE_SYMENGINE_MPFR True)
 set(SYMENGINE_GMP_LIBRARIES /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-x86_64/temp-deps/libgmp.a)
-set(SYMENGINE_GMP_INCLUDE_DIRS /Users/christianstrobele/code/math-stack-ios-builder/build/include)
+set(SYMENGINE_GMP_INCLUDE_DIRS /Users/christianstrobele/code/math-stack-ios-builder/build-gmp/include)
 set(HAVE_SYMENGINE_GMP True)
 
 set(SYMENGINE_LLVM_COMPONENTS )

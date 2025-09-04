@@ -803,7 +803,7 @@ symengine/CMakeFiles/symengine.dir/nan.cpp.o: \
   /Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/symengine/mp_wrapper.h \
   /Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/symengine/symengine_rcp.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/ciso646 \
-  /Users/christianstrobele/code/math-stack-ios-builder/build/include/gmp.h \
+  /Users/christianstrobele/code/math-stack-ios-builder/build-gmp/include/gmp.h \
   /Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/symengine/flint_wrapper.h \
   /Users/christianstrobele/code/math-stack-ios-builder/build-flint/include/flint/fmpz.h \
   /Users/christianstrobele/code/math-stack-ios-builder/build-flint/include/flint/fmpz_types.h \

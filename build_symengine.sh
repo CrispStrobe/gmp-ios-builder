@@ -10,6 +10,9 @@ set -e
 readonly SCRIPTDIR=$(cd "$(dirname "$0")" && pwd)
 readonly BUILDDIR="$SCRIPTDIR/build-symengine"
 readonly LIBDIR="$BUILDDIR/lib"
+
+readonly COMBINED_LIB_BASENAME="symengine_flutter_wrapper" 
+
 readonly HEADERDIR_FINAL="$BUILDDIR/include"
 readonly LIBNAME="symengine"
 readonly VERSION_SYMENGINE="0.11.2"
@@ -92,193 +95,103 @@ copyFlutterWrapperToDir() {
 }
 
 configureAndMake() {
-    local platform=$1
-    local arch=$2
-    local build_dir="$BUILDDIR/$platform-$arch"
-
+    local platform=$1; local arch=$2; local build_dir="$BUILDDIR/$platform-$arch"
     logMsg "================================================================="
-    logMsg "Configuring SymEngine + Flutter Wrapper for PLATFORM: $platform, ARCH: $arch"
+    logMsg "Configuring SymEngine + Wrapper for PLATFORM: $platform, ARCH: $arch"
     logMsg "================================================================="
 
-    local sdkpath
-    sdkpath=$(xcrun --sdk "$platform" --show-sdk-path)
-    if [ ! -d "$sdkpath" ]; then errorExit "SDK path not found for platform '$platform'."; fi
-
-    rm -rf "$build_dir"
-    mkdir -p "$build_dir"
-    cd "$build_dir"
-
-    # Copy Flutter wrapper source files to this build directory
+    local sdkpath=$(xcrun --sdk "$platform" --show-sdk-path)
+    rm -rf "$build_dir"; mkdir -p "$build_dir"; cd "$build_dir"
     copyFlutterWrapperToDir "$build_dir"
 
-    local temp_lib_dir="$build_dir/temp-deps"
-    mkdir -p "$temp_lib_dir"
+    local temp_lib_dir="$build_dir/temp-deps"; mkdir -p "$temp_lib_dir"
     ln -sf "$GMP_BUILDDIR/lib/libgmp-$platform-$arch.a" "$temp_lib_dir/libgmp.a"
     ln -sf "$MPFR_BUILDDIR/lib/libmpfr-$platform-$arch.a" "$temp_lib_dir/libmpfr.a"
     ln -sf "$MPC_BUILDDIR/lib/libmpc-$platform-$arch.a" "$temp_lib_dir/libmpc.a"
     ln -sf "$FLINT_BUILDDIR/lib/libflint-$platform-$arch.a" "$temp_lib_dir/libflint.a"
 
-    local cmake_args=()
-    cmake_args+=(
-        "-DCMAKE_BUILD_TYPE=Release"
-        "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
-        "-DBUILD_SHARED_LIBS=OFF"
-        "-DWITH_GMP=ON" "-DWITH_MPFR=ON" "-DWITH_MPC=ON" "-DWITH_FLINT=ON"
-        "-DINTEGER_CLASS=flint"
-        "-DWITH_SYMENGINE_THREAD_SAFE=OFF" "-DWITH_LLVM=OFF" "-DWITH_TCMALLOC=OFF"
-        "-DBUILD_TESTS=OFF" "-DBUILD_BENCHMARKS=OFF"
-        "-DGMP_INCLUDE_DIR=$GMP_BUILDDIR/include"
-        "-DGMP_LIBRARY=$temp_lib_dir/libgmp.a"
-        "-DMPFR_INCLUDE_DIR=$MPFR_BUILDDIR/include"
-        "-DMPFR_LIBRARY=$temp_lib_dir/libmpfr.a"
-        "-DMPC_INCLUDE_DIR=$MPC_BUILDDIR/include"
-        "-DMPC_LIBRARY=$temp_lib_dir/libmpc.a"
-        "-DFLINT_INCLUDE_DIR=$FLINT_BUILDDIR/include"
-        "-DFLINT_LIBRARY=$temp_lib_dir/libflint.a"
-    )
-
+    local cmake_args=("-DCMAKE_POLICY_VERSION_MINIMUM=3.5" "-DCMAKE_BUILD_TYPE=Release" "-DBUILD_SHARED_LIBS=OFF" "-DWITH_GMP=ON" "-DWITH_MPFR=ON" "-DWITH_MPC=ON" "-DWITH_FLINT=ON" "-DINTEGER_CLASS=flint" "-DBUILD_TESTS=OFF" "-DBUILD_BENCHMARKS=OFF" "-DGMP_INCLUDE_DIR=$GMP_BUILDDIR/include" "-DGMP_LIBRARY=$temp_lib_dir/libgmp.a" "-DMPFR_INCLUDE_DIR=$MPFR_BUILDDIR/include" "-DMPFR_LIBRARY=$temp_lib_dir/libmpfr.a" "-DMPC_INCLUDE_DIR=$MPC_BUILDDIR/include" "-DMPC_LIBRARY=$temp_lib_dir/libmpc.a" "-DFLINT_INCLUDE_DIR=$FLINT_BUILDDIR/include" "-DFLINT_LIBRARY=$temp_lib_dir/libflint.a")
     if [[ "$platform" == "iphoneos" ]] || [[ "$platform" == "iphonesimulator" ]]; then
-        cmake_args+=( "-DCMAKE_SYSTEM_NAME=iOS" "-DCMAKE_OSX_ARCHITECTURES=$arch" "-DCMAKE_OSX_SYSROOT=$sdkpath" "-DCMAKE_OSX_DEPLOYMENT_TARGET=$IOS_MIN_VERSION" )
-    else # macosx
-        cmake_args+=( "-DCMAKE_OSX_ARCHITECTURES=$arch" "-DCMAKE_OSX_SYSROOT=$sdkpath" "-DCMAKE_OSX_DEPLOYMENT_TARGET=$MACOS_MIN_VERSION" )
+        cmake_args+=("-DCMAKE_SYSTEM_NAME=iOS" "-DCMAKE_OSX_ARCHITECTURES=$arch" "-DCMAKE_OSX_SYSROOT=$sdkpath" "-DCMAKE_OSX_DEPLOYMENT_TARGET=$IOS_MIN_VERSION")
+    else
+        cmake_args+=("-DCMAKE_OSX_ARCHITECTURES=$arch" "-DCMAKE_OSX_SYSROOT=$sdkpath" "-DCMAKE_OSX_DEPLOYMENT_TARGET=$MACOS_MIN_VERSION")
     fi
 
-    logMsg "Running CMake configure for SymEngine..."
-    cmake "$SYMENGINE_SOURCE" \
-        -DCMAKE_C_COMPILER="$(xcrun --sdk "$platform" -f clang)" \
-        -DCMAKE_CXX_COMPILER="$(xcrun --sdk "$platform" -f clang++)" \
-        "${cmake_args[@]}"
-
-    logMsg "Building SymEngine for $platform $arch..."
+    cmake "$SYMENGINE_SOURCE" -DCMAKE_C_COMPILER="$(xcrun --sdk "$platform" -f clang)" -DCMAKE_CXX_COMPILER="$(xcrun --sdk "$platform" -f clang++)" "${cmake_args[@]}"
     make -j"$(sysctl -n hw.ncpu)"
 
-    # Now compile our Flutter wrapper against the built SymEngine
-    logMsg "Building Flutter wrapper against SymEngine..."
-    local target_cc
-    target_cc=$(xcrun --sdk "$platform" -f clang)
-    
-    local target_cflags
-    if [[ "$platform" == "iphoneos" ]]; then
-        target_cflags="-arch $arch -isysroot $sdkpath -miphoneos-version-min=$IOS_MIN_VERSION"
-    elif [[ "$platform" == "iphonesimulator" ]]; then
-        target_cflags="-arch $arch -isysroot $sdkpath -mios-simulator-version-min=$IOS_MIN_VERSION"
-    else # macosx
-        target_cflags="-arch $arch -isysroot $sdkpath -mmacosx-version-min=$MACOS_MIN_VERSION"
-    fi
-    
-    # Add include paths for SymEngine and all dependencies
-    target_cflags="$target_cflags -I$SYMENGINE_SOURCE -I$build_dir"
-    target_cflags="$target_cflags -I$GMP_BUILDDIR/include"
-    target_cflags="$target_cflags -I$MPFR_BUILDDIR/include"  
-    target_cflags="$target_cflags -I$MPC_BUILDDIR/include"
-    target_cflags="$target_cflags -I$FLINT_BUILDDIR/include"
-    
-    # Verify files exist before compiling
-    if [ ! -f "flutter_symengine_wrapper.c" ]; then
-        errorExit "Flutter wrapper source file not found in $build_dir"
-    fi
-    
-    # Compile Flutter wrapper
+    local target_cc=$(xcrun --sdk "$platform" -f clang); local target_cflags
+    if [[ "$platform" == "iphoneos" ]]; then target_cflags="-arch $arch -isysroot $sdkpath -miphoneos-version-min=$IOS_MIN_VERSION"; elif [[ "$platform" == "iphonesimulator" ]]; then target_cflags="-arch $arch -isysroot $sdkpath -mios-simulator-version-min=$IOS_MIN_VERSION"; else target_cflags="-arch $arch -isysroot $sdkpath -mmacosx-version-min=$MACOS_MIN_VERSION"; fi
+    target_cflags="$target_cflags -I$SYMENGINE_SOURCE -I$build_dir -I$GMP_BUILDDIR/include -I$MPFR_BUILDDIR/include -I$MPC_BUILDDIR/include -I$FLINT_BUILDDIR/include"
     "$target_cc" $target_cflags -c "flutter_symengine_wrapper.c" -o "flutter_symengine_wrapper.o"
     
-    # Find the built SymEngine library
-    local found_lib
-    found_lib=$(find . -name "lib$LIBNAME.a" -type f | head -1)
-    if [ -z "$found_lib" ]; then
-        errorExit "Could not find built SymEngine library (lib$LIBNAME.a) in '$build_dir'."
-    fi
+    local symengine_lib=$(find . -name "libsymengine.a" -type f | head -1)
+    if [ -z "$symengine_lib" ]; then errorExit "Could not find built SymEngine library."; fi
 
-    logMsg "Creating combined library with Flutter wrapper..."
-    # Create a combined library that includes both SymEngine and our Flutter wrapper
-    mkdir -p temp_extract
-    cd temp_extract
-    ar x "../$found_lib"
+    mkdir -p temp_extract; cd temp_extract
+    ar x "../$symengine_lib"
     cp "../flutter_symengine_wrapper.o" .
-    ar rcs "../libsymengine_flutter_wrapper.a" *.o
-    cd ..
-    rm -rf temp_extract
+    ar rcs "../lib${COMBINED_LIB_BASENAME}.a" *.o
+    cd ..; rm -rf temp_extract
 
-    logMsg "Copying built library..."
     mkdir -p "$LIBDIR"
-    cp "libsymengine_flutter_wrapper.a" "$LIBDIR/libsymengine_flutter_wrapper-$platform-$arch.a"
+    cp "lib${COMBINED_LIB_BASENAME}.a" "$LIBDIR/lib${COMBINED_LIB_BASENAME}-$platform-$arch.a"
 }
 
 createFlutterWrapperXCFramework() {
     local framework_name="SymEngineFlutterWrapper"
     local framework_dir="$SCRIPTDIR/$framework_name.xcframework"
-
+    # Define the consistent binary name.
+    local consistent_binary_name="lib${COMBINED_LIB_BASENAME}.a"
+    
     logMsg "================================================================="
-    logMsg "Creating $framework_name.xcframework"
+    logMsg "Creating and patching $framework_name.xcframework"
     logMsg "================================================================="
 
     rm -rf "$framework_dir"
 
-    # Define source library paths
-    local device_lib="$LIBDIR/libsymengine_flutter_wrapper-iphoneos-arm64.a"
-    local sim_universal_lib="$LIBDIR/libsymengine_flutter_wrapper-iphonesimulator-universal.a"
-    local mac_universal_lib="$LIBDIR/libsymengine_flutter_wrapper-macosx-universal.a"
+    local device_lib="$LIBDIR/lib${COMBINED_LIB_BASENAME}-iphoneos-arm64.a"
+    local sim_universal_lib="$LIBDIR/lib${COMBINED_LIB_BASENAME}-iphonesimulator-universal.a"
+    local mac_universal_lib="$LIBDIR/lib${COMBINED_LIB_BASENAME}-macosx-universal.a"
     
-    # Create universal "fat" libraries for simulator and macOS.
-    logMsg "Creating universal libraries..."
-    lipo -create -output "$sim_universal_lib" \
-        "$LIBDIR/libsymengine_flutter_wrapper-iphonesimulator-x86_64.a" \
-        "$LIBDIR/libsymengine_flutter_wrapper-iphonesimulator-arm64.a"
+    lipo -create -output "$sim_universal_lib" "$LIBDIR/lib${COMBINED_LIB_BASENAME}-iphonesimulator-x86_64.a" "$LIBDIR/lib${COMBINED_LIB_BASENAME}-iphonesimulator-arm64.a"
+    lipo -create -output "$mac_universal_lib" "$LIBDIR/lib${COMBINED_LIB_BASENAME}-macosx-x86_64.a" "$LIBDIR/lib${COMBINED_LIB_BASENAME}-macosx-arm64.a"
 
-    lipo -create -output "$mac_universal_lib" \
-        "$LIBDIR/libsymengine_flutter_wrapper-macosx-x86_64.a" \
-        "$LIBDIR/libsymengine_flutter_wrapper-macosx-arm64.a"
-
-    # Set up headers
-    logMsg "Setting up headers..."
-    rm -rf "$HEADERDIR_FINAL"
-    mkdir -p "$HEADERDIR_FINAL"
+    rm -rf "$HEADERDIR_FINAL"; mkdir -p "$HEADERDIR_FINAL"
     cp "$FLUTTER_WRAPPER_SRC/flutter_symengine_wrapper.h" "$HEADERDIR_FINAL/"
 
-    # Create the XCFramework
-    logMsg "Assembling XCFramework..."
     xcodebuild -create-xcframework \
         -library "$device_lib" -headers "$HEADERDIR_FINAL" \
         -library "$sim_universal_lib" -headers "$HEADERDIR_FINAL" \
         -library "$mac_universal_lib" -headers "$HEADERDIR_FINAL" \
         -output "$framework_dir"
 
-    # Patch for CocoaPods compatibility
-    logMsg "Patching framework for CocoaPods compatibility..."
-    mv "$framework_dir/ios-arm64/libsymengine_flutter_wrapper-iphoneos-arm64.a" "$framework_dir/ios-arm64/$framework_name"
-    mv "$framework_dir/ios-arm64_x86_64-simulator/libsymengine_flutter_wrapper-iphonesimulator-universal.a" "$framework_dir/ios-arm64_x86_64-simulator/$framework_name"
-    mv "$framework_dir/macos-arm64_x86_64/libsymengine_flutter_wrapper-macosx-universal.a" "$framework_dir/macos-arm64_x86_64/$framework_name"
+    logMsg "Patching generated framework for consistent naming..."
+    
+    # Rename internal binaries to the consistent name.
+    mv "$framework_dir/ios-arm64/$(basename "$device_lib")" "$framework_dir/ios-arm64/$consistent_binary_name"
+    mv "$framework_dir/ios-arm64_x86_64-simulator/$(basename "$sim_universal_lib")" "$framework_dir/ios-arm64_x86_64-simulator/$consistent_binary_name"
+    mv "$framework_dir/macos-arm64_x86_64/$(basename "$mac_universal_lib")" "$framework_dir/macos-arm64_x86_64/$consistent_binary_name"
 
-    # Edit the manifest
     local PLIST_PATH="$framework_dir/Info.plist"
     local COUNT=$(/usr/libexec/PlistBuddy -c "Print :AvailableLibraries:" "$PLIST_PATH" | grep -c "Dict")
     for (( i=0; i<$COUNT; i++ )); do
-        /usr/libexec/PlistBuddy -c "Set :AvailableLibraries:$i:BinaryPath $framework_name" "$PLIST_PATH"
-        /usr/libexec/PlistBuddy -c "Set :AvailableLibraries:$i:LibraryPath $framework_name" "$PLIST_PATH"
+        # Update Info.plist to point to the consistent name.
+        /usr/libexec/PlistBuddy -c "Set :AvailableLibraries:$i:BinaryPath $consistent_binary_name" "$PLIST_PATH"
+        /usr/libexec/PlistBuddy -c "Set :AvailableLibraries:$i:LibraryPath $consistent_binary_name" "$PLIST_PATH"
     done
     
-    logMsg "✅ Successfully created $framework_dir"
+    logMsg "✅ Successfully created and patched $framework_dir"
 }
 
 # --- Main Build Logic ---
-logMsg "Starting SymEngine + Flutter wrapper build (SINGLE COMPILATION POINT)..."
-
-checkCMake
-checkDependencies
-checkFlutterWrapperSource
-downloadSymEngine
-
+logMsg "Starting SymEngine + Flutter wrapper build..."
+checkCMake; checkDependencies; checkFlutterWrapperSource; downloadSymEngine
 if [ -d "$BUILDDIR" ]; then rm -rf "$BUILDDIR"; fi
-
-logMsg "--- Building SymEngine + Flutter Wrapper for iOS Device ---"
 for ARCH in $DEVARCHS; do configureAndMake "iphoneos" "$ARCH"; done
-
-logMsg "--- Building SymEngine + Flutter Wrapper for iOS Simulator ---"
 for ARCH in $SIMARCHS; do configureAndMake "iphonesimulator" "$ARCH"; done
-
-logMsg "--- Building SymEngine + Flutter Wrapper for macOS ---"
 for ARCH in $MACARCHS; do configureAndMake "macosx" "$ARCH"; done
-
 createFlutterWrapperXCFramework
-
 logMsg "🚀 SymEngine + Flutter wrapper build process completed successfully!"
 exit 0
+

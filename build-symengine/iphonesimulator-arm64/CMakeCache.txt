@@ -309,7 +309,7 @@ FLINT_INCLUDE_DIR:PATH=/Users/christianstrobele/code/math-stack-ios-builder/buil
 FLINT_LIBRARY:FILEPATH=/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphonesimulator-arm64/temp-deps/libflint.a
 
 //Path to a file.
-GMP_INCLUDE_DIR:PATH=/Users/christianstrobele/code/math-stack-ios-builder/build/include
+GMP_INCLUDE_DIR:PATH=/Users/christianstrobele/code/math-stack-ios-builder/build-gmp/include
 
 //Path to a library.
 GMP_LIBRARY:FILEPATH=/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphonesimulator-arm64/temp-deps/libgmp.a
@@ -384,7 +384,7 @@ WITH_GENERATE_PARSER:BOOL=no
 WITH_GMP:UNINITIALIZED=ON
 
 //Build with LLVM
-WITH_LLVM:BOOL=OFF
+WITH_LLVM:BOOL=no
 
 //Build with MPC
 WITH_MPC:BOOL=ON
@@ -414,13 +414,13 @@ WITH_SYMENGINE_RCP:BOOL=yes
 WITH_SYMENGINE_TEUCHOS:BOOL=no
 
 //Enable SYMENGINE_THREAD_SAFE support
-WITH_SYMENGINE_THREAD_SAFE:BOOL=OFF
+WITH_SYMENGINE_THREAD_SAFE:BOOL=no
 
 //Build with system cereal instead of vendored files
 WITH_SYSTEM_CEREAL:BOOL=no
 
 //Build with TCMalloc linked
-WITH_TCMALLOC:BOOL=OFF
+WITH_TCMALLOC:BOOL=no
 
 //Use virtual TypeID getter
 WITH_VIRTUAL_TYPEID:BOOL=no
@@ -641,7 +641,7 @@ EXCLUDE_LIBS:INTERNAL=FALSE
 //Details about finding FLINT
 FIND_PACKAGE_MESSAGE_DETAILS_FLINT:INTERNAL=[/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphonesimulator-arm64/temp-deps/libflint.a][/Users/christianstrobele/code/math-stack-ios-builder/build-flint/include;/Users/christianstrobele/code/math-stack-ios-builder/build-flint/include/flint][3.3.1][v()]
 //Details about finding GMP
-FIND_PACKAGE_MESSAGE_DETAILS_GMP:INTERNAL=[/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphonesimulator-arm64/temp-deps/libgmp.a][/Users/christianstrobele/code/math-stack-ios-builder/build/include][v()]
+FIND_PACKAGE_MESSAGE_DETAILS_GMP:INTERNAL=[/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphonesimulator-arm64/temp-deps/libgmp.a][/Users/christianstrobele/code/math-stack-ios-builder/build-gmp/include][v()]
 //Details about finding MPC
 FIND_PACKAGE_MESSAGE_DETAILS_MPC:INTERNAL=[/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphonesimulator-arm64/temp-deps/libmpc.a][/Users/christianstrobele/code/math-stack-ios-builder/build-mpc/include][v()]
 //Details about finding MPFR

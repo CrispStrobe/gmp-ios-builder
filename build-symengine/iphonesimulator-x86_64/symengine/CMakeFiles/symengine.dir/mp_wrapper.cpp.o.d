@@ -787,7 +787,7 @@ symengine/CMakeFiles/symengine.dir/mp_wrapper.cpp.o: \
   /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphonesimulator-x86_64/symengine/symengine_config.h \
   /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphonesimulator-x86_64/symengine/symengine_export.h \
   /Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/symengine/symengine_assert.h \
-  /Users/christianstrobele/code/math-stack-ios-builder/build/include/gmp.h \
+  /Users/christianstrobele/code/math-stack-ios-builder/build-gmp/include/gmp.h \
   /Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/symengine/flint_wrapper.h \
   /Users/christianstrobele/code/math-stack-ios-builder/build-flint/include/flint/fmpz.h \
   /Users/christianstrobele/code/math-stack-ios-builder/build-flint/include/flint/fmpz_types.h \
