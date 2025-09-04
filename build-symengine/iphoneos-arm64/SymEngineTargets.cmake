@@ -57,7 +57,7 @@ set_target_properties(symengine PROPERTIES
 set_property(TARGET symengine APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(symengine PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
-  IMPORTED_LOCATION_RELEASE "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/symengine/libsymengine.a"
+  IMPORTED_LOCATION_RELEASE "/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/symengine/libsymengine.a"
   )
 
 # This file does not depend on other imported targets which have

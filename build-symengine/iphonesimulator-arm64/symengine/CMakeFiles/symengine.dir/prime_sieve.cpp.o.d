@@ -1,6 +1,6 @@
 symengine/CMakeFiles/symengine.dir/prime_sieve.cpp.o: \
-  /Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/symengine/prime_sieve.cpp \
-  /Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/symengine/prime_sieve.h \
+  /Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/symengine/prime_sieve.cpp \
+  /Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/symengine/prime_sieve.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/usr/include/c++/v1/vector \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/usr/include/c++/v1/__algorithm/copy.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/usr/include/c++/v1/__algorithm/copy_move_common.h \
@@ -746,8 +746,8 @@ symengine/CMakeFiles/symengine.dir/prime_sieve.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/usr/include/_types/_nl_item.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/usr/include/c++/v1/__locale_dir/locale_base_api/bsd_locale_defaults.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/usr/include/c++/v1/cstdarg \
-  /Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/symengine/symengine_config.h \
-  /Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/symengine/symengine_export.h \
+  /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphonesimulator-arm64/symengine/symengine_config.h \
+  /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphonesimulator-arm64/symengine/symengine_export.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/usr/include/c++/v1/ciso646 \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/usr/include/c++/v1/valarray \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/usr/include/c++/v1/functional \

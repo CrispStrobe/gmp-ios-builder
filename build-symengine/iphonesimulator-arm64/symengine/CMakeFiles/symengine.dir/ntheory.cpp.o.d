@@ -1,5 +1,5 @@
 symengine/CMakeFiles/symengine.dir/ntheory.cpp.o: \
-  /Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/symengine/ntheory.cpp \
+  /Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/symengine/ntheory.cpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/usr/include/c++/v1/valarray \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/usr/include/c++/v1/__algorithm/copy.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/usr/include/c++/v1/__algorithm/copy_move_common.h \
@@ -767,13 +767,13 @@ symengine/CMakeFiles/symengine.dir/ntheory.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/usr/include/_types/_nl_item.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/usr/include/c++/v1/__locale_dir/locale_base_api/bsd_locale_defaults.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/usr/include/c++/v1/cstdarg \
-  /Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/symengine/prime_sieve.h \
-  /Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/symengine/symengine_config.h \
-  /Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/symengine/symengine_export.h \
-  /Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/symengine/ntheory.h \
-  /Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/symengine/integer.h \
-  /Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/symengine/number.h \
-  /Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/symengine/basic.h \
+  /Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/symengine/prime_sieve.h \
+  /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphonesimulator-arm64/symengine/symengine_config.h \
+  /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphonesimulator-arm64/symengine/symengine_export.h \
+  /Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/symengine/ntheory.h \
+  /Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/symengine/integer.h \
+  /Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/symengine/number.h \
+  /Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/symengine/basic.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/usr/include/c++/v1/sstream \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/usr/include/c++/v1/__ostream/basic_ostream.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/usr/include/c++/v1/bitset \
@@ -798,51 +798,51 @@ symengine/CMakeFiles/symengine.dir/ntheory.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/usr/include/_assert.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/usr/include/_static_assert.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/usr/include/c++/v1/complex \
-  /Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/symengine/symengine_exception.h \
-  /Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/symengine/dict.h \
-  /Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/symengine/mp_class.h \
-  /Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/symengine/symengine_casts.h \
+  /Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/symengine/symengine_exception.h \
+  /Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/symengine/dict.h \
+  /Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/symengine/mp_class.h \
+  /Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/symengine/symengine_casts.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/usr/include/c++/v1/iostream \
-  /Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/symengine/symengine_assert.h \
-  /Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/symengine/mp_wrapper.h \
-  /Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/symengine/symengine_rcp.h \
+  /Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/symengine/symengine_assert.h \
+  /Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/symengine/mp_wrapper.h \
+  /Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/symengine/symengine_rcp.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/usr/include/c++/v1/ciso646 \
-  /Users/christianstrobele/code/gmp-ios-builder/build/include/gmp.h \
-  /Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/symengine/flint_wrapper.h \
-  /Users/christianstrobele/code/gmp-ios-builder/build-flint/include/flint/fmpz.h \
-  /Users/christianstrobele/code/gmp-ios-builder/build-flint/include/flint/fmpz_types.h \
-  /Users/christianstrobele/code/gmp-ios-builder/build-flint/include/flint/flint.h \
-  /Users/christianstrobele/code/gmp-ios-builder/build-flint/include/flint/flint-config.h \
-  /Users/christianstrobele/code/gmp-ios-builder/build-flint/include/flint/fmpq.h \
-  /Users/christianstrobele/code/gmp-ios-builder/build-flint/include/flint/fmpz_poly.h \
-  /Users/christianstrobele/code/gmp-ios-builder/build-flint/include/flint/nmod_types.h \
-  /Users/christianstrobele/code/gmp-ios-builder/build-flint/include/flint/fmpz_poly_factor.h \
-  /Users/christianstrobele/code/gmp-ios-builder/build-flint/include/flint/fmpq_poly.h \
-  /Users/christianstrobele/code/gmp-ios-builder/build-flint/include/flint/fmpq_types.h \
-  /Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/symengine/type_codes.inc \
-  /Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/symengine/basic-methods.inc \
-  /Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/symengine/basic-inl.h \
-  /Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/symengine/tribool.h \
-  /Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/symengine/assumptions.h \
-  /Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/symengine/rational.h \
-  /Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/symengine/constants.h \
-  /Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/symengine/symbol.h \
-  /Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/symengine/infinity.h \
-  /Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/symengine/mul.h \
-  /Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/symengine/nan.h \
-  /Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/symengine/add.h \
-  /Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/symengine/pow.h \
-  /Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/symengine/functions.h \
-  /Users/christianstrobele/code/gmp-ios-builder/build-mpfr/include/mpfr.h \
-  /Users/christianstrobele/code/gmp-ios-builder/build-flint/include/flint/arb.h \
-  /Users/christianstrobele/code/gmp-ios-builder/build-flint/include/flint/arf.h \
-  /Users/christianstrobele/code/gmp-ios-builder/build-flint/include/flint/longlong.h \
-  /Users/christianstrobele/code/gmp-ios-builder/build-flint/include/flint/longlong_asm_clang.h \
-  /Users/christianstrobele/code/gmp-ios-builder/build-flint/include/flint/longlong_asm_gnu.h \
-  /Users/christianstrobele/code/gmp-ios-builder/build-flint/include/flint/longlong_div_gnu.h \
-  /Users/christianstrobele/code/gmp-ios-builder/build-flint/include/flint/mag.h \
-  /Users/christianstrobele/code/gmp-ios-builder/build-flint/include/flint/fmpz_extras.h \
-  /Users/christianstrobele/code/gmp-ios-builder/build-flint/include/flint/arb_types.h \
-  /Users/christianstrobele/code/gmp-ios-builder/build-flint/include/flint/arf_types.h \
-  /Users/christianstrobele/code/gmp-ios-builder/build-flint/include/flint/bernoulli.h \
-  /Users/christianstrobele/code/gmp-ios-builder/build-flint/include/flint/arith.h
+  /Users/christianstrobele/code/math-stack-ios-builder/build/include/gmp.h \
+  /Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/symengine/flint_wrapper.h \
+  /Users/christianstrobele/code/math-stack-ios-builder/build-flint/include/flint/fmpz.h \
+  /Users/christianstrobele/code/math-stack-ios-builder/build-flint/include/flint/fmpz_types.h \
+  /Users/christianstrobele/code/math-stack-ios-builder/build-flint/include/flint/flint.h \
+  /Users/christianstrobele/code/math-stack-ios-builder/build-flint/include/flint/flint-config.h \
+  /Users/christianstrobele/code/math-stack-ios-builder/build-flint/include/flint/fmpq.h \
+  /Users/christianstrobele/code/math-stack-ios-builder/build-flint/include/flint/fmpz_poly.h \
+  /Users/christianstrobele/code/math-stack-ios-builder/build-flint/include/flint/nmod_types.h \
+  /Users/christianstrobele/code/math-stack-ios-builder/build-flint/include/flint/fmpz_poly_factor.h \
+  /Users/christianstrobele/code/math-stack-ios-builder/build-flint/include/flint/fmpq_poly.h \
+  /Users/christianstrobele/code/math-stack-ios-builder/build-flint/include/flint/fmpq_types.h \
+  /Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/symengine/type_codes.inc \
+  /Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/symengine/basic-methods.inc \
+  /Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/symengine/basic-inl.h \
+  /Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/symengine/tribool.h \
+  /Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/symengine/assumptions.h \
+  /Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/symengine/rational.h \
+  /Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/symengine/constants.h \
+  /Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/symengine/symbol.h \
+  /Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/symengine/infinity.h \
+  /Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/symengine/mul.h \
+  /Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/symengine/nan.h \
+  /Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/symengine/add.h \
+  /Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/symengine/pow.h \
+  /Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/symengine/functions.h \
+  /Users/christianstrobele/code/math-stack-ios-builder/build-mpfr/include/mpfr.h \
+  /Users/christianstrobele/code/math-stack-ios-builder/build-flint/include/flint/arb.h \
+  /Users/christianstrobele/code/math-stack-ios-builder/build-flint/include/flint/arf.h \
+  /Users/christianstrobele/code/math-stack-ios-builder/build-flint/include/flint/longlong.h \
+  /Users/christianstrobele/code/math-stack-ios-builder/build-flint/include/flint/longlong_asm_clang.h \
+  /Users/christianstrobele/code/math-stack-ios-builder/build-flint/include/flint/longlong_asm_gnu.h \
+  /Users/christianstrobele/code/math-stack-ios-builder/build-flint/include/flint/longlong_div_gnu.h \
+  /Users/christianstrobele/code/math-stack-ios-builder/build-flint/include/flint/mag.h \
+  /Users/christianstrobele/code/math-stack-ios-builder/build-flint/include/flint/fmpz_extras.h \
+  /Users/christianstrobele/code/math-stack-ios-builder/build-flint/include/flint/arb_types.h \
+  /Users/christianstrobele/code/math-stack-ios-builder/build-flint/include/flint/arf_types.h \
+  /Users/christianstrobele/code/math-stack-ios-builder/build-flint/include/flint/bernoulli.h \
+  /Users/christianstrobele/code/math-stack-ios-builder/build-flint/include/flint/arith.h

@@ -57,10 +57,10 @@ RM = /opt/homebrew/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2
+CMAKE_SOURCE_DIR = /Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64
+CMAKE_BINARY_DIR = /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -142,14 +142,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(CMAKE_COMMAND) -E cmake_progress_start /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64/CMakeFiles /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64/symengine//CMakeFiles/progress.marks
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 symengine/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64/CMakeFiles 0
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(CMAKE_COMMAND) -E cmake_progress_start /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64/CMakeFiles /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64/symengine//CMakeFiles/progress.marks
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 symengine/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 symengine/clean
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 symengine/clean
 .PHONY : clean
 
 # The main clean target
@@ -158,22 +158,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 symengine/preinstall
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 symengine/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 symengine/preinstall
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 symengine/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 symengine/CMakeFiles/symengine.dir/rule:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 symengine/CMakeFiles/symengine.dir/rule
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 symengine/CMakeFiles/symengine.dir/rule
 .PHONY : symengine/CMakeFiles/symengine.dir/rule
 
 # Convenience name for target.
@@ -182,7 +182,7 @@ symengine: symengine/CMakeFiles/symengine.dir/rule
 
 # fast build rule for target.
 symengine/fast:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/build
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/build
 .PHONY : symengine/fast
 
 add.o: add.cpp.o
@@ -190,7 +190,7 @@ add.o: add.cpp.o
 
 # target to build an object file
 add.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/add.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/add.cpp.o
 .PHONY : add.cpp.o
 
 add.i: add.cpp.i
@@ -198,7 +198,7 @@ add.i: add.cpp.i
 
 # target to preprocess a source file
 add.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/add.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/add.cpp.i
 .PHONY : add.cpp.i
 
 add.s: add.cpp.s
@@ -206,7 +206,7 @@ add.s: add.cpp.s
 
 # target to generate assembly for a file
 add.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/add.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/add.cpp.s
 .PHONY : add.cpp.s
 
 assumptions.o: assumptions.cpp.o
@@ -214,7 +214,7 @@ assumptions.o: assumptions.cpp.o
 
 # target to build an object file
 assumptions.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/assumptions.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/assumptions.cpp.o
 .PHONY : assumptions.cpp.o
 
 assumptions.i: assumptions.cpp.i
@@ -222,7 +222,7 @@ assumptions.i: assumptions.cpp.i
 
 # target to preprocess a source file
 assumptions.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/assumptions.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/assumptions.cpp.i
 .PHONY : assumptions.cpp.i
 
 assumptions.s: assumptions.cpp.s
@@ -230,7 +230,7 @@ assumptions.s: assumptions.cpp.s
 
 # target to generate assembly for a file
 assumptions.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/assumptions.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/assumptions.cpp.s
 .PHONY : assumptions.cpp.s
 
 basic.o: basic.cpp.o
@@ -238,7 +238,7 @@ basic.o: basic.cpp.o
 
 # target to build an object file
 basic.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/basic.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/basic.cpp.o
 .PHONY : basic.cpp.o
 
 basic.i: basic.cpp.i
@@ -246,7 +246,7 @@ basic.i: basic.cpp.i
 
 # target to preprocess a source file
 basic.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/basic.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/basic.cpp.i
 .PHONY : basic.cpp.i
 
 basic.s: basic.cpp.s
@@ -254,7 +254,7 @@ basic.s: basic.cpp.s
 
 # target to generate assembly for a file
 basic.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/basic.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/basic.cpp.s
 .PHONY : basic.cpp.s
 
 complex.o: complex.cpp.o
@@ -262,7 +262,7 @@ complex.o: complex.cpp.o
 
 # target to build an object file
 complex.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/complex.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/complex.cpp.o
 .PHONY : complex.cpp.o
 
 complex.i: complex.cpp.i
@@ -270,7 +270,7 @@ complex.i: complex.cpp.i
 
 # target to preprocess a source file
 complex.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/complex.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/complex.cpp.i
 .PHONY : complex.cpp.i
 
 complex.s: complex.cpp.s
@@ -278,7 +278,7 @@ complex.s: complex.cpp.s
 
 # target to generate assembly for a file
 complex.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/complex.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/complex.cpp.s
 .PHONY : complex.cpp.s
 
 complex_double.o: complex_double.cpp.o
@@ -286,7 +286,7 @@ complex_double.o: complex_double.cpp.o
 
 # target to build an object file
 complex_double.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/complex_double.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/complex_double.cpp.o
 .PHONY : complex_double.cpp.o
 
 complex_double.i: complex_double.cpp.i
@@ -294,7 +294,7 @@ complex_double.i: complex_double.cpp.i
 
 # target to preprocess a source file
 complex_double.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/complex_double.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/complex_double.cpp.i
 .PHONY : complex_double.cpp.i
 
 complex_double.s: complex_double.cpp.s
@@ -302,7 +302,7 @@ complex_double.s: complex_double.cpp.s
 
 # target to generate assembly for a file
 complex_double.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/complex_double.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/complex_double.cpp.s
 .PHONY : complex_double.cpp.s
 
 complex_mpc.o: complex_mpc.cpp.o
@@ -310,7 +310,7 @@ complex_mpc.o: complex_mpc.cpp.o
 
 # target to build an object file
 complex_mpc.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/complex_mpc.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/complex_mpc.cpp.o
 .PHONY : complex_mpc.cpp.o
 
 complex_mpc.i: complex_mpc.cpp.i
@@ -318,7 +318,7 @@ complex_mpc.i: complex_mpc.cpp.i
 
 # target to preprocess a source file
 complex_mpc.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/complex_mpc.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/complex_mpc.cpp.i
 .PHONY : complex_mpc.cpp.i
 
 complex_mpc.s: complex_mpc.cpp.s
@@ -326,7 +326,7 @@ complex_mpc.s: complex_mpc.cpp.s
 
 # target to generate assembly for a file
 complex_mpc.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/complex_mpc.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/complex_mpc.cpp.s
 .PHONY : complex_mpc.cpp.s
 
 constants.o: constants.cpp.o
@@ -334,7 +334,7 @@ constants.o: constants.cpp.o
 
 # target to build an object file
 constants.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/constants.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/constants.cpp.o
 .PHONY : constants.cpp.o
 
 constants.i: constants.cpp.i
@@ -342,7 +342,7 @@ constants.i: constants.cpp.i
 
 # target to preprocess a source file
 constants.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/constants.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/constants.cpp.i
 .PHONY : constants.cpp.i
 
 constants.s: constants.cpp.s
@@ -350,7 +350,7 @@ constants.s: constants.cpp.s
 
 # target to generate assembly for a file
 constants.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/constants.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/constants.cpp.s
 .PHONY : constants.cpp.s
 
 cse.o: cse.cpp.o
@@ -358,7 +358,7 @@ cse.o: cse.cpp.o
 
 # target to build an object file
 cse.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/cse.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/cse.cpp.o
 .PHONY : cse.cpp.o
 
 cse.i: cse.cpp.i
@@ -366,7 +366,7 @@ cse.i: cse.cpp.i
 
 # target to preprocess a source file
 cse.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/cse.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/cse.cpp.i
 .PHONY : cse.cpp.i
 
 cse.s: cse.cpp.s
@@ -374,7 +374,7 @@ cse.s: cse.cpp.s
 
 # target to generate assembly for a file
 cse.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/cse.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/cse.cpp.s
 .PHONY : cse.cpp.s
 
 cwrapper.o: cwrapper.cpp.o
@@ -382,7 +382,7 @@ cwrapper.o: cwrapper.cpp.o
 
 # target to build an object file
 cwrapper.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/cwrapper.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/cwrapper.cpp.o
 .PHONY : cwrapper.cpp.o
 
 cwrapper.i: cwrapper.cpp.i
@@ -390,7 +390,7 @@ cwrapper.i: cwrapper.cpp.i
 
 # target to preprocess a source file
 cwrapper.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/cwrapper.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/cwrapper.cpp.i
 .PHONY : cwrapper.cpp.i
 
 cwrapper.s: cwrapper.cpp.s
@@ -398,7 +398,7 @@ cwrapper.s: cwrapper.cpp.s
 
 # target to generate assembly for a file
 cwrapper.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/cwrapper.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/cwrapper.cpp.s
 .PHONY : cwrapper.cpp.s
 
 dense_matrix.o: dense_matrix.cpp.o
@@ -406,7 +406,7 @@ dense_matrix.o: dense_matrix.cpp.o
 
 # target to build an object file
 dense_matrix.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/dense_matrix.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/dense_matrix.cpp.o
 .PHONY : dense_matrix.cpp.o
 
 dense_matrix.i: dense_matrix.cpp.i
@@ -414,7 +414,7 @@ dense_matrix.i: dense_matrix.cpp.i
 
 # target to preprocess a source file
 dense_matrix.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/dense_matrix.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/dense_matrix.cpp.i
 .PHONY : dense_matrix.cpp.i
 
 dense_matrix.s: dense_matrix.cpp.s
@@ -422,7 +422,7 @@ dense_matrix.s: dense_matrix.cpp.s
 
 # target to generate assembly for a file
 dense_matrix.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/dense_matrix.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/dense_matrix.cpp.s
 .PHONY : dense_matrix.cpp.s
 
 derivative.o: derivative.cpp.o
@@ -430,7 +430,7 @@ derivative.o: derivative.cpp.o
 
 # target to build an object file
 derivative.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/derivative.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/derivative.cpp.o
 .PHONY : derivative.cpp.o
 
 derivative.i: derivative.cpp.i
@@ -438,7 +438,7 @@ derivative.i: derivative.cpp.i
 
 # target to preprocess a source file
 derivative.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/derivative.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/derivative.cpp.i
 .PHONY : derivative.cpp.i
 
 derivative.s: derivative.cpp.s
@@ -446,7 +446,7 @@ derivative.s: derivative.cpp.s
 
 # target to generate assembly for a file
 derivative.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/derivative.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/derivative.cpp.s
 .PHONY : derivative.cpp.s
 
 dict.o: dict.cpp.o
@@ -454,7 +454,7 @@ dict.o: dict.cpp.o
 
 # target to build an object file
 dict.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/dict.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/dict.cpp.o
 .PHONY : dict.cpp.o
 
 dict.i: dict.cpp.i
@@ -462,7 +462,7 @@ dict.i: dict.cpp.i
 
 # target to preprocess a source file
 dict.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/dict.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/dict.cpp.i
 .PHONY : dict.cpp.i
 
 dict.s: dict.cpp.s
@@ -470,7 +470,7 @@ dict.s: dict.cpp.s
 
 # target to generate assembly for a file
 dict.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/dict.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/dict.cpp.s
 .PHONY : dict.cpp.s
 
 diophantine.o: diophantine.cpp.o
@@ -478,7 +478,7 @@ diophantine.o: diophantine.cpp.o
 
 # target to build an object file
 diophantine.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/diophantine.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/diophantine.cpp.o
 .PHONY : diophantine.cpp.o
 
 diophantine.i: diophantine.cpp.i
@@ -486,7 +486,7 @@ diophantine.i: diophantine.cpp.i
 
 # target to preprocess a source file
 diophantine.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/diophantine.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/diophantine.cpp.i
 .PHONY : diophantine.cpp.i
 
 diophantine.s: diophantine.cpp.s
@@ -494,7 +494,7 @@ diophantine.s: diophantine.cpp.s
 
 # target to generate assembly for a file
 diophantine.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/diophantine.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/diophantine.cpp.s
 .PHONY : diophantine.cpp.s
 
 eval.o: eval.cpp.o
@@ -502,7 +502,7 @@ eval.o: eval.cpp.o
 
 # target to build an object file
 eval.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/eval.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/eval.cpp.o
 .PHONY : eval.cpp.o
 
 eval.i: eval.cpp.i
@@ -510,7 +510,7 @@ eval.i: eval.cpp.i
 
 # target to preprocess a source file
 eval.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/eval.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/eval.cpp.i
 .PHONY : eval.cpp.i
 
 eval.s: eval.cpp.s
@@ -518,7 +518,7 @@ eval.s: eval.cpp.s
 
 # target to generate assembly for a file
 eval.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/eval.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/eval.cpp.s
 .PHONY : eval.cpp.s
 
 eval_arb.o: eval_arb.cpp.o
@@ -526,7 +526,7 @@ eval_arb.o: eval_arb.cpp.o
 
 # target to build an object file
 eval_arb.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/eval_arb.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/eval_arb.cpp.o
 .PHONY : eval_arb.cpp.o
 
 eval_arb.i: eval_arb.cpp.i
@@ -534,7 +534,7 @@ eval_arb.i: eval_arb.cpp.i
 
 # target to preprocess a source file
 eval_arb.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/eval_arb.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/eval_arb.cpp.i
 .PHONY : eval_arb.cpp.i
 
 eval_arb.s: eval_arb.cpp.s
@@ -542,7 +542,7 @@ eval_arb.s: eval_arb.cpp.s
 
 # target to generate assembly for a file
 eval_arb.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/eval_arb.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/eval_arb.cpp.s
 .PHONY : eval_arb.cpp.s
 
 eval_double.o: eval_double.cpp.o
@@ -550,7 +550,7 @@ eval_double.o: eval_double.cpp.o
 
 # target to build an object file
 eval_double.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/eval_double.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/eval_double.cpp.o
 .PHONY : eval_double.cpp.o
 
 eval_double.i: eval_double.cpp.i
@@ -558,7 +558,7 @@ eval_double.i: eval_double.cpp.i
 
 # target to preprocess a source file
 eval_double.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/eval_double.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/eval_double.cpp.i
 .PHONY : eval_double.cpp.i
 
 eval_double.s: eval_double.cpp.s
@@ -566,7 +566,7 @@ eval_double.s: eval_double.cpp.s
 
 # target to generate assembly for a file
 eval_double.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/eval_double.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/eval_double.cpp.s
 .PHONY : eval_double.cpp.s
 
 eval_mpc.o: eval_mpc.cpp.o
@@ -574,7 +574,7 @@ eval_mpc.o: eval_mpc.cpp.o
 
 # target to build an object file
 eval_mpc.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/eval_mpc.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/eval_mpc.cpp.o
 .PHONY : eval_mpc.cpp.o
 
 eval_mpc.i: eval_mpc.cpp.i
@@ -582,7 +582,7 @@ eval_mpc.i: eval_mpc.cpp.i
 
 # target to preprocess a source file
 eval_mpc.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/eval_mpc.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/eval_mpc.cpp.i
 .PHONY : eval_mpc.cpp.i
 
 eval_mpc.s: eval_mpc.cpp.s
@@ -590,7 +590,7 @@ eval_mpc.s: eval_mpc.cpp.s
 
 # target to generate assembly for a file
 eval_mpc.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/eval_mpc.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/eval_mpc.cpp.s
 .PHONY : eval_mpc.cpp.s
 
 eval_mpfr.o: eval_mpfr.cpp.o
@@ -598,7 +598,7 @@ eval_mpfr.o: eval_mpfr.cpp.o
 
 # target to build an object file
 eval_mpfr.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/eval_mpfr.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/eval_mpfr.cpp.o
 .PHONY : eval_mpfr.cpp.o
 
 eval_mpfr.i: eval_mpfr.cpp.i
@@ -606,7 +606,7 @@ eval_mpfr.i: eval_mpfr.cpp.i
 
 # target to preprocess a source file
 eval_mpfr.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/eval_mpfr.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/eval_mpfr.cpp.i
 .PHONY : eval_mpfr.cpp.i
 
 eval_mpfr.s: eval_mpfr.cpp.s
@@ -614,7 +614,7 @@ eval_mpfr.s: eval_mpfr.cpp.s
 
 # target to generate assembly for a file
 eval_mpfr.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/eval_mpfr.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/eval_mpfr.cpp.s
 .PHONY : eval_mpfr.cpp.s
 
 expand.o: expand.cpp.o
@@ -622,7 +622,7 @@ expand.o: expand.cpp.o
 
 # target to build an object file
 expand.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/expand.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/expand.cpp.o
 .PHONY : expand.cpp.o
 
 expand.i: expand.cpp.i
@@ -630,7 +630,7 @@ expand.i: expand.cpp.i
 
 # target to preprocess a source file
 expand.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/expand.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/expand.cpp.i
 .PHONY : expand.cpp.i
 
 expand.s: expand.cpp.s
@@ -638,7 +638,7 @@ expand.s: expand.cpp.s
 
 # target to generate assembly for a file
 expand.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/expand.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/expand.cpp.s
 .PHONY : expand.cpp.s
 
 expression.o: expression.cpp.o
@@ -646,7 +646,7 @@ expression.o: expression.cpp.o
 
 # target to build an object file
 expression.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/expression.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/expression.cpp.o
 .PHONY : expression.cpp.o
 
 expression.i: expression.cpp.i
@@ -654,7 +654,7 @@ expression.i: expression.cpp.i
 
 # target to preprocess a source file
 expression.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/expression.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/expression.cpp.i
 .PHONY : expression.cpp.i
 
 expression.s: expression.cpp.s
@@ -662,7 +662,7 @@ expression.s: expression.cpp.s
 
 # target to generate assembly for a file
 expression.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/expression.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/expression.cpp.s
 .PHONY : expression.cpp.s
 
 fields.o: fields.cpp.o
@@ -670,7 +670,7 @@ fields.o: fields.cpp.o
 
 # target to build an object file
 fields.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/fields.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/fields.cpp.o
 .PHONY : fields.cpp.o
 
 fields.i: fields.cpp.i
@@ -678,7 +678,7 @@ fields.i: fields.cpp.i
 
 # target to preprocess a source file
 fields.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/fields.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/fields.cpp.i
 .PHONY : fields.cpp.i
 
 fields.s: fields.cpp.s
@@ -686,7 +686,7 @@ fields.s: fields.cpp.s
 
 # target to generate assembly for a file
 fields.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/fields.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/fields.cpp.s
 .PHONY : fields.cpp.s
 
 finitediff.o: finitediff.cpp.o
@@ -694,7 +694,7 @@ finitediff.o: finitediff.cpp.o
 
 # target to build an object file
 finitediff.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/finitediff.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/finitediff.cpp.o
 .PHONY : finitediff.cpp.o
 
 finitediff.i: finitediff.cpp.i
@@ -702,7 +702,7 @@ finitediff.i: finitediff.cpp.i
 
 # target to preprocess a source file
 finitediff.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/finitediff.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/finitediff.cpp.i
 .PHONY : finitediff.cpp.i
 
 finitediff.s: finitediff.cpp.s
@@ -710,7 +710,7 @@ finitediff.s: finitediff.cpp.s
 
 # target to generate assembly for a file
 finitediff.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/finitediff.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/finitediff.cpp.s
 .PHONY : finitediff.cpp.s
 
 functions.o: functions.cpp.o
@@ -718,7 +718,7 @@ functions.o: functions.cpp.o
 
 # target to build an object file
 functions.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/functions.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/functions.cpp.o
 .PHONY : functions.cpp.o
 
 functions.i: functions.cpp.i
@@ -726,7 +726,7 @@ functions.i: functions.cpp.i
 
 # target to preprocess a source file
 functions.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/functions.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/functions.cpp.i
 .PHONY : functions.cpp.i
 
 functions.s: functions.cpp.s
@@ -734,7 +734,7 @@ functions.s: functions.cpp.s
 
 # target to generate assembly for a file
 functions.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/functions.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/functions.cpp.s
 .PHONY : functions.cpp.s
 
 infinity.o: infinity.cpp.o
@@ -742,7 +742,7 @@ infinity.o: infinity.cpp.o
 
 # target to build an object file
 infinity.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/infinity.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/infinity.cpp.o
 .PHONY : infinity.cpp.o
 
 infinity.i: infinity.cpp.i
@@ -750,7 +750,7 @@ infinity.i: infinity.cpp.i
 
 # target to preprocess a source file
 infinity.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/infinity.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/infinity.cpp.i
 .PHONY : infinity.cpp.i
 
 infinity.s: infinity.cpp.s
@@ -758,7 +758,7 @@ infinity.s: infinity.cpp.s
 
 # target to generate assembly for a file
 infinity.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/infinity.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/infinity.cpp.s
 .PHONY : infinity.cpp.s
 
 integer.o: integer.cpp.o
@@ -766,7 +766,7 @@ integer.o: integer.cpp.o
 
 # target to build an object file
 integer.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/integer.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/integer.cpp.o
 .PHONY : integer.cpp.o
 
 integer.i: integer.cpp.i
@@ -774,7 +774,7 @@ integer.i: integer.cpp.i
 
 # target to preprocess a source file
 integer.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/integer.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/integer.cpp.i
 .PHONY : integer.cpp.i
 
 integer.s: integer.cpp.s
@@ -782,7 +782,7 @@ integer.s: integer.cpp.s
 
 # target to generate assembly for a file
 integer.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/integer.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/integer.cpp.s
 .PHONY : integer.cpp.s
 
 logic.o: logic.cpp.o
@@ -790,7 +790,7 @@ logic.o: logic.cpp.o
 
 # target to build an object file
 logic.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/logic.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/logic.cpp.o
 .PHONY : logic.cpp.o
 
 logic.i: logic.cpp.i
@@ -798,7 +798,7 @@ logic.i: logic.cpp.i
 
 # target to preprocess a source file
 logic.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/logic.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/logic.cpp.i
 .PHONY : logic.cpp.i
 
 logic.s: logic.cpp.s
@@ -806,7 +806,7 @@ logic.s: logic.cpp.s
 
 # target to generate assembly for a file
 logic.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/logic.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/logic.cpp.s
 .PHONY : logic.cpp.s
 
 matrices/conjugate_matrix.o: matrices/conjugate_matrix.cpp.o
@@ -814,7 +814,7 @@ matrices/conjugate_matrix.o: matrices/conjugate_matrix.cpp.o
 
 # target to build an object file
 matrices/conjugate_matrix.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/conjugate_matrix.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/conjugate_matrix.cpp.o
 .PHONY : matrices/conjugate_matrix.cpp.o
 
 matrices/conjugate_matrix.i: matrices/conjugate_matrix.cpp.i
@@ -822,7 +822,7 @@ matrices/conjugate_matrix.i: matrices/conjugate_matrix.cpp.i
 
 # target to preprocess a source file
 matrices/conjugate_matrix.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/conjugate_matrix.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/conjugate_matrix.cpp.i
 .PHONY : matrices/conjugate_matrix.cpp.i
 
 matrices/conjugate_matrix.s: matrices/conjugate_matrix.cpp.s
@@ -830,7 +830,7 @@ matrices/conjugate_matrix.s: matrices/conjugate_matrix.cpp.s
 
 # target to generate assembly for a file
 matrices/conjugate_matrix.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/conjugate_matrix.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/conjugate_matrix.cpp.s
 .PHONY : matrices/conjugate_matrix.cpp.s
 
 matrices/diagonal_matrix.o: matrices/diagonal_matrix.cpp.o
@@ -838,7 +838,7 @@ matrices/diagonal_matrix.o: matrices/diagonal_matrix.cpp.o
 
 # target to build an object file
 matrices/diagonal_matrix.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/diagonal_matrix.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/diagonal_matrix.cpp.o
 .PHONY : matrices/diagonal_matrix.cpp.o
 
 matrices/diagonal_matrix.i: matrices/diagonal_matrix.cpp.i
@@ -846,7 +846,7 @@ matrices/diagonal_matrix.i: matrices/diagonal_matrix.cpp.i
 
 # target to preprocess a source file
 matrices/diagonal_matrix.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/diagonal_matrix.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/diagonal_matrix.cpp.i
 .PHONY : matrices/diagonal_matrix.cpp.i
 
 matrices/diagonal_matrix.s: matrices/diagonal_matrix.cpp.s
@@ -854,7 +854,7 @@ matrices/diagonal_matrix.s: matrices/diagonal_matrix.cpp.s
 
 # target to generate assembly for a file
 matrices/diagonal_matrix.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/diagonal_matrix.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/diagonal_matrix.cpp.s
 .PHONY : matrices/diagonal_matrix.cpp.s
 
 matrices/hadamard_product.o: matrices/hadamard_product.cpp.o
@@ -862,7 +862,7 @@ matrices/hadamard_product.o: matrices/hadamard_product.cpp.o
 
 # target to build an object file
 matrices/hadamard_product.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/hadamard_product.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/hadamard_product.cpp.o
 .PHONY : matrices/hadamard_product.cpp.o
 
 matrices/hadamard_product.i: matrices/hadamard_product.cpp.i
@@ -870,7 +870,7 @@ matrices/hadamard_product.i: matrices/hadamard_product.cpp.i
 
 # target to preprocess a source file
 matrices/hadamard_product.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/hadamard_product.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/hadamard_product.cpp.i
 .PHONY : matrices/hadamard_product.cpp.i
 
 matrices/hadamard_product.s: matrices/hadamard_product.cpp.s
@@ -878,7 +878,7 @@ matrices/hadamard_product.s: matrices/hadamard_product.cpp.s
 
 # target to generate assembly for a file
 matrices/hadamard_product.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/hadamard_product.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/hadamard_product.cpp.s
 .PHONY : matrices/hadamard_product.cpp.s
 
 matrices/identity_matrix.o: matrices/identity_matrix.cpp.o
@@ -886,7 +886,7 @@ matrices/identity_matrix.o: matrices/identity_matrix.cpp.o
 
 # target to build an object file
 matrices/identity_matrix.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/identity_matrix.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/identity_matrix.cpp.o
 .PHONY : matrices/identity_matrix.cpp.o
 
 matrices/identity_matrix.i: matrices/identity_matrix.cpp.i
@@ -894,7 +894,7 @@ matrices/identity_matrix.i: matrices/identity_matrix.cpp.i
 
 # target to preprocess a source file
 matrices/identity_matrix.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/identity_matrix.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/identity_matrix.cpp.i
 .PHONY : matrices/identity_matrix.cpp.i
 
 matrices/identity_matrix.s: matrices/identity_matrix.cpp.s
@@ -902,7 +902,7 @@ matrices/identity_matrix.s: matrices/identity_matrix.cpp.s
 
 # target to generate assembly for a file
 matrices/identity_matrix.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/identity_matrix.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/identity_matrix.cpp.s
 .PHONY : matrices/identity_matrix.cpp.s
 
 matrices/immutable_dense_matrix.o: matrices/immutable_dense_matrix.cpp.o
@@ -910,7 +910,7 @@ matrices/immutable_dense_matrix.o: matrices/immutable_dense_matrix.cpp.o
 
 # target to build an object file
 matrices/immutable_dense_matrix.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/immutable_dense_matrix.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/immutable_dense_matrix.cpp.o
 .PHONY : matrices/immutable_dense_matrix.cpp.o
 
 matrices/immutable_dense_matrix.i: matrices/immutable_dense_matrix.cpp.i
@@ -918,7 +918,7 @@ matrices/immutable_dense_matrix.i: matrices/immutable_dense_matrix.cpp.i
 
 # target to preprocess a source file
 matrices/immutable_dense_matrix.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/immutable_dense_matrix.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/immutable_dense_matrix.cpp.i
 .PHONY : matrices/immutable_dense_matrix.cpp.i
 
 matrices/immutable_dense_matrix.s: matrices/immutable_dense_matrix.cpp.s
@@ -926,7 +926,7 @@ matrices/immutable_dense_matrix.s: matrices/immutable_dense_matrix.cpp.s
 
 # target to generate assembly for a file
 matrices/immutable_dense_matrix.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/immutable_dense_matrix.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/immutable_dense_matrix.cpp.s
 .PHONY : matrices/immutable_dense_matrix.cpp.s
 
 matrices/is_diagonal.o: matrices/is_diagonal.cpp.o
@@ -934,7 +934,7 @@ matrices/is_diagonal.o: matrices/is_diagonal.cpp.o
 
 # target to build an object file
 matrices/is_diagonal.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/is_diagonal.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/is_diagonal.cpp.o
 .PHONY : matrices/is_diagonal.cpp.o
 
 matrices/is_diagonal.i: matrices/is_diagonal.cpp.i
@@ -942,7 +942,7 @@ matrices/is_diagonal.i: matrices/is_diagonal.cpp.i
 
 # target to preprocess a source file
 matrices/is_diagonal.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/is_diagonal.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/is_diagonal.cpp.i
 .PHONY : matrices/is_diagonal.cpp.i
 
 matrices/is_diagonal.s: matrices/is_diagonal.cpp.s
@@ -950,7 +950,7 @@ matrices/is_diagonal.s: matrices/is_diagonal.cpp.s
 
 # target to generate assembly for a file
 matrices/is_diagonal.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/is_diagonal.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/is_diagonal.cpp.s
 .PHONY : matrices/is_diagonal.cpp.s
 
 matrices/is_lower.o: matrices/is_lower.cpp.o
@@ -958,7 +958,7 @@ matrices/is_lower.o: matrices/is_lower.cpp.o
 
 # target to build an object file
 matrices/is_lower.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/is_lower.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/is_lower.cpp.o
 .PHONY : matrices/is_lower.cpp.o
 
 matrices/is_lower.i: matrices/is_lower.cpp.i
@@ -966,7 +966,7 @@ matrices/is_lower.i: matrices/is_lower.cpp.i
 
 # target to preprocess a source file
 matrices/is_lower.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/is_lower.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/is_lower.cpp.i
 .PHONY : matrices/is_lower.cpp.i
 
 matrices/is_lower.s: matrices/is_lower.cpp.s
@@ -974,7 +974,7 @@ matrices/is_lower.s: matrices/is_lower.cpp.s
 
 # target to generate assembly for a file
 matrices/is_lower.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/is_lower.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/is_lower.cpp.s
 .PHONY : matrices/is_lower.cpp.s
 
 matrices/is_real.o: matrices/is_real.cpp.o
@@ -982,7 +982,7 @@ matrices/is_real.o: matrices/is_real.cpp.o
 
 # target to build an object file
 matrices/is_real.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/is_real.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/is_real.cpp.o
 .PHONY : matrices/is_real.cpp.o
 
 matrices/is_real.i: matrices/is_real.cpp.i
@@ -990,7 +990,7 @@ matrices/is_real.i: matrices/is_real.cpp.i
 
 # target to preprocess a source file
 matrices/is_real.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/is_real.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/is_real.cpp.i
 .PHONY : matrices/is_real.cpp.i
 
 matrices/is_real.s: matrices/is_real.cpp.s
@@ -998,7 +998,7 @@ matrices/is_real.s: matrices/is_real.cpp.s
 
 # target to generate assembly for a file
 matrices/is_real.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/is_real.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/is_real.cpp.s
 .PHONY : matrices/is_real.cpp.s
 
 matrices/is_square.o: matrices/is_square.cpp.o
@@ -1006,7 +1006,7 @@ matrices/is_square.o: matrices/is_square.cpp.o
 
 # target to build an object file
 matrices/is_square.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/is_square.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/is_square.cpp.o
 .PHONY : matrices/is_square.cpp.o
 
 matrices/is_square.i: matrices/is_square.cpp.i
@@ -1014,7 +1014,7 @@ matrices/is_square.i: matrices/is_square.cpp.i
 
 # target to preprocess a source file
 matrices/is_square.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/is_square.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/is_square.cpp.i
 .PHONY : matrices/is_square.cpp.i
 
 matrices/is_square.s: matrices/is_square.cpp.s
@@ -1022,7 +1022,7 @@ matrices/is_square.s: matrices/is_square.cpp.s
 
 # target to generate assembly for a file
 matrices/is_square.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/is_square.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/is_square.cpp.s
 .PHONY : matrices/is_square.cpp.s
 
 matrices/is_symmetric.o: matrices/is_symmetric.cpp.o
@@ -1030,7 +1030,7 @@ matrices/is_symmetric.o: matrices/is_symmetric.cpp.o
 
 # target to build an object file
 matrices/is_symmetric.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/is_symmetric.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/is_symmetric.cpp.o
 .PHONY : matrices/is_symmetric.cpp.o
 
 matrices/is_symmetric.i: matrices/is_symmetric.cpp.i
@@ -1038,7 +1038,7 @@ matrices/is_symmetric.i: matrices/is_symmetric.cpp.i
 
 # target to preprocess a source file
 matrices/is_symmetric.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/is_symmetric.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/is_symmetric.cpp.i
 .PHONY : matrices/is_symmetric.cpp.i
 
 matrices/is_symmetric.s: matrices/is_symmetric.cpp.s
@@ -1046,7 +1046,7 @@ matrices/is_symmetric.s: matrices/is_symmetric.cpp.s
 
 # target to generate assembly for a file
 matrices/is_symmetric.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/is_symmetric.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/is_symmetric.cpp.s
 .PHONY : matrices/is_symmetric.cpp.s
 
 matrices/is_toeplitz.o: matrices/is_toeplitz.cpp.o
@@ -1054,7 +1054,7 @@ matrices/is_toeplitz.o: matrices/is_toeplitz.cpp.o
 
 # target to build an object file
 matrices/is_toeplitz.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/is_toeplitz.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/is_toeplitz.cpp.o
 .PHONY : matrices/is_toeplitz.cpp.o
 
 matrices/is_toeplitz.i: matrices/is_toeplitz.cpp.i
@@ -1062,7 +1062,7 @@ matrices/is_toeplitz.i: matrices/is_toeplitz.cpp.i
 
 # target to preprocess a source file
 matrices/is_toeplitz.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/is_toeplitz.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/is_toeplitz.cpp.i
 .PHONY : matrices/is_toeplitz.cpp.i
 
 matrices/is_toeplitz.s: matrices/is_toeplitz.cpp.s
@@ -1070,7 +1070,7 @@ matrices/is_toeplitz.s: matrices/is_toeplitz.cpp.s
 
 # target to generate assembly for a file
 matrices/is_toeplitz.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/is_toeplitz.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/is_toeplitz.cpp.s
 .PHONY : matrices/is_toeplitz.cpp.s
 
 matrices/is_upper.o: matrices/is_upper.cpp.o
@@ -1078,7 +1078,7 @@ matrices/is_upper.o: matrices/is_upper.cpp.o
 
 # target to build an object file
 matrices/is_upper.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/is_upper.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/is_upper.cpp.o
 .PHONY : matrices/is_upper.cpp.o
 
 matrices/is_upper.i: matrices/is_upper.cpp.i
@@ -1086,7 +1086,7 @@ matrices/is_upper.i: matrices/is_upper.cpp.i
 
 # target to preprocess a source file
 matrices/is_upper.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/is_upper.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/is_upper.cpp.i
 .PHONY : matrices/is_upper.cpp.i
 
 matrices/is_upper.s: matrices/is_upper.cpp.s
@@ -1094,7 +1094,7 @@ matrices/is_upper.s: matrices/is_upper.cpp.s
 
 # target to generate assembly for a file
 matrices/is_upper.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/is_upper.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/is_upper.cpp.s
 .PHONY : matrices/is_upper.cpp.s
 
 matrices/is_zero.o: matrices/is_zero.cpp.o
@@ -1102,7 +1102,7 @@ matrices/is_zero.o: matrices/is_zero.cpp.o
 
 # target to build an object file
 matrices/is_zero.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/is_zero.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/is_zero.cpp.o
 .PHONY : matrices/is_zero.cpp.o
 
 matrices/is_zero.i: matrices/is_zero.cpp.i
@@ -1110,7 +1110,7 @@ matrices/is_zero.i: matrices/is_zero.cpp.i
 
 # target to preprocess a source file
 matrices/is_zero.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/is_zero.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/is_zero.cpp.i
 .PHONY : matrices/is_zero.cpp.i
 
 matrices/is_zero.s: matrices/is_zero.cpp.s
@@ -1118,7 +1118,7 @@ matrices/is_zero.s: matrices/is_zero.cpp.s
 
 # target to generate assembly for a file
 matrices/is_zero.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/is_zero.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/is_zero.cpp.s
 .PHONY : matrices/is_zero.cpp.s
 
 matrices/matrix_add.o: matrices/matrix_add.cpp.o
@@ -1126,7 +1126,7 @@ matrices/matrix_add.o: matrices/matrix_add.cpp.o
 
 # target to build an object file
 matrices/matrix_add.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/matrix_add.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/matrix_add.cpp.o
 .PHONY : matrices/matrix_add.cpp.o
 
 matrices/matrix_add.i: matrices/matrix_add.cpp.i
@@ -1134,7 +1134,7 @@ matrices/matrix_add.i: matrices/matrix_add.cpp.i
 
 # target to preprocess a source file
 matrices/matrix_add.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/matrix_add.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/matrix_add.cpp.i
 .PHONY : matrices/matrix_add.cpp.i
 
 matrices/matrix_add.s: matrices/matrix_add.cpp.s
@@ -1142,7 +1142,7 @@ matrices/matrix_add.s: matrices/matrix_add.cpp.s
 
 # target to generate assembly for a file
 matrices/matrix_add.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/matrix_add.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/matrix_add.cpp.s
 .PHONY : matrices/matrix_add.cpp.s
 
 matrices/matrix_mul.o: matrices/matrix_mul.cpp.o
@@ -1150,7 +1150,7 @@ matrices/matrix_mul.o: matrices/matrix_mul.cpp.o
 
 # target to build an object file
 matrices/matrix_mul.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/matrix_mul.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/matrix_mul.cpp.o
 .PHONY : matrices/matrix_mul.cpp.o
 
 matrices/matrix_mul.i: matrices/matrix_mul.cpp.i
@@ -1158,7 +1158,7 @@ matrices/matrix_mul.i: matrices/matrix_mul.cpp.i
 
 # target to preprocess a source file
 matrices/matrix_mul.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/matrix_mul.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/matrix_mul.cpp.i
 .PHONY : matrices/matrix_mul.cpp.i
 
 matrices/matrix_mul.s: matrices/matrix_mul.cpp.s
@@ -1166,7 +1166,7 @@ matrices/matrix_mul.s: matrices/matrix_mul.cpp.s
 
 # target to generate assembly for a file
 matrices/matrix_mul.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/matrix_mul.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/matrix_mul.cpp.s
 .PHONY : matrices/matrix_mul.cpp.s
 
 matrices/matrix_symbol.o: matrices/matrix_symbol.cpp.o
@@ -1174,7 +1174,7 @@ matrices/matrix_symbol.o: matrices/matrix_symbol.cpp.o
 
 # target to build an object file
 matrices/matrix_symbol.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/matrix_symbol.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/matrix_symbol.cpp.o
 .PHONY : matrices/matrix_symbol.cpp.o
 
 matrices/matrix_symbol.i: matrices/matrix_symbol.cpp.i
@@ -1182,7 +1182,7 @@ matrices/matrix_symbol.i: matrices/matrix_symbol.cpp.i
 
 # target to preprocess a source file
 matrices/matrix_symbol.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/matrix_symbol.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/matrix_symbol.cpp.i
 .PHONY : matrices/matrix_symbol.cpp.i
 
 matrices/matrix_symbol.s: matrices/matrix_symbol.cpp.s
@@ -1190,7 +1190,7 @@ matrices/matrix_symbol.s: matrices/matrix_symbol.cpp.s
 
 # target to generate assembly for a file
 matrices/matrix_symbol.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/matrix_symbol.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/matrix_symbol.cpp.s
 .PHONY : matrices/matrix_symbol.cpp.s
 
 matrices/size.o: matrices/size.cpp.o
@@ -1198,7 +1198,7 @@ matrices/size.o: matrices/size.cpp.o
 
 # target to build an object file
 matrices/size.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/size.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/size.cpp.o
 .PHONY : matrices/size.cpp.o
 
 matrices/size.i: matrices/size.cpp.i
@@ -1206,7 +1206,7 @@ matrices/size.i: matrices/size.cpp.i
 
 # target to preprocess a source file
 matrices/size.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/size.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/size.cpp.i
 .PHONY : matrices/size.cpp.i
 
 matrices/size.s: matrices/size.cpp.s
@@ -1214,7 +1214,7 @@ matrices/size.s: matrices/size.cpp.s
 
 # target to generate assembly for a file
 matrices/size.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/size.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/size.cpp.s
 .PHONY : matrices/size.cpp.s
 
 matrices/trace.o: matrices/trace.cpp.o
@@ -1222,7 +1222,7 @@ matrices/trace.o: matrices/trace.cpp.o
 
 # target to build an object file
 matrices/trace.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/trace.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/trace.cpp.o
 .PHONY : matrices/trace.cpp.o
 
 matrices/trace.i: matrices/trace.cpp.i
@@ -1230,7 +1230,7 @@ matrices/trace.i: matrices/trace.cpp.i
 
 # target to preprocess a source file
 matrices/trace.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/trace.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/trace.cpp.i
 .PHONY : matrices/trace.cpp.i
 
 matrices/trace.s: matrices/trace.cpp.s
@@ -1238,7 +1238,7 @@ matrices/trace.s: matrices/trace.cpp.s
 
 # target to generate assembly for a file
 matrices/trace.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/trace.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/trace.cpp.s
 .PHONY : matrices/trace.cpp.s
 
 matrices/transpose.o: matrices/transpose.cpp.o
@@ -1246,7 +1246,7 @@ matrices/transpose.o: matrices/transpose.cpp.o
 
 # target to build an object file
 matrices/transpose.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/transpose.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/transpose.cpp.o
 .PHONY : matrices/transpose.cpp.o
 
 matrices/transpose.i: matrices/transpose.cpp.i
@@ -1254,7 +1254,7 @@ matrices/transpose.i: matrices/transpose.cpp.i
 
 # target to preprocess a source file
 matrices/transpose.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/transpose.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/transpose.cpp.i
 .PHONY : matrices/transpose.cpp.i
 
 matrices/transpose.s: matrices/transpose.cpp.s
@@ -1262,7 +1262,7 @@ matrices/transpose.s: matrices/transpose.cpp.s
 
 # target to generate assembly for a file
 matrices/transpose.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/transpose.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/transpose.cpp.s
 .PHONY : matrices/transpose.cpp.s
 
 matrices/zero_matrix.o: matrices/zero_matrix.cpp.o
@@ -1270,7 +1270,7 @@ matrices/zero_matrix.o: matrices/zero_matrix.cpp.o
 
 # target to build an object file
 matrices/zero_matrix.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/zero_matrix.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/zero_matrix.cpp.o
 .PHONY : matrices/zero_matrix.cpp.o
 
 matrices/zero_matrix.i: matrices/zero_matrix.cpp.i
@@ -1278,7 +1278,7 @@ matrices/zero_matrix.i: matrices/zero_matrix.cpp.i
 
 # target to preprocess a source file
 matrices/zero_matrix.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/zero_matrix.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/zero_matrix.cpp.i
 .PHONY : matrices/zero_matrix.cpp.i
 
 matrices/zero_matrix.s: matrices/zero_matrix.cpp.s
@@ -1286,7 +1286,7 @@ matrices/zero_matrix.s: matrices/zero_matrix.cpp.s
 
 # target to generate assembly for a file
 matrices/zero_matrix.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/zero_matrix.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrices/zero_matrix.cpp.s
 .PHONY : matrices/zero_matrix.cpp.s
 
 matrix.o: matrix.cpp.o
@@ -1294,7 +1294,7 @@ matrix.o: matrix.cpp.o
 
 # target to build an object file
 matrix.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrix.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrix.cpp.o
 .PHONY : matrix.cpp.o
 
 matrix.i: matrix.cpp.i
@@ -1302,7 +1302,7 @@ matrix.i: matrix.cpp.i
 
 # target to preprocess a source file
 matrix.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrix.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrix.cpp.i
 .PHONY : matrix.cpp.i
 
 matrix.s: matrix.cpp.s
@@ -1310,7 +1310,7 @@ matrix.s: matrix.cpp.s
 
 # target to generate assembly for a file
 matrix.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrix.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/matrix.cpp.s
 .PHONY : matrix.cpp.s
 
 monomials.o: monomials.cpp.o
@@ -1318,7 +1318,7 @@ monomials.o: monomials.cpp.o
 
 # target to build an object file
 monomials.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/monomials.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/monomials.cpp.o
 .PHONY : monomials.cpp.o
 
 monomials.i: monomials.cpp.i
@@ -1326,7 +1326,7 @@ monomials.i: monomials.cpp.i
 
 # target to preprocess a source file
 monomials.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/monomials.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/monomials.cpp.i
 .PHONY : monomials.cpp.i
 
 monomials.s: monomials.cpp.s
@@ -1334,7 +1334,7 @@ monomials.s: monomials.cpp.s
 
 # target to generate assembly for a file
 monomials.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/monomials.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/monomials.cpp.s
 .PHONY : monomials.cpp.s
 
 mp_wrapper.o: mp_wrapper.cpp.o
@@ -1342,7 +1342,7 @@ mp_wrapper.o: mp_wrapper.cpp.o
 
 # target to build an object file
 mp_wrapper.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/mp_wrapper.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/mp_wrapper.cpp.o
 .PHONY : mp_wrapper.cpp.o
 
 mp_wrapper.i: mp_wrapper.cpp.i
@@ -1350,7 +1350,7 @@ mp_wrapper.i: mp_wrapper.cpp.i
 
 # target to preprocess a source file
 mp_wrapper.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/mp_wrapper.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/mp_wrapper.cpp.i
 .PHONY : mp_wrapper.cpp.i
 
 mp_wrapper.s: mp_wrapper.cpp.s
@@ -1358,7 +1358,7 @@ mp_wrapper.s: mp_wrapper.cpp.s
 
 # target to generate assembly for a file
 mp_wrapper.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/mp_wrapper.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/mp_wrapper.cpp.s
 .PHONY : mp_wrapper.cpp.s
 
 mul.o: mul.cpp.o
@@ -1366,7 +1366,7 @@ mul.o: mul.cpp.o
 
 # target to build an object file
 mul.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/mul.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/mul.cpp.o
 .PHONY : mul.cpp.o
 
 mul.i: mul.cpp.i
@@ -1374,7 +1374,7 @@ mul.i: mul.cpp.i
 
 # target to preprocess a source file
 mul.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/mul.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/mul.cpp.i
 .PHONY : mul.cpp.i
 
 mul.s: mul.cpp.s
@@ -1382,7 +1382,7 @@ mul.s: mul.cpp.s
 
 # target to generate assembly for a file
 mul.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/mul.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/mul.cpp.s
 .PHONY : mul.cpp.s
 
 nan.o: nan.cpp.o
@@ -1390,7 +1390,7 @@ nan.o: nan.cpp.o
 
 # target to build an object file
 nan.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/nan.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/nan.cpp.o
 .PHONY : nan.cpp.o
 
 nan.i: nan.cpp.i
@@ -1398,7 +1398,7 @@ nan.i: nan.cpp.i
 
 # target to preprocess a source file
 nan.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/nan.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/nan.cpp.i
 .PHONY : nan.cpp.i
 
 nan.s: nan.cpp.s
@@ -1406,7 +1406,7 @@ nan.s: nan.cpp.s
 
 # target to generate assembly for a file
 nan.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/nan.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/nan.cpp.s
 .PHONY : nan.cpp.s
 
 ntheory.o: ntheory.cpp.o
@@ -1414,7 +1414,7 @@ ntheory.o: ntheory.cpp.o
 
 # target to build an object file
 ntheory.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/ntheory.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/ntheory.cpp.o
 .PHONY : ntheory.cpp.o
 
 ntheory.i: ntheory.cpp.i
@@ -1422,7 +1422,7 @@ ntheory.i: ntheory.cpp.i
 
 # target to preprocess a source file
 ntheory.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/ntheory.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/ntheory.cpp.i
 .PHONY : ntheory.cpp.i
 
 ntheory.s: ntheory.cpp.s
@@ -1430,7 +1430,7 @@ ntheory.s: ntheory.cpp.s
 
 # target to generate assembly for a file
 ntheory.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/ntheory.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/ntheory.cpp.s
 .PHONY : ntheory.cpp.s
 
 ntheory_funcs.o: ntheory_funcs.cpp.o
@@ -1438,7 +1438,7 @@ ntheory_funcs.o: ntheory_funcs.cpp.o
 
 # target to build an object file
 ntheory_funcs.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/ntheory_funcs.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/ntheory_funcs.cpp.o
 .PHONY : ntheory_funcs.cpp.o
 
 ntheory_funcs.i: ntheory_funcs.cpp.i
@@ -1446,7 +1446,7 @@ ntheory_funcs.i: ntheory_funcs.cpp.i
 
 # target to preprocess a source file
 ntheory_funcs.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/ntheory_funcs.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/ntheory_funcs.cpp.i
 .PHONY : ntheory_funcs.cpp.i
 
 ntheory_funcs.s: ntheory_funcs.cpp.s
@@ -1454,7 +1454,7 @@ ntheory_funcs.s: ntheory_funcs.cpp.s
 
 # target to generate assembly for a file
 ntheory_funcs.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/ntheory_funcs.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/ntheory_funcs.cpp.s
 .PHONY : ntheory_funcs.cpp.s
 
 number.o: number.cpp.o
@@ -1462,7 +1462,7 @@ number.o: number.cpp.o
 
 # target to build an object file
 number.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/number.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/number.cpp.o
 .PHONY : number.cpp.o
 
 number.i: number.cpp.i
@@ -1470,7 +1470,7 @@ number.i: number.cpp.i
 
 # target to preprocess a source file
 number.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/number.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/number.cpp.i
 .PHONY : number.cpp.i
 
 number.s: number.cpp.s
@@ -1478,7 +1478,7 @@ number.s: number.cpp.s
 
 # target to generate assembly for a file
 number.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/number.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/number.cpp.s
 .PHONY : number.cpp.s
 
 numer_denom.o: numer_denom.cpp.o
@@ -1486,7 +1486,7 @@ numer_denom.o: numer_denom.cpp.o
 
 # target to build an object file
 numer_denom.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/numer_denom.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/numer_denom.cpp.o
 .PHONY : numer_denom.cpp.o
 
 numer_denom.i: numer_denom.cpp.i
@@ -1494,7 +1494,7 @@ numer_denom.i: numer_denom.cpp.i
 
 # target to preprocess a source file
 numer_denom.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/numer_denom.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/numer_denom.cpp.i
 .PHONY : numer_denom.cpp.i
 
 numer_denom.s: numer_denom.cpp.s
@@ -1502,7 +1502,7 @@ numer_denom.s: numer_denom.cpp.s
 
 # target to generate assembly for a file
 numer_denom.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/numer_denom.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/numer_denom.cpp.s
 .PHONY : numer_denom.cpp.s
 
 parser/parser.o: parser/parser.cpp.o
@@ -1510,7 +1510,7 @@ parser/parser.o: parser/parser.cpp.o
 
 # target to build an object file
 parser/parser.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/parser/parser.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/parser/parser.cpp.o
 .PHONY : parser/parser.cpp.o
 
 parser/parser.i: parser/parser.cpp.i
@@ -1518,7 +1518,7 @@ parser/parser.i: parser/parser.cpp.i
 
 # target to preprocess a source file
 parser/parser.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/parser/parser.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/parser/parser.cpp.i
 .PHONY : parser/parser.cpp.i
 
 parser/parser.s: parser/parser.cpp.s
@@ -1526,7 +1526,7 @@ parser/parser.s: parser/parser.cpp.s
 
 # target to generate assembly for a file
 parser/parser.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/parser/parser.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/parser/parser.cpp.s
 .PHONY : parser/parser.cpp.s
 
 parser/parser.tab.o: parser/parser.tab.cc.o
@@ -1534,7 +1534,7 @@ parser/parser.tab.o: parser/parser.tab.cc.o
 
 # target to build an object file
 parser/parser.tab.cc.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/parser/parser.tab.cc.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/parser/parser.tab.cc.o
 .PHONY : parser/parser.tab.cc.o
 
 parser/parser.tab.i: parser/parser.tab.cc.i
@@ -1542,7 +1542,7 @@ parser/parser.tab.i: parser/parser.tab.cc.i
 
 # target to preprocess a source file
 parser/parser.tab.cc.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/parser/parser.tab.cc.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/parser/parser.tab.cc.i
 .PHONY : parser/parser.tab.cc.i
 
 parser/parser.tab.s: parser/parser.tab.cc.s
@@ -1550,7 +1550,7 @@ parser/parser.tab.s: parser/parser.tab.cc.s
 
 # target to generate assembly for a file
 parser/parser.tab.cc.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/parser/parser.tab.cc.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/parser/parser.tab.cc.s
 .PHONY : parser/parser.tab.cc.s
 
 parser/parser_old.o: parser/parser_old.cpp.o
@@ -1558,7 +1558,7 @@ parser/parser_old.o: parser/parser_old.cpp.o
 
 # target to build an object file
 parser/parser_old.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/parser/parser_old.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/parser/parser_old.cpp.o
 .PHONY : parser/parser_old.cpp.o
 
 parser/parser_old.i: parser/parser_old.cpp.i
@@ -1566,7 +1566,7 @@ parser/parser_old.i: parser/parser_old.cpp.i
 
 # target to preprocess a source file
 parser/parser_old.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/parser/parser_old.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/parser/parser_old.cpp.i
 .PHONY : parser/parser_old.cpp.i
 
 parser/parser_old.s: parser/parser_old.cpp.s
@@ -1574,7 +1574,7 @@ parser/parser_old.s: parser/parser_old.cpp.s
 
 # target to generate assembly for a file
 parser/parser_old.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/parser/parser_old.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/parser/parser_old.cpp.s
 .PHONY : parser/parser_old.cpp.s
 
 parser/sbml/sbml_parser.o: parser/sbml/sbml_parser.cpp.o
@@ -1582,7 +1582,7 @@ parser/sbml/sbml_parser.o: parser/sbml/sbml_parser.cpp.o
 
 # target to build an object file
 parser/sbml/sbml_parser.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/parser/sbml/sbml_parser.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/parser/sbml/sbml_parser.cpp.o
 .PHONY : parser/sbml/sbml_parser.cpp.o
 
 parser/sbml/sbml_parser.i: parser/sbml/sbml_parser.cpp.i
@@ -1590,7 +1590,7 @@ parser/sbml/sbml_parser.i: parser/sbml/sbml_parser.cpp.i
 
 # target to preprocess a source file
 parser/sbml/sbml_parser.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/parser/sbml/sbml_parser.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/parser/sbml/sbml_parser.cpp.i
 .PHONY : parser/sbml/sbml_parser.cpp.i
 
 parser/sbml/sbml_parser.s: parser/sbml/sbml_parser.cpp.s
@@ -1598,7 +1598,7 @@ parser/sbml/sbml_parser.s: parser/sbml/sbml_parser.cpp.s
 
 # target to generate assembly for a file
 parser/sbml/sbml_parser.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/parser/sbml/sbml_parser.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/parser/sbml/sbml_parser.cpp.s
 .PHONY : parser/sbml/sbml_parser.cpp.s
 
 parser/sbml/sbml_parser.tab.o: parser/sbml/sbml_parser.tab.cc.o
@@ -1606,7 +1606,7 @@ parser/sbml/sbml_parser.tab.o: parser/sbml/sbml_parser.tab.cc.o
 
 # target to build an object file
 parser/sbml/sbml_parser.tab.cc.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/parser/sbml/sbml_parser.tab.cc.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/parser/sbml/sbml_parser.tab.cc.o
 .PHONY : parser/sbml/sbml_parser.tab.cc.o
 
 parser/sbml/sbml_parser.tab.i: parser/sbml/sbml_parser.tab.cc.i
@@ -1614,7 +1614,7 @@ parser/sbml/sbml_parser.tab.i: parser/sbml/sbml_parser.tab.cc.i
 
 # target to preprocess a source file
 parser/sbml/sbml_parser.tab.cc.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/parser/sbml/sbml_parser.tab.cc.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/parser/sbml/sbml_parser.tab.cc.i
 .PHONY : parser/sbml/sbml_parser.tab.cc.i
 
 parser/sbml/sbml_parser.tab.s: parser/sbml/sbml_parser.tab.cc.s
@@ -1622,7 +1622,7 @@ parser/sbml/sbml_parser.tab.s: parser/sbml/sbml_parser.tab.cc.s
 
 # target to generate assembly for a file
 parser/sbml/sbml_parser.tab.cc.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/parser/sbml/sbml_parser.tab.cc.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/parser/sbml/sbml_parser.tab.cc.s
 .PHONY : parser/sbml/sbml_parser.tab.cc.s
 
 parser/sbml/sbml_tokenizer.o: parser/sbml/sbml_tokenizer.cpp.o
@@ -1630,7 +1630,7 @@ parser/sbml/sbml_tokenizer.o: parser/sbml/sbml_tokenizer.cpp.o
 
 # target to build an object file
 parser/sbml/sbml_tokenizer.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/parser/sbml/sbml_tokenizer.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/parser/sbml/sbml_tokenizer.cpp.o
 .PHONY : parser/sbml/sbml_tokenizer.cpp.o
 
 parser/sbml/sbml_tokenizer.i: parser/sbml/sbml_tokenizer.cpp.i
@@ -1638,7 +1638,7 @@ parser/sbml/sbml_tokenizer.i: parser/sbml/sbml_tokenizer.cpp.i
 
 # target to preprocess a source file
 parser/sbml/sbml_tokenizer.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/parser/sbml/sbml_tokenizer.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/parser/sbml/sbml_tokenizer.cpp.i
 .PHONY : parser/sbml/sbml_tokenizer.cpp.i
 
 parser/sbml/sbml_tokenizer.s: parser/sbml/sbml_tokenizer.cpp.s
@@ -1646,7 +1646,7 @@ parser/sbml/sbml_tokenizer.s: parser/sbml/sbml_tokenizer.cpp.s
 
 # target to generate assembly for a file
 parser/sbml/sbml_tokenizer.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/parser/sbml/sbml_tokenizer.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/parser/sbml/sbml_tokenizer.cpp.s
 .PHONY : parser/sbml/sbml_tokenizer.cpp.s
 
 parser/tokenizer.o: parser/tokenizer.cpp.o
@@ -1654,7 +1654,7 @@ parser/tokenizer.o: parser/tokenizer.cpp.o
 
 # target to build an object file
 parser/tokenizer.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/parser/tokenizer.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/parser/tokenizer.cpp.o
 .PHONY : parser/tokenizer.cpp.o
 
 parser/tokenizer.i: parser/tokenizer.cpp.i
@@ -1662,7 +1662,7 @@ parser/tokenizer.i: parser/tokenizer.cpp.i
 
 # target to preprocess a source file
 parser/tokenizer.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/parser/tokenizer.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/parser/tokenizer.cpp.i
 .PHONY : parser/tokenizer.cpp.i
 
 parser/tokenizer.s: parser/tokenizer.cpp.s
@@ -1670,7 +1670,7 @@ parser/tokenizer.s: parser/tokenizer.cpp.s
 
 # target to generate assembly for a file
 parser/tokenizer.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/parser/tokenizer.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/parser/tokenizer.cpp.s
 .PHONY : parser/tokenizer.cpp.s
 
 polys/basic_conversions.o: polys/basic_conversions.cpp.o
@@ -1678,7 +1678,7 @@ polys/basic_conversions.o: polys/basic_conversions.cpp.o
 
 # target to build an object file
 polys/basic_conversions.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/polys/basic_conversions.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/polys/basic_conversions.cpp.o
 .PHONY : polys/basic_conversions.cpp.o
 
 polys/basic_conversions.i: polys/basic_conversions.cpp.i
@@ -1686,7 +1686,7 @@ polys/basic_conversions.i: polys/basic_conversions.cpp.i
 
 # target to preprocess a source file
 polys/basic_conversions.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/polys/basic_conversions.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/polys/basic_conversions.cpp.i
 .PHONY : polys/basic_conversions.cpp.i
 
 polys/basic_conversions.s: polys/basic_conversions.cpp.s
@@ -1694,7 +1694,7 @@ polys/basic_conversions.s: polys/basic_conversions.cpp.s
 
 # target to generate assembly for a file
 polys/basic_conversions.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/polys/basic_conversions.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/polys/basic_conversions.cpp.s
 .PHONY : polys/basic_conversions.cpp.s
 
 polys/msymenginepoly.o: polys/msymenginepoly.cpp.o
@@ -1702,7 +1702,7 @@ polys/msymenginepoly.o: polys/msymenginepoly.cpp.o
 
 # target to build an object file
 polys/msymenginepoly.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/polys/msymenginepoly.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/polys/msymenginepoly.cpp.o
 .PHONY : polys/msymenginepoly.cpp.o
 
 polys/msymenginepoly.i: polys/msymenginepoly.cpp.i
@@ -1710,7 +1710,7 @@ polys/msymenginepoly.i: polys/msymenginepoly.cpp.i
 
 # target to preprocess a source file
 polys/msymenginepoly.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/polys/msymenginepoly.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/polys/msymenginepoly.cpp.i
 .PHONY : polys/msymenginepoly.cpp.i
 
 polys/msymenginepoly.s: polys/msymenginepoly.cpp.s
@@ -1718,7 +1718,7 @@ polys/msymenginepoly.s: polys/msymenginepoly.cpp.s
 
 # target to generate assembly for a file
 polys/msymenginepoly.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/polys/msymenginepoly.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/polys/msymenginepoly.cpp.s
 .PHONY : polys/msymenginepoly.cpp.s
 
 polys/uexprpoly.o: polys/uexprpoly.cpp.o
@@ -1726,7 +1726,7 @@ polys/uexprpoly.o: polys/uexprpoly.cpp.o
 
 # target to build an object file
 polys/uexprpoly.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/polys/uexprpoly.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/polys/uexprpoly.cpp.o
 .PHONY : polys/uexprpoly.cpp.o
 
 polys/uexprpoly.i: polys/uexprpoly.cpp.i
@@ -1734,7 +1734,7 @@ polys/uexprpoly.i: polys/uexprpoly.cpp.i
 
 # target to preprocess a source file
 polys/uexprpoly.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/polys/uexprpoly.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/polys/uexprpoly.cpp.i
 .PHONY : polys/uexprpoly.cpp.i
 
 polys/uexprpoly.s: polys/uexprpoly.cpp.s
@@ -1742,7 +1742,7 @@ polys/uexprpoly.s: polys/uexprpoly.cpp.s
 
 # target to generate assembly for a file
 polys/uexprpoly.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/polys/uexprpoly.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/polys/uexprpoly.cpp.s
 .PHONY : polys/uexprpoly.cpp.s
 
 polys/uintpoly.o: polys/uintpoly.cpp.o
@@ -1750,7 +1750,7 @@ polys/uintpoly.o: polys/uintpoly.cpp.o
 
 # target to build an object file
 polys/uintpoly.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/polys/uintpoly.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/polys/uintpoly.cpp.o
 .PHONY : polys/uintpoly.cpp.o
 
 polys/uintpoly.i: polys/uintpoly.cpp.i
@@ -1758,7 +1758,7 @@ polys/uintpoly.i: polys/uintpoly.cpp.i
 
 # target to preprocess a source file
 polys/uintpoly.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/polys/uintpoly.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/polys/uintpoly.cpp.i
 .PHONY : polys/uintpoly.cpp.i
 
 polys/uintpoly.s: polys/uintpoly.cpp.s
@@ -1766,7 +1766,7 @@ polys/uintpoly.s: polys/uintpoly.cpp.s
 
 # target to generate assembly for a file
 polys/uintpoly.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/polys/uintpoly.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/polys/uintpoly.cpp.s
 .PHONY : polys/uintpoly.cpp.s
 
 polys/uintpoly_flint.o: polys/uintpoly_flint.cpp.o
@@ -1774,7 +1774,7 @@ polys/uintpoly_flint.o: polys/uintpoly_flint.cpp.o
 
 # target to build an object file
 polys/uintpoly_flint.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/polys/uintpoly_flint.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/polys/uintpoly_flint.cpp.o
 .PHONY : polys/uintpoly_flint.cpp.o
 
 polys/uintpoly_flint.i: polys/uintpoly_flint.cpp.i
@@ -1782,7 +1782,7 @@ polys/uintpoly_flint.i: polys/uintpoly_flint.cpp.i
 
 # target to preprocess a source file
 polys/uintpoly_flint.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/polys/uintpoly_flint.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/polys/uintpoly_flint.cpp.i
 .PHONY : polys/uintpoly_flint.cpp.i
 
 polys/uintpoly_flint.s: polys/uintpoly_flint.cpp.s
@@ -1790,7 +1790,7 @@ polys/uintpoly_flint.s: polys/uintpoly_flint.cpp.s
 
 # target to generate assembly for a file
 polys/uintpoly_flint.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/polys/uintpoly_flint.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/polys/uintpoly_flint.cpp.s
 .PHONY : polys/uintpoly_flint.cpp.s
 
 polys/uratpoly.o: polys/uratpoly.cpp.o
@@ -1798,7 +1798,7 @@ polys/uratpoly.o: polys/uratpoly.cpp.o
 
 # target to build an object file
 polys/uratpoly.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/polys/uratpoly.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/polys/uratpoly.cpp.o
 .PHONY : polys/uratpoly.cpp.o
 
 polys/uratpoly.i: polys/uratpoly.cpp.i
@@ -1806,7 +1806,7 @@ polys/uratpoly.i: polys/uratpoly.cpp.i
 
 # target to preprocess a source file
 polys/uratpoly.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/polys/uratpoly.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/polys/uratpoly.cpp.i
 .PHONY : polys/uratpoly.cpp.i
 
 polys/uratpoly.s: polys/uratpoly.cpp.s
@@ -1814,7 +1814,7 @@ polys/uratpoly.s: polys/uratpoly.cpp.s
 
 # target to generate assembly for a file
 polys/uratpoly.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/polys/uratpoly.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/polys/uratpoly.cpp.s
 .PHONY : polys/uratpoly.cpp.s
 
 pow.o: pow.cpp.o
@@ -1822,7 +1822,7 @@ pow.o: pow.cpp.o
 
 # target to build an object file
 pow.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/pow.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/pow.cpp.o
 .PHONY : pow.cpp.o
 
 pow.i: pow.cpp.i
@@ -1830,7 +1830,7 @@ pow.i: pow.cpp.i
 
 # target to preprocess a source file
 pow.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/pow.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/pow.cpp.i
 .PHONY : pow.cpp.i
 
 pow.s: pow.cpp.s
@@ -1838,7 +1838,7 @@ pow.s: pow.cpp.s
 
 # target to generate assembly for a file
 pow.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/pow.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/pow.cpp.s
 .PHONY : pow.cpp.s
 
 prime_sieve.o: prime_sieve.cpp.o
@@ -1846,7 +1846,7 @@ prime_sieve.o: prime_sieve.cpp.o
 
 # target to build an object file
 prime_sieve.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/prime_sieve.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/prime_sieve.cpp.o
 .PHONY : prime_sieve.cpp.o
 
 prime_sieve.i: prime_sieve.cpp.i
@@ -1854,7 +1854,7 @@ prime_sieve.i: prime_sieve.cpp.i
 
 # target to preprocess a source file
 prime_sieve.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/prime_sieve.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/prime_sieve.cpp.i
 .PHONY : prime_sieve.cpp.i
 
 prime_sieve.s: prime_sieve.cpp.s
@@ -1862,7 +1862,7 @@ prime_sieve.s: prime_sieve.cpp.s
 
 # target to generate assembly for a file
 prime_sieve.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/prime_sieve.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/prime_sieve.cpp.s
 .PHONY : prime_sieve.cpp.s
 
 printers/codegen.o: printers/codegen.cpp.o
@@ -1870,7 +1870,7 @@ printers/codegen.o: printers/codegen.cpp.o
 
 # target to build an object file
 printers/codegen.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/printers/codegen.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/printers/codegen.cpp.o
 .PHONY : printers/codegen.cpp.o
 
 printers/codegen.i: printers/codegen.cpp.i
@@ -1878,7 +1878,7 @@ printers/codegen.i: printers/codegen.cpp.i
 
 # target to preprocess a source file
 printers/codegen.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/printers/codegen.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/printers/codegen.cpp.i
 .PHONY : printers/codegen.cpp.i
 
 printers/codegen.s: printers/codegen.cpp.s
@@ -1886,7 +1886,7 @@ printers/codegen.s: printers/codegen.cpp.s
 
 # target to generate assembly for a file
 printers/codegen.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/printers/codegen.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/printers/codegen.cpp.s
 .PHONY : printers/codegen.cpp.s
 
 printers/latex.o: printers/latex.cpp.o
@@ -1894,7 +1894,7 @@ printers/latex.o: printers/latex.cpp.o
 
 # target to build an object file
 printers/latex.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/printers/latex.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/printers/latex.cpp.o
 .PHONY : printers/latex.cpp.o
 
 printers/latex.i: printers/latex.cpp.i
@@ -1902,7 +1902,7 @@ printers/latex.i: printers/latex.cpp.i
 
 # target to preprocess a source file
 printers/latex.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/printers/latex.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/printers/latex.cpp.i
 .PHONY : printers/latex.cpp.i
 
 printers/latex.s: printers/latex.cpp.s
@@ -1910,7 +1910,7 @@ printers/latex.s: printers/latex.cpp.s
 
 # target to generate assembly for a file
 printers/latex.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/printers/latex.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/printers/latex.cpp.s
 .PHONY : printers/latex.cpp.s
 
 printers/mathml.o: printers/mathml.cpp.o
@@ -1918,7 +1918,7 @@ printers/mathml.o: printers/mathml.cpp.o
 
 # target to build an object file
 printers/mathml.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/printers/mathml.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/printers/mathml.cpp.o
 .PHONY : printers/mathml.cpp.o
 
 printers/mathml.i: printers/mathml.cpp.i
@@ -1926,7 +1926,7 @@ printers/mathml.i: printers/mathml.cpp.i
 
 # target to preprocess a source file
 printers/mathml.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/printers/mathml.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/printers/mathml.cpp.i
 .PHONY : printers/mathml.cpp.i
 
 printers/mathml.s: printers/mathml.cpp.s
@@ -1934,7 +1934,7 @@ printers/mathml.s: printers/mathml.cpp.s
 
 # target to generate assembly for a file
 printers/mathml.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/printers/mathml.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/printers/mathml.cpp.s
 .PHONY : printers/mathml.cpp.s
 
 printers/sbml.o: printers/sbml.cpp.o
@@ -1942,7 +1942,7 @@ printers/sbml.o: printers/sbml.cpp.o
 
 # target to build an object file
 printers/sbml.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/printers/sbml.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/printers/sbml.cpp.o
 .PHONY : printers/sbml.cpp.o
 
 printers/sbml.i: printers/sbml.cpp.i
@@ -1950,7 +1950,7 @@ printers/sbml.i: printers/sbml.cpp.i
 
 # target to preprocess a source file
 printers/sbml.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/printers/sbml.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/printers/sbml.cpp.i
 .PHONY : printers/sbml.cpp.i
 
 printers/sbml.s: printers/sbml.cpp.s
@@ -1958,7 +1958,7 @@ printers/sbml.s: printers/sbml.cpp.s
 
 # target to generate assembly for a file
 printers/sbml.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/printers/sbml.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/printers/sbml.cpp.s
 .PHONY : printers/sbml.cpp.s
 
 printers/stringbox.o: printers/stringbox.cpp.o
@@ -1966,7 +1966,7 @@ printers/stringbox.o: printers/stringbox.cpp.o
 
 # target to build an object file
 printers/stringbox.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/printers/stringbox.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/printers/stringbox.cpp.o
 .PHONY : printers/stringbox.cpp.o
 
 printers/stringbox.i: printers/stringbox.cpp.i
@@ -1974,7 +1974,7 @@ printers/stringbox.i: printers/stringbox.cpp.i
 
 # target to preprocess a source file
 printers/stringbox.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/printers/stringbox.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/printers/stringbox.cpp.i
 .PHONY : printers/stringbox.cpp.i
 
 printers/stringbox.s: printers/stringbox.cpp.s
@@ -1982,7 +1982,7 @@ printers/stringbox.s: printers/stringbox.cpp.s
 
 # target to generate assembly for a file
 printers/stringbox.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/printers/stringbox.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/printers/stringbox.cpp.s
 .PHONY : printers/stringbox.cpp.s
 
 printers/strprinter.o: printers/strprinter.cpp.o
@@ -1990,7 +1990,7 @@ printers/strprinter.o: printers/strprinter.cpp.o
 
 # target to build an object file
 printers/strprinter.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/printers/strprinter.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/printers/strprinter.cpp.o
 .PHONY : printers/strprinter.cpp.o
 
 printers/strprinter.i: printers/strprinter.cpp.i
@@ -1998,7 +1998,7 @@ printers/strprinter.i: printers/strprinter.cpp.i
 
 # target to preprocess a source file
 printers/strprinter.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/printers/strprinter.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/printers/strprinter.cpp.i
 .PHONY : printers/strprinter.cpp.i
 
 printers/strprinter.s: printers/strprinter.cpp.s
@@ -2006,7 +2006,7 @@ printers/strprinter.s: printers/strprinter.cpp.s
 
 # target to generate assembly for a file
 printers/strprinter.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/printers/strprinter.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/printers/strprinter.cpp.s
 .PHONY : printers/strprinter.cpp.s
 
 printers/unicode.o: printers/unicode.cpp.o
@@ -2014,7 +2014,7 @@ printers/unicode.o: printers/unicode.cpp.o
 
 # target to build an object file
 printers/unicode.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/printers/unicode.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/printers/unicode.cpp.o
 .PHONY : printers/unicode.cpp.o
 
 printers/unicode.i: printers/unicode.cpp.i
@@ -2022,7 +2022,7 @@ printers/unicode.i: printers/unicode.cpp.i
 
 # target to preprocess a source file
 printers/unicode.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/printers/unicode.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/printers/unicode.cpp.i
 .PHONY : printers/unicode.cpp.i
 
 printers/unicode.s: printers/unicode.cpp.s
@@ -2030,7 +2030,7 @@ printers/unicode.s: printers/unicode.cpp.s
 
 # target to generate assembly for a file
 printers/unicode.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/printers/unicode.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/printers/unicode.cpp.s
 .PHONY : printers/unicode.cpp.s
 
 rational.o: rational.cpp.o
@@ -2038,7 +2038,7 @@ rational.o: rational.cpp.o
 
 # target to build an object file
 rational.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/rational.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/rational.cpp.o
 .PHONY : rational.cpp.o
 
 rational.i: rational.cpp.i
@@ -2046,7 +2046,7 @@ rational.i: rational.cpp.i
 
 # target to preprocess a source file
 rational.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/rational.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/rational.cpp.i
 .PHONY : rational.cpp.i
 
 rational.s: rational.cpp.s
@@ -2054,7 +2054,7 @@ rational.s: rational.cpp.s
 
 # target to generate assembly for a file
 rational.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/rational.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/rational.cpp.s
 .PHONY : rational.cpp.s
 
 real_double.o: real_double.cpp.o
@@ -2062,7 +2062,7 @@ real_double.o: real_double.cpp.o
 
 # target to build an object file
 real_double.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/real_double.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/real_double.cpp.o
 .PHONY : real_double.cpp.o
 
 real_double.i: real_double.cpp.i
@@ -2070,7 +2070,7 @@ real_double.i: real_double.cpp.i
 
 # target to preprocess a source file
 real_double.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/real_double.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/real_double.cpp.i
 .PHONY : real_double.cpp.i
 
 real_double.s: real_double.cpp.s
@@ -2078,7 +2078,7 @@ real_double.s: real_double.cpp.s
 
 # target to generate assembly for a file
 real_double.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/real_double.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/real_double.cpp.s
 .PHONY : real_double.cpp.s
 
 real_mpfr.o: real_mpfr.cpp.o
@@ -2086,7 +2086,7 @@ real_mpfr.o: real_mpfr.cpp.o
 
 # target to build an object file
 real_mpfr.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/real_mpfr.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/real_mpfr.cpp.o
 .PHONY : real_mpfr.cpp.o
 
 real_mpfr.i: real_mpfr.cpp.i
@@ -2094,7 +2094,7 @@ real_mpfr.i: real_mpfr.cpp.i
 
 # target to preprocess a source file
 real_mpfr.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/real_mpfr.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/real_mpfr.cpp.i
 .PHONY : real_mpfr.cpp.i
 
 real_mpfr.s: real_mpfr.cpp.s
@@ -2102,7 +2102,7 @@ real_mpfr.s: real_mpfr.cpp.s
 
 # target to generate assembly for a file
 real_mpfr.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/real_mpfr.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/real_mpfr.cpp.s
 .PHONY : real_mpfr.cpp.s
 
 refine.o: refine.cpp.o
@@ -2110,7 +2110,7 @@ refine.o: refine.cpp.o
 
 # target to build an object file
 refine.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/refine.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/refine.cpp.o
 .PHONY : refine.cpp.o
 
 refine.i: refine.cpp.i
@@ -2118,7 +2118,7 @@ refine.i: refine.cpp.i
 
 # target to preprocess a source file
 refine.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/refine.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/refine.cpp.i
 .PHONY : refine.cpp.i
 
 refine.s: refine.cpp.s
@@ -2126,7 +2126,7 @@ refine.s: refine.cpp.s
 
 # target to generate assembly for a file
 refine.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/refine.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/refine.cpp.s
 .PHONY : refine.cpp.s
 
 rewrite.o: rewrite.cpp.o
@@ -2134,7 +2134,7 @@ rewrite.o: rewrite.cpp.o
 
 # target to build an object file
 rewrite.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/rewrite.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/rewrite.cpp.o
 .PHONY : rewrite.cpp.o
 
 rewrite.i: rewrite.cpp.i
@@ -2142,7 +2142,7 @@ rewrite.i: rewrite.cpp.i
 
 # target to preprocess a source file
 rewrite.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/rewrite.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/rewrite.cpp.i
 .PHONY : rewrite.cpp.i
 
 rewrite.s: rewrite.cpp.s
@@ -2150,7 +2150,7 @@ rewrite.s: rewrite.cpp.s
 
 # target to generate assembly for a file
 rewrite.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/rewrite.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/rewrite.cpp.s
 .PHONY : rewrite.cpp.s
 
 rings.o: rings.cpp.o
@@ -2158,7 +2158,7 @@ rings.o: rings.cpp.o
 
 # target to build an object file
 rings.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/rings.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/rings.cpp.o
 .PHONY : rings.cpp.o
 
 rings.i: rings.cpp.i
@@ -2166,7 +2166,7 @@ rings.i: rings.cpp.i
 
 # target to preprocess a source file
 rings.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/rings.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/rings.cpp.i
 .PHONY : rings.cpp.i
 
 rings.s: rings.cpp.s
@@ -2174,7 +2174,7 @@ rings.s: rings.cpp.s
 
 # target to generate assembly for a file
 rings.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/rings.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/rings.cpp.s
 .PHONY : rings.cpp.s
 
 series.o: series.cpp.o
@@ -2182,7 +2182,7 @@ series.o: series.cpp.o
 
 # target to build an object file
 series.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/series.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/series.cpp.o
 .PHONY : series.cpp.o
 
 series.i: series.cpp.i
@@ -2190,7 +2190,7 @@ series.i: series.cpp.i
 
 # target to preprocess a source file
 series.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/series.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/series.cpp.i
 .PHONY : series.cpp.i
 
 series.s: series.cpp.s
@@ -2198,7 +2198,7 @@ series.s: series.cpp.s
 
 # target to generate assembly for a file
 series.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/series.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/series.cpp.s
 .PHONY : series.cpp.s
 
 series_flint.o: series_flint.cpp.o
@@ -2206,7 +2206,7 @@ series_flint.o: series_flint.cpp.o
 
 # target to build an object file
 series_flint.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/series_flint.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/series_flint.cpp.o
 .PHONY : series_flint.cpp.o
 
 series_flint.i: series_flint.cpp.i
@@ -2214,7 +2214,7 @@ series_flint.i: series_flint.cpp.i
 
 # target to preprocess a source file
 series_flint.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/series_flint.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/series_flint.cpp.i
 .PHONY : series_flint.cpp.i
 
 series_flint.s: series_flint.cpp.s
@@ -2222,7 +2222,7 @@ series_flint.s: series_flint.cpp.s
 
 # target to generate assembly for a file
 series_flint.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/series_flint.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/series_flint.cpp.s
 .PHONY : series_flint.cpp.s
 
 series_generic.o: series_generic.cpp.o
@@ -2230,7 +2230,7 @@ series_generic.o: series_generic.cpp.o
 
 # target to build an object file
 series_generic.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/series_generic.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/series_generic.cpp.o
 .PHONY : series_generic.cpp.o
 
 series_generic.i: series_generic.cpp.i
@@ -2238,7 +2238,7 @@ series_generic.i: series_generic.cpp.i
 
 # target to preprocess a source file
 series_generic.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/series_generic.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/series_generic.cpp.i
 .PHONY : series_generic.cpp.i
 
 series_generic.s: series_generic.cpp.s
@@ -2246,7 +2246,7 @@ series_generic.s: series_generic.cpp.s
 
 # target to generate assembly for a file
 series_generic.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/series_generic.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/series_generic.cpp.s
 .PHONY : series_generic.cpp.s
 
 set_funcs.o: set_funcs.cpp.o
@@ -2254,7 +2254,7 @@ set_funcs.o: set_funcs.cpp.o
 
 # target to build an object file
 set_funcs.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/set_funcs.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/set_funcs.cpp.o
 .PHONY : set_funcs.cpp.o
 
 set_funcs.i: set_funcs.cpp.i
@@ -2262,7 +2262,7 @@ set_funcs.i: set_funcs.cpp.i
 
 # target to preprocess a source file
 set_funcs.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/set_funcs.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/set_funcs.cpp.i
 .PHONY : set_funcs.cpp.i
 
 set_funcs.s: set_funcs.cpp.s
@@ -2270,7 +2270,7 @@ set_funcs.s: set_funcs.cpp.s
 
 # target to generate assembly for a file
 set_funcs.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/set_funcs.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/set_funcs.cpp.s
 .PHONY : set_funcs.cpp.s
 
 sets.o: sets.cpp.o
@@ -2278,7 +2278,7 @@ sets.o: sets.cpp.o
 
 # target to build an object file
 sets.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/sets.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/sets.cpp.o
 .PHONY : sets.cpp.o
 
 sets.i: sets.cpp.i
@@ -2286,7 +2286,7 @@ sets.i: sets.cpp.i
 
 # target to preprocess a source file
 sets.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/sets.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/sets.cpp.i
 .PHONY : sets.cpp.i
 
 sets.s: sets.cpp.s
@@ -2294,7 +2294,7 @@ sets.s: sets.cpp.s
 
 # target to generate assembly for a file
 sets.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/sets.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/sets.cpp.s
 .PHONY : sets.cpp.s
 
 simplify.o: simplify.cpp.o
@@ -2302,7 +2302,7 @@ simplify.o: simplify.cpp.o
 
 # target to build an object file
 simplify.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/simplify.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/simplify.cpp.o
 .PHONY : simplify.cpp.o
 
 simplify.i: simplify.cpp.i
@@ -2310,7 +2310,7 @@ simplify.i: simplify.cpp.i
 
 # target to preprocess a source file
 simplify.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/simplify.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/simplify.cpp.i
 .PHONY : simplify.cpp.i
 
 simplify.s: simplify.cpp.s
@@ -2318,7 +2318,7 @@ simplify.s: simplify.cpp.s
 
 # target to generate assembly for a file
 simplify.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/simplify.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/simplify.cpp.s
 .PHONY : simplify.cpp.s
 
 solve.o: solve.cpp.o
@@ -2326,7 +2326,7 @@ solve.o: solve.cpp.o
 
 # target to build an object file
 solve.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/solve.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/solve.cpp.o
 .PHONY : solve.cpp.o
 
 solve.i: solve.cpp.i
@@ -2334,7 +2334,7 @@ solve.i: solve.cpp.i
 
 # target to preprocess a source file
 solve.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/solve.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/solve.cpp.i
 .PHONY : solve.cpp.i
 
 solve.s: solve.cpp.s
@@ -2342,7 +2342,7 @@ solve.s: solve.cpp.s
 
 # target to generate assembly for a file
 solve.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/solve.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/solve.cpp.s
 .PHONY : solve.cpp.s
 
 sparse_matrix.o: sparse_matrix.cpp.o
@@ -2350,7 +2350,7 @@ sparse_matrix.o: sparse_matrix.cpp.o
 
 # target to build an object file
 sparse_matrix.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/sparse_matrix.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/sparse_matrix.cpp.o
 .PHONY : sparse_matrix.cpp.o
 
 sparse_matrix.i: sparse_matrix.cpp.i
@@ -2358,7 +2358,7 @@ sparse_matrix.i: sparse_matrix.cpp.i
 
 # target to preprocess a source file
 sparse_matrix.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/sparse_matrix.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/sparse_matrix.cpp.i
 .PHONY : sparse_matrix.cpp.i
 
 sparse_matrix.s: sparse_matrix.cpp.s
@@ -2366,7 +2366,7 @@ sparse_matrix.s: sparse_matrix.cpp.s
 
 # target to generate assembly for a file
 sparse_matrix.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/sparse_matrix.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/sparse_matrix.cpp.s
 .PHONY : sparse_matrix.cpp.s
 
 symbol.o: symbol.cpp.o
@@ -2374,7 +2374,7 @@ symbol.o: symbol.cpp.o
 
 # target to build an object file
 symbol.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/symbol.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/symbol.cpp.o
 .PHONY : symbol.cpp.o
 
 symbol.i: symbol.cpp.i
@@ -2382,7 +2382,7 @@ symbol.i: symbol.cpp.i
 
 # target to preprocess a source file
 symbol.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/symbol.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/symbol.cpp.i
 .PHONY : symbol.cpp.i
 
 symbol.s: symbol.cpp.s
@@ -2390,7 +2390,7 @@ symbol.s: symbol.cpp.s
 
 # target to generate assembly for a file
 symbol.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/symbol.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/symbol.cpp.s
 .PHONY : symbol.cpp.s
 
 symengine_rcp.o: symengine_rcp.cpp.o
@@ -2398,7 +2398,7 @@ symengine_rcp.o: symengine_rcp.cpp.o
 
 # target to build an object file
 symengine_rcp.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/symengine_rcp.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/symengine_rcp.cpp.o
 .PHONY : symengine_rcp.cpp.o
 
 symengine_rcp.i: symengine_rcp.cpp.i
@@ -2406,7 +2406,7 @@ symengine_rcp.i: symengine_rcp.cpp.i
 
 # target to preprocess a source file
 symengine_rcp.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/symengine_rcp.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/symengine_rcp.cpp.i
 .PHONY : symengine_rcp.cpp.i
 
 symengine_rcp.s: symengine_rcp.cpp.s
@@ -2414,7 +2414,7 @@ symengine_rcp.s: symengine_rcp.cpp.s
 
 # target to generate assembly for a file
 symengine_rcp.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/symengine_rcp.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/symengine_rcp.cpp.s
 .PHONY : symengine_rcp.cpp.s
 
 test_visitors.o: test_visitors.cpp.o
@@ -2422,7 +2422,7 @@ test_visitors.o: test_visitors.cpp.o
 
 # target to build an object file
 test_visitors.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/test_visitors.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/test_visitors.cpp.o
 .PHONY : test_visitors.cpp.o
 
 test_visitors.i: test_visitors.cpp.i
@@ -2430,7 +2430,7 @@ test_visitors.i: test_visitors.cpp.i
 
 # target to preprocess a source file
 test_visitors.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/test_visitors.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/test_visitors.cpp.i
 .PHONY : test_visitors.cpp.i
 
 test_visitors.s: test_visitors.cpp.s
@@ -2438,7 +2438,7 @@ test_visitors.s: test_visitors.cpp.s
 
 # target to generate assembly for a file
 test_visitors.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/test_visitors.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/test_visitors.cpp.s
 .PHONY : test_visitors.cpp.s
 
 tuple.o: tuple.cpp.o
@@ -2446,7 +2446,7 @@ tuple.o: tuple.cpp.o
 
 # target to build an object file
 tuple.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/tuple.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/tuple.cpp.o
 .PHONY : tuple.cpp.o
 
 tuple.i: tuple.cpp.i
@@ -2454,7 +2454,7 @@ tuple.i: tuple.cpp.i
 
 # target to preprocess a source file
 tuple.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/tuple.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/tuple.cpp.i
 .PHONY : tuple.cpp.i
 
 tuple.s: tuple.cpp.s
@@ -2462,7 +2462,7 @@ tuple.s: tuple.cpp.s
 
 # target to generate assembly for a file
 tuple.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/tuple.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/tuple.cpp.s
 .PHONY : tuple.cpp.s
 
 visitor.o: visitor.cpp.o
@@ -2470,7 +2470,7 @@ visitor.o: visitor.cpp.o
 
 # target to build an object file
 visitor.cpp.o:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/visitor.cpp.o
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/visitor.cpp.o
 .PHONY : visitor.cpp.o
 
 visitor.i: visitor.cpp.i
@@ -2478,7 +2478,7 @@ visitor.i: visitor.cpp.i
 
 # target to preprocess a source file
 visitor.cpp.i:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/visitor.cpp.i
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/visitor.cpp.i
 .PHONY : visitor.cpp.i
 
 visitor.s: visitor.cpp.s
@@ -2486,7 +2486,7 @@ visitor.s: visitor.cpp.s
 
 # target to generate assembly for a file
 visitor.cpp.s:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/visitor.cpp.s
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(MAKE) $(MAKESILENT) -f symengine/CMakeFiles/symengine.dir/build.make symengine/CMakeFiles/symengine.dir/visitor.cpp.s
 .PHONY : visitor.cpp.s
 
 # Help Target
@@ -2802,6 +2802,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/christianstrobele/code/gmp-ios-builder/build-symengine/macosx-arm64 && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/macosx-arm64 && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

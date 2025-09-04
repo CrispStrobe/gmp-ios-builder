@@ -1,5 +1,5 @@
 symengine/CMakeFiles/symengine.dir/printers/stringbox.cpp.o: \
-  /Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/symengine/printers/stringbox.cpp \
+  /Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/symengine/printers/stringbox.cpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/iterator \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__config \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__config_site \
@@ -781,4 +781,4 @@ symengine/CMakeFiles/symengine.dir/printers/stringbox.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__fwd/stack.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/print \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk/usr/include/unistd.h \
-  /Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/symengine/printers/stringbox.h
+  /Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/symengine/printers/stringbox.h

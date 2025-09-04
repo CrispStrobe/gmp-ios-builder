@@ -1,4 +1,4 @@
-# Install script for directory: /Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2
+# Install script for directory: /Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,8 +39,8 @@ endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/symengine" TYPE FILE FILES
-    "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/SymEngineConfig.cmake"
-    "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/SymEngineConfigVersion.cmake"
+    "/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/SymEngineConfig.cmake"
+    "/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/SymEngineConfigVersion.cmake"
     )
 endif()
 
@@ -48,7 +48,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/symengine/SymEngineTargets.cmake")
     file(DIFFERENT _cmake_export_file_changed FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/symengine/SymEngineTargets.cmake"
-         "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/Export/4d5d58af8d13d18c404fc02e6eeb1d86/SymEngineTargets.cmake")
+         "/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/Export/4d5d58af8d13d18c404fc02e6eeb1d86/SymEngineTargets.cmake")
     if(_cmake_export_file_changed)
       file(GLOB _cmake_old_config_files "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/symengine/SymEngineTargets-*.cmake")
       if(_cmake_old_config_files)
@@ -61,22 +61,22 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
     endif()
     unset(_cmake_export_file_changed)
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/symengine" TYPE FILE FILES "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/Export/4d5d58af8d13d18c404fc02e6eeb1d86/SymEngineTargets.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/symengine" TYPE FILE FILES "/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/Export/4d5d58af8d13d18c404fc02e6eeb1d86/SymEngineTargets.cmake")
   if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/symengine" TYPE FILE FILES "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/Export/4d5d58af8d13d18c404fc02e6eeb1d86/SymEngineTargets-release.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/symengine" TYPE FILE FILES "/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/Export/4d5d58af8d13d18c404fc02e6eeb1d86/SymEngineTargets-release.cmake")
   endif()
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/symengine/cmake_install.cmake")
+  include("/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/symengine/cmake_install.cmake")
 
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/install_local_manifest.txt"
+  file(WRITE "/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
 if(CMAKE_INSTALL_COMPONENT)
@@ -92,6 +92,6 @@ else()
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

@@ -1,4 +1,4 @@
-# Install script for directory: /Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/symengine/utilities/matchpycpp
+# Install script for directory: /Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/symengine/utilities/matchpycpp
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,6 +40,6 @@ endif()
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/symengine/utilities/matchpycpp/install_local_manifest.txt"
+  file(WRITE "/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphonesimulator-arm64/symengine/utilities/matchpycpp/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

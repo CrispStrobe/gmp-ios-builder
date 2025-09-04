@@ -393,7 +393,7 @@ events:
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
       
       The C compiler identification is AppleClang, found in:
-        /Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/4.1.1/CompilerIdC/CMakeCCompilerId.o
+        /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/4.1.1/CompilerIdC/CMakeCCompilerId.o
       
   -
     kind: "message-v1"
@@ -1620,7 +1620,7 @@ events:
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
       
       The CXX compiler identification is AppleClang, found in:
-        /Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/4.1.1/CompilerIdCXX/CMakeCXXCompilerId.o
+        /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/4.1.1/CompilerIdCXX/CMakeCXXCompilerId.o
       
   -
     kind: "message-v1"
@@ -1814,31 +1814,31 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-e8tX16"
-      binary: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-e8tX16"
+      source: "/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-1tZue7"
+      binary: "/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-1tZue7"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_EXE_LINKER_FLAGS: ""
       CMAKE_OSX_ARCHITECTURES: "arm64"
       CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
       CMAKE_OSX_SYSROOT: "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk"
-      CMAKE_USER_MAKE_RULES_OVERRIDE: "/Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/cmake/UserOverride.cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/cmake/UserOverride.cmake"
     buildResult:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-e8tX16'
+        Change Dir: '/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-1tZue7'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_5ff08/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_5ff08.dir/build.make CMakeFiles/cmTC_5ff08.dir/build
-        Building C object CMakeFiles/cmTC_5ff08.dir/CMakeCCompilerABI.c.o
-        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang   -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -miphoneos-version-min=13.0   -v -Wl,-v -MD -MT CMakeFiles/cmTC_5ff08.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_5ff08.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_5ff08.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_ef4a5/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_ef4a5.dir/build.make CMakeFiles/cmTC_ef4a5.dir/build
+        Building C object CMakeFiles/cmTC_ef4a5.dir/CMakeCCompilerABI.c.o
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang   -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -miphoneos-version-min=13.0   -v -Wl,-v -MD -MT CMakeFiles/cmTC_ef4a5.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_ef4a5.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_ef4a5.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c
         Apple clang version 17.0.0 (clang-1700.0.13.5)
         Target: arm64-apple-darwin24.6.0
         Thread model: posix
         InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
         clang: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
-         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-ios13.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=18.5 -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -target-cpu apple-a7 -target-feature +zcm -target-feature +zcz -target-feature +v8a -target-feature +aes -target-feature +fp-armv8 -target-feature +neon -target-feature +perfmon -target-feature +sha2 -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-e8tX16 -target-linker-version 1167.5 -v -fcoverage-compilation-dir=/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-e8tX16 -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17 -dependency-file CMakeFiles/cmTC_5ff08.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_5ff08.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_5ff08.dir/CMakeCCompilerABI.c.o -x c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c
+         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-ios13.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=18.5 -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -target-cpu apple-a7 -target-feature +zcm -target-feature +zcz -target-feature +v8a -target-feature +aes -target-feature +fp-armv8 -target-feature +neon -target-feature +perfmon -target-feature +sha2 -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-1tZue7 -target-linker-version 1167.5 -v -fcoverage-compilation-dir=/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-1tZue7 -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17 -dependency-file CMakeFiles/cmTC_ef4a5.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_ef4a5.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_ef4a5.dir/CMakeCCompilerABI.c.o -x c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c
         clang -cc1 version 17.0.0 (clang-1700.0.13.5) default target arm64-apple-darwin24.6.0
         ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/local/include"
         ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/System/Library/SubFrameworks"
@@ -1850,13 +1850,13 @@ events:
          /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include
          /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/System/Library/Frameworks (framework directory)
         End of search list.
-        Linking C executable cmTC_5ff08.app/cmTC_5ff08
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5ff08.dir/link.txt --verbose=1
+        Linking C executable cmTC_ef4a5.app/cmTC_ef4a5
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ef4a5.dir/link.txt --verbose=1
         Apple clang version 17.0.0 (clang-1700.0.13.5)
         Target: arm64-apple-darwin24.6.0
         Thread model: posix
         InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
-         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version ios 13.0.0 18.5 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_5ff08.app/cmTC_5ff08 -headerpad_max_install_names -v CMakeFiles/cmTC_5ff08.dir/CMakeCCompilerABI.c.o -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.ios.a
+         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version ios 13.0.0 18.5 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_ef4a5.app/cmTC_ef4a5 -headerpad_max_install_names -v CMakeFiles/cmTC_ef4a5.dir/CMakeCCompilerABI.c.o -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.ios.a
         @(#)PROGRAM:ld PROJECT:ld-1167.5
         BUILD 01:45:05 Apr 30 2025
         configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
@@ -1868,7 +1868,7 @@ events:
         	/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/lib/swift
         Framework search paths:
         	/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/System/Library/Frameworks
-        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -miphoneos-version-min=13.0 -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_5ff08.dir/CMakeCCompilerABI.c.o -o cmTC_5ff08.app/cmTC_5ff08
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -miphoneos-version-min=13.0 -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_ef4a5.dir/CMakeCCompilerABI.c.o -o cmTC_ef4a5.app/cmTC_ef4a5
         
       exitCode: 0
   -
@@ -1901,18 +1901,18 @@ events:
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-e8tX16']
+        ignore line: [Change Dir: '/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-1tZue7']
         ignore line: []
-        ignore line: [Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_5ff08/fast]
-        ignore line: [/Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_5ff08.dir/build.make CMakeFiles/cmTC_5ff08.dir/build]
-        ignore line: [Building C object CMakeFiles/cmTC_5ff08.dir/CMakeCCompilerABI.c.o]
-        ignore line: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang   -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -miphoneos-version-min=13.0   -v -Wl -v -MD -MT CMakeFiles/cmTC_5ff08.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_5ff08.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_5ff08.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_ef4a5/fast]
+        ignore line: [/Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_ef4a5.dir/build.make CMakeFiles/cmTC_ef4a5.dir/build]
+        ignore line: [Building C object CMakeFiles/cmTC_ef4a5.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang   -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -miphoneos-version-min=13.0   -v -Wl -v -MD -MT CMakeFiles/cmTC_ef4a5.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_ef4a5.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_ef4a5.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c]
         ignore line: [Apple clang version 17.0.0 (clang-1700.0.13.5)]
         ignore line: [Target: arm64-apple-darwin24.6.0]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
         ignore line: [clang: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
-        ignore line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-ios13.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=18.5 -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -target-cpu apple-a7 -target-feature +zcm -target-feature +zcz -target-feature +v8a -target-feature +aes -target-feature +fp-armv8 -target-feature +neon -target-feature +perfmon -target-feature +sha2 -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-e8tX16 -target-linker-version 1167.5 -v -fcoverage-compilation-dir=/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-e8tX16 -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17 -dependency-file CMakeFiles/cmTC_5ff08.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_5ff08.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_5ff08.dir/CMakeCCompilerABI.c.o -x c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-ios13.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=18.5 -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -target-cpu apple-a7 -target-feature +zcm -target-feature +zcz -target-feature +v8a -target-feature +aes -target-feature +fp-armv8 -target-feature +neon -target-feature +perfmon -target-feature +sha2 -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-1tZue7 -target-linker-version 1167.5 -v -fcoverage-compilation-dir=/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-1tZue7 -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17 -dependency-file CMakeFiles/cmTC_ef4a5.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_ef4a5.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_ef4a5.dir/CMakeCCompilerABI.c.o -x c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c]
         ignore line: [clang -cc1 version 17.0.0 (clang-1700.0.13.5) default target arm64-apple-darwin24.6.0]
         ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/local/include"]
         ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/System/Library/SubFrameworks"]
@@ -1924,13 +1924,13 @@ events:
         ignore line: [ /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
         ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/System/Library/Frameworks (framework directory)]
         ignore line: [End of search list.]
-        ignore line: [Linking C executable cmTC_5ff08.app/cmTC_5ff08]
-        ignore line: [/opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5ff08.dir/link.txt --verbose=1]
+        ignore line: [Linking C executable cmTC_ef4a5.app/cmTC_ef4a5]
+        ignore line: [/opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ef4a5.dir/link.txt --verbose=1]
         ignore line: [Apple clang version 17.0.0 (clang-1700.0.13.5)]
         ignore line: [Target: arm64-apple-darwin24.6.0]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
-        link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version ios 13.0.0 18.5 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_5ff08.app/cmTC_5ff08 -headerpad_max_install_names -v CMakeFiles/cmTC_5ff08.dir/CMakeCCompilerABI.c.o -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.ios.a]
+        link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version ios 13.0.0 18.5 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_ef4a5.app/cmTC_ef4a5 -headerpad_max_install_names -v CMakeFiles/cmTC_ef4a5.dir/CMakeCCompilerABI.c.o -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.ios.a]
           arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld] ==> ignore
           arg [-demangle] ==> ignore
           arg [-lto_library] ==> ignore, skip following value
@@ -1947,10 +1947,10 @@ events:
           arg [-mllvm] ==> ignore
           arg [-enable-linkonceodr-outlining] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_5ff08.app/cmTC_5ff08] ==> ignore
+          arg [cmTC_ef4a5.app/cmTC_ef4a5] ==> ignore
           arg [-headerpad_max_install_names] ==> ignore
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_5ff08.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [CMakeFiles/cmTC_ef4a5.dir/CMakeCCompilerABI.c.o] ==> ignore
           arg [-lSystem] ==> lib [System]
           arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.ios.a] ==> lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.ios.a]
         linker tool for 'C': /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld
@@ -1991,8 +1991,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-JuF3rr"
-      binary: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-JuF3rr"
+      source: "/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-rBmLlj"
+      binary: "/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-rBmLlj"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
@@ -2000,24 +2000,24 @@ events:
       CMAKE_OSX_ARCHITECTURES: "arm64"
       CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
       CMAKE_OSX_SYSROOT: "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk"
-      CMAKE_USER_MAKE_RULES_OVERRIDE: "/Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/cmake/UserOverride.cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/cmake/UserOverride.cmake"
     buildResult:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-JuF3rr'
+        Change Dir: '/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-rBmLlj'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_7e8e4/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_7e8e4.dir/build.make CMakeFiles/cmTC_7e8e4.dir/build
-        Building CXX object CMakeFiles/cmTC_7e8e4.dir/CMakeCXXCompilerABI.cpp.o
-        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++   -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -miphoneos-version-min=13.0   -v -Wl,-v -MD -MT CMakeFiles/cmTC_7e8e4.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_7e8e4.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_7e8e4.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_c0fa9/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_c0fa9.dir/build.make CMakeFiles/cmTC_c0fa9.dir/build
+        Building CXX object CMakeFiles/cmTC_c0fa9.dir/CMakeCXXCompilerABI.cpp.o
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++   -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -miphoneos-version-min=13.0   -v -Wl,-v -MD -MT CMakeFiles/cmTC_c0fa9.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_c0fa9.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_c0fa9.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
         Apple clang version 17.0.0 (clang-1700.0.13.5)
         Target: arm64-apple-darwin24.6.0
         Thread model: posix
         InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
         clang++: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
         ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"
-         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-ios13.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=18.5 -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -target-cpu apple-a7 -target-feature +zcm -target-feature +zcz -target-feature +v8a -target-feature +aes -target-feature +fp-armv8 -target-feature +neon -target-feature +perfmon -target-feature +sha2 -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-JuF3rr -target-linker-version 1167.5 -v -fcoverage-compilation-dir=/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-JuF3rr -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17 -dependency-file CMakeFiles/cmTC_7e8e4.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_7e8e4.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdeprecated-macro -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_7e8e4.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-ios13.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=18.5 -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -target-cpu apple-a7 -target-feature +zcm -target-feature +zcz -target-feature +v8a -target-feature +aes -target-feature +fp-armv8 -target-feature +neon -target-feature +perfmon -target-feature +sha2 -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-rBmLlj -target-linker-version 1167.5 -v -fcoverage-compilation-dir=/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-rBmLlj -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17 -dependency-file CMakeFiles/cmTC_c0fa9.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_c0fa9.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdeprecated-macro -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_c0fa9.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
         clang -cc1 version 17.0.0 (clang-1700.0.13.5) default target arm64-apple-darwin24.6.0
         ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/local/include"
         ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/System/Library/SubFrameworks"
@@ -2030,13 +2030,13 @@ events:
          /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include
          /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/System/Library/Frameworks (framework directory)
         End of search list.
-        Linking CXX executable cmTC_7e8e4.app/cmTC_7e8e4
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7e8e4.dir/link.txt --verbose=1
+        Linking CXX executable cmTC_c0fa9.app/cmTC_c0fa9
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c0fa9.dir/link.txt --verbose=1
         Apple clang version 17.0.0 (clang-1700.0.13.5)
         Target: arm64-apple-darwin24.6.0
         Thread model: posix
         InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
-         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version ios 13.0.0 18.5 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_7e8e4.app/cmTC_7e8e4 -headerpad_max_install_names -v CMakeFiles/cmTC_7e8e4.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.ios.a
+         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version ios 13.0.0 18.5 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_c0fa9.app/cmTC_c0fa9 -headerpad_max_install_names -v CMakeFiles/cmTC_c0fa9.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.ios.a
         @(#)PROGRAM:ld PROJECT:ld-1167.5
         BUILD 01:45:05 Apr 30 2025
         configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
@@ -2048,7 +2048,7 @@ events:
         	/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/lib/swift
         Framework search paths:
         	/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/System/Library/Frameworks
-        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -miphoneos-version-min=13.0 -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_7e8e4.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_7e8e4.app/cmTC_7e8e4
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -miphoneos-version-min=13.0 -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_c0fa9.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_c0fa9.app/cmTC_c0fa9
         
       exitCode: 0
   -
@@ -2083,19 +2083,19 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-JuF3rr']
+        ignore line: [Change Dir: '/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-rBmLlj']
         ignore line: []
-        ignore line: [Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_7e8e4/fast]
-        ignore line: [/Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_7e8e4.dir/build.make CMakeFiles/cmTC_7e8e4.dir/build]
-        ignore line: [Building CXX object CMakeFiles/cmTC_7e8e4.dir/CMakeCXXCompilerABI.cpp.o]
-        ignore line: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++   -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -miphoneos-version-min=13.0   -v -Wl -v -MD -MT CMakeFiles/cmTC_7e8e4.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_7e8e4.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_7e8e4.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_c0fa9/fast]
+        ignore line: [/Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_c0fa9.dir/build.make CMakeFiles/cmTC_c0fa9.dir/build]
+        ignore line: [Building CXX object CMakeFiles/cmTC_c0fa9.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++   -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -miphoneos-version-min=13.0   -v -Wl -v -MD -MT CMakeFiles/cmTC_c0fa9.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_c0fa9.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_c0fa9.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Apple clang version 17.0.0 (clang-1700.0.13.5)]
         ignore line: [Target: arm64-apple-darwin24.6.0]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
         ignore line: [clang++: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
         ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"]
-        ignore line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-ios13.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=18.5 -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -target-cpu apple-a7 -target-feature +zcm -target-feature +zcz -target-feature +v8a -target-feature +aes -target-feature +fp-armv8 -target-feature +neon -target-feature +perfmon -target-feature +sha2 -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-JuF3rr -target-linker-version 1167.5 -v -fcoverage-compilation-dir=/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-JuF3rr -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17 -dependency-file CMakeFiles/cmTC_7e8e4.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_7e8e4.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdeprecated-macro -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_7e8e4.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-ios13.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=18.5 -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -target-cpu apple-a7 -target-feature +zcm -target-feature +zcz -target-feature +v8a -target-feature +aes -target-feature +fp-armv8 -target-feature +neon -target-feature +perfmon -target-feature +sha2 -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-rBmLlj -target-linker-version 1167.5 -v -fcoverage-compilation-dir=/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-rBmLlj -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17 -dependency-file CMakeFiles/cmTC_c0fa9.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_c0fa9.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdeprecated-macro -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_c0fa9.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [clang -cc1 version 17.0.0 (clang-1700.0.13.5) default target arm64-apple-darwin24.6.0]
         ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/usr/local/include"]
         ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/System/Library/SubFrameworks"]
@@ -2108,13 +2108,13 @@ events:
         ignore line: [ /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
         ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/System/Library/Frameworks (framework directory)]
         ignore line: [End of search list.]
-        ignore line: [Linking CXX executable cmTC_7e8e4.app/cmTC_7e8e4]
-        ignore line: [/opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7e8e4.dir/link.txt --verbose=1]
+        ignore line: [Linking CXX executable cmTC_c0fa9.app/cmTC_c0fa9]
+        ignore line: [/opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c0fa9.dir/link.txt --verbose=1]
         ignore line: [Apple clang version 17.0.0 (clang-1700.0.13.5)]
         ignore line: [Target: arm64-apple-darwin24.6.0]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
-        link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version ios 13.0.0 18.5 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_7e8e4.app/cmTC_7e8e4 -headerpad_max_install_names -v CMakeFiles/cmTC_7e8e4.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.ios.a]
+        link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version ios 13.0.0 18.5 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_c0fa9.app/cmTC_c0fa9 -headerpad_max_install_names -v CMakeFiles/cmTC_c0fa9.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.ios.a]
           arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld] ==> ignore
           arg [-demangle] ==> ignore
           arg [-lto_library] ==> ignore, skip following value
@@ -2131,10 +2131,10 @@ events:
           arg [-mllvm] ==> ignore
           arg [-enable-linkonceodr-outlining] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_7e8e4.app/cmTC_7e8e4] ==> ignore
+          arg [cmTC_c0fa9.app/cmTC_c0fa9] ==> ignore
           arg [-headerpad_max_install_names] ==> ignore
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_7e8e4.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [CMakeFiles/cmTC_c0fa9.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
           arg [-lc++] ==> lib [c++]
           arg [-lSystem] ==> lib [System]
           arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.ios.a] ==> lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.ios.a]
@@ -2172,29 +2172,29 @@ events:
     backtrace:
       - "CMakeLists.txt:65 (try_compile)"
     directories:
-      source: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/cxx/CMakeFiles/CMakeTmp"
-      binary: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/cxx/CMakeFiles/CMakeTmp"
+      source: "/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/cxx/CMakeFiles/CMakeTmp"
+      binary: "/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/cxx/CMakeFiles/CMakeTmp"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "-std=c++11  -fPIC"
       CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_MODULE_PATH: "/Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/cmake"
+      CMAKE_MODULE_PATH: "/Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/cmake"
       CMAKE_OSX_ARCHITECTURES: "arm64"
       CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
       CMAKE_OSX_SYSROOT: "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk"
-      CMAKE_USER_MAKE_RULES_OVERRIDE: "/Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/cmake/UserOverride.cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/cmake/UserOverride.cmake"
     buildResult:
       variable: "CXX11"
       cached: true
       stdout: |
-        Change Dir: '/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/cxx/CMakeFiles/CMakeTmp'
+        Change Dir: '/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/cxx/CMakeFiles/CMakeTmp'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_bed88/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_bed88.dir/build.make CMakeFiles/cmTC_bed88.dir/build
-        Building CXX object CMakeFiles/cmTC_bed88.dir/checkcxx11.cpp.o
-        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++   -std=c++11  -fPIC -std=c++11  -fPIC -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -miphoneos-version-min=13.0 -MD -MT CMakeFiles/cmTC_bed88.dir/checkcxx11.cpp.o -MF CMakeFiles/cmTC_bed88.dir/checkcxx11.cpp.o.d -o CMakeFiles/cmTC_bed88.dir/checkcxx11.cpp.o -c /Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/cmake/checkcxx11.cpp
-        Linking CXX executable cmTC_bed88.app/cmTC_bed88
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bed88.dir/link.txt --verbose=1
-        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -std=c++11  -fPIC -std=c++11  -fPIC -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -miphoneos-version-min=13.0 -Wl,-headerpad_max_install_names CMakeFiles/cmTC_bed88.dir/checkcxx11.cpp.o -o cmTC_bed88.app/cmTC_bed88
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_1315d/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_1315d.dir/build.make CMakeFiles/cmTC_1315d.dir/build
+        Building CXX object CMakeFiles/cmTC_1315d.dir/checkcxx11.cpp.o
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++   -std=c++11  -fPIC -std=c++11  -fPIC -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -miphoneos-version-min=13.0 -MD -MT CMakeFiles/cmTC_1315d.dir/checkcxx11.cpp.o -MF CMakeFiles/cmTC_1315d.dir/checkcxx11.cpp.o.d -o CMakeFiles/cmTC_1315d.dir/checkcxx11.cpp.o -c /Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/cmake/checkcxx11.cpp
+        Linking CXX executable cmTC_1315d.app/cmTC_1315d
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1315d.dir/link.txt --verbose=1
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -std=c++11  -fPIC -std=c++11  -fPIC -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -miphoneos-version-min=13.0 -Wl,-headerpad_max_install_names CMakeFiles/cmTC_1315d.dir/checkcxx11.cpp.o -o cmTC_1315d.app/cmTC_1315d
         
       exitCode: 0
   -
@@ -2202,33 +2202,33 @@ events:
     backtrace:
       - "CMakeLists.txt:78 (try_compile)"
     directories:
-      source: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/cxx/CMakeFiles/CMakeTmp"
-      binary: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/cxx/CMakeFiles/CMakeTmp"
+      source: "/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/cxx/CMakeFiles/CMakeTmp"
+      binary: "/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/cxx/CMakeFiles/CMakeTmp"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "-std=c++11  -fPIC"
       CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_MODULE_PATH: "/Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/cmake"
+      CMAKE_MODULE_PATH: "/Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/cmake"
       CMAKE_OSX_ARCHITECTURES: "arm64"
       CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
       CMAKE_OSX_SYSROOT: "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk"
-      CMAKE_USER_MAKE_RULES_OVERRIDE: "/Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/cmake/UserOverride.cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/cmake/UserOverride.cmake"
     buildResult:
       variable: "EXCLUDE_LIBS"
       cached: true
       stdout: |
-        Change Dir: '/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/cxx/CMakeFiles/CMakeTmp'
+        Change Dir: '/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/cxx/CMakeFiles/CMakeTmp'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_3ecfb/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_3ecfb.dir/build.make CMakeFiles/cmTC_3ecfb.dir/build
-        Building CXX object CMakeFiles/cmTC_3ecfb.dir/checkcxx11.cpp.o
-        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++   -std=c++11  -fPIC -std=c++11  -fPIC -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -miphoneos-version-min=13.0 -MD -MT CMakeFiles/cmTC_3ecfb.dir/checkcxx11.cpp.o -MF CMakeFiles/cmTC_3ecfb.dir/checkcxx11.cpp.o.d -o CMakeFiles/cmTC_3ecfb.dir/checkcxx11.cpp.o -c /Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/cmake/checkcxx11.cpp
-        Linking CXX executable cmTC_3ecfb.app/cmTC_3ecfb
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3ecfb.dir/link.txt --verbose=1
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_883d8/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_883d8.dir/build.make CMakeFiles/cmTC_883d8.dir/build
+        Building CXX object CMakeFiles/cmTC_883d8.dir/checkcxx11.cpp.o
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++   -std=c++11  -fPIC -std=c++11  -fPIC -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -miphoneos-version-min=13.0 -MD -MT CMakeFiles/cmTC_883d8.dir/checkcxx11.cpp.o -MF CMakeFiles/cmTC_883d8.dir/checkcxx11.cpp.o.d -o CMakeFiles/cmTC_883d8.dir/checkcxx11.cpp.o -c /Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/cmake/checkcxx11.cpp
+        Linking CXX executable cmTC_883d8.app/cmTC_883d8
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_883d8.dir/link.txt --verbose=1
         ld: unknown options: --exclude-libs 
         clang++: error: linker command failed with exit code 1 (use -v to see invocation)
-        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -std=c++11  -fPIC -std=c++11  -fPIC -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -miphoneos-version-min=13.0 -Wl,-headerpad_max_install_names CMakeFiles/cmTC_3ecfb.dir/checkcxx11.cpp.o -o cmTC_3ecfb.app/cmTC_3ecfb  -Wl,--exclude-libs,ALL
-        make[1]: *** [cmTC_3ecfb.app/cmTC_3ecfb] Error 1
-        make: *** [cmTC_3ecfb/fast] Error 2
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -std=c++11  -fPIC -std=c++11  -fPIC -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -miphoneos-version-min=13.0 -Wl,-headerpad_max_install_names CMakeFiles/cmTC_883d8.dir/checkcxx11.cpp.o -o cmTC_883d8.app/cmTC_883d8  -Wl,--exclude-libs,ALL
+        make[1]: *** [cmTC_883d8.app/cmTC_883d8] Error 1
+        make: *** [cmTC_883d8/fast] Error 2
         
       exitCode: 2
   -
@@ -2236,29 +2236,29 @@ events:
     backtrace:
       - "CMakeLists.txt:91 (try_compile)"
     directories:
-      source: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/cxx/CMakeFiles/CMakeTmp"
-      binary: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/cxx/CMakeFiles/CMakeTmp"
+      source: "/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/cxx/CMakeFiles/CMakeTmp"
+      binary: "/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/cxx/CMakeFiles/CMakeTmp"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "-std=c++11  -fPIC"
       CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_MODULE_PATH: "/Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/cmake"
+      CMAKE_MODULE_PATH: "/Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/cmake"
       CMAKE_OSX_ARCHITECTURES: "arm64"
       CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
       CMAKE_OSX_SYSROOT: "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk"
-      CMAKE_USER_MAKE_RULES_OVERRIDE: "/Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/cmake/UserOverride.cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/cmake/UserOverride.cmake"
     buildResult:
       variable: "UNEXPORTED_SYMBOL"
       cached: true
       stdout: |
-        Change Dir: '/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/cxx/CMakeFiles/CMakeTmp'
+        Change Dir: '/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/cxx/CMakeFiles/CMakeTmp'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_ebfa4/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_ebfa4.dir/build.make CMakeFiles/cmTC_ebfa4.dir/build
-        Building CXX object CMakeFiles/cmTC_ebfa4.dir/checkcxx11.cpp.o
-        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++   -std=c++11  -fPIC -std=c++11  -fPIC -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -miphoneos-version-min=13.0 -MD -MT CMakeFiles/cmTC_ebfa4.dir/checkcxx11.cpp.o -MF CMakeFiles/cmTC_ebfa4.dir/checkcxx11.cpp.o.d -o CMakeFiles/cmTC_ebfa4.dir/checkcxx11.cpp.o -c /Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/cmake/checkcxx11.cpp
-        Linking CXX executable cmTC_ebfa4.app/cmTC_ebfa4
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ebfa4.dir/link.txt --verbose=1
-        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -std=c++11  -fPIC -std=c++11  -fPIC -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -miphoneos-version-min=13.0 -Wl,-headerpad_max_install_names CMakeFiles/cmTC_ebfa4.dir/checkcxx11.cpp.o -o cmTC_ebfa4.app/cmTC_ebfa4  -Wl,-unexported_symbol,dummy
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_46423/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_46423.dir/build.make CMakeFiles/cmTC_46423.dir/build
+        Building CXX object CMakeFiles/cmTC_46423.dir/checkcxx11.cpp.o
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++   -std=c++11  -fPIC -std=c++11  -fPIC -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -miphoneos-version-min=13.0 -MD -MT CMakeFiles/cmTC_46423.dir/checkcxx11.cpp.o -MF CMakeFiles/cmTC_46423.dir/checkcxx11.cpp.o.d -o CMakeFiles/cmTC_46423.dir/checkcxx11.cpp.o -c /Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/cmake/checkcxx11.cpp
+        Linking CXX executable cmTC_46423.app/cmTC_46423
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_46423.dir/link.txt --verbose=1
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -std=c++11  -fPIC -std=c++11  -fPIC -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -miphoneos-version-min=13.0 -Wl,-headerpad_max_install_names CMakeFiles/cmTC_46423.dir/checkcxx11.cpp.o -o cmTC_46423.app/cmTC_46423  -Wl,-unexported_symbol,dummy
         
       exitCode: 0
   -
@@ -2270,29 +2270,29 @@ events:
     checks:
       - "Looking for sys/types.h"
     directories:
-      source: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-h6FGeX"
-      binary: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-h6FGeX"
+      source: "/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-YVXsTC"
+      binary: "/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-YVXsTC"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_MODULE_PATH: "/Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/cmake"
+      CMAKE_MODULE_PATH: "/Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/cmake"
       CMAKE_OSX_ARCHITECTURES: "arm64"
       CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
       CMAKE_OSX_SYSROOT: "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk"
-      CMAKE_USER_MAKE_RULES_OVERRIDE: "/Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/cmake/UserOverride.cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/cmake/UserOverride.cmake"
     buildResult:
       variable: "HAVE_SYS_TYPES_H"
       cached: true
       stdout: |
-        Change Dir: '/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-h6FGeX'
+        Change Dir: '/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-YVXsTC'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_58133/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_58133.dir/build.make CMakeFiles/cmTC_58133.dir/build
-        Building C object CMakeFiles/cmTC_58133.dir/CheckIncludeFile.c.o
-        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang   -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -miphoneos-version-min=13.0 -MD -MT CMakeFiles/cmTC_58133.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_58133.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_58133.dir/CheckIncludeFile.c.o -c /Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-h6FGeX/CheckIncludeFile.c
-        Linking C executable cmTC_58133.app/cmTC_58133
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_58133.dir/link.txt --verbose=1
-        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -miphoneos-version-min=13.0 -Wl,-headerpad_max_install_names CMakeFiles/cmTC_58133.dir/CheckIncludeFile.c.o -o cmTC_58133.app/cmTC_58133
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_3eb91/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_3eb91.dir/build.make CMakeFiles/cmTC_3eb91.dir/build
+        Building C object CMakeFiles/cmTC_3eb91.dir/CheckIncludeFile.c.o
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang   -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -miphoneos-version-min=13.0 -MD -MT CMakeFiles/cmTC_3eb91.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_3eb91.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_3eb91.dir/CheckIncludeFile.c.o -c /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-YVXsTC/CheckIncludeFile.c
+        Linking C executable cmTC_3eb91.app/cmTC_3eb91
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3eb91.dir/link.txt --verbose=1
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -miphoneos-version-min=13.0 -Wl,-headerpad_max_install_names CMakeFiles/cmTC_3eb91.dir/CheckIncludeFile.c.o -o cmTC_3eb91.app/cmTC_3eb91
         
       exitCode: 0
   -
@@ -2304,29 +2304,29 @@ events:
     checks:
       - "Looking for stdint.h"
     directories:
-      source: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-HPBXiR"
-      binary: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-HPBXiR"
+      source: "/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-rv0ExD"
+      binary: "/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-rv0ExD"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_MODULE_PATH: "/Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/cmake"
+      CMAKE_MODULE_PATH: "/Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/cmake"
       CMAKE_OSX_ARCHITECTURES: "arm64"
       CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
       CMAKE_OSX_SYSROOT: "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk"
-      CMAKE_USER_MAKE_RULES_OVERRIDE: "/Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/cmake/UserOverride.cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/cmake/UserOverride.cmake"
     buildResult:
       variable: "HAVE_STDINT_H"
       cached: true
       stdout: |
-        Change Dir: '/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-HPBXiR'
+        Change Dir: '/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-rv0ExD'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_6d417/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_6d417.dir/build.make CMakeFiles/cmTC_6d417.dir/build
-        Building C object CMakeFiles/cmTC_6d417.dir/CheckIncludeFile.c.o
-        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang   -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -miphoneos-version-min=13.0 -MD -MT CMakeFiles/cmTC_6d417.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_6d417.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_6d417.dir/CheckIncludeFile.c.o -c /Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-HPBXiR/CheckIncludeFile.c
-        Linking C executable cmTC_6d417.app/cmTC_6d417
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6d417.dir/link.txt --verbose=1
-        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -miphoneos-version-min=13.0 -Wl,-headerpad_max_install_names CMakeFiles/cmTC_6d417.dir/CheckIncludeFile.c.o -o cmTC_6d417.app/cmTC_6d417
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_50691/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_50691.dir/build.make CMakeFiles/cmTC_50691.dir/build
+        Building C object CMakeFiles/cmTC_50691.dir/CheckIncludeFile.c.o
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang   -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -miphoneos-version-min=13.0 -MD -MT CMakeFiles/cmTC_50691.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_50691.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_50691.dir/CheckIncludeFile.c.o -c /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-rv0ExD/CheckIncludeFile.c
+        Linking C executable cmTC_50691.app/cmTC_50691
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_50691.dir/link.txt --verbose=1
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -miphoneos-version-min=13.0 -Wl,-headerpad_max_install_names CMakeFiles/cmTC_50691.dir/CheckIncludeFile.c.o -o cmTC_50691.app/cmTC_50691
         
       exitCode: 0
   -
@@ -2338,29 +2338,29 @@ events:
     checks:
       - "Looking for stddef.h"
     directories:
-      source: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-QWjuTn"
-      binary: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-QWjuTn"
+      source: "/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-TcSjPY"
+      binary: "/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-TcSjPY"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_MODULE_PATH: "/Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/cmake"
+      CMAKE_MODULE_PATH: "/Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/cmake"
       CMAKE_OSX_ARCHITECTURES: "arm64"
       CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
       CMAKE_OSX_SYSROOT: "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk"
-      CMAKE_USER_MAKE_RULES_OVERRIDE: "/Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/cmake/UserOverride.cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/cmake/UserOverride.cmake"
     buildResult:
       variable: "HAVE_STDDEF_H"
       cached: true
       stdout: |
-        Change Dir: '/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-QWjuTn'
+        Change Dir: '/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-TcSjPY'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_d31fc/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_d31fc.dir/build.make CMakeFiles/cmTC_d31fc.dir/build
-        Building C object CMakeFiles/cmTC_d31fc.dir/CheckIncludeFile.c.o
-        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang   -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -miphoneos-version-min=13.0 -MD -MT CMakeFiles/cmTC_d31fc.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_d31fc.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_d31fc.dir/CheckIncludeFile.c.o -c /Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-QWjuTn/CheckIncludeFile.c
-        Linking C executable cmTC_d31fc.app/cmTC_d31fc
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d31fc.dir/link.txt --verbose=1
-        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -miphoneos-version-min=13.0 -Wl,-headerpad_max_install_names CMakeFiles/cmTC_d31fc.dir/CheckIncludeFile.c.o -o cmTC_d31fc.app/cmTC_d31fc
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_15cc8/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_15cc8.dir/build.make CMakeFiles/cmTC_15cc8.dir/build
+        Building C object CMakeFiles/cmTC_15cc8.dir/CheckIncludeFile.c.o
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang   -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -miphoneos-version-min=13.0 -MD -MT CMakeFiles/cmTC_15cc8.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_15cc8.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_15cc8.dir/CheckIncludeFile.c.o -c /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-TcSjPY/CheckIncludeFile.c
+        Linking C executable cmTC_15cc8.app/cmTC_15cc8
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_15cc8.dir/link.txt --verbose=1
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -miphoneos-version-min=13.0 -Wl,-headerpad_max_install_names CMakeFiles/cmTC_15cc8.dir/CheckIncludeFile.c.o -o cmTC_15cc8.app/cmTC_15cc8
         
       exitCode: 0
   -
@@ -2372,29 +2372,29 @@ events:
     checks:
       - "Check size of long double"
     directories:
-      source: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-E8s086"
-      binary: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-E8s086"
+      source: "/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-WNo3kZ"
+      binary: "/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-WNo3kZ"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_MODULE_PATH: "/Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/cmake"
+      CMAKE_MODULE_PATH: "/Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/cmake"
       CMAKE_OSX_ARCHITECTURES: "arm64"
       CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
       CMAKE_OSX_SYSROOT: "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk"
-      CMAKE_USER_MAKE_RULES_OVERRIDE: "/Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/cmake/UserOverride.cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/cmake/UserOverride.cmake"
     buildResult:
       variable: "HAVE_SYMENGINE_SIZEOF_LONG_DOUBLE"
       cached: true
       stdout: |
-        Change Dir: '/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-E8s086'
+        Change Dir: '/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-WNo3kZ'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_33e31/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_33e31.dir/build.make CMakeFiles/cmTC_33e31.dir/build
-        Building C object CMakeFiles/cmTC_33e31.dir/SYMENGINE_SIZEOF_LONG_DOUBLE.c.o
-        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang   -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -miphoneos-version-min=13.0 -MD -MT CMakeFiles/cmTC_33e31.dir/SYMENGINE_SIZEOF_LONG_DOUBLE.c.o -MF CMakeFiles/cmTC_33e31.dir/SYMENGINE_SIZEOF_LONG_DOUBLE.c.o.d -o CMakeFiles/cmTC_33e31.dir/SYMENGINE_SIZEOF_LONG_DOUBLE.c.o -c /Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-E8s086/SYMENGINE_SIZEOF_LONG_DOUBLE.c
-        Linking C executable cmTC_33e31.app/cmTC_33e31
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_33e31.dir/link.txt --verbose=1
-        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -miphoneos-version-min=13.0 -Wl,-headerpad_max_install_names CMakeFiles/cmTC_33e31.dir/SYMENGINE_SIZEOF_LONG_DOUBLE.c.o -o cmTC_33e31.app/cmTC_33e31
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_4a542/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_4a542.dir/build.make CMakeFiles/cmTC_4a542.dir/build
+        Building C object CMakeFiles/cmTC_4a542.dir/SYMENGINE_SIZEOF_LONG_DOUBLE.c.o
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang   -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -miphoneos-version-min=13.0 -MD -MT CMakeFiles/cmTC_4a542.dir/SYMENGINE_SIZEOF_LONG_DOUBLE.c.o -MF CMakeFiles/cmTC_4a542.dir/SYMENGINE_SIZEOF_LONG_DOUBLE.c.o.d -o CMakeFiles/cmTC_4a542.dir/SYMENGINE_SIZEOF_LONG_DOUBLE.c.o -c /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-WNo3kZ/SYMENGINE_SIZEOF_LONG_DOUBLE.c
+        Linking C executable cmTC_4a542.app/cmTC_4a542
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4a542.dir/link.txt --verbose=1
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -miphoneos-version-min=13.0 -Wl,-headerpad_max_install_names CMakeFiles/cmTC_4a542.dir/SYMENGINE_SIZEOF_LONG_DOUBLE.c.o -o cmTC_4a542.app/cmTC_4a542
         
       exitCode: 0
   -
@@ -2402,29 +2402,29 @@ events:
     backtrace:
       - "CMakeLists.txt:140 (try_compile)"
     directories:
-      source: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/cxx/CMakeFiles/CMakeTmp"
-      binary: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/cxx/CMakeFiles/CMakeTmp"
+      source: "/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/cxx/CMakeFiles/CMakeTmp"
+      binary: "/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/cxx/CMakeFiles/CMakeTmp"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "-std=c++11  -fPIC"
       CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_MODULE_PATH: "/Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/cmake"
+      CMAKE_MODULE_PATH: "/Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/cmake"
       CMAKE_OSX_ARCHITECTURES: "arm64"
       CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
       CMAKE_OSX_SYSROOT: "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk"
-      CMAKE_USER_MAKE_RULES_OVERRIDE: "/Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/cmake/UserOverride.cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/cmake/UserOverride.cmake"
     buildResult:
       variable: "HAVE_SYMENGINE_STD_TO_STRING"
       cached: true
       stdout: |
-        Change Dir: '/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/cxx/CMakeFiles/CMakeTmp'
+        Change Dir: '/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/cxx/CMakeFiles/CMakeTmp'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_5ffd2/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_5ffd2.dir/build.make CMakeFiles/cmTC_5ffd2.dir/build
-        Building CXX object CMakeFiles/cmTC_5ffd2.dir/checkstdtostring.cpp.o
-        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++   -std=c++11  -fPIC -std=c++11  -fPIC -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -miphoneos-version-min=13.0 -MD -MT CMakeFiles/cmTC_5ffd2.dir/checkstdtostring.cpp.o -MF CMakeFiles/cmTC_5ffd2.dir/checkstdtostring.cpp.o.d -o CMakeFiles/cmTC_5ffd2.dir/checkstdtostring.cpp.o -c /Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/cmake/checkstdtostring.cpp
-        Linking CXX executable cmTC_5ffd2.app/cmTC_5ffd2
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5ffd2.dir/link.txt --verbose=1
-        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -std=c++11  -fPIC -std=c++11  -fPIC -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -miphoneos-version-min=13.0 -Wl,-headerpad_max_install_names CMakeFiles/cmTC_5ffd2.dir/checkstdtostring.cpp.o -o cmTC_5ffd2.app/cmTC_5ffd2
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_8d136/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_8d136.dir/build.make CMakeFiles/cmTC_8d136.dir/build
+        Building CXX object CMakeFiles/cmTC_8d136.dir/checkstdtostring.cpp.o
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++   -std=c++11  -fPIC -std=c++11  -fPIC -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -miphoneos-version-min=13.0 -MD -MT CMakeFiles/cmTC_8d136.dir/checkstdtostring.cpp.o -MF CMakeFiles/cmTC_8d136.dir/checkstdtostring.cpp.o.d -o CMakeFiles/cmTC_8d136.dir/checkstdtostring.cpp.o -c /Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/cmake/checkstdtostring.cpp
+        Linking CXX executable cmTC_8d136.app/cmTC_8d136
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8d136.dir/link.txt --verbose=1
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -std=c++11  -fPIC -std=c++11  -fPIC -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -miphoneos-version-min=13.0 -Wl,-headerpad_max_install_names CMakeFiles/cmTC_8d136.dir/checkstdtostring.cpp.o -o cmTC_8d136.app/cmTC_8d136
         
       exitCode: 0
   -
@@ -2432,36 +2432,36 @@ events:
     backtrace:
       - "CMakeLists.txt:144 (try_compile)"
     directories:
-      source: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/cxx/CMakeFiles/CMakeTmp"
-      binary: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/cxx/CMakeFiles/CMakeTmp"
+      source: "/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/cxx/CMakeFiles/CMakeTmp"
+      binary: "/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/cxx/CMakeFiles/CMakeTmp"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "-std=c++11  -fPIC"
       CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_MODULE_PATH: "/Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/cmake"
+      CMAKE_MODULE_PATH: "/Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/cmake"
       CMAKE_OSX_ARCHITECTURES: "arm64"
       CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
       CMAKE_OSX_SYSROOT: "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk"
-      CMAKE_USER_MAKE_RULES_OVERRIDE: "/Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/cmake/UserOverride.cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/cmake/UserOverride.cmake"
     buildResult:
       variable: "CHECK_CLANG"
       cached: true
       stdout: |
-        Change Dir: '/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/cxx/CMakeFiles/CMakeTmp'
+        Change Dir: '/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/cxx/CMakeFiles/CMakeTmp'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_23238/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_23238.dir/build.make CMakeFiles/cmTC_23238.dir/build
-        Building CXX object CMakeFiles/cmTC_23238.dir/checkclang.cpp.o
-        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++   -std=c++11  -fPIC  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -miphoneos-version-min=13.0 -MD -MT CMakeFiles/cmTC_23238.dir/checkclang.cpp.o -MF CMakeFiles/cmTC_23238.dir/checkclang.cpp.o.d -o CMakeFiles/cmTC_23238.dir/checkclang.cpp.o -c /Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/cmake/checkclang.cpp
-        Linking CXX executable cmTC_23238.app/cmTC_23238
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_23238.dir/link.txt --verbose=1
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_d3b37/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_d3b37.dir/build.make CMakeFiles/cmTC_d3b37.dir/build
+        Building CXX object CMakeFiles/cmTC_d3b37.dir/checkclang.cpp.o
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++   -std=c++11  -fPIC  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -miphoneos-version-min=13.0 -MD -MT CMakeFiles/cmTC_d3b37.dir/checkclang.cpp.o -MF CMakeFiles/cmTC_d3b37.dir/checkclang.cpp.o.d -o CMakeFiles/cmTC_d3b37.dir/checkclang.cpp.o -c /Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/cmake/checkclang.cpp
+        Linking CXX executable cmTC_d3b37.app/cmTC_d3b37
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d3b37.dir/link.txt --verbose=1
         Undefined symbols for architecture arm64:
           "_main", referenced from:
               <initial-undefines>
         ld: symbol(s) not found for architecture arm64
         clang++: error: linker command failed with exit code 1 (use -v to see invocation)
-        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -std=c++11  -fPIC  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -miphoneos-version-min=13.0 -Wl,-headerpad_max_install_names CMakeFiles/cmTC_23238.dir/checkclang.cpp.o -o cmTC_23238.app/cmTC_23238
-        make[1]: *** [cmTC_23238.app/cmTC_23238] Error 1
-        make: *** [cmTC_23238/fast] Error 2
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -std=c++11  -fPIC  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -miphoneos-version-min=13.0 -Wl,-headerpad_max_install_names CMakeFiles/cmTC_d3b37.dir/checkclang.cpp.o -o cmTC_d3b37.app/cmTC_d3b37
+        make[1]: *** [cmTC_d3b37.app/cmTC_d3b37] Error 1
+        make: *** [cmTC_d3b37/fast] Error 2
         
       exitCode: 2
   -
@@ -2476,29 +2476,29 @@ events:
     checks:
       - "Performing Test COMPILER_HAS_HIDDEN_VISIBILITY"
     directories:
-      source: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-Q21Bnt"
-      binary: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-Q21Bnt"
+      source: "/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-5VUULV"
+      binary: "/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-5VUULV"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "-std=c++11  -fPIC -D__extern_always_inline=inline"
       CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_MODULE_PATH: "/Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/cmake"
+      CMAKE_MODULE_PATH: "/Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/cmake"
       CMAKE_OSX_ARCHITECTURES: "arm64"
       CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
       CMAKE_OSX_SYSROOT: "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk"
-      CMAKE_USER_MAKE_RULES_OVERRIDE: "/Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/cmake/UserOverride.cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/cmake/UserOverride.cmake"
     buildResult:
       variable: "COMPILER_HAS_HIDDEN_VISIBILITY"
       cached: true
       stdout: |
-        Change Dir: '/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-Q21Bnt'
+        Change Dir: '/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-5VUULV'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_c3f39/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_c3f39.dir/build.make CMakeFiles/cmTC_c3f39.dir/build
-        Building CXX object CMakeFiles/cmTC_c3f39.dir/src.cxx.o
-        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -DCOMPILER_HAS_HIDDEN_VISIBILITY  -std=c++11  -fPIC -D__extern_always_inline=inline  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -miphoneos-version-min=13.0   -fvisibility=hidden -MD -MT CMakeFiles/cmTC_c3f39.dir/src.cxx.o -MF CMakeFiles/cmTC_c3f39.dir/src.cxx.o.d -o CMakeFiles/cmTC_c3f39.dir/src.cxx.o -c /Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-Q21Bnt/src.cxx
-        Linking CXX executable cmTC_c3f39.app/cmTC_c3f39
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c3f39.dir/link.txt --verbose=1
-        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -std=c++11  -fPIC -D__extern_always_inline=inline  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -miphoneos-version-min=13.0 -Wl,-headerpad_max_install_names CMakeFiles/cmTC_c3f39.dir/src.cxx.o -o cmTC_c3f39.app/cmTC_c3f39
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_04056/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_04056.dir/build.make CMakeFiles/cmTC_04056.dir/build
+        Building CXX object CMakeFiles/cmTC_04056.dir/src.cxx.o
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -DCOMPILER_HAS_HIDDEN_VISIBILITY  -std=c++11  -fPIC -D__extern_always_inline=inline  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -miphoneos-version-min=13.0   -fvisibility=hidden -MD -MT CMakeFiles/cmTC_04056.dir/src.cxx.o -MF CMakeFiles/cmTC_04056.dir/src.cxx.o.d -o CMakeFiles/cmTC_04056.dir/src.cxx.o -c /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-5VUULV/src.cxx
+        Linking CXX executable cmTC_04056.app/cmTC_04056
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_04056.dir/link.txt --verbose=1
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -std=c++11  -fPIC -D__extern_always_inline=inline  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -miphoneos-version-min=13.0 -Wl,-headerpad_max_install_names CMakeFiles/cmTC_04056.dir/src.cxx.o -o cmTC_04056.app/cmTC_04056
         
       exitCode: 0
   -
@@ -2513,29 +2513,29 @@ events:
     checks:
       - "Performing Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY"
     directories:
-      source: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-DLiGZz"
-      binary: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-DLiGZz"
+      source: "/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-FOHiha"
+      binary: "/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-FOHiha"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "-std=c++11  -fPIC -D__extern_always_inline=inline"
       CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_MODULE_PATH: "/Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/cmake"
+      CMAKE_MODULE_PATH: "/Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/cmake"
       CMAKE_OSX_ARCHITECTURES: "arm64"
       CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
       CMAKE_OSX_SYSROOT: "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk"
-      CMAKE_USER_MAKE_RULES_OVERRIDE: "/Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/cmake/UserOverride.cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/cmake/UserOverride.cmake"
     buildResult:
       variable: "COMPILER_HAS_HIDDEN_INLINE_VISIBILITY"
       cached: true
       stdout: |
-        Change Dir: '/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-DLiGZz'
+        Change Dir: '/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-FOHiha'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_3b1e1/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_3b1e1.dir/build.make CMakeFiles/cmTC_3b1e1.dir/build
-        Building CXX object CMakeFiles/cmTC_3b1e1.dir/src.cxx.o
-        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -DCOMPILER_HAS_HIDDEN_INLINE_VISIBILITY  -std=c++11  -fPIC -D__extern_always_inline=inline  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -miphoneos-version-min=13.0   -fvisibility-inlines-hidden -MD -MT CMakeFiles/cmTC_3b1e1.dir/src.cxx.o -MF CMakeFiles/cmTC_3b1e1.dir/src.cxx.o.d -o CMakeFiles/cmTC_3b1e1.dir/src.cxx.o -c /Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-DLiGZz/src.cxx
-        Linking CXX executable cmTC_3b1e1.app/cmTC_3b1e1
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3b1e1.dir/link.txt --verbose=1
-        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -std=c++11  -fPIC -D__extern_always_inline=inline  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -miphoneos-version-min=13.0 -Wl,-headerpad_max_install_names CMakeFiles/cmTC_3b1e1.dir/src.cxx.o -o cmTC_3b1e1.app/cmTC_3b1e1
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_d587c/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_d587c.dir/build.make CMakeFiles/cmTC_d587c.dir/build
+        Building CXX object CMakeFiles/cmTC_d587c.dir/src.cxx.o
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -DCOMPILER_HAS_HIDDEN_INLINE_VISIBILITY  -std=c++11  -fPIC -D__extern_always_inline=inline  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -miphoneos-version-min=13.0   -fvisibility-inlines-hidden -MD -MT CMakeFiles/cmTC_d587c.dir/src.cxx.o -MF CMakeFiles/cmTC_d587c.dir/src.cxx.o.d -o CMakeFiles/cmTC_d587c.dir/src.cxx.o -c /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-FOHiha/src.cxx
+        Linking CXX executable cmTC_d587c.app/cmTC_d587c
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d587c.dir/link.txt --verbose=1
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -std=c++11  -fPIC -D__extern_always_inline=inline  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -miphoneos-version-min=13.0 -Wl,-headerpad_max_install_names CMakeFiles/cmTC_d587c.dir/src.cxx.o -o cmTC_d587c.app/cmTC_d587c
         
       exitCode: 0
   -
@@ -2550,36 +2550,36 @@ events:
     checks:
       - "Performing Test COMPILER_HAS_DEPRECATED_ATTR"
     directories:
-      source: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-CHW5On"
-      binary: "/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-CHW5On"
+      source: "/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-2EDPSq"
+      binary: "/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-2EDPSq"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "-std=c++11  -fPIC -D__extern_always_inline=inline"
       CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_MODULE_PATH: "/Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/cmake"
+      CMAKE_MODULE_PATH: "/Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/cmake"
       CMAKE_OSX_ARCHITECTURES: "arm64"
       CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
       CMAKE_OSX_SYSROOT: "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk"
-      CMAKE_USER_MAKE_RULES_OVERRIDE: "/Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/cmake/UserOverride.cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "/Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/cmake/UserOverride.cmake"
     buildResult:
       variable: "COMPILER_HAS_DEPRECATED_ATTR"
       cached: true
       stdout: |
-        Change Dir: '/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-CHW5On'
+        Change Dir: '/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-2EDPSq'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_ee569/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_ee569.dir/build.make CMakeFiles/cmTC_ee569.dir/build
-        Building CXX object CMakeFiles/cmTC_ee569.dir/src.cxx.o
-        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -DCOMPILER_HAS_DEPRECATED_ATTR  -std=c++11  -fPIC -D__extern_always_inline=inline  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -miphoneos-version-min=13.0 -MD -MT CMakeFiles/cmTC_ee569.dir/src.cxx.o -MF CMakeFiles/cmTC_ee569.dir/src.cxx.o.d -o CMakeFiles/cmTC_ee569.dir/src.cxx.o -c /Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-CHW5On/src.cxx
-        /Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-CHW5On/src.cxx:2:25: warning: 'somefunc' is deprecated [-Wdeprecated-declarations]
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_60b00/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_60b00.dir/build.make CMakeFiles/cmTC_60b00.dir/build
+        Building CXX object CMakeFiles/cmTC_60b00.dir/src.cxx.o
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -DCOMPILER_HAS_DEPRECATED_ATTR  -std=c++11  -fPIC -D__extern_always_inline=inline  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -miphoneos-version-min=13.0 -MD -MT CMakeFiles/cmTC_60b00.dir/src.cxx.o -MF CMakeFiles/cmTC_60b00.dir/src.cxx.o.d -o CMakeFiles/cmTC_60b00.dir/src.cxx.o -c /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-2EDPSq/src.cxx
+        /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-2EDPSq/src.cxx:2:25: warning: 'somefunc' is deprecated [-Wdeprecated-declarations]
             2 |     int main() { return somefunc();}
               |                         ^
-        /Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-CHW5On/src.cxx:1:16: note: 'somefunc' has been explicitly marked deprecated here
+        /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/CMakeFiles/CMakeScratch/TryCompile-2EDPSq/src.cxx:1:16: note: 'somefunc' has been explicitly marked deprecated here
             1 | __attribute__((__deprecated__)) int somefunc() { return 0; }
               |                ^
         1 warning generated.
-        Linking CXX executable cmTC_ee569.app/cmTC_ee569
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ee569.dir/link.txt --verbose=1
-        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -std=c++11  -fPIC -D__extern_always_inline=inline  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -miphoneos-version-min=13.0 -Wl,-headerpad_max_install_names CMakeFiles/cmTC_ee569.dir/src.cxx.o -o cmTC_ee569.app/cmTC_ee569
+        Linking CXX executable cmTC_60b00.app/cmTC_60b00
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_60b00.dir/link.txt --verbose=1
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -std=c++11  -fPIC -D__extern_always_inline=inline  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -miphoneos-version-min=13.0 -Wl,-headerpad_max_install_names CMakeFiles/cmTC_60b00.dir/src.cxx.o -o cmTC_60b00.app/cmTC_60b00
         
       exitCode: 0
 ...

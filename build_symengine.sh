@@ -1,7 +1,7 @@
 #!/bin/bash
 ############################################################################
 #
-# build_symengine.sh (Fixed - creates wrapper files per build)
+# build_symengine.sh (SINGLE COMPILATION POINT - includes Flutter wrapper)
 #
 ############################################################################
 set -e
@@ -14,6 +14,9 @@ readonly HEADERDIR_FINAL="$BUILDDIR/include"
 readonly LIBNAME="symengine"
 readonly VERSION_SYMENGINE="0.11.2"
 readonly SYMENGINE_SOURCE="$SCRIPTDIR/symengine-$VERSION_SYMENGINE"
+
+# Flutter wrapper source directory
+readonly FLUTTER_WRAPPER_SRC="$SCRIPTDIR/src"
 
 # Dependency paths
 readonly GMP_BUILDDIR="$SCRIPTDIR/build"
@@ -54,6 +57,17 @@ checkDependencies() {
     logMsg "✅ All dependency directories found."
 }
 
+checkFlutterWrapperSource() {
+    logMsg "Checking for Flutter wrapper source files..."
+    if [ ! -f "$FLUTTER_WRAPPER_SRC/flutter_symengine_wrapper.h" ]; then
+        errorExit "Flutter wrapper header not found: $FLUTTER_WRAPPER_SRC/flutter_symengine_wrapper.h"
+    fi
+    if [ ! -f "$FLUTTER_WRAPPER_SRC/flutter_symengine_wrapper.c" ]; then
+        errorExit "Flutter wrapper source not found: $FLUTTER_WRAPPER_SRC/flutter_symengine_wrapper.c"
+    fi
+    logMsg "✅ Flutter wrapper source files found."
+}
+
 downloadSymEngine() {
     if [ -d "$SYMENGINE_SOURCE" ]; then return; fi
     logMsg "Downloading SymEngine v$VERSION_SYMENGINE..."
@@ -65,139 +79,16 @@ downloadSymEngine() {
     if [ ! -d "$SYMENGINE_SOURCE" ]; then errorExit "Failed to extract SymEngine source"; fi
 }
 
-# Create wrapper source files in a specific directory
-createCWrapperInDir() {
+# Copy Flutter wrapper source files to build directory
+copyFlutterWrapperToDir() {
     local target_dir="$1"
     mkdir -p "$target_dir"
     
-    # Create the C header file (ONLY C, no C++)
-    cat > "$target_dir/symengine_c_wrapper.h" << 'EOF'
-#ifndef SYMENGINE_C_WRAPPER_H
-#define SYMENGINE_C_WRAPPER_H
-
-#ifdef __cplusplus
-extern "C" {
-#endif
-
-char* symengine_evaluate(const char* expression);
-char* symengine_solve(const char* expression, const char* symbol);
-char* symengine_factor(const char* expression);
-char* symengine_expand(const char* expression);
-void symengine_free_string(char* str);
-
-#ifdef __cplusplus
-}
-#endif
-
-#endif
-EOF
-
-    # Create the C++ implementation file
-    cat > "$target_dir/symengine_c_wrapper.cpp" << 'EOF'
-#include "symengine_c_wrapper.h"
-#include <string>
-#include <iostream>
-#include <sstream>
-#include <cstring>
-#include <vector>
-#include <utility>
-
-#include <symengine/basic.h>
-#include <symengine/symbol.h>
-#include <symengine/parser.h>
-#include <symengine/eval_double.h>
-#include <symengine/solve.h>
-#include <symengine/sets.h>
-#include <symengine/visitor.h>
-
-using namespace SymEngine;
-
-static char* string_to_char_ptr(const std::string& s) {
-    return strdup(s.c_str());
-}
-
-extern "C" {
-    char* symengine_evaluate(const char* input_expr) {
-        try {
-            RCP<const Basic> expr = parse(std::string(input_expr));
-            double result = eval_double(*expr);
-            std::ostringstream oss;
-            oss << result;
-            std::string result_str = oss.str();
-            if (result_str.find('.') != std::string::npos) {
-                result_str.erase(result_str.find_last_not_of('0') + 1, std::string::npos);
-                if (!result_str.empty() && result_str.back() == '.') {
-                    result_str.pop_back();
-                }
-            }
-            return string_to_char_ptr(result_str);
-        } catch (const std::exception& e) {
-            return string_to_char_ptr("Error");
-        }
-    }
-
-    char* symengine_solve(const char* input_expr, const char* symbol_name) {
-        try {
-            RCP<const Basic> expr = parse(std::string(input_expr));
-            RCP<const Symbol> sym = symbol(std::string(symbol_name));
-            RCP<const Set> solution_set = solve_poly(expr, sym);
-            
-            if (is_a<FiniteSet>(*solution_set)) {
-                auto container = rcp_static_cast<const FiniteSet>(solution_set)->get_container();
-                if (container.empty()) {
-                    return string_to_char_ptr("No solutions found");
-                }
-                
-                std::ostringstream oss;
-                bool first = true;
-                for (const auto& sol : container) {
-                    if (!first) oss << ", ";
-                    try {
-                        double val = eval_double(*sol);
-                        oss << val;
-                    } catch (const std::exception&) {
-                        oss << sol->__str__();
-                    }
-                    first = false;
-                }
-                return string_to_char_ptr(oss.str());
-            } else {
-                return string_to_char_ptr(rcp_static_cast<const Basic>(solution_set)->__str__());
-            }
-        } catch (const std::exception&) {
-            return string_to_char_ptr("Solve error");
-        }
-    }
-
-    char* symengine_factor(const char* input_expr) {
-        try {
-            RCP<const Basic> expr = parse(std::string(input_expr));
-            RCP<const Basic> result = expand(expr);
-            return string_to_char_ptr(result->__str__());
-        } catch (const std::exception&) {
-            return string_to_char_ptr("Factor Error");
-        }
-    }
-
-    char* symengine_expand(const char* input_expr) {
-        try {
-            RCP<const Basic> expr = parse(std::string(input_expr));
-            RCP<const Basic> expanded_expr = expand(expr);
-            return string_to_char_ptr(expanded_expr->__str__());
-        } catch (const std::exception&) {
-            return string_to_char_ptr("Expand Error");
-        }
-    }
-
-    void symengine_free_string(char* str) {
-        if (str != nullptr) {
-            free(str);
-        }
-    }
-}
-EOF
-
-    logMsg "✅ Created C wrapper source files in $target_dir"
+    logMsg "Copying Flutter wrapper source files to $target_dir"
+    cp "$FLUTTER_WRAPPER_SRC/flutter_symengine_wrapper.h" "$target_dir/"
+    cp "$FLUTTER_WRAPPER_SRC/flutter_symengine_wrapper.c" "$target_dir/"
+    
+    logMsg "✅ Copied Flutter wrapper source files to $target_dir"
 }
 
 configureAndMake() {
@@ -206,7 +97,7 @@ configureAndMake() {
     local build_dir="$BUILDDIR/$platform-$arch"
 
     logMsg "================================================================="
-    logMsg "Configuring SymEngine + C Wrapper for PLATFORM: $platform, ARCH: $arch"
+    logMsg "Configuring SymEngine + Flutter Wrapper for PLATFORM: $platform, ARCH: $arch"
     logMsg "================================================================="
 
     local sdkpath
@@ -217,8 +108,8 @@ configureAndMake() {
     mkdir -p "$build_dir"
     cd "$build_dir"
 
-    # Create wrapper source files in THIS build directory
-    createCWrapperInDir "$build_dir"
+    # Copy Flutter wrapper source files to this build directory
+    copyFlutterWrapperToDir "$build_dir"
 
     local temp_lib_dir="$build_dir/temp-deps"
     mkdir -p "$temp_lib_dir"
@@ -261,34 +152,34 @@ configureAndMake() {
     logMsg "Building SymEngine for $platform $arch..."
     make -j"$(sysctl -n hw.ncpu)"
 
-    # Now compile our C wrapper against the built SymEngine
-    logMsg "Building C wrapper against SymEngine..."
-    local target_cxx
-    target_cxx=$(xcrun --sdk "$platform" -f clang++)
+    # Now compile our Flutter wrapper against the built SymEngine
+    logMsg "Building Flutter wrapper against SymEngine..."
+    local target_cc
+    target_cc=$(xcrun --sdk "$platform" -f clang)
     
-    local target_cxxflags
+    local target_cflags
     if [[ "$platform" == "iphoneos" ]]; then
-        target_cxxflags="-arch $arch -std=c++14 -stdlib=libc++ -isysroot $sdkpath -miphoneos-version-min=$IOS_MIN_VERSION"
+        target_cflags="-arch $arch -isysroot $sdkpath -miphoneos-version-min=$IOS_MIN_VERSION"
     elif [[ "$platform" == "iphonesimulator" ]]; then
-        target_cxxflags="-arch $arch -std=c++14 -stdlib=libc++ -isysroot $sdkpath -mios-simulator-version-min=$IOS_MIN_VERSION"
+        target_cflags="-arch $arch -isysroot $sdkpath -mios-simulator-version-min=$IOS_MIN_VERSION"
     else # macosx
-        target_cxxflags="-arch $arch -std=c++14 -stdlib=libc++ -isysroot $sdkpath -mmacosx-version-min=$MACOS_MIN_VERSION"
+        target_cflags="-arch $arch -isysroot $sdkpath -mmacosx-version-min=$MACOS_MIN_VERSION"
     fi
     
     # Add include paths for SymEngine and all dependencies
-    target_cxxflags="$target_cxxflags -I$SYMENGINE_SOURCE -I$build_dir"
-    target_cxxflags="$target_cxxflags -I$GMP_BUILDDIR/include"
-    target_cxxflags="$target_cxxflags -I$MPFR_BUILDDIR/include"  
-    target_cxxflags="$target_cxxflags -I$MPC_BUILDDIR/include"
-    target_cxxflags="$target_cxxflags -I$FLINT_BUILDDIR/include"
+    target_cflags="$target_cflags -I$SYMENGINE_SOURCE -I$build_dir"
+    target_cflags="$target_cflags -I$GMP_BUILDDIR/include"
+    target_cflags="$target_cflags -I$MPFR_BUILDDIR/include"  
+    target_cflags="$target_cflags -I$MPC_BUILDDIR/include"
+    target_cflags="$target_cflags -I$FLINT_BUILDDIR/include"
     
     # Verify files exist before compiling
-    if [ ! -f "symengine_c_wrapper.cpp" ]; then
-        errorExit "Wrapper source file not found in $build_dir"
+    if [ ! -f "flutter_symengine_wrapper.c" ]; then
+        errorExit "Flutter wrapper source file not found in $build_dir"
     fi
     
-    # Compile wrapper (using relative path since we're in the build directory)
-    "$target_cxx" $target_cxxflags -c "symengine_c_wrapper.cpp" -o "symengine_c_wrapper.o"
+    # Compile Flutter wrapper
+    "$target_cc" $target_cflags -c "flutter_symengine_wrapper.c" -o "flutter_symengine_wrapper.o"
     
     # Find the built SymEngine library
     local found_lib
@@ -297,70 +188,67 @@ configureAndMake() {
         errorExit "Could not find built SymEngine library (lib$LIBNAME.a) in '$build_dir'."
     fi
 
-    logMsg "Creating combined library with C wrapper..."
-    # Create a combined library that includes both SymEngine and our wrapper
+    logMsg "Creating combined library with Flutter wrapper..."
+    # Create a combined library that includes both SymEngine and our Flutter wrapper
     mkdir -p temp_extract
     cd temp_extract
     ar x "../$found_lib"
-    cp "../symengine_c_wrapper.o" .
-    ar rcs "../libsymengine_wrapper.a" *.o
+    cp "../flutter_symengine_wrapper.o" .
+    ar rcs "../libsymengine_flutter_wrapper.a" *.o
     cd ..
     rm -rf temp_extract
 
     logMsg "Copying built library..."
     mkdir -p "$LIBDIR"
-    cp "libsymengine_wrapper.a" "$LIBDIR/libsymengine_wrapper-$platform-$arch.a"
+    cp "libsymengine_flutter_wrapper.a" "$LIBDIR/libsymengine_flutter_wrapper-$platform-$arch.a"
 }
 
-createXCFramework() {
-    local framework_name="SymEngineWrapper"
+createFlutterWrapperXCFramework() {
+    local framework_name="SymEngineFlutterWrapper"
     local framework_dir="$SCRIPTDIR/$framework_name.xcframework"
 
     logMsg "================================================================="
-    logMsg "Creating and patching $framework_name.xcframework"
+    logMsg "Creating $framework_name.xcframework"
     logMsg "================================================================="
 
     rm -rf "$framework_dir"
 
     # Define source library paths
-    local device_lib="$LIBDIR/libsymengine_wrapper-iphoneos-arm64.a"
-    local sim_universal_lib="$LIBDIR/libsymengine_wrapper-iphonesimulator-universal.a"
-    local mac_universal_lib="$LIBDIR/libsymengine_wrapper-macosx-universal.a"
+    local device_lib="$LIBDIR/libsymengine_flutter_wrapper-iphoneos-arm64.a"
+    local sim_universal_lib="$LIBDIR/libsymengine_flutter_wrapper-iphonesimulator-universal.a"
+    local mac_universal_lib="$LIBDIR/libsymengine_flutter_wrapper-macosx-universal.a"
     
     # Create universal "fat" libraries for simulator and macOS.
     logMsg "Creating universal libraries..."
     lipo -create -output "$sim_universal_lib" \
-        "$LIBDIR/libsymengine_wrapper-iphonesimulator-x86_64.a" \
-        "$LIBDIR/libsymengine_wrapper-iphonesimulator-arm64.a"
+        "$LIBDIR/libsymengine_flutter_wrapper-iphonesimulator-x86_64.a" \
+        "$LIBDIR/libsymengine_flutter_wrapper-iphonesimulator-arm64.a"
 
     lipo -create -output "$mac_universal_lib" \
-        "$LIBDIR/libsymengine_wrapper-macosx-x86_64.a" \
-        "$LIBDIR/libsymengine_wrapper-macosx-arm64.a"
+        "$LIBDIR/libsymengine_flutter_wrapper-macosx-x86_64.a" \
+        "$LIBDIR/libsymengine_flutter_wrapper-macosx-arm64.a"
 
-    # Copy only the C wrapper header (no C++ headers!)
-    logMsg "Setting up C-only headers..."
+    # Set up headers
+    logMsg "Setting up headers..."
     rm -rf "$HEADERDIR_FINAL"
     mkdir -p "$HEADERDIR_FINAL"
-    # Get the header from any of the build directories (they're all the same)
-    cp "$BUILDDIR/iphoneos-arm64/symengine_c_wrapper.h" "$HEADERDIR_FINAL/"
+    cp "$FLUTTER_WRAPPER_SRC/flutter_symengine_wrapper.h" "$HEADERDIR_FINAL/"
 
-    # Step 1: Create the XCFramework
-    logMsg "Assembling initial XCFramework..."
+    # Create the XCFramework
+    logMsg "Assembling XCFramework..."
     xcodebuild -create-xcframework \
         -library "$device_lib" -headers "$HEADERDIR_FINAL" \
         -library "$sim_universal_lib" -headers "$HEADERDIR_FINAL" \
         -library "$mac_universal_lib" -headers "$HEADERDIR_FINAL" \
         -output "$framework_dir"
 
-    # Step 2: Immediately Patch the XCFramework
-    logMsg "Patching generated framework for CocoaPods compatibility..."
-    
-    # Rename the binaries inside the framework to be consistent
-    mv "$framework_dir/ios-arm64/libsymengine_wrapper-iphoneos-arm64.a" "$framework_dir/ios-arm64/$framework_name"
-    mv "$framework_dir/ios-arm64_x86_64-simulator/libsymengine_wrapper-iphonesimulator-universal.a" "$framework_dir/ios-arm64_x86_64-simulator/$framework_name"
-    mv "$framework_dir/macos-arm64_x86_64/libsymengine_wrapper-macosx-universal.a" "$framework_dir/macos-arm64_x86_64/$framework_name"
+    # Patch for CocoaPods compatibility
+    logMsg "Patching framework for CocoaPods compatibility..."
+    mv "$framework_dir/ios-arm64/libsymengine_flutter_wrapper-iphoneos-arm64.a" "$framework_dir/ios-arm64/$framework_name"
+    mv "$framework_dir/ios-arm64_x86_64-simulator/libsymengine_flutter_wrapper-iphonesimulator-universal.a" "$framework_dir/ios-arm64_x86_64-simulator/$framework_name"
+    mv "$framework_dir/macos-arm64_x86_64/libsymengine_flutter_wrapper-macosx-universal.a" "$framework_dir/macos-arm64_x86_64/$framework_name"
 
-    # Edit the manifest (Info.plist) to reflect the new, consistent binary names
+    # Edit the manifest
     local PLIST_PATH="$framework_dir/Info.plist"
     local COUNT=$(/usr/libexec/PlistBuddy -c "Print :AvailableLibraries:" "$PLIST_PATH" | grep -c "Dict")
     for (( i=0; i<$COUNT; i++ )); do
@@ -368,28 +256,29 @@ createXCFramework() {
         /usr/libexec/PlistBuddy -c "Set :AvailableLibraries:$i:LibraryPath $framework_name" "$PLIST_PATH"
     done
     
-    logMsg "✅ Successfully created and patched $framework_dir"
+    logMsg "✅ Successfully created $framework_dir"
 }
 
 # --- Main Build Logic ---
-logMsg "Starting SymEngine C Wrapper build..."
+logMsg "Starting SymEngine + Flutter wrapper build (SINGLE COMPILATION POINT)..."
 
 checkCMake
 checkDependencies
+checkFlutterWrapperSource
 downloadSymEngine
 
 if [ -d "$BUILDDIR" ]; then rm -rf "$BUILDDIR"; fi
 
-logMsg "--- Building SymEngine + C Wrapper for iOS Device ---"
+logMsg "--- Building SymEngine + Flutter Wrapper for iOS Device ---"
 for ARCH in $DEVARCHS; do configureAndMake "iphoneos" "$ARCH"; done
 
-logMsg "--- Building SymEngine + C Wrapper for iOS Simulator ---"
+logMsg "--- Building SymEngine + Flutter Wrapper for iOS Simulator ---"
 for ARCH in $SIMARCHS; do configureAndMake "iphonesimulator" "$ARCH"; done
 
-logMsg "--- Building SymEngine + C Wrapper for macOS ---"
+logMsg "--- Building SymEngine + Flutter Wrapper for macOS ---"
 for ARCH in $MACARCHS; do configureAndMake "macosx" "$ARCH"; done
 
-createXCFramework
+createFlutterWrapperXCFramework
 
-logMsg "🚀 SymEngine C Wrapper build process completed successfully!"
+logMsg "🚀 SymEngine + Flutter wrapper build process completed successfully!"
 exit 0

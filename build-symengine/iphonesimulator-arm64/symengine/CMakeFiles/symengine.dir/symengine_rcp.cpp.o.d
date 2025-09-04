@@ -1,6 +1,6 @@
 symengine/CMakeFiles/symengine.dir/symengine_rcp.cpp.o: \
-  /Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/symengine/symengine_rcp.cpp \
-  /Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/symengine/symengine_rcp.h \
+  /Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/symengine/symengine_rcp.cpp \
+  /Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/symengine/symengine_rcp.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/usr/include/c++/v1/iostream \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/usr/include/c++/v1/__config \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/usr/include/c++/v1/__config_site \
@@ -783,6 +783,6 @@ symengine/CMakeFiles/symengine.dir/symengine_rcp.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/usr/include/c++/v1/print \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/usr/include/unistd.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk/usr/include/c++/v1/ciso646 \
-  /Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/symengine/symengine_config.h \
-  /Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphonesimulator-arm64/symengine/symengine_export.h \
-  /Users/christianstrobele/code/gmp-ios-builder/symengine-0.11.2/symengine/symengine_assert.h
+  /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphonesimulator-arm64/symengine/symengine_config.h \
+  /Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphonesimulator-arm64/symengine/symengine_export.h \
+  /Users/christianstrobele/code/math-stack-ios-builder/symengine-0.11.2/symengine/symengine_assert.h

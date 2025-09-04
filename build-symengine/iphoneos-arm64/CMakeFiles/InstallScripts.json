@@ -1,9 +1,9 @@
 {
 	"InstallScripts" : 
 	[
-		"/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/cmake_install.cmake",
-		"/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/symengine/cmake_install.cmake",
-		"/Users/christianstrobele/code/gmp-ios-builder/build-symengine/iphoneos-arm64/symengine/utilities/matchpycpp/cmake_install.cmake"
+		"/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/cmake_install.cmake",
+		"/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/symengine/cmake_install.cmake",
+		"/Users/christianstrobele/code/math-stack-ios-builder/build-symengine/iphoneos-arm64/symengine/utilities/matchpycpp/cmake_install.cmake"
 	],
 	"Parallel" : false
 }
