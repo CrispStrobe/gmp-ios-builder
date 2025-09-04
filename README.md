@@ -1,168 +1,144 @@
-# iOS Mathematical Computing Stack Builder
+# Mathematical Computing Stack Builder for Flutter, and especially for iOS
 
-[![iOS](https://img.shields.io/badge/iOS-13.0%2B-blue)](https://developer.apple.com/ios/)
-[![Universal](https://img.shields.io/badge/Universal-arm64%20%7C%20x86__64-green)](https://developer.apple.com/documentation/xcode/building_a_universal_macos_binary)
-[![License](https://img.shields.io/badge/License-MIT-yellow)](https://opensource.org/licenses/MIT)
+[](https://developer.apple.com/ios/)
+[](https://developer.apple.com/macos/)
+[](https://developer.apple.com/documentation/xcode/building_a_universal_macos_binary)
+[](https://opensource.org/licenses/MIT)
 
-A complete build system for creating a powerful mathematical computing stack for iOS. This project compiles **GMP, MPFR, MPC, FLINT, and SymEngine** as static `XCFrameworks` that work on modern iOS devices and simulators (Intel and Apple Silicon).
+A complete build system for compiling a powerful mathematical computing stack for Flutter, and especially, for modern Apple platforms. This project compiles **GMP, MPFR, MPC, FLINT, and SymEngine** into self-contained, static `XCFrameworks` that work on iOS devices, simulators (Intel and Apple Silicon), and macOS.
 
-This provides a full suite of tools for arbitrary-precision arithmetic, number theory, and symbolic manipulation directly on iOS.
+This provides a suite of tools for arbitrary-precision arithmetic, number theory, and symbolic manipulation directly within Apple ecosystem applications.
+
+-----
 
 ## What This Builds
 
-The build process creates five interdependent `XCFrameworks`:
+The build process creates five interdependent `XCFrameworks`. The final product, `SymEngineFlutterWrapper.xcframework`, bundles the SymEngine library with a C wrapper designed for seamless Flutter FFI integration.
 
-| Framework                 | Library                                                              | Purpose                                          |
-| ------------------------- | -------------------------------------------------------------------- | ------------------------------------------------ |
-| `GMP.xcframework`         | [GNU Multiple Precision](https://gmplib.org/) 6.3.0                  | Arbitrary-precision integer arithmetic.          |
-| `MPFR.xcframework`        | [Multiple-Precision Floating-Point](https://www.mpfr.org/) 4.2.2     | Correctly rounded arbitrary-precision floats.    |
-| `MPC.xcframework`         | [Multiple-Precision Complex](http://www.multiprecision.org/) 1.3.1    | Arbitrary-precision complex number arithmetic.   |
-| `FLINT.xcframework`       | [Fast Library for Number Theory](https://flintlib.org/) 3.3.1        | Advanced number theory, polynomials, and matrices. |
-| `SymEngineWrapper.xcframework` | [SymEngine](https://symengine.org/) 0.11.2 + C Wrapper           | Fast symbolic manipulation with C API.            |
+| Framework                           | Library                                                              | Purpose                                          |
+| ----------------------------------- | -------------------------------------------------------------------- | ------------------------------------------------ |
+| `GMP.xcframework`                   | [GNU Multiple Precision](https://gmplib.org/) 6.3.0                  | Arbitrary-precision integer arithmetic.          |
+| `MPFR.xcframework`                  | [Multiple-Precision Floating-Point](https://www.mpfr.org/) 4.2.2     | Correctly rounded arbitrary-precision floats.    |
+| `MPC.xcframework`                   | [Multiple-Precision Complex](http://www.multiprecision.org/) 1.3.1    | Arbitrary-precision complex number arithmetic.   |
+| `FLINT.xcframework`                 | [Fast Library for Number Theory](https://flintlib.org/) 3.3.1        | Advanced number theory, polynomials, and matrices. |
+| `SymEngineFlutterWrapper.xcframework` | [SymEngine](https://symengine.org/) 0.11.2 + Flutter C Wrapper       | Fast symbolic manipulation with a C FFI layer.     |
 
-Each framework is built with universal support for physical devices (`arm64`) and simulators (`arm64`, `x86_64`).
+-----
 
 ## Requirements
 
-- **macOS** with Xcode and Command Line Tools installed.
-- **CMake**: Required for building SymEngine (`brew install cmake`).
-- **Source Archives**: The following tarballs must be in the project's root directory:
-    - `gmp-6.3.0.tar.bz2`
-    - `mpfr-4.2.2.tar.xz`
-    - `mpc-1.3.1.tar.gz`
-    - `flint-3.3.1.tar.gz`
-    - `symengine-0.11.2.tar.gz`
+  - **macOS** with Xcode and Command Line Tools installed.
+  - **CMake**: Required for building SymEngine. Install via Homebrew: `brew install cmake`.
+  - **Source Archives**: The following tarballs must be present in the project's root directory:
+      - `gmp-6.3.0.tar.bz2`
+      - `mpfr-4.2.2.tar.xz`
+      - `mpc-1.3.1.tar.gz`
+      - `flint-3.3.1.tar.gz`
+      - `symengine-0.11.2.tar.gz`
 
-## Quick Start: Build the Entire Stack
+-----
 
-The libraries have dependencies, so they **must be built in the correct order**.
+## Build Instructions
+
+A master script, `build_all.sh`, handles the entire build process, running the individual library scripts in the correct dependency order.
 
 ```bash
 # First, make all build scripts executable
 chmod +x build_*.sh
 
-# 1. Build GMP (no dependencies)
-./build_gmp.sh
+# Run the master script to build the entire stack
+./build_all.sh
 
-# 2. Build MPFR (depends on GMP)
-./build_mpfr.sh
-
-# 3. Build MPC (depends on GMP and MPFR)
-./build_mpc.sh
-
-# 4. Build FLINT (depends on GMP and MPFR)
-./build_flint.sh
-
-# 5. Build SymEngine with C wrapper (depends on all of the above)
-./build_symengine.sh
-
-# Copy the built frameworks to your plugin
-./copy_symengine_wrapper.sh
-
-# All five XCFrameworks are now ready for use.
+# All five XCFrameworks have been created in the root directory.
 ```
+
+The master script is the recommended way to build, as it ensures all dependencies are met. It simply automates the process of running each `build_gmp.sh`, `build_mpfr.sh`, etc., in the correct sequence.
+
+-----
 
 ## Integration with Flutter
 
-This project is designed to work with the **symbolic_math_bridge** Flutter plugin architecture. The XCFrameworks are consumed by the plugin, which provides both high-level symbolic computing and direct low-level access to all mathematical libraries.
+This project is the foundational component for the **symbolic\_math\_bridge** Flutter plugin. The generated XCFrameworks are consumed by the plugin, providing unified access to the entire math stack.
 
-### Modern Architecture: Complete Stack Access
+### Unified Architecture
 
-Unlike traditional approaches that require separate plugins for each library, this system provides unified access to the entire mathematical computing stack through a single Flutter plugin:
+A single Flutter plugin provides access to all libraries, from high-level symbolic algebra down to low-level arbitrary-precision arithmetic.
 
 ```dart
-// High-level symbolic computing
-final result = casBridge.evaluate('solve(x^2 + 2*x + 1, x)');
+// High-level symbolic computing (SymEngine)
+final result = casBridge.evaluate('solve(x^2 - 1, x)');
 
 // Direct arbitrary-precision integer arithmetic (GMP)
-final bigInt = casBridge.testGMPDirect(256); // 2^256
+final bigInt = casBridge.gmpPower(2, 256); // 2^256
 
 // Direct arbitrary-precision floating-point (MPFR) 
-final pi = casBridge.testMPFRDirect(); // High-precision π calculation
+final pi = casBridge.mpfrGetPi(128); // 128-bit precision π
 
 // Direct complex number arithmetic (MPC)
-final complex = casBridge.testMPCDirect(); // (3+4i) × (1+2i)
+final complexResult = casBridge.mpcMultiply(3, 4, 1, 2); // (3+4i) * (1+2i)
 
 // Direct number theory functions (FLINT)
-final factorial = casBridge.testFLINTDirect(); // 20!
+final isPrime = casBridge.flintIsPrime(997); // true
 ```
 
 ### The Symbol Linking Solution
 
-A key step in this system is circumventing the "symbol stripping" problem that occurs when static C libraries are used in Flutter apps. Our simple but robust solution involves:
+To prevent the linker from stripping unused symbols from the static C libraries—a common issue in native integration—this system uses a simple and robust solution:
 
-1. **Force Symbol Loading**: The plugin's `SymEngineBridge.m` file contains references to 40+ core functions from all libraries, preventing the linker from stripping them.
+1.  **Force Symbol Loading**: The plugin's Objective-C bridge file contains direct references to key functions from all five libraries, ensuring they are linked into the final application binary.
+2.  **XCFramework Integration**: Packaging as XCFrameworks provides clean header access and simplifies integration with CocoaPods and Xcode.
+3.  **Unified Plugin**: A single plugin, `symbolic_math_bridge`, manages all five libraries, eliminating the need for multiple, separate packages.
 
-2. **XCFramework Integration**: All libraries are packaged as XCFrameworks with proper header access for both plugin compilation and runtime symbol resolution.
-
-3. **Unified Plugin Architecture**: A single plugin (`symbolic_math_bridge`) provides access to all libraries rather than requiring separate plugins for each.
+-----
 
 ## Companion Repositories
 
-This build system is part of a complete mathematical computing solution:
+This build system is one part of a complete mathematical computing solution for Flutter:
 
-- **[math-stack-ios-builder](https://github.com/CrispStrobe/math-stack-ios-builder)** (This Repository): Builds the XCFramework libraries
-- **[symbolic_math_bridge](https://github.com/CrispStrobe/symbolic_math_bridge)**: Flutter plugin providing unified access to all libraries  
-- **[math-stack-test](https://github.com/CrispStrobe/math-stack-test)**: Demo Flutter app showcasing the complete functionality
+  - **[math-stack-ios-builder](https://github.com/CrispStrobe/math-stack-ios-builder)** (This Repository): Builds the XCFramework libraries.
+  - **[symbolic\_math\_bridge](https://github.com/CrispStrobe/symbolic_math_bridge)**: The Flutter plugin that provides a unified Dart API to all libraries.
+  - **[math-stack-test](https://github.com/CrispStrobe/math-stack-test)**: A demo Flutter app showcasing the complete functionality.
+
+-----
 
 ## Technical Notes
 
 ### Build Dependencies
 
-The build order is enforced by dependencies between the libraries:
+The build order is critical and enforced by the `build_all.sh` script:
 
-- **MPFR** requires **GMP**.
-- **MPC** requires **GMP** and **MPFR**.
-- **FLINT** requires **GMP** and **MPFR**.
-- **SymEngine** requires **GMP**, **MPFR**, **MPC**, and **FLINT**.
+  - **MPFR** requires **GMP**.
+  - **MPC** requires **GMP** and **MPFR**.
+  - **FLINT** requires **GMP** and **MPFR**.
+  - **SymEngine** requires **GMP**, **MPFR**, **MPC**, and **FLINT**.
 
-### Build Configuration
+### SymEngine Flutter C Wrapper
 
-- **Minimum iOS Version**: 13.0
-- **Supported Architectures**: `arm64` (device + simulator), `x86_64` (simulator)
-- **Assembly**: Disabled (`--disable-assembly`) for maximum iOS compatibility.
-- **Linking**: Static libraries only (`--disable-shared`).
-- **Thread Safety**: Disabled where applicable for simplicity in a typical iOS context.
-- **SymEngine Wrapper**: Includes a C wrapper layer for easier FFI integration.
-
-### SymEngine C Wrapper
-
-The SymEngine build creates both the core library and a C wrapper that provides simplified access to common operations:
+The SymEngine build creates the core library and bundles it with a C wrapper that provides a simplified, FFI-friendly API. The function names are prefixed to avoid conflicts.
 
 ```c
-// C wrapper functions created during build
-char* symengine_evaluate(const char* expression);
-char* symengine_solve(const char* expression, const char* symbol);
-char* symengine_factor(const char* expression);
-char* symengine_expand(const char* expression);
-void symengine_free_string(char* str);
+// C wrapper functions exposed for FFI
+char* flutter_symengine_evaluate(const char* expression);
+char* flutter_symengine_solve(const char* expression, const char* symbol);
+char* flutter_symengine_expand(const char* expression);
+// ... and many more ...
+void flutter_symengine_free_string(char* str);
 ```
+
+-----
 
 ## Troubleshooting
 
-### "Command not found" or Permission Denied
+  - **"Command not found" or "Permission Denied"**: Run `chmod +x build_*.sh` to make the build scripts executable.
+  - **"SDK path not found"**: Install the Xcode Command Line Tools via `xcode-select --install`.
+  - **Dependency Error (e.g., "GMP build not found")**: Ensure you are using the `build_all.sh` script or running the individual scripts in the correct order.
+  - **Symbol Linking Issues in Flutter ("symbol not found")**:
+      - Verify the plugin's `.podspec` includes the necessary linker flags (`-all_load`).
+      - Ensure the Objective-C bridge file includes references to force-load symbols.
+      - Confirm all XCFrameworks are properly included in the plugin's Podspec.
 
-Run `chmod +x build_*.sh` to make all build scripts executable.
-
-### "SDK path not found"
-
-Install the Xcode Command Line Tools via `xcode-select --install`.
-
-### "GMP build not found" (or similar dependency error)
-
-You must run the build scripts in the correct order as described in the "Quick Start" section.
-
-### Symbol Linking Issues in Flutter
-
-If you encounter "symbol not found" errors:
-- Ensure the `SymEngineBridge.m` file includes all necessary symbol references
-- Verify the plugin's `.podspec` uses `-all_load` and `DEAD_CODE_STRIPPING = NO`
-- Check that all XCFrameworks are properly included in the plugin
+-----
 
 ## License
 
-This build system is released under the **MIT License**. The underlying mathematical libraries are available under their own open-source licenses (LGPL, GPL), which you must comply with in your application.
-
-## Credits
-
-This project modernizes and extends concepts from [NeoTeo/gmp-ios-builder](https://github.com/NeoTeo/gmp-ios-builder) to create a full-featured mathematical computing stack with unified Flutter integration.
+This build system is released under the **MIT License**. The underlying mathematical libraries are available under their own open-source licenses (primarily LGPL), which you must comply with in your application.

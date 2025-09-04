@@ -22,7 +22,7 @@ readonly VERSION="4.2.2"
 readonly SOFTWARETAR="$SCRIPTDIR/$LIBNAME-$VERSION.tar.xz"
 
 # GMP dependency paths (must exist from previous GMP build)
-readonly GMP_BUILDDIR="$SCRIPTDIR/build"
+readonly GMP_BUILDDIR="$SCRIPTDIR/build-gmp"
 readonly GMP_LIBDIR="$GMP_BUILDDIR/lib"
 readonly GMP_HEADERS_DIR="$GMP_BUILDDIR/source"
 

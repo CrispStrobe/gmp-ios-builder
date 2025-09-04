@@ -19,7 +19,7 @@ readonly SYMENGINE_SOURCE="$SCRIPTDIR/symengine-$VERSION_SYMENGINE"
 readonly FLUTTER_WRAPPER_SRC="$SCRIPTDIR/src"
 
 # Dependency paths
-readonly GMP_BUILDDIR="$SCRIPTDIR/build"
+readonly GMP_BUILDDIR="$SCRIPTDIR/build-gmp"
 readonly MPFR_BUILDDIR="$SCRIPTDIR/build-mpfr"
 readonly MPC_BUILDDIR="$SCRIPTDIR/build-mpc"
 readonly FLINT_BUILDDIR="$SCRIPTDIR/build-flint"

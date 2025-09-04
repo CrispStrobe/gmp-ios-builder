@@ -1,7 +1,7 @@
 #!/bin/bash
 #############################################################################
 #
-# build_gmp.sh (Corrected & Robust Version)
+# build_gmp.sh
 #
 # Creates a GMP.xcframework with universal binaries for iOS device,
 # iOS simulator (x86_64, arm64), and macOS (x86_64, arm64).
@@ -13,7 +13,8 @@ set -e # Exit immediately if a command exits with a non-zero status.
 
 # --- Configuration ---
 readonly SCRIPTDIR=$(cd "$(dirname "$0")" && pwd)
-readonly BUILDDIR="$SCRIPTDIR/build"
+# VVVV DIRECTORY NAME CHANGED HERE VVVV
+readonly BUILDDIR="$SCRIPTDIR/build-gmp"
 readonly LIBDIR="$BUILDDIR/lib"
 readonly HEADERDIR="$BUILDDIR/include"
 readonly LIBNAME="gmp"
@@ -180,22 +181,22 @@ createXCFramework() {
     
     mkdir -p "$HEADERDIR"; cp "$BUILDDIR/install-iphoneos-arm64/usr/local/include/gmp.h" "$HEADERDIR/"
 
-    # Step 1: Create the XCFramework (which will have an incorrect manifest)
+    # Step 1: Create the XCFramework
     xcodebuild -create-xcframework \
         -library "$device_lib" -headers "$HEADERDIR" \
         -library "$sim_universal_lib" -headers "$HEADERDIR" \
         -library "$mac_universal_lib" -headers "$HEADERDIR" \
         -output "$framework_dir"
 
-    # --- Step 2: Immediately Patch the XCFramework We Just Created ---
-    logMsg "Patching generated framework for CocoaPods compatibility..."
+    # Step 2: Patch the XCFramework for CocoaPods compatibility
+    logMsg "Patching generated framework..."
     
-    # Rename the binaries inside the framework to be consistent
+    # Rename the binaries inside each slice to be consistent
     mv "$framework_dir/ios-arm64/libgmp-iphoneos-arm64.a" "$framework_dir/ios-arm64/$framework_name"
     mv "$framework_dir/ios-arm64_x86_64-simulator/libgmp-iphonesimulator-universal.a" "$framework_dir/ios-arm64_x86_64-simulator/$framework_name"
     mv "$framework_dir/macos-arm64_x86_64/libgmp-macosx-universal.a" "$framework_dir/macos-arm64_x86_64/$framework_name"
 
-    # Edit the manifest (Info.plist) to reflect the new, consistent binary names
+    # Edit the manifest (Info.plist) to reflect the new binary names
     local PLIST_PATH="$framework_dir/Info.plist"
     local COUNT=$(/usr/libexec/PlistBuddy -c "Print :AvailableLibraries:" "$PLIST_PATH" | grep -c "Dict")
     for (( i=0; i<$COUNT; i++ )); do

@@ -19,7 +19,7 @@ readonly VERSION="1.3.1"
 readonly SOFTWARETAR="$SCRIPTDIR/$LIBNAME-$VERSION.tar.gz"
 
 # --- Dependency Paths ---
-readonly GMP_BUILDDIR="$SCRIPTDIR/build"
+readonly GMP_BUILDDIR="$SCRIPTDIR/build-gmp"
 readonly GMP_LIBDIR="$GMP_BUILDDIR/lib"
 readonly GMP_HEADERDIR="$GMP_BUILDDIR/include"
 
